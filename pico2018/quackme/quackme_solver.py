@@ -7,7 +7,7 @@ import r2pipe
 import codecs
 
 # Open file in r2 and perform auto-analysis
-r2 = r2pipe.open("../ctf-files/quackme-main")
+r2 = r2pipe.open("quackme-main")
 r2.cmd('aaaa')
 
 # Print obj.greetingMessage as string in json format,
