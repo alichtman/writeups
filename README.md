@@ -1,3 +1,3 @@
-# CTFs
+# Writeups
 
-This repository will hold some of my script solutions and writeups for CTF challenges.
+This repo will hold my writeups and solutions for CTF, Hack the Box, Vulnhub, exploit challenges, pwnables, crackmes, etc. Anything goes.
