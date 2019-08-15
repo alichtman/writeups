@@ -1,0 +1,5 @@
+# Nmap 7.70 scan initiated Wed Aug 14 19:12:06 2019 as: nmap -p- -vvv -oA valentine-all 10.10.10.79
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.79 ()	Status: Up
+Host: 10.10.10.79 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 443/open/tcp//https///	Ignored State: closed (65532)
+# Nmap done at Wed Aug 14 19:25:57 2019 -- 1 IP address (1 host up) scanned in 831.80 seconds

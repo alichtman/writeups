@@ -1,0 +1,13 @@
+# Nmap 7.70 scan initiated Wed Aug 14 19:12:06 2019 as: nmap -p- -vvv -oA valentine-all 10.10.10.79
+Nmap scan report for 10.10.10.79
+Host is up, received syn-ack ttl 63 (0.18s latency).
+Scanned at 2019-08-14 19:12:06 EDT for 831s
+Not shown: 65532 closed ports
+Reason: 65532 resets
+PORT    STATE SERVICE REASON
+22/tcp  open  ssh     syn-ack ttl 63
+80/tcp  open  http    syn-ack ttl 63
+443/tcp open  https   syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Wed Aug 14 19:25:57 2019 -- 1 IP address (1 host up) scanned in 831.80 seconds

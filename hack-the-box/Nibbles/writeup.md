@@ -1,0 +1,7 @@
+- nmap to find ports 22, 80
+- Go to http://10.10.10.75 to find homepage of website with /nibbleblog/ hidden in the source code.
+- Gobuster that to find admin page at /nibbleblog/admin.php
+- Guess user:pass combo of admin:nibbles
+- Followed this guide to get a shell: https://curesec.com/blog/article/blog/NibbleBlog-403-Code-Execution-47.html
+- Saw the kernel was 4.4 and successfully used this exploit against it: https://www.exploit-db.com/raw/44298
+- I moved the exploit over in source code form and wrote it to tmp, and then compiled it with gcc, that I knew was on there from running LinEnum.sh. Trivial to run the exploit after that.

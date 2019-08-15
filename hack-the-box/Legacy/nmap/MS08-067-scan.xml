@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Mon Aug 12 03:29:34 2019 as: nmap -p 139,445 -&#45;script-args=unsafe=1 -&#45;script /usr/share/nmap/scripts/smb-os-discovery.nse -oA MS08-067-scan 10.10.10.4 -->
+<nmaprun scanner="nmap" args="nmap -p 139,445 -&#45;script-args=unsafe=1 -&#45;script /usr/share/nmap/scripts/smb-os-discovery.nse -oA MS08-067-scan 10.10.10.4" start="1565594974" startstr="Mon Aug 12 03:29:34 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="2" services="139,445"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1565594974" endtime="1565594990"><status state="up" reason="echo-reply" reason_ttl="127"/>
+<address addr="10.10.10.4" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="139"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="tcp" portid="445"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+</ports>
+<times srtt="234277" rttvar="234277" to="1171385"/>
+</host>
+<runstats><finished time="1565594990" timestr="Mon Aug 12 03:29:50 2019" elapsed="16.82" summary="Nmap done at Mon Aug 12 03:29:50 2019; 1 IP address (1 host up) scanned in 16.82 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

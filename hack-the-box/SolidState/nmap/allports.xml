@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sun Aug 11 09:42:27 2019 as: nmap -p- -oA allports 10.10.10.51 -->
+<nmaprun scanner="nmap" args="nmap -p- -oA allports 10.10.10.51" start="1565530947" startstr="Sun Aug 11 09:42:27 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<taskprogress task="SYN Stealth Scan" time="1565531567" percent="44.40" remaining="759" etc="1565532326"/>
