@@ -1,0 +1,13 @@
+[x] Connecting to 2019shell1.picoctf.com on port 22
+[+] Connecting to 2019shell1.picoctf.com on port 22: Done
+[*] alichtman@2019shell1.picoctf.com:
+    Distro    Ubuntu 18.04
+    OS:       linux
+    Arch:     amd64
+    Version:  4.15.0
+    ASLR:     [32mEnabled[m
+[x] Starting remote process b'/problems/handy-shellcode_5_d1b3658f284f442eac06607b8ac4d1f5/vuln' on 2019shell1.picoctf.com
+[+] Starting remote process b'/problems/handy-shellcode_5_d1b3658f284f442eac06607b8ac4d1f5/vuln' on 2019shell1.picoctf.com: pid 1395988
+[*] Stopped remote process b'vuln' on 2019shell1.picoctf.com (pid 1395988)
+
+FLAG: picoCTF{h4ndY_d4ndY_sh311c0d3_0b440487}
