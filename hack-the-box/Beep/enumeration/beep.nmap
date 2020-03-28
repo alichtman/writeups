@@ -1,0 +1,47 @@
+# Nmap 7.80 scan initiated Fri Mar 27 22:31:31 2020 as: nmap -vvv -sCV -oN beep 10.10.10.7
+Nmap scan report for 10.10.10.7
+Host is up, received syn-ack (0.060s latency).
+Scanned at 2020-03-27 22:31:31 CDT for 353s
+Not shown: 988 closed ports
+Reason: 988 conn-refused
+PORT      STATE SERVICE    REASON  VERSION
+22/tcp    open  ssh        syn-ack OpenSSH 4.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 ad:ee:5a:bb:69:37:fb:27:af:b8:30:72:a0:f9:6f:53 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAI04jN+Sn7/9f2k+5UteAWn8KKj3FRGuF4LyeDmo/xxuHgSsdCjYuWtNS8m7stqgNH5edUu8vZ0pzF/quX5kphWg/UOz9weGeGyzde5lfb8epRlTQ2kfbP00l+kq9ztuWaXOsZQGcSR9iKE4lLRJhRCLYPaEbuxKnYz4WhAv4yD5AAAAFQDXgQ9BbvoxeDahe/ksAac2ECqflwAAAIEAiGdIue6mgTfdz/HikSp8DB6SkVh4xjpTTZE8L/HOVpTUYtFYKYj9eG0W1WYo+lGg6SveATlp3EE/7Y6BqdtJNm0RfR8kihoqSL0VzKT7myerJWmP2EavMRPjkbXw32fVBdCGjBqMgDl/QSEn2NNDu8OAyQUVBEHrE4xPGI825qgAAACANnqx2XdVmY8agjD7eFLmS+EovCIRz2+iE+5chaljGD/27OgpGcjdZNN+xm85PPFjUKJQuWmwMVTQRdza6TSp9vvQAgFh3bUtTV3dzDCuoR1D2Ybj9p/bMPnyw62jgBPxj5lVd27LTBi8IAH2fZnct7794Y3Ge+5r4Pm8Qbrpy68=
+|   2048 bc:c6:73:59:13:a1:8a:4b:55:07:50:f6:65:1d:6d:0d (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEA4SXumrUtyO/pcRLwmvnF25NG/ozHsxSVNRmTwEf7AYubgpAo4aUuvhZXg5iymwTcZd6vm46Y+TX39NQV/yT6ilAEtLbrj1PLjJl+UTS8HDIKl6QgIb1b3vuEjbVjDj1LTq0Puzx52Es0/86WJNRVwh4c9vN8MtYteMb/dE2Azk0SQMtpBP+4Lul4kQrNwl/qjg+lQ7XE+NU7Va22dpEjLv/TjHAKImQu2EqPsC99sePp8PP5LdNbda6KHsSrZXnK9hqpxnwattPHT19D94NHVmMHfea9gXN3NCI3NVfDHQsxhqVtR/LiZzpbKHldFU0lfZYH1aTdBfxvMLrVhasZcw==
+25/tcp    open  smtp       syn-ack Postfix smtpd
+|_smtp-commands: beep.localdomain, PIPELINING, SIZE 10240000, VRFY, ETRN, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+80/tcp    open  http       syn-ack Apache httpd 2.2.3
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.3 (CentOS)
+|_http-title: Did not follow redirect to https://10.10.10.7/
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+110/tcp   open  pop3       syn-ack Cyrus pop3d 2.3.7-Invoca-RPM-2.3.7-7.el5_6.4
+|_pop3-capabilities: RESP-CODES AUTH-RESP-CODE STLS USER UIDL IMPLEMENTATION(Cyrus POP3 server v2) LOGIN-DELAY(0) EXPIRE(NEVER) APOP TOP PIPELINING
+111/tcp   open  rpcbind    syn-ack 2 (RPC #100000)
+143/tcp   open  imap       syn-ack Cyrus imapd 2.3.7-Invoca-RPM-2.3.7-7.el5_6.4
+|_imap-capabilities: STARTTLS Completed OK NO URLAUTHA0001 X-NETSCAPE IMAP4rev1 MULTIAPPEND CATENATE LISTEXT THREAD=ORDEREDSUBJECT IDLE LITERAL+ BINARY CONDSTORE NAMESPACE LIST-SUBSCRIBED QUOTA SORT=MODSEQ THREAD=REFERENCES ANNOTATEMORE UIDPLUS RIGHTS=kxte RENAME ACL CHILDREN UNSELECT MAILBOX-REFERRALS ID IMAP4 SORT ATOMIC
+443/tcp   open  ssl/https? syn-ack
+|_ssl-date: 2020-03-28T04:37:36+00:00; +1h02m47s from scanner time.
+993/tcp   open  ssl/imap   syn-ack Cyrus imapd
+|_imap-capabilities: CAPABILITY
+995/tcp   open  pop3       syn-ack Cyrus pop3d
+3306/tcp  open  mysql?     syn-ack
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+4445/tcp  open  upnotifyp? syn-ack
+10000/tcp open  http       syn-ack MiniServ 1.570 (Webmin httpd)
+|_http-favicon: Unknown favicon MD5: 74F7F6F633A027FA3EA36F05004C9341
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+Service Info: Hosts:  beep.localdomain, 127.0.0.1, example.com
+
+Host script results:
+|_clock-skew: 1h02m46s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar 27 22:37:24 2020 -- 1 IP address (1 host up) scanned in 353.41 seconds
