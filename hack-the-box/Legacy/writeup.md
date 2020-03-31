@@ -86,8 +86,8 @@ Nice. We're root already.
 
 ```
 meterpreter > cat "C:\Documents and Settings\john\Desktop\user.txt"
-e69af0e4f443de7e36876fda4ec7644f
+e69af***************************
 
 meterpreter > cat "C:\Documents and Settings\Administrator\Desktop\root.txt"
-993442d258b0e0ec917cae9e695d5713
+99344 ***************************
 ```

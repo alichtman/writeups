@@ -220,7 +220,8 @@ wc user.txt
  1  1 33 user.txt
 $ cat user.txt
 cat user.txt
-51d236438b333970dbba7dc3089be33b
+51d2 ****************************
+
 ```
 
 ## Privilege Escalation
@@ -393,7 +394,7 @@ cat: /root/flag.txt: No such file or directory
 # ls /root/
 root.txt
 # cat /root/root.txt
-1703b8a3c9a8dde879942c79d02fd3a0
+1703b****************************
 ```
 
 And there we have it.

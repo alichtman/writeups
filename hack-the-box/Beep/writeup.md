@@ -214,9 +214,9 @@ First, I tried `amp111`, which failed, and then I tried `jEhdIekWmdjE`, which go
 [root@beep ~]# wc root.txt
  1  1 33 root.txt
 [root@beep ~]# cat root.txt
-d88e006123842106982acce0aaf453f0
+d88e****************************
 [root@beep /]# wc /home/fanis/user.txt
  1  1 33 /home/fanis/user.txt
 [root@beep /]# cat /home/fanis/user.txt
-aeff3def0c765c2677b94715cffa73ac
+aeff****************************
 ```
