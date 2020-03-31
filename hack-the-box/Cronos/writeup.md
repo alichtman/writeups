@@ -35,16 +35,16 @@ Service detection performed. Please report any incorrect results at https://nmap
 # Nmap done at Sun Mar 29 07:23:11 2020 -- 1 IP address (1 host up) scanned in 21.48 seconds
 ```
 
-Ports 22, 53 and 80 are open. 22 is running `ssh`, 53 is the DNS port, and 80 is a webserver running Apache httpd 2.4.18, and we know the OS is Ubuntu.
+Ports 22, 53 and 80 are open. 22 is running `ssh`, 53 is the DNS port, and 80 is a webserver running `Apache httpd 2.4.18`, and we know the OS is `Ubuntu`.
 
 Let's crawl that webserver and see what other pages there are. Nothing comes up with `$ gobuster dir -u http://10.10.10.13 -w ~/wordlists/common.txt -o gobuster-common-http-root.log --wildcard -t 20
 ` sweep, so we'll have to try something else.
 
-The SSH version is fairly recent so we're going to skip that for now, and move on to DNS enumeration.
+The `SSH` version is fairly recent so we're going to skip that for now, and move on to `DNS` enumeration.
 
 ### DNS
 
-DNS is running on TCP instead of UDP, which indicates that it may be vulnerable to a DNS Zone Transfer Attack. Let's grab the nameserver address...
+`DNS` is running on `TCP` instead of `UDP`, which indicates that it may be vulnerable to a `DNS` Zone Transfer Attack. Let's grab the nameserver address...
 
 ```bash
 nslookup
@@ -401,5 +401,42 @@ And there we have it.
 I also now realize that my original approach to reading the root flag didn't work because I didn't have the correct path! I was using `/root/flag.txt`, not `/root/root.txt`.
 
 I bet that if I reset the box (since I've overwritten the `artisan` file) and changed my scheduled function to cat the correct file that I would have been able to read the root flag a bit ago... On the other hand, this approach gets me a full **root shell**, not just the ability to execute commands with root privileges.
+
+Another approach I could have taken was a kernel exploit since the kernel was so old, but that's less fun.
+
+```bash
+[-] Kernel information (continued):
+Linux version 4.4.0-72-generic (buildd@lcy01-17) (gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) ) #93-Ubuntu SMP Fri Mar 31 14:07:41 UTC 2017
+```
+
+The `4.4` kernel seems to be vulnerable to a number of exploits:
+
+```bash
+$ searchsploit 4.4 kernel
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ Exploit Title                                                                                                                                 |  Path
+                                                                                                                                               | (/usr/share/exploitdb/)
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Linux Kernel 2.4.4 < 2.4.37.4 / 2.6.0 < 2.6.30.4 - 'Sendpage' Local Privilege Escalation (Metasploit)                                          | exploits/linux/local/19933.rb
+Linux Kernel 2.6 < 2.6.19 (White Box 4 / CentOS 4.4/4.5 / Fedora Core 4/5/6 x86) - 'ip_append_data()' Ring0 Privilege Escalation (1)           | exploits/linux_x86/local/9542.c
+Linux Kernel 3.10/3.18 /4.4 - Netfilter IPT_SO_SET_REPLACE Memory Corruption                                                                   | exploits/linux/dos/39545.txt
+Linux Kernel 4.4 (Ubuntu 16.04) - 'BPF' Local Privilege Escalation (Metasploit)                                                                | exploits/linux/local/40759.rb
+Linux Kernel 4.4 (Ubuntu 16.04) - 'snd_timer_user_ccallback()' Kernel Pointer Leak                                                             | exploits/linux/dos/46529.c
+Linux Kernel 4.4 - 'rtnetlink' Stack Memory Disclosure                                                                                         | exploits/linux/local/46006.c
+Linux Kernel 4.4.0 (Ubuntu 14.04/16.04 x86-64) - 'AF_PACKET' Race Condition Privilege Escalation                                               | exploits/linux_x86-64/local/40871.c
+Linux Kernel 4.4.0 (Ubuntu) - DCCP Double-Free (PoC)                                                                                           | exploits/linux/dos/41457.c
+Linux Kernel 4.4.0 (Ubuntu) - DCCP Double-Free Privilege Escalation                                                                            | exploits/linux/local/41458.c
+Linux Kernel 4.4.0-21 (Ubuntu 16.04 x64) - Netfilter target_offset Out-of-Bounds Privilege Escalation                                          | exploits/linux_x86-64/local/40049.c
+Linux Kernel 4.4.0-21 < 4.4.0-51 (Ubuntu 14.04/16.04 x86-64) - 'AF_PACKET' Race Condition Privilege Escalation                                 | exploits/linux/local/47170.c
+Linux Kernel 4.4.1 - REFCOUNT Overflow Use-After-Free in Keyrings Local Privilege Escalation (1)                                               | exploits/linux/local/39277.c
+Linux Kernel 4.4.1 - REFCOUNT Overflow Use-After-Free in Keyrings Local Privilege Escalation (2)                                               | exploits/linux/local/40003.c
+Linux Kernel 4.4.x (Ubuntu 16.04) - 'double-fdput()' bpf(BPF_PROG_LOAD) Privilege Escalation                                                   | exploits/linux/local/39772.txt
+Linux Kernel < 3.4.5 (Android 4.2.2/4.4 ARM) - Local Privilege Escalation                                                                      | exploits/arm/local/31574.c
+Linux Kernel < 4.4.0-116 (Ubuntu 16.04.4) - Local Privilege Escalation                                                                         | exploits/linux/local/44298.c
+Linux Kernel < 4.4.0-21 (Ubuntu 16.04 x64) - 'netfilter target_offset' Local Privilege Escalation                                              | exploits/linux/local/44300.c
+Linux Kernel < 4.4.0-83 / < 4.8.0-58 (Ubuntu 14.04/16.04) - Local Privilege Escalation (KASLR / SMEP)                                          | exploits/linux/local/43418.c
+Linux Kernel < 4.4.0/ < 4.8.0 (Ubuntu 14.04/16.04 / Linux Mint 17/18 / Zorin) - Local Privilege Escalation (KASLR / SMEP)                      | exploits/linux/local/47169.c
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+```
 
 _I've now confirmed that my original approach would have worked if I had the correct path of the root proof._
