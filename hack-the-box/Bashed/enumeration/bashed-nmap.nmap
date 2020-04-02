@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Thu Apr  2 06:16:17 2020 as: nmap -sCV -vvv -oA bashed-nmap 10.10.10.68
+Nmap scan report for 10.10.10.68
+Host is up, received syn-ack (0.046s latency).
+Scanned at 2020-04-02 06:16:17 CDT for 9s
+Not shown: 999 closed ports
+Reason: 999 conn-refused
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: 6AA5034A553DFA77C3B2C7B4C26CF870
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Arrexel's Development Site
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr  2 06:16:26 2020 -- 1 IP address (1 host up) scanned in 8.61 seconds
