@@ -1,0 +1,3 @@
+#pattern  filter=crypt diff=crypt
+**/flags/*  filter=crypt diff=crypt
+**/flags.*  filter=crypt diff=crypt
