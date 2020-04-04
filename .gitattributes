@@ -1,3 +1,4 @@
 #pattern  filter=crypt diff=crypt
 **/flags/*  filter=crypt diff=crypt
 **/flags.*  filter=crypt diff=crypt
+**/ACTIVE-MACHINES/**  filter=crypt diff=crypt
