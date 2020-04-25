@@ -6,7 +6,7 @@
 | ---              | ---           | ---                   |
 | Lame        [x]  | Legacy   [ ]  | Jeeves (Windows) [ ]  |
 | Brainfuck   [ ]  | Blue     [ ]  | Bart (Windows)   [ ]  |
-| Shocker     [ ]  | Devel    [ ]  | Tally (Windows)  [ ]  |
+| Shocker     [x]  | Devel    [ ]  | Tally (Windows)  [ ]  |
 | Bashed      [x]  | Optimum  [ ]  | Arctic (Windows) [ ]  |
 | Nibbles     [o]  | Bastard  [ ]  | Jail (Linux)     [ ]  |
 | Beep        [x]  | Granny   [ ]  | Falafel (Linux)  [ ]  |
@@ -27,4 +27,5 @@
 | Key  | Meaning                                           |
 | ---  | ---                                               |
 | x    | Done for OSCP prep                                |
-| o    | Done previously but should redo if time permits.
+| o    | Done previously but should redo if time permits.  |
+| !    | In Progress                                       |
