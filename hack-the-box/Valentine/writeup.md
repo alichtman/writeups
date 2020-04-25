@@ -1,5 +1,4 @@
 # Valentine
-# OS: Linux
 
 ## Enumeration
 
