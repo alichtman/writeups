@@ -10,7 +10,7 @@
 | Bashed      [x]  | Optimum  [ ]  | Arctic (Windows) [ ]  |
 | Nibbles     [o]  | Bastard  [ ]  | Jail (Linux)     [ ]  |
 | Beep        [x]  | Granny   [ ]  | Falafel (Linux)  [ ]  |
-| Nineveh     [ ]  | Grandpa  [ ]  | Devops (Linux)   [ ]  |
+| Nineveh     [ ]  | Grandpa  [ ]  | Devoops (Linux)  [ ]  |
 | Cronos      [x]  | Arctic   [ ]  | Hawk (Linux)     [ ]  |
 | Sense       [ ]  | Silo     [ ]  |                       |
 | Solidstate  [o]  | Bounty   [ ]  |                       |
