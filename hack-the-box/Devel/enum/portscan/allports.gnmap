@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Mon Aug 31 17:36:03 2020 as: nmap -A -sVC -v -p- -Pn -oA allports 10.10.10.5
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.5 (devel.htb)	Status: Up
+Host: 10.10.10.5 (devel.htb)	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 80/open/tcp//http//Microsoft IIS httpd 7.5/	Ignored State: filtered (65533)	Seq Index: 261	IP ID Seq: Busy server or unknown class
+# Nmap done at Mon Aug 31 17:39:09 2020 -- 1 IP address (1 host up) scanned in 186.80 seconds

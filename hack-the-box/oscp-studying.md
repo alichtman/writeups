@@ -4,13 +4,13 @@
 
 | Linux            | Windows       | Extra Challenging     |
 | ---              | ---           | ---                   |
-| Lame        [x]  | Legacy   [ ]  | Jeeves (Windows) [ ]  |
-| Brainfuck   [ ]  | Blue     [ ]  | Bart (Windows)   [ ]  |
-| Shocker     [x]  | Devel    [ ]  | Tally (Windows)  [ ]  |
-| Bashed      [x]  | Optimum  [ ]  | Arctic (Windows) [ ]  |
+| Lame        [x]  | Legacy   [x]  | Jeeves (Windows) [ ]  |
+| Brainfuck   [ ]  | Blue     [x]  | Bart (Windows)   [ ]  |
+| Shocker     [x]  | Devel    [x]  | Tally (Windows)  [ ]  |
+| Bashed      [x]  | Optimum  [x]  | Arctic (Windows) [ ]  |
 | Nibbles     [o]  | Bastard  [ ]  | Jail (Linux)     [ ]  |
-| Beep        [x]  | Granny   [ ]  | Falafel (Linux)  [ ]  |
-| Nineveh     [ ]  | Grandpa  [ ]  | Devoops (Linux)  [ ]  |
+| Beep        [x]  | Granny   [x]  | Falafel (Linux)  [ ]  |
+| Nineveh     [ ]  | Grandpa  [x]  | Devoops (Linux)  [ ]  |
 | Cronos      [x]  | Arctic   [ ]  | Hawk (Linux)     [ ]  |
 | Sense       [ ]  | Silo     [ ]  |                       |
 | Solidstate  [o]  | Bounty   [ ]  |                       |

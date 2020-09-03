@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Sep  1 20:48:17 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Grandpa/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Grandpa/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.14 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Grandpa/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Grandpa/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.14" start="1599011297" startstr="Tue Sep  1 20:48:17 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599011297"/>
+<taskend task="NSE" time="1599011297"/>
+<taskbegin task="NSE" time="1599011297"/>
+<taskend task="NSE" time="1599011297"/>
+<taskbegin task="NSE" time="1599011297"/>
+<taskend task="NSE" time="1599011297"/>
+<taskbegin task="SYN Stealth Scan" time="1599011297"/>
+<taskprogress task="SYN Stealth Scan" time="1599011328" percent="17.41" remaining="148" etc="1599011475"/>
+<taskprogress task="SYN Stealth Scan" time="1599011358" percent="44.89" remaining="75" etc="1599011433"/>
+<taskprogress task="SYN Stealth Scan" time="1599011388" percent="71.20" remaining="37" etc="1599011425"/>
+<taskend task="SYN Stealth Scan" time="1599011426" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1599011426"/>
+<taskend task="Service scan" time="1599011432" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1599011437"/>
+<taskend task="Traceroute" time="1599011437"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1599011437"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1599011437"/>
+<taskbegin task="NSE" time="1599011437"/>
+<taskend task="NSE" time="1599011438"/>
+<taskbegin task="NSE" time="1599011438"/>
+<taskend task="NSE" time="1599011438"/>
+<taskbegin task="NSE" time="1599011438"/>
+<taskend task="NSE" time="1599011438"/>
+<host starttime="1599011297" endtime="1599011438"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.14" addrtype="ipv4"/>
+<hostnames>
+<hostname name="grandpa.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="6.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:6.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT POST MOVE MKCOL PROPPATCH&#xa;  Potentially risky methods: TRACE COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT MOVE MKCOL PROPPATCH"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>COPY</elem>
+<elem>PROPFIND</elem>
+<elem>SEARCH</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+<elem>DELETE</elem>
+<elem>PUT</elem>
+<elem>POST</elem>
+<elem>MOVE</elem>
+<elem>MKCOL</elem>
+<elem>PROPPATCH</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+<elem>COPY</elem>
+<elem>PROPFIND</elem>
+<elem>SEARCH</elem>
+<elem>LOCK</elem>
+<elem>UNLOCK</elem>
+<elem>DELETE</elem>
+<elem>PUT</elem>
+<elem>MOVE</elem>
+<elem>MKCOL</elem>
+<elem>PROPPATCH</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/6.0"><elem>Microsoft-IIS/6.0</elem>
+</script><script id="http-title" output="Under Construction"><elem key="title">Under Construction</elem>
+</script><script id="http-webdav-scan" output="&#xa;  Server Type: Microsoft-IIS/6.0&#xa;  Public Options: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH&#xa;  WebDAV type: Unknown&#xa;  Allowed Methods: OPTIONS, TRACE, GET, HEAD, COPY, PROPFIND, SEARCH, LOCK, UNLOCK&#xa;  Server Date: Wed, 02 Sep 2020 01:56:29 GMT"><elem key="Server Type">Microsoft-IIS/6.0</elem>
+<elem key="Public Options">OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH</elem>
+<elem key="WebDAV type">Unknown</elem>
+<elem key="Allowed Methods">OPTIONS, TRACE, GET, HEAD, COPY, PROPFIND, SEARCH, LOCK, UNLOCK</elem>
+<elem key="Server Date">Wed, 02 Sep 2020 01:56:29 GMT</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2003" accuracy="90" line="71784">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2003</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2003 SP2" accuracy="88" line="72922">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2003::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows XP SP3" accuracy="88" line="84746">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="XP" accuracy="88"><cpe>cpe:/o:microsoft:windows_xp::sp3</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2003 2" accuracy="86" line="71820">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2003" accuracy="86"><cpe>cpe:/o:microsoft:windows_server_2003</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 2000 SP4" accuracy="86" line="71132">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2000" accuracy="86"><cpe>cpe:/o:microsoft:windows_2000::sp4</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=9/1%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F4EFA6E%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=FD%GCD=1%ISR=110%TS=0)&#xa;OPS(O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)&#xa;WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)&#xa;ECN(R=Y%DF=N%TG=80%W=FAF0%O=M54DNW0NNS%CC=N%Q=)&#xa;T1(R=Y%DF=N%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;T4(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=S%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="253" difficulty="Good luck!" values="5C37C5ED,C8B5F479,8339186E,1D38DCBA,943A8EF6,9B6CFA3"/>
+<ipidsequence class="Busy server or unknown class" values="42C5,436A,4420,44D2,4575,4624"/>
+<tcptssequence class="zero timestamp" values="0,0,0,0,0,0"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="47.90"/>
+<hop ttl="2" ipaddr="10.10.10.14" rtt="47.91" host="grandpa.htb"/>
+</trace>
+<times srtt="48496" rttvar="1230" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1599011438"/>
+<taskend task="NSE" time="1599011438"/>
+<taskbegin task="NSE" time="1599011438"/>
+<taskend task="NSE" time="1599011438"/>
+<taskbegin task="NSE" time="1599011438"/>
+<taskend task="NSE" time="1599011438"/>
+<runstats><finished time="1599011438" timestr="Tue Sep  1 20:50:38 2020" elapsed="140.93" summary="Nmap done at Tue Sep  1 20:50:38 2020; 1 IP address (1 host up) scanned in 140.93 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

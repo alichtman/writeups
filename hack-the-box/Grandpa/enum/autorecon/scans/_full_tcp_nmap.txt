@@ -1,0 +1,55 @@
+# Nmap 7.80 scan initiated Tue Sep  1 20:48:17 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Grandpa/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Grandpa/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.14
+adjust_timeouts2: packet supposedly had rtt of -696199 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -696199 microseconds.  Ignoring time.
+Nmap scan report for grandpa.htb (10.10.10.14)
+Host is up, received user-set (0.048s latency).
+Scanned at 2020-09-01 20:48:17 CDT for 141s
+Not shown: 65534 filtered ports
+Reason: 65534 no-responses
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 6.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT POST MOVE MKCOL PROPPATCH
+|_  Potentially risky methods: TRACE COPY PROPFIND SEARCH LOCK UNLOCK DELETE PUT MOVE MKCOL PROPPATCH
+|_http-server-header: Microsoft-IIS/6.0
+|_http-title: Under Construction
+| http-webdav-scan: 
+|   Server Type: Microsoft-IIS/6.0
+|   Public Options: OPTIONS, TRACE, GET, HEAD, DELETE, PUT, POST, COPY, MOVE, MKCOL, PROPFIND, PROPPATCH, LOCK, UNLOCK, SEARCH
+|   WebDAV type: Unknown
+|   Allowed Methods: OPTIONS, TRACE, GET, HEAD, COPY, PROPFIND, SEARCH, LOCK, UNLOCK
+|_  Server Date: Wed, 02 Sep 2020 01:56:29 GMT
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2003|XP|2000 (90%)
+OS CPE: cpe:/o:microsoft:windows_server_2003 cpe:/o:microsoft:windows_xp::sp3 cpe:/o:microsoft:windows_2000::sp4
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2003 (90%), Microsoft Windows Server 2003 SP2 (88%), Microsoft Windows XP SP3 (88%), Microsoft Windows Server 2003 2 (86%), Microsoft Windows 2000 SP4 (86%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=9/1%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F4EFA6E%P=x86_64-pc-linux-gnu)
+SEQ(SP=FD%GCD=1%ISR=110%TS=0)
+OPS(O1=M54DNW0NNT00NNS%O2=M54DNW0NNT00NNS%O3=M54DNW0NNT00%O4=M54DNW0NNT00NNS%O5=M54DNW0NNT00NNS%O6=M54DNNT00NNS)
+WIN(W1=FAF0%W2=FAF0%W3=FAF0%W4=FAF0%W5=FAF0%W6=FAF0)
+ECN(R=Y%DF=N%TG=80%W=FAF0%O=M54DNW0NNS%CC=N%Q=)
+T1(R=Y%DF=N%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+T4(R=Y%DF=N%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=S%TG=80%CD=Z)
+
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   47.90 ms 10.10.14.1
+2   47.91 ms grandpa.htb (10.10.10.14)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Sep  1 20:50:38 2020 -- 1 IP address (1 host up) scanned in 140.93 seconds

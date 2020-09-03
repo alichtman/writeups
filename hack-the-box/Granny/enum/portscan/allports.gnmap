@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Wed Sep  2 23:29:22 2020 as: nmap -A -sVC -v -p- -Pn -oA allports 10.10.10.15
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.15 (granny.htb)	Status: Up
+Host: 10.10.10.15 (granny.htb)	Ports: 80/open/tcp//http//Microsoft IIS httpd 6.0/	Ignored State: filtered (65534)	Seq Index: 248	IP ID Seq: Busy server or unknown class
+# Nmap done at Wed Sep  2 23:32:27 2020 -- 1 IP address (1 host up) scanned in 185.62 seconds

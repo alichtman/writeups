@@ -1,0 +1,4 @@
+/aspnet_client (Status: 301) [Size: 158]
+/devel.aspx (Status: 200) [Size: 0]
+/ex.aspx (Status: 200) [Size: 0]
+/shell.aspx (Status: 200) [Size: 0]

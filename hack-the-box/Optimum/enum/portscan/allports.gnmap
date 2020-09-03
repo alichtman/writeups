@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Tue Sep  1 19:30:33 2020 as: nmap -A -sVC -v -p- -Pn -oA allports 10.10.10.8
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.8 (optimum.htb)	Status: Up
+Host: 10.10.10.8 (optimum.htb)	Ports: 80/open/tcp//http//HttpFileServer httpd 2.3/	Ignored State: filtered (65534)	Seq Index: 259	IP ID Seq: Busy server or unknown class
+# Nmap done at Tue Sep  1 19:34:14 2020 -- 1 IP address (1 host up) scanned in 221.34 seconds

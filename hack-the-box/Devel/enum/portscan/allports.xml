@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Aug 31 17:36:03 2020 as: nmap -A -sVC -v -p- -Pn -oA allports 10.10.10.5 -->
+<nmaprun scanner="nmap" args="nmap -A -sVC -v -p- -Pn -oA allports 10.10.10.5" start="1598913363" startstr="Mon Aug 31 17:36:03 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1598913363"/>
+<taskend task="NSE" time="1598913363"/>
+<taskbegin task="NSE" time="1598913363"/>
+<taskend task="NSE" time="1598913363"/>
+<taskbegin task="NSE" time="1598913363"/>
+<taskend task="NSE" time="1598913363"/>
+<taskbegin task="SYN Stealth Scan" time="1598913363"/>
+<taskprogress task="SYN Stealth Scan" time="1598913394" percent="8.51" remaining="334" etc="1598913727"/>
+<taskprogress task="SYN Stealth Scan" time="1598913424" percent="29.43" remaining="147" etc="1598913570"/>
+<taskprogress task="SYN Stealth Scan" time="1598913454" percent="47.08" remaining="103" etc="1598913556"/>
+<taskprogress task="SYN Stealth Scan" time="1598913490" percent="59.70" remaining="86" etc="1598913576"/>
+<taskprogress task="SYN Stealth Scan" time="1598913520" percent="82.71" remaining="33" etc="1598913553"/>
+<taskend task="SYN Stealth Scan" time="1598913538" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1598913538"/>
+<taskend task="Service scan" time="1598913544" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1598913548"/>
+<taskend task="Traceroute" time="1598913548"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1598913548"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1598913548"/>
+<taskbegin task="NSE" time="1598913548"/>
+<taskend task="NSE" time="1598913549"/>
+<taskbegin task="NSE" time="1598913549"/>
+<taskend task="NSE" time="1598913549"/>
+<taskbegin task="NSE" time="1598913549"/>
+<taskend task="NSE" time="1598913549"/>
+<host starttime="1598913363" endtime="1598913549"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.5" addrtype="ipv4"/>
+<hostnames>
+<hostname name="devel.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;03-18-17  02:06AM       &lt;DIR&gt;          aspnet_client&#xa;09-04-20  02:01AM                 2836 devel.aspx&#xa;09-04-20  05:40AM                 2835 ex.aspx&#xa;03-17-17  05:37PM                  689 iisstart.htm&#xa;03-17-17  05:37PM               184946 welcome.png"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script><script id="http-title" output="IIS7"><elem key="title">IIS7</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="21"/>
+</os>
+<uptime seconds="28455" lastboot="Mon Aug 31 09:44:54 2020"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="398EAC03,ABB78D1,18C3A265,7FAD8F2F,A2A59F08,42A10C3"/>
+<ipidsequence class="Busy server or unknown class" values="7745,77EA,7871,790A,79AC,7A39"/>
+<tcptssequence class="100HZ" values="2B6AB8,2B6AC3,2B6ACD,2B6AD6,2B6AE0,2B6AEA"/>
+<trace port="21" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="44.07"/>
+<hop ttl="2" ipaddr="10.10.10.5" rtt="44.06" host="devel.htb"/>
+</trace>
+<times srtt="45812" rttvar="2960" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1598913549"/>
+<taskend task="NSE" time="1598913549"/>
+<taskbegin task="NSE" time="1598913549"/>
+<taskend task="NSE" time="1598913549"/>
+<taskbegin task="NSE" time="1598913549"/>
+<taskend task="NSE" time="1598913549"/>
+<runstats><finished time="1598913549" timestr="Mon Aug 31 17:39:09 2020" elapsed="186.80" summary="Nmap done at Mon Aug 31 17:39:09 2020; 1 IP address (1 host up) scanned in 186.80 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
