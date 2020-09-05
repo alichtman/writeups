@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Sep  3 02:33:26 2020 as: nmap -A -sVC -v -p- -Pn -oA allports sense.htb -->
+<nmaprun scanner="nmap" args="nmap -A -sVC -v -p- -Pn -oA allports sense.htb" start="1599118406" startstr="Thu Sep  3 02:33:26 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599118407"/>
+<taskend task="NSE" time="1599118407"/>
+<taskbegin task="NSE" time="1599118407"/>
+<taskend task="NSE" time="1599118407"/>
+<taskbegin task="NSE" time="1599118407"/>
+<taskend task="NSE" time="1599118407"/>
+<taskbegin task="SYN Stealth Scan" time="1599118407"/>
+<taskprogress task="SYN Stealth Scan" time="1599118438" percent="16.96" remaining="152" etc="1599118590"/>
+<taskprogress task="SYN Stealth Scan" time="1599118468" percent="32.19" remaining="129" etc="1599118596"/>
+<taskprogress task="SYN Stealth Scan" time="1599118498" percent="48.86" remaining="96" etc="1599118593"/>
+<taskprogress task="SYN Stealth Scan" time="1599118528" percent="62.26" remaining="74" etc="1599118601"/>
+<taskprogress task="SYN Stealth Scan" time="1599118558" percent="75.45" remaining="50" etc="1599118607"/>
+<taskend task="SYN Stealth Scan" time="1599118602" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1599118603"/>
+<taskend task="Service scan" time="1599118617" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1599118622"/>
+<taskend task="Traceroute" time="1599118623"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1599118623"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1599118623"/>
+<taskbegin task="NSE" time="1599118623"/>
+<taskend task="NSE" time="1599118634"/>
+<taskbegin task="NSE" time="1599118634"/>
+<taskend task="NSE" time="1599118694"/>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<host starttime="1599118407" endtime="1599118694"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.60" addrtype="ipv4"/>
+<hostnames>
+<hostname name="sense.htb" type="user"/>
+<hostname name="sense.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="lighttpd" version="1.4.35" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd:1.4.35</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="lighttpd/1.4.35"><elem>lighttpd/1.4.35</elem>
+</script><script id="http-title" output="Did not follow redirect to https://sense.htb/"><elem key="redirect_url">https://sense.htb/</elem>
+</script><script id="https-redirect" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https" tunnel="ssl" method="table" conf="3"/><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Comau C4G robot control unit" accuracy="92" line="19189">
+<osclass type="specialized" vendor="Comau" osfamily="embedded" accuracy="92"/>
+</osmatch>
+<osmatch name="OpenBSD 4.0" accuracy="89" line="90353">
+<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="89"><cpe>cpe:/o:openbsd:openbsd:4.0</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="75" lastboot="Thu Sep  3 02:36:59 2020"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="CF1CA745,2065F3C3,9681C7B3,EF24C80B,F16477BB,A035F49F"/>
+<ipidsequence class="Randomized" values="CB82,6059,115C,3A5,A9A,A5F4"/>
+<tcptssequence class="other" values="81A5277C,95D7E6AC,FE71B7DF,C1FA3CA6,80320324,4F4617B1"/>
+<trace port="443" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="66.00"/>
+<hop ttl="2" ipaddr="10.10.10.60" rtt="66.01" host="sense.htb"/>
+</trace>
+<times srtt="61824" rttvar="6454" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<runstats><finished time="1599118694" timestr="Thu Sep  3 02:38:14 2020" elapsed="287.41" summary="Nmap done at Thu Sep  3 02:38:14 2020; 1 IP address (1 host up) scanned in 287.41 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

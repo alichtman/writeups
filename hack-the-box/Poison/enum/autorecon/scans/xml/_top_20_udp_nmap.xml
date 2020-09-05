@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Sep  5 02:25:43 2020 as: nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.84 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.84" start="1599290743" startstr="Sat Sep  5 02:25:43 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="20" services="53,67-69,123,135,137-139,161-162,445,500,514,520,631,1434,1900,4500,49152"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599290744"/>
+<taskend task="NSE" time="1599290744"/>
+<taskbegin task="NSE" time="1599290744"/>
+<taskend task="NSE" time="1599290744"/>
+<taskbegin task="NSE" time="1599290744"/>
+<taskend task="NSE" time="1599290744"/>
+<taskbegin task="UDP Scan" time="1599290744"/>
+<taskend task="UDP Scan" time="1599290745" extrainfo="20 total ports"/>
+<taskbegin task="Service scan" time="1599290745"/>
+<taskend task="Service scan" time="1599290988" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1599290988"/>
+<taskend task="Traceroute" time="1599290989"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1599290989"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1599290989"/>
+<taskbegin task="NSE" time="1599290989"/>
+<taskend task="NSE" time="1599291003"/>
+<taskbegin task="NSE" time="1599291003"/>
+<taskend task="NSE" time="1599291004"/>
+<taskbegin task="NSE" time="1599291004"/>
+<taskend task="NSE" time="1599291004"/>
+<host starttime="1599290744" endtime="1599291004"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.84" addrtype="ipv4"/>
+<hostnames>
+<hostname name="poison.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="53"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="67"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="69"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="tftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="udp" portid="135"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="138"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="161"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="162"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmptrap" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="520"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="route" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1434"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ms-sql-m" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="4500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="53"/>
+<osmatch name="FreeBSD 11.0-RELEASE - 12.0-CURRENT" accuracy="100" line="26317">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="100"><cpe>cpe:/o:freebsd:freebsd:11</cpe></osclass>
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="100"><cpe>cpe:/o:freebsd:freebsd:12</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 11.0-STABLE" accuracy="100" line="26337">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="100"><cpe>cpe:/o:freebsd:freebsd:11.0</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=9/5%OT=%CT=%CU=53%PV=Y%DS=2%DC=T%G=N%TM=5F533E7C%P=x86&#xa;OS:_64-pc-linux-gnu)SEQ(CI=Z)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;OS:T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S&#xa;OS:+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK&#xa;OS:=G%RUD=G)IE(R=Y%DFI=S%T=40%CD=S)&#xa;"/>
+</os>
+<distance value="2"/>
+<trace port="631" proto="udp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="57.05"/>
+<hop ttl="2" ipaddr="10.10.10.84" rtt="66.45" host="poison.htb"/>
+</trace>
+<times srtt="60692" rttvar="4215" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1599291004"/>
+<taskend task="NSE" time="1599291004"/>
+<taskbegin task="NSE" time="1599291004"/>
+<taskend task="NSE" time="1599291004"/>
+<taskbegin task="NSE" time="1599291004"/>
+<taskend task="NSE" time="1599291004"/>
+<runstats><finished time="1599291004" timestr="Sat Sep  5 02:30:04 2020" elapsed="260.45" summary="Nmap done at Sat Sep  5 02:30:04 2020; 1 IP address (1 host up) scanned in 260.45 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,4 @@
+https://nineveh.htb/index.html (Status: 200)
+https://nineveh.htb/db (Status: 301)
+https://nineveh.htb/server-status (Status: 403)
+https://nineveh.htb/secure_notes (Status: 301)

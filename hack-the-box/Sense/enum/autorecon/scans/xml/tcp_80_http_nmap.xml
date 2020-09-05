@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Sep  3 02:35:22 2020 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.60 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.60" start="1599118522" startstr="Thu Sep  3 02:35:22 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599118522"/>
+<taskend task="NSE" time="1599118522"/>
+<taskbegin task="NSE" time="1599118522"/>
+<taskend task="NSE" time="1599118522"/>
+<taskbegin task="NSE" time="1599118522"/>
+<taskend task="NSE" time="1599118522"/>
+<taskbegin task="SYN Stealth Scan" time="1599118522"/>
+<taskend task="SYN Stealth Scan" time="1599118522" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1599118522"/>
+<taskend task="Service scan" time="1599118528" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1599118528"/>
+<taskprogress task="NSE" time="1599118559" percent="98.69" remaining="1" etc="1599118559"/>
+<taskprogress task="NSE" time="1599118589" percent="99.67" remaining="1" etc="1599118589"/>
+<taskprogress task="NSE" time="1599118619" percent="99.67" remaining="1" etc="1599118619"/>
+<taskprogress task="NSE" time="1599118649" percent="99.67" remaining="1" etc="1599118649"/>
+<taskprogress task="NSE" time="1599118679" percent="99.67" remaining="1" etc="1599118679"/>
+<taskend task="NSE" time="1599118700"/>
+<taskbegin task="NSE" time="1599118700"/>
+<taskend task="NSE" time="1599118700"/>
+<taskbegin task="NSE" time="1599118700"/>
+<taskend task="NSE" time="1599118700"/>
+<host starttime="1599118522" endtime="1599118700"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.60" addrtype="ipv4"/>
+<hostnames>
+<hostname name="sense.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="lighttpd" version="1.4.35" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd:1.4.35</cpe></service><script id="http-chrono" output="Request times for /; avg: 441.05ms; min: 201.35ms; max: 1254.81ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Thu, 03 Sep 2020 07:41:26 GMT; +5m53s from local time."><elem key="date">2020-09-03T07:41:26+00:00</elem>
+<elem key="delta">353.0</elem>
+</script><script id="http-default-accounts" output="&#xa;  [Arris 2307] at /logo_t.gif&#xa;    &lt;blank&gt;:&lt;blank&gt;&#xa;"><table key="Arris 2307">
+<elem key="path">/logo_t.gif</elem>
+<table key="credentials">
+<table>
+<elem key="username"></elem>
+<elem key="password"></elem>
+</table>
+</table>
+</table>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Location: https://sense.htb/&#xa;  Content-Length: 0&#xa;  Connection: close&#xa;  Date: Thu, 03 Sep 2020 07:41:26 GMT&#xa;  Server: lighttpd/1.4.35&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-passwd" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="lighttpd/1.4.35"><elem>lighttpd/1.4.35</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    &#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Did not follow redirect to https://sense.htb/"><elem key="redirect_url">https://sense.htb/</elem>
+</script><script id="http-traceroute" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: false&#xa;  Redirected To: https://sense.htb/&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">false</elem>
+<elem key="Redirected To">https://sense.htb/</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;108 names had status 301&#xa;19 names had status ERROR"/><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="77698" rttvar="77698" to="388490"/>
+</host>
+<taskbegin task="NSE" time="1599118700"/>
+<taskend task="NSE" time="1599118700"/>
+<taskbegin task="NSE" time="1599118700"/>
+<taskend task="NSE" time="1599118700"/>
+<taskbegin task="NSE" time="1599118700"/>
+<taskend task="NSE" time="1599118700"/>
+<runstats><finished time="1599118700" timestr="Thu Sep  3 02:38:20 2020" elapsed="178.50" summary="Nmap done at Thu Sep  3 02:38:20 2020; 1 IP address (1 host up) scanned in 178.50 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

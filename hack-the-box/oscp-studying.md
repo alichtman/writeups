@@ -2,25 +2,36 @@
 
 ## Machines
 
-| Linux            | Windows       | Extra Challenging     |
-| ---              | ---           | ---                   |
-| Lame        [x]  | Legacy   [x]  | Jeeves (Windows) [ ]  |
-| Brainfuck   [ ]  | Blue     [x]  | Bart (Windows)   [ ]  |
-| Shocker     [x]  | Devel    [x]  | Tally (Windows)  [ ]  |
-| Bashed      [x]  | Optimum  [x]  | Arctic (Windows) [ ]  |
-| Nibbles     [o]  | Bastard  [ ]  | Jail (Linux)     [ ]  |
-| Beep        [x]  | Granny   [x]  | Falafel (Linux)  [ ]  |
-| Nineveh     [ ]  | Grandpa  [x]  | Devoops (Linux)  [ ]  |
-| Cronos      [x]  | Arctic   [ ]  | Hawk (Linux)     [ ]  |
-| Sense       [ ]  | Silo     [ ]  |                       |
-| Solidstate  [o]  | Bounty   [ ]  |                       |
-| Kotarak     [ ]  | Jerry    [ ]  |                       |
-| Node        [ ]  |               |                       |
-| Valentine   [o]  |               |                       |
-| Poison      [ ]  |               |                       |
-| Sunday      [ ]  |               |                       |
-| Tartarsauce [ ]  |               |                       |
-| Magic       [x]  |               |                       |
+| Linux            | Windows         | HARD Linux            | HARD Windows  |
+| ---              | ---             | ---                   |               |
+| Lame        [x]  | Legacy     [x]  | Book             [ ]  | Jeeves   [ ]  |
+| Brainfuck   [ ]  | Blue       [x]  | Mango            [ ]  | Bart     [ ]  |
+| Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
+| Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [ ]  |
+| Nibbles     [o]  | Bastard    [ ]  | Jail             [ ]  | Netmon   [ ]  |
+| Beep        [x]  | Granny     [x]  | Falafel          [ ]  | Sizzle   [ ]  |
+| Nineveh     [x]  | Grandpa    [x]  | Devoops          [ ]  | Sniper   [ ]  |
+| Cronos      [x]  | Servmon    [ ]  | Hawk             [ ]  | Control  [ ]  |
+| Sense       [x]  | Silo       [ ]  | Lightweight      [ ]  | Nest     [ ]  |
+| Solidstate  [o]  | Bounty     [ ]  | La Casa De Papel [ ]  | Sauna    [ ]  |
+| Kotarak     [ ]  | Jerry      [ ]  | Jail             [ ]  | Querier  [ ]  |
+| Node        [ ]  | Conceal    [ ]  | Safe             [ ]  |               |
+| Valentine   [o]  | Chatterbox [ ]  |                       |               |
+| Poison      [ ]  | Forest     [ ]  |                       |               |
+| Sunday      [ ]  | BankRobber [ ]  |                       |               |
+| Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
+| Magic       [x]  | Secnotes   [ ]  |                       |               |
+| Irked       [ ]  | Buff       [ ]  |                       |               |
+| Friendzone  [ ]  |                 |                       |               |
+| Swagshop    [ ]  |                 |                       |               |
+| Networked   [ ]  |                 |                       |               |
+| Jarvis      [ ]  |                 |                       |               |
+| Mirai       [ ]  |                 |                       |               |
+| Popcorn     [ ]  |                 |                       |               |
+| Haircut     [ ]  |                 |                       |               |
+| Blocky      [ ]  |                 |                       |               |
+| Frolic      [ ]  |                 |                       |               |
+| Postman     [ ]  |                 |                       |               |
 
 ## Legend
 

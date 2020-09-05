@@ -1,0 +1,52 @@
+# Nmap 7.80 scan initiated Thu Sep  3 02:33:15 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.60
+adjust_timeouts2: packet supposedly had rtt of -409389 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -409389 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -207124 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -207124 microseconds.  Ignoring time.
+Nmap scan report for sense.htb (10.10.10.60)
+Host is up, received user-set (0.064s latency).
+Scanned at 2020-09-03 02:33:15 CDT for 299s
+Not shown: 65533 filtered ports
+Reason: 65533 no-responses
+PORT    STATE SERVICE    REASON         VERSION
+80/tcp  open  http       syn-ack ttl 63 lighttpd 1.4.35
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: lighttpd/1.4.35
+|_http-title: Did not follow redirect to https://sense.htb/
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+443/tcp open  ssl/https? syn-ack ttl 63
+|_ssl-date: TLS randomness does not represent time
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized
+Running (JUST GUESSING): OpenBSD 4.X (93%), Comau embedded (85%)
+OS CPE: cpe:/o:openbsd:openbsd:4.3
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: OpenBSD 4.3 (93%), OpenBSD 4.0 (91%), Comau C4G robot control unit (85%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=9/3%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F509D66%P=x86_64-pc-linux-gnu)
+SEQ(SP=103%GCD=2%ISR=10A%TI=RD%TS=21)
+OPS(O1=M54DNW7ST11%O2=M54DNW7ST11%O3=M280NW7NNT11%O4=M54DNW7ST11%O5=M218NW7ST11%O6=M109ST11)
+WIN(W1=FECC%W2=FECC%W3=FECC%W4=FECC%W5=FECC%W6=FECC)
+ECN(R=Y%DF=Y%TG=40%W=FECC%O=M54DNW7SLL%CC=N%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=S%TG=40%CD=S)
+
+Uptime guess: 0.001 days (since Thu Sep  3 02:36:40 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=254 (Good luck!)
+IP ID Sequence Generation: Randomized
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   71.00 ms 10.10.14.1
+2   70.99 ms sense.htb (10.10.10.60)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep  3 02:38:14 2020 -- 1 IP address (1 host up) scanned in 298.59 seconds

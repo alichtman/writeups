@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Sep  5 02:25:43 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.84 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.84" start="1599290743" startstr="Sat Sep  5 02:25:43 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599290744"/>
+<taskend task="NSE" time="1599290744"/>
+<taskbegin task="NSE" time="1599290744"/>
+<taskend task="NSE" time="1599290744"/>
+<taskbegin task="NSE" time="1599290744"/>
+<taskend task="NSE" time="1599290744"/>
+<taskbegin task="SYN Stealth Scan" time="1599290744"/>
+<taskprogress task="SYN Stealth Scan" time="1599290775" percent="2.53" remaining="1194" etc="1599291969"/>
+<taskprogress task="SYN Stealth Scan" time="1599290805" percent="4.61" remaining="1262" etc="1599292067"/>
+<taskprogress task="SYN Stealth Scan" time="1599290952" percent="14.83" remaining="1195" etc="1599292147"/>
+<taskprogress task="SYN Stealth Scan" time="1599291030" percent="20.27" remaining="1125" etc="1599292155"/>
+<taskprogress task="SYN Stealth Scan" time="1599291105" percent="25.52" remaining="1054" etc="1599292159"/>
+<taskprogress task="SYN Stealth Scan" time="1599291183" percent="30.89" remaining="983" etc="1599292165"/>
+<taskprogress task="SYN Stealth Scan" time="1599291252" percent="35.88" remaining="908" etc="1599292160"/>
+<taskprogress task="SYN Stealth Scan" time="1599291315" percent="40.55" remaining="838" etc="1599292152"/>
+<taskprogress task="SYN Stealth Scan" time="1599291381" percent="45.43" remaining="766" etc="1599292146"/>
+<taskprogress task="SYN Stealth Scan" time="1599291450" percent="50.50" remaining="692" etc="1599292142"/>
+<taskprogress task="SYN Stealth Scan" time="1599291519" percent="55.56" remaining="620" etc="1599292139"/>
+<taskprogress task="SYN Stealth Scan" time="1599291588" percent="60.55" remaining="550" etc="1599292138"/>
+<taskprogress task="SYN Stealth Scan" time="1599291654" percent="65.47" remaining="480" etc="1599292134"/>
+<taskprogress task="SYN Stealth Scan" time="1599291723" percent="70.47" remaining="411" etc="1599292133"/>
+<taskprogress task="SYN Stealth Scan" time="1599291795" percent="75.66" remaining="339" etc="1599292133"/>
+<taskprogress task="SYN Stealth Scan" time="1599291864" percent="80.73" remaining="268" etc="1599292131"/>
+<taskprogress task="SYN Stealth Scan" time="1599291936" percent="85.84" remaining="197" etc="1599292133"/>
+<taskprogress task="SYN Stealth Scan" time="1599292017" percent="90.92" remaining="128" etc="1599292144"/>
+<taskprogress task="SYN Stealth Scan" time="1599292092" percent="96.09" remaining="55" etc="1599292147"/>
+<taskend task="SYN Stealth Scan" time="1599292154" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1599292154"/>
+<taskend task="Service scan" time="1599292160" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1599292174"/>
+<taskend task="Traceroute" time="1599292174"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1599292174"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1599292174"/>
+<taskbegin task="NSE" time="1599292174"/>
+<taskend task="NSE" time="1599292176"/>
+<taskbegin task="NSE" time="1599292176"/>
+<taskend task="NSE" time="1599292177"/>
+<taskbegin task="NSE" time="1599292177"/>
+<taskend task="NSE" time="1599292177"/>
+<host starttime="1599290744" endtime="1599292177"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.84" addrtype="ipv4"/>
+<hostnames>
+<hostname name="poison.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="resets" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2" extrainfo="FreeBSD 20161230; protocol 2.0" ostype="FreeBSD" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2</cpe><cpe>cpe:/o:freebsd:freebsd</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 e3:3b:7d:3c:8f:4b:8c:f9:cd:7f:d2:3a:ce:2d:ff:bb (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFLpOCLU3rRUdNNbb5u5WlP+JKUpoYw4znHe0n4mRlv5sQ5kkkZSDNMqXtfWUFzevPaLaJboNBOAXjPwd1OV1wL2YFcGsTL5MOXgTeW4ixpxNBsnBj67mPSmQSaWcudPUmhqnT5VhKYLbPk43FsWqGkNhDtbuBVo9/BmN+GjN1v7w54PPtn8wDd7Zap3yStvwRxeq8E0nBE4odsfBhPPC01302RZzkiXymV73WqmI8MeF9W94giTBQS5swH6NgUe4/QV1tOjTct/uzidFx+8bbcwcQ1eUgK5DyRLaEhou7PRlZX6Pg5YgcuQUlYbGjgk6ycMJDuwb2D5mJkAzN4dih&#xa;  256 4c:e8:c6:02:bd:fc:83:ff:c9:80:01:54:7d:22:81:72 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKXh613KF4mJTcOxbIy/3mN/O/wAYht2Vt4m9PUoQBBSao16RI9B3VYod1HSbx3PYsPpKmqjcT7A/fHggPIzDYU=&#xa;  256 0b:8f:d5:71:85:90:13:85:61:8b:eb:34:13:5f:94:3b (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJrg2EBbG5D2maVLhDME5mZwrvlhTXrK7jiEI+MiZ+Am"><table>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDFLpOCLU3rRUdNNbb5u5WlP+JKUpoYw4znHe0n4mRlv5sQ5kkkZSDNMqXtfWUFzevPaLaJboNBOAXjPwd1OV1wL2YFcGsTL5MOXgTeW4ixpxNBsnBj67mPSmQSaWcudPUmhqnT5VhKYLbPk43FsWqGkNhDtbuBVo9/BmN+GjN1v7w54PPtn8wDd7Zap3yStvwRxeq8E0nBE4odsfBhPPC01302RZzkiXymV73WqmI8MeF9W94giTBQS5swH6NgUe4/QV1tOjTct/uzidFx+8bbcwcQ1eUgK5DyRLaEhou7PRlZX6Pg5YgcuQUlYbGjgk6ycMJDuwb2D5mJkAzN4dih</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="bits">2048</elem>
+<elem key="fingerprint">e33b7d3c8f4b8cf9cd7fd23ace2dffbb</elem>
+</table>
+<table>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKXh613KF4mJTcOxbIy/3mN/O/wAYht2Vt4m9PUoQBBSao16RI9B3VYod1HSbx3PYsPpKmqjcT7A/fHggPIzDYU=</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">4ce8c602bdfc83ffc98001547d228172</elem>
+</table>
+<table>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIJrg2EBbG5D2maVLhDME5mZwrvlhTXrK7jiEI+MiZ+Am</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="bits">256</elem>
+<elem key="fingerprint">0b8fd57185901385618beb34135f943b</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(FreeBSD) PHP/5.6.32" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.29 (FreeBSD) PHP/5.6.32"><elem>Apache/2.4.29 (FreeBSD) PHP/5.6.32</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=UTF-8)."></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="41278"/>
+<osmatch name="FreeBSD 11.0-RELEASE - 12.0-CURRENT" accuracy="97" line="26317">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="97"><cpe>cpe:/o:freebsd:freebsd:11</cpe></osclass>
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="97"><cpe>cpe:/o:freebsd:freebsd:12</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 9.1-STABLE" accuracy="95" line="29016">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="9.X" accuracy="95"><cpe>cpe:/o:freebsd:freebsd:9.1</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 11.0-STABLE" accuracy="95" line="26337">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="95"><cpe>cpe:/o:freebsd:freebsd:11.0</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 11.0-CURRENT" accuracy="94" line="26222">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="94"><cpe>cpe:/o:freebsd:freebsd:11.0</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 11.0-RELEASE" accuracy="94" line="26242">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="11.X" accuracy="94"><cpe>cpe:/o:freebsd:freebsd:11.0</cpe></osclass>
+</osmatch>
+<osmatch name="FreeNAS 9.10 (FreeBSD 10.3-STABLE)" accuracy="91" line="29544">
+<osclass type="storage-misc" vendor="FreeNAS" osfamily="FreeNAS" osgen="9.X" accuracy="91"><cpe>cpe:/o:freenas:freenas:9.10</cpe></osclass>
+<osclass type="storage-misc" vendor="FreeBSD" osfamily="FreeBSD" osgen="10.X" accuracy="91"><cpe>cpe:/o:freebsd:freebsd:10.3</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 12.0-CURRENT" accuracy="91" line="26394">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="12.X" accuracy="91"><cpe>cpe:/o:freebsd:freebsd:12.0</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 7.0-BETA4 - 7.0" accuracy="91" line="27632">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="7.X" accuracy="91"><cpe>cpe:/o:freebsd:freebsd:7</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 7.0-RELEASE" accuracy="91" line="27832">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="7.X" accuracy="91"><cpe>cpe:/o:freebsd:freebsd:7.0</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 10.1-RELEASE" accuracy="89" line="25996">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="10.X" accuracy="89"><cpe>cpe:/o:freebsd:freebsd:10.1</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=9/5%OT=22%CT=1%CU=41278%PV=Y%DS=2%DC=T%G=Y%TM=5F534311&#xa;OS:%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=107%TI=Z%CI=Z%TS=22)OPS(O1=M&#xa;OS:54DNW6ST11%O2=M54DNW6ST11%O3=M280NW6NNT11%O4=M54DNW6ST11%O5=M218NW6ST11%&#xa;OS:O6=M109ST11)WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FFFF)ECN(R=Y%&#xa;OS:DF=Y%T=40%W=FFFF%O=M54DNW6SLL%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=&#xa;OS:0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=FFFF%S=O%A=S+%F=AS%O=M109NW6ST11%RD=0%Q=)&#xa;OS:T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=N)T5(R=Y%DF=Y%T=40%W=0%&#xa;OS:S=Z%A=O%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R&#xa;OS:=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=38%UN=0%R&#xa;OS:IPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=S%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="4" lastboot="Sat Sep  5 02:49:33 2020"/>
+<distance value="2"/>
+<tcpsequence index="257" difficulty="Good luck!" values="97BCCEC9,F479E6B2,A559A795,BB5AC3A5,810362BF,B0F4D9B2"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="39CE9B22,902E20E1,439D6922,25C1F106,5BA72C6D,ABCD2E33"/>
+<trace port="8888" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="43.70"/>
+<hop ttl="2" ipaddr="10.10.10.84" rtt="75.19" host="poison.htb"/>
+</trace>
+<times srtt="52433" rttvar="11379" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1599292177"/>
+<taskend task="NSE" time="1599292177"/>
+<taskbegin task="NSE" time="1599292177"/>
+<taskend task="NSE" time="1599292177"/>
+<taskbegin task="NSE" time="1599292177"/>
+<taskend task="NSE" time="1599292177"/>
+<runstats><finished time="1599292177" timestr="Sat Sep  5 02:49:37 2020" elapsed="1433.74" summary="Nmap done at Sat Sep  5 02:49:37 2020; 1 IP address (1 host up) scanned in 1433.74 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

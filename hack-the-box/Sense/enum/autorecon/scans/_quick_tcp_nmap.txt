@@ -1,0 +1,19 @@
+# Nmap 7.80 scan initiated Thu Sep  3 02:33:15 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.60
+Nmap scan report for sense.htb (10.10.10.60)
+Host is up, received user-set (0.086s latency).
+Scanned at 2020-09-03 02:33:15 CDT for 126s
+Not shown: 998 filtered ports
+Reason: 998 no-responses
+PORT    STATE SERVICE    REASON         VERSION
+80/tcp  open  http       syn-ack ttl 63 lighttpd 1.4.35
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: lighttpd/1.4.35
+|_http-title: Did not follow redirect to https://sense.htb/
+|_https-redirect: ERROR: Script execution failed (use -d to debug)
+443/tcp open  ssl/https? syn-ack ttl 63
+|_ssl-date: TLS randomness does not represent time
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep  3 02:35:21 2020 -- 1 IP address (1 host up) scanned in 126.51 seconds

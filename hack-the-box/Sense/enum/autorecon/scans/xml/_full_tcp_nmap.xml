@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Sep  3 02:33:15 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.60 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sense/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.60" start="1599118395" startstr="Thu Sep  3 02:33:15 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599118395"/>
+<taskend task="NSE" time="1599118395"/>
+<taskbegin task="NSE" time="1599118395"/>
+<taskend task="NSE" time="1599118395"/>
+<taskbegin task="NSE" time="1599118395"/>
+<taskend task="NSE" time="1599118395"/>
+<taskbegin task="SYN Stealth Scan" time="1599118395"/>
+<taskprogress task="SYN Stealth Scan" time="1599118426" percent="3.08" remaining="977" etc="1599119403"/>
+<taskprogress task="SYN Stealth Scan" time="1599118456" percent="21.46" remaining="224" etc="1599118679"/>
+<taskprogress task="SYN Stealth Scan" time="1599118486" percent="44.06" remaining="116" etc="1599118602"/>
+<taskprogress task="SYN Stealth Scan" time="1599118516" percent="62.26" remaining="74" etc="1599118589"/>
+<taskprogress task="SYN Stealth Scan" time="1599118546" percent="79.76" remaining="39" etc="1599118584"/>
+<taskend task="SYN Stealth Scan" time="1599118583" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1599118583"/>
+<taskend task="Service scan" time="1599118597" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1599118602"/>
+<taskend task="Traceroute" time="1599118602"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1599118602"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1599118602"/>
+<taskbegin task="NSE" time="1599118602"/>
+<taskprogress task="NSE" time="1599118633" percent="99.63" remaining="1" etc="1599118633"/>
+<taskend task="NSE" time="1599118634"/>
+<taskbegin task="NSE" time="1599118634"/>
+<taskprogress task="NSE" time="1599118665" percent="93.75" remaining="3" etc="1599118667"/>
+<taskend task="NSE" time="1599118694"/>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<host starttime="1599118395" endtime="1599118694"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.60" addrtype="ipv4"/>
+<hostnames>
+<hostname name="sense.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="lighttpd" version="1.4.35" method="probed" conf="10"><cpe>cpe:/a:lighttpd:lighttpd:1.4.35</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="lighttpd/1.4.35"><elem>lighttpd/1.4.35</elem>
+</script><script id="http-title" output="Did not follow redirect to https://sense.htb/"><elem key="redirect_url">https://sense.htb/</elem>
+</script><script id="https-redirect" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="https" tunnel="ssl" method="table" conf="3"/><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="OpenBSD 4.3" accuracy="93" line="90591">
+<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="93"><cpe>cpe:/o:openbsd:openbsd:4.3</cpe></osclass>
+</osmatch>
+<osmatch name="OpenBSD 4.0" accuracy="91" line="90353">
+<osclass type="general purpose" vendor="OpenBSD" osfamily="OpenBSD" osgen="4.X" accuracy="91"><cpe>cpe:/o:openbsd:openbsd:4.0</cpe></osclass>
+</osmatch>
+<osmatch name="Comau C4G robot control unit" accuracy="85" line="19189">
+<osclass type="specialized" vendor="Comau" osfamily="embedded" accuracy="85"/>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=9/3%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F509D66%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=103%GCD=2%ISR=10A%TI=RD%TS=21)&#xa;OPS(O1=M54DNW7ST11%O2=M54DNW7ST11%O3=M280NW7NNT11%O4=M54DNW7ST11%O5=M218NW7ST11%O6=M109ST11)&#xa;WIN(W1=FECC%W2=FECC%W3=FECC%W4=FECC%W5=FECC%W6=FECC)&#xa;ECN(R=Y%DF=Y%TG=40%W=FECC%O=M54DNW7SLL%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=S%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="94" lastboot="Thu Sep  3 02:36:40 2020"/>
+<distance value="2"/>
+<tcpsequence index="254" difficulty="Good luck!" values="22E99D44,CA3D6B4C,9B9862B2,E258AE06,47646F3E,A1A9B14"/>
+<ipidsequence class="Randomized" values="1BB8,8DD7,4268,751C,140C,3558"/>
+<tcptssequence class="other" values="199128BC,E65BBE69,1F1B4AB2,227C82FB,4549FDFC,2E67F287"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="71.00"/>
+<hop ttl="2" ipaddr="10.10.10.60" rtt="70.99" host="sense.htb"/>
+</trace>
+<times srtt="63765" rttvar="11329" to="109081"/>
+</host>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<taskbegin task="NSE" time="1599118694"/>
+<taskend task="NSE" time="1599118694"/>
+<runstats><finished time="1599118694" timestr="Thu Sep  3 02:38:14 2020" elapsed="298.59" summary="Nmap done at Thu Sep  3 02:38:14 2020; 1 IP address (1 host up) scanned in 298.59 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

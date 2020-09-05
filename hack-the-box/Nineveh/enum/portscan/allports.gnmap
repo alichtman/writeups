@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Sep  3 22:51:27 2020 as: nmap -A -sVC -v -p- -Pn -oA allports nineveh.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.43 (nineveh.htb)	Status: Up
+Host: 10.10.10.43 (nineveh.htb)	Ports: 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/, 443/open/tcp//ssl|ssl//Apache httpd (SSL-only mode)/	Ignored State: filtered (65533)	Seq Index: 262	IP ID Seq: All zeros
+# Nmap done at Thu Sep  3 22:53:49 2020 -- 1 IP address (1 host up) scanned in 141.79 seconds

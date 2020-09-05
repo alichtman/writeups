@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Sat Sep  5 02:25:54 2020 as: nmap -A -sVC -v -p- -Pn -oA allports poison.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.84 (poison.htb)	Status: Up
+Host: 10.10.10.84 (poison.htb)	Ports: 22/open/tcp//ssh//OpenSSH 7.2 (FreeBSD 20161230; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.29 ((FreeBSD) PHP|5.6.32)/	Ignored State: closed (65533)	Seq Index: 264	IP ID Seq: All zeros
+# Nmap done at Sat Sep  5 02:33:38 2020 -- 1 IP address (1 host up) scanned in 464.43 seconds

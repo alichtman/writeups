@@ -1,0 +1,52 @@
+# Nmap 7.80 scan initiated Sat Sep  5 02:25:43 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Poison/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.84
+adjust_timeouts2: packet supposedly had rtt of -328747 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -328747 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -309890 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -309890 microseconds.  Ignoring time.
+Nmap scan report for poison.htb (10.10.10.84)
+Host is up, received user-set (0.061s latency).
+Scanned at 2020-09-05 02:25:44 CDT for 260s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    closed        domain       port-unreach ttl 63
+67/udp    closed        dhcps        port-unreach ttl 63
+68/udp    closed        dhcpc        port-unreach ttl 63
+69/udp    closed        tftp         port-unreach ttl 63
+123/udp   closed        ntp          port-unreach ttl 63
+135/udp   closed        msrpc        port-unreach ttl 63
+137/udp   closed        netbios-ns   port-unreach ttl 63
+138/udp   closed        netbios-dgm  port-unreach ttl 63
+139/udp   closed        netbios-ssn  port-unreach ttl 63
+161/udp   closed        snmp         port-unreach ttl 63
+162/udp   closed        snmptrap     port-unreach ttl 63
+445/udp   closed        microsoft-ds port-unreach ttl 63
+500/udp   closed        isakmp       port-unreach ttl 63
+514/udp   open|filtered syslog       no-response
+520/udp   closed        route        port-unreach ttl 63
+631/udp   closed        ipp          port-unreach ttl 63
+1434/udp  closed        ms-sql-m     port-unreach ttl 63
+1900/udp  closed        upnp         port-unreach ttl 63
+4500/udp  closed        nat-t-ike    port-unreach ttl 63
+49152/udp closed        unknown      port-unreach ttl 63
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: FreeBSD 11.X|12.X
+OS CPE: cpe:/o:freebsd:freebsd:11 cpe:/o:freebsd:freebsd:12
+OS details: FreeBSD 11.0-RELEASE - 12.0-CURRENT, FreeBSD 11.0-STABLE
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=9/5%OT=%CT=%CU=53%PV=Y%DS=2%DC=T%G=N%TM=5F533E7C%P=x86
+OS:_64-pc-linux-gnu)SEQ(CI=Z)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+OS:T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S
+OS:+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=38%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK
+OS:=G%RUD=G)IE(R=Y%DFI=S%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 631/udp)
+HOP RTT      ADDRESS
+1   57.05 ms 10.10.14.1
+2   66.45 ms poison.htb (10.10.10.84)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Sep  5 02:30:04 2020 -- 1 IP address (1 host up) scanned in 260.45 seconds

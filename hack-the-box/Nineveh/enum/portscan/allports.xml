@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Sep  3 22:51:27 2020 as: nmap -A -sVC -v -p- -Pn -oA allports nineveh.htb -->
+<nmaprun scanner="nmap" args="nmap -A -sVC -v -p- -Pn -oA allports nineveh.htb" start="1599191487" startstr="Thu Sep  3 22:51:27 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599191488"/>
+<taskend task="NSE" time="1599191488"/>
+<taskbegin task="NSE" time="1599191488"/>
+<taskend task="NSE" time="1599191488"/>
+<taskbegin task="NSE" time="1599191488"/>
+<taskend task="NSE" time="1599191488"/>
+<taskbegin task="SYN Stealth Scan" time="1599191488"/>
+<taskprogress task="SYN Stealth Scan" time="1599191519" percent="19.70" remaining="127" etc="1599191645"/>
+<taskprogress task="SYN Stealth Scan" time="1599191549" percent="41.47" remaining="87" etc="1599191635"/>
+<taskprogress task="SYN Stealth Scan" time="1599191579" percent="68.09" remaining="43" etc="1599191622"/>
+<taskend task="SYN Stealth Scan" time="1599191608" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1599191608"/>
+<taskend task="Service scan" time="1599191620" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1599191626"/>
+<taskend task="Traceroute" time="1599191626"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1599191626"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1599191626"/>
+<taskbegin task="NSE" time="1599191626"/>
+<taskend task="NSE" time="1599191629"/>
+<taskbegin task="NSE" time="1599191629"/>
+<taskend task="NSE" time="1599191629"/>
+<taskbegin task="NSE" time="1599191629"/>
+<taskend task="NSE" time="1599191629"/>
+<host starttime="1599191488" endtime="1599191629"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.43" addrtype="ipv4"/>
+<hostnames>
+<hostname name="nineveh.htb" type="user"/>
+<hostname name="nineveh.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssl" product="Apache httpd" extrainfo="SSL-only mode" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script><script id="ssl-cert" output="Subject: commonName=nineveh.htb/organizationName=HackTheBox Ltd/stateOrProvinceName=Athens/countryName=GR&#xa;Issuer: commonName=nineveh.htb/organizationName=HackTheBox Ltd/stateOrProvinceName=Athens/countryName=GR&#xa;Public Key type: rsa&#xa;Public Key bits: 2048&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2017-07-01T15:03:30&#xa;Not valid after:  2018-07-01T15:03:30&#xa;MD5:   d182 94b8 0210 7992 bf01 e802 b26f 8639&#xa;SHA-1: 2275 b03e 27bd 1226 fdaa 8b0f 6de9 84f0 113b 42c0"><table key="subject">
+<elem key="organizationName">HackTheBox Ltd</elem>
+<elem key="countryName">GR</elem>
+<elem key="emailAddress">admin@nineveh.htb</elem>
+<elem key="stateOrProvinceName">Athens</elem>
+<elem key="localityName">Athens</elem>
+<elem key="organizationalUnitName">Support</elem>
+<elem key="commonName">nineveh.htb</elem>
+</table>
+<table key="issuer">
+<elem key="organizationName">HackTheBox Ltd</elem>
+<elem key="countryName">GR</elem>
+<elem key="emailAddress">admin@nineveh.htb</elem>
+<elem key="stateOrProvinceName">Athens</elem>
+<elem key="localityName">Athens</elem>
+<elem key="organizationalUnitName">Support</elem>
+<elem key="commonName">nineveh.htb</elem>
+</table>
+<table key="pubkey">
+<elem key="modulus">userdata: 0x55d90bcabc68</elem>
+<elem key="bits">2048</elem>
+<elem key="type">rsa</elem>
+<elem key="exponent">userdata: 0x55d90bcabc28</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">87:46:12:7D:53:88:D3:95:B2:38:59:ED:1B:29:30:73:7F:CE:CE:B3</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:87:46:12:7D:53:88:D3:95:B2:38:59:ED:1B:29:30:73:7F:CE:CE:B3&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2017-07-01T15:03:30</elem>
+<elem key="notAfter">2018-07-01T15:03:30</elem>
+</table>
+<elem key="md5">d18294b802107992bf01e802b26f8639</elem>
+<elem key="sha1">2275b03e27bd1226fdaa8b0f6de984f0113b42c0</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIID+TCCAuGgAwIBAgIJANwojrkai1UOMA0GCSqGSIb3DQEBCwUAMIGSMQswCQYD&#xa;VQQGEwJHUjEPMA0GA1UECAwGQXRoZW5zMQ8wDQYDVQQHDAZBdGhlbnMxFzAVBgNV&#xa;BAoMDkhhY2tUaGVCb3ggTHRkMRAwDgYDVQQLDAdTdXBwb3J0MRQwEgYDVQQDDAtu&#xa;aW5ldmVoLmh0YjEgMB4GCSqGSIb3DQEJARYRYWRtaW5AbmluZXZlaC5odGIwHhcN&#xa;MTcwNzAxMTUwMzMwWhcNMTgwNzAxMTUwMzMwWjCBkjELMAkGA1UEBhMCR1IxDzAN&#xa;BgNVBAgMBkF0aGVuczEPMA0GA1UEBwwGQXRoZW5zMRcwFQYDVQQKDA5IYWNrVGhl&#xa;Qm94IEx0ZDEQMA4GA1UECwwHU3VwcG9ydDEUMBIGA1UEAwwLbmluZXZlaC5odGIx&#xa;IDAeBgkqhkiG9w0BCQEWEWFkbWluQG5pbmV2ZWguaHRiMIIBIjANBgkqhkiG9w0B&#xa;AQEFAAOCAQ8AMIIBCgKCAQEA+HUDrGgG769A68bslDXjV/uBaw18SaF52iEz/ui2&#xa;WwXguHnY8BS7ZetS4jAso6BOrGUZpN3+278mROPa4khQlmZ09cj8kQ4k7lOIxSlp&#xa;eZxvt+R8fkJvtA7e47nvwP4H2O6SI0nD/pGDZc05i842kOc/8Kw+gKkglotGi8ZO&#xa;GiuRgzyfdaNSWC7Lj3gTjVMCllhc6PgcQf9r7vK1KPkyFleYDUwB0dwf3taN0J2C&#xa;U2EHz/4U1l40HoIngkwfhFI+2z2J/xx2JP+iFUcsV7LQRw0x4g6Z5WFWETluWUHi&#xa;AWUZHrjMpMaXs3TZNNW81tWUP2jBulX5kv6H5CTocsXgyQIDAQABo1AwTjAdBgNV&#xa;HQ4EFgQUh0YSfVOI05WyOFntGykwc3/OzrMwHwYDVR0jBBgwFoAUh0YSfVOI05Wy&#xa;OFntGykwc3/OzrMwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQsFAAOCAQEAehma&#xa;AJKuLeAHqHAIcLopQg9mE28lYDGxf+3eIEuUAHmUKs0qGLs3ZTY8J77XTxmjvH1U&#xa;qYVXfZSub1IG7LgUFybLFKNl6gioKEPXXA9ofKdoJX6Bar/0G/15YRSEZGc9WXh4&#xa;Xh1Qr3rkYYZj/rJa4H5uiWoRFofSTNGMfbY8iF8X2+P2LwyEOqThypdMBKMiIt6d&#xa;7sSuqsrnQRa73OdqdoCpHxEG6antne6Vvz3ALxv4cI7SqzKiQvH1zdJ/jOhZK1g1&#xa;CxLUGYbNsjIJWSdOoSlIgRswnu+A+O612+iosxYaYdCUZ8BElgjUAXLEHzuUFtRb&#xa;KrYQgX28Ulf8OSGJuA==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Linux 3.10 - 4.11" accuracy="91" line="63230">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="91" line="63662">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13 or 4.2" accuracy="91" line="63776">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="91" line="63944">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16 - 4.6" accuracy="91" line="64164">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="91" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="91" line="67075">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="91" line="67111">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.8" accuracy="91" line="67659">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="91" line="67713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="91"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="17179765" lastboot="Tue Feb 18 01:44:24 2020"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="1C1701FF,188DFB2B,8ACCAF7C,6CF7753D,834EF80D,AC356D1F"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FFFF95BB,FFFF95D6,FFFF95EE,FFFF9610,FFFF9620,FFFF9638"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="43.27"/>
+<hop ttl="2" ipaddr="10.10.10.43" rtt="43.27" host="nineveh.htb"/>
+</trace>
+<times srtt="45085" rttvar="3480" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1599191629"/>
+<taskend task="NSE" time="1599191629"/>
+<taskbegin task="NSE" time="1599191629"/>
+<taskend task="NSE" time="1599191629"/>
+<taskbegin task="NSE" time="1599191629"/>
+<taskend task="NSE" time="1599191629"/>
+<runstats><finished time="1599191629" timestr="Thu Sep  3 22:53:49 2020" elapsed="141.79" summary="Nmap done at Thu Sep  3 22:53:49 2020; 1 IP address (1 host up) scanned in 141.79 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

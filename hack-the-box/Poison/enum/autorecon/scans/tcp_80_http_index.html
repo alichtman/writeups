@@ -1,0 +1,19 @@
+HTTP/1.1 200 OK
+Date: Sat, 05 Sep 2020 07:32:05 GMT
+Server: Apache/2.4.29 (FreeBSD) PHP/5.6.32
+X-Powered-By: PHP/5.6.32
+Content-Length: 289
+Content-Type: text/html; charset=UTF-8
+
+<html>
+<body>
+<h1>Temporary website to test local .php scripts.</h1>
+Sites to be tested: ini.php, info.php, listfiles.php, phpinfo.php
+
+</body>
+</html>
+
+<form action="/browse.php" method="GET">
+	Scriptname: <input type="text" name="file"><br>
+	<input type="submit" value="Submit">
+</form>

@@ -1,0 +1,4 @@
+http://nineveh.htb/index.html (Status: 200)
+http://nineveh.htb/info.php (Status: 200)
+http://nineveh.htb/department (Status: 301)
+http://nineveh.htb/server-status (Status: 403)

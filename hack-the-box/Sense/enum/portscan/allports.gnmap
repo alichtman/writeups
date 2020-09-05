@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Sep  3 02:33:26 2020 as: nmap -A -sVC -v -p- -Pn -oA allports sense.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.60 (sense.htb)	Status: Up
+Host: 10.10.10.60 (sense.htb)	Ports: 80/open/tcp//http//lighttpd 1.4.35/, 443/open/tcp//ssl|https?///	Ignored State: filtered (65533)	Seq Index: 262	IP ID Seq: Randomized
+# Nmap done at Thu Sep  3 02:38:14 2020 -- 1 IP address (1 host up) scanned in 287.41 seconds
