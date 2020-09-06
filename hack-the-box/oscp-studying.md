@@ -17,7 +17,7 @@
 | Kotarak     [ ]  | Jerry      [ ]  | Jail             [ ]  | Querier  [ ]  |
 | Node        [ ]  | Conceal    [ ]  | Safe             [ ]  |               |
 | Valentine   [o]  | Chatterbox [ ]  |                       |               |
-| Poison      [ ]  | Forest     [ ]  |                       |               |
+| Poison      [x]  | Forest     [ ]  |                       |               |
 | Sunday      [ ]  | BankRobber [ ]  |                       |               |
 | Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
 | Magic       [x]  | Secnotes   [ ]  |                       |               |
@@ -26,7 +26,7 @@
 | Swagshop    [ ]  |                 |                       |               |
 | Networked   [ ]  |                 |                       |               |
 | Jarvis      [ ]  |                 |                       |               |
-| Mirai       [ ]  |                 |                       |               |
+| Mirai       [o]  |                 |                       |               |
 | Popcorn     [ ]  |                 |                       |               |
 | Haircut     [ ]  |                 |                       |               |
 | Blocky      [ ]  |                 |                       |               |

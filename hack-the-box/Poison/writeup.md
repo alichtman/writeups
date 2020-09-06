@@ -1,7 +1,5 @@
 # Poison (`10.10.10.84`)
 
-## Summary
-
 ## `/etc/hosts`
 
 I begin by adding an entry in `/etc/hosts` to resolve `poison.htb` to `10.10.10.84`. I use this later in my report.
@@ -81,11 +79,28 @@ It appears to be a file filled with junk.
 
 ![](img/2020-09-05-04-19-13.png)
 
-## Reverse Shell
+I find a `VNC` process.
 
-## Upgrading Shell
+![](img/2020-09-05-18-54-58.png)
 
-## Privilege Escalation
+I set up `proxychains` like this:
 
-## Proof
+```bash
+$ tail /etc/proxychains.conf
+#
+#       proxy types: http, socks4, socks5
+#        ( auth types supported: "basic"-http  "user/pass"-socks )
+#
+[ProxyList]
+# add proxy here ...
+# meanwile
+# defaults set to "tor"
+socks4  127.0.0.1 8081
+```
+
+Then I enable dynamic port forwarding with: `$ ssh charix@10.10.10.84 -D 8081`.
+
+And I use the port forwarding to authenticate to the VNC session with: `$ proxychains vncviewer 127.0.0.1:5901 -passwd secret`
+
+![](img/2020-09-05-19-10-23.png)
 
