@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Sep  6 03:49:41 2020 as: nmap -A -sVC -v -p- -Pn -oA allports sunday.htb -->
+<nmaprun scanner="nmap" args="nmap -A -sVC -v -p- -Pn -oA allports sunday.htb" start="1599382181" startstr="Sun Sep  6 03:49:41 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599382181"/>
+<taskend task="NSE" time="1599382181"/>
+<taskbegin task="NSE" time="1599382181"/>
+<taskend task="NSE" time="1599382181"/>
+<taskbegin task="NSE" time="1599382181"/>
+<taskend task="NSE" time="1599382181"/>
+<taskbegin task="SYN Stealth Scan" time="1599382181"/>
+<taskprogress task="SYN Stealth Scan" time="1599382212" percent="0.58"/>
+<taskprogress task="SYN Stealth Scan" time="1599382242" percent="0.99"/>
+<taskprogress task="SYN Stealth Scan" time="1599382272" percent="1.21" remaining="7452" etc="1599389723"/>
+<taskprogress task="SYN Stealth Scan" time="1599382302" percent="1.42" remaining="8383" etc="1599390685"/>
+<taskprogress task="SYN Stealth Scan" time="1599382332" percent="1.64" remaining="9054" etc="1599391386"/>
+<taskprogress task="SYN Stealth Scan" time="1599382362" percent="1.82" remaining="9752" etc="1599392114"/>
+<taskprogress task="SYN Stealth Scan" time="1599382392" percent="1.87" remaining="11058" etc="1599393450"/>
+<taskprogress task="SYN Stealth Scan" time="1599382422" percent="1.92" remaining="12302" etc="1599394723"/>
+<taskprogress task="SYN Stealth Scan" time="1599382452" percent="1.98" remaining="13431" etc="1599395883"/>
+<taskprogress task="SYN Stealth Scan" time="1599382482" percent="2.04" remaining="14477" etc="1599396958"/>
+<taskprogress task="SYN Stealth Scan" time="1599382512" percent="2.09" remaining="15504" etc="1599398016"/>
+<taskprogress task="SYN Stealth Scan" time="1599382542" percent="2.14" remaining="16523" etc="1599399064"/>
+<taskprogress task="SYN Stealth Scan" time="1599382572" percent="2.18" remaining="17530" etc="1599400101"/>
+<taskprogress task="SYN Stealth Scan" time="1599382605" percent="2.24" remaining="18467" etc="1599401072"/>
+<taskprogress task="SYN Stealth Scan" time="1599382644" percent="2.32" remaining="19513" etc="1599402156"/>
+<taskprogress task="SYN Stealth Scan" time="1599382686" percent="2.40" remaining="20559" etc="1599403245"/>
+<taskprogress task="SYN Stealth Scan" time="1599382731" percent="2.48" remaining="21661" etc="1599404392"/>
+<taskprogress task="SYN Stealth Scan" time="1599382785" percent="2.58" remaining="22813" etc="1599405598"/>
+<taskprogress task="SYN Stealth Scan" time="1599382842" percent="2.68" remaining="24043" etc="1599406884"/>
+<taskprogress task="SYN Stealth Scan" time="1599382911" percent="2.81" remaining="25291" etc="1599408202"/>
+<taskprogress task="SYN Stealth Scan" time="1599382986" percent="2.94" remaining="26623" etc="1599409609"/>
+<taskprogress task="SYN Stealth Scan" time="1599383067" percent="3.07" remaining="28018" etc="1599411084"/>
+<taskprogress task="SYN Stealth Scan" time="1599383172" percent="3.25" remaining="29478" etc="1599412650"/>
+<taskprogress task="SYN Stealth Scan" time="1599383301" percent="3.48" remaining="31033" etc="1599414334"/>
+<taskprogress task="SYN Stealth Scan" time="1599383460" percent="3.77" remaining="32643" etc="1599416102"/>
+<taskprogress task="SYN Stealth Scan" time="1599383595" percent="3.95" remaining="34340" etc="1599417934"/>
+<taskprogress task="SYN Stealth Scan" time="1599383745" percent="4.15" remaining="36141" etc="1599419885"/>
+<taskprogress task="SYN Stealth Scan" time="1599383835" percent="4.17" remaining="38052" etc="1599421886"/>
+<taskprogress task="SYN Stealth Scan" time="1599383934" percent="4.19" remaining="40063" etc="1599423997"/>
+<taskprogress task="SYN Stealth Scan" time="1599384246" percent="4.67" remaining="42166" etc="1599426412"/>
+<taskprogress task="SYN Stealth Scan" time="1599385143" percent="6.26" remaining="44387" etc="1599429529"/>
+<taskprogress task="SYN Stealth Scan" time="1599394005" percent="21.96" remaining="42019" etc="1599436023"/>
+<taskprogress task="SYN Stealth Scan" time="1599396927" percent="27.27" remaining="39326" etc="1599436253"/>
+<taskprogress task="SYN Stealth Scan" time="1599399981" percent="32.71" remaining="36620" etc="1599436601"/>
+<taskprogress task="SYN Stealth Scan" time="1599402942" percent="37.98" remaining="33897" etc="1599436838"/>
+<taskprogress task="SYN Stealth Scan" time="1599405708" percent="43.02" remaining="31161" etc="1599436868"/>
+<taskprogress task="SYN Stealth Scan" time="1599408606" percent="48.18" remaining="28422" etc="1599437028"/>
+<taskprogress task="SYN Stealth Scan" time="1599411402" percent="53.23" remaining="25678" etc="1599437079"/>
+<taskprogress task="SYN Stealth Scan" time="1599414312" percent="58.35" remaining="22931" etc="1599437242"/>
+<taskprogress task="SYN Stealth Scan" time="1599417075" percent="63.36" remaining="20177" etc="1599437251"/>
+<taskprogress task="SYN Stealth Scan" time="1599419808" percent="68.36" remaining="17420" etc="1599437227"/>
+<taskprogress task="SYN Stealth Scan" time="1599422547" percent="73.35" remaining="14664" etc="1599437210"/>
+<taskprogress task="SYN Stealth Scan" time="1599425307" percent="78.36" remaining="11912" etc="1599437218"/>
+<taskprogress task="SYN Stealth Scan" time="1599428043" percent="83.36" remaining="9157" etc="1599437199"/>
+<taskprogress task="SYN Stealth Scan" time="1599430785" percent="88.36" remaining="6402" etc="1599437187"/>
+<taskprogress task="SYN Stealth Scan" time="1599433530" percent="93.36" remaining="3652" etc="1599437181"/>
+<taskprogress task="SYN Stealth Scan" time="1599436374" percent="98.37" remaining="897" etc="1599437271"/>
+<taskend task="SYN Stealth Scan" time="1599438215" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1599438215"/>
+<taskend task="Service scan" time="1599438250" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1599438267"/>
+<taskend task="Traceroute" time="1599438267"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1599438267"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1599438267"/>
+<taskbegin task="NSE" time="1599438267"/>
+<taskend task="NSE" time="1599438277"/>
+<taskbegin task="NSE" time="1599438277"/>
+<taskend task="NSE" time="1599438278"/>
+<taskbegin task="NSE" time="1599438278"/>
+<taskend task="NSE" time="1599438278"/>
+<host starttime="1599382181" endtime="1599438278"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.76" addrtype="ipv4"/>
+<hostnames>
+<hostname name="sunday.htb" type="user"/>
+<hostname name="sunday.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="64664">
+<extrareasons reason="resets" count="64664"/>
+</extraports>
+<extraports state="filtered" count="866">
+<extrareasons reason="no-responses" count="853"/>
+<extrareasons reason="host-unreaches" count="13"/>
+</extraports>
+<port protocol="tcp" portid="79"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="finger" product="Sun Solaris fingerd" ostype="Solaris" method="probed" conf="10"><cpe>cpe:/o:sun:sunos</cpe></service><script id="finger" output="No one logged on&#xd;&#xa;"/></port>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="22022"><state state="open" reason="syn-ack" reason_ttl="59"/><service name="ssh" product="SunSSH" version="1.3" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:sun:sunssh:1.3</cpe></service><script id="ssh-hostkey" output="&#xa;  1024 d2:e5:cb:bd:33:c7:01:31:0b:3c:63:d9:82:d9:f1:4e (DSA)&#xa;  1024 e4:2c:80:62:cf:15:17:79:ff:72:9d:df:8b:a6:c9:ac (RSA)"><table>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-dss</elem>
+<elem key="fingerprint">d2e5cbbd33c701310b3c63d982d9f14e</elem>
+<elem key="key">AAAAB3NzaC1kc3MAAACBAKQhj2N5gfwsseuHbx/yCXwOkphQCTzDyXaBw5SHg/vRBW9aYPsWUUV0XGZPlVtbhxFylTZGNZTWJyndzQL3aRcQNouwVH8NnQsT63s4uLKsAP3jx4afAwB7049PvisAxtDVMbqg94vxaJkh88VY/EMpASYNrLFtr1mZngrbAzOvAAAAFQCiLK6Oh21fvEjgZ0Yl0IRtONW/wwAAAIAxz1u+bPH+VE7upID2HEvYksXOItmohsDFt0oHmGMHf9TKwZvqQLZRix0eXYu8zLnTIdg7rVYSjGyRhuWeIkl1+0aIJL4/dzB+JthInTGFIngc83MtonLP4Sj3YL20wL9etVh8/M0ZOedntWrQcUW+8cUWZRlgW8q620HZKE8VqAAAAIB0s8wn1ufviVEKXct60uz2ZoduUgg07dfPfzvhpbw232KYUJ6lchTj2p2AV8cD0fk2lok2Qc6Kn/OKSjO9C0PlvG8WWkVVvlISUY4BEhtqtL3aof7PYp5nCrLK+2v+grCLxOvyYpT1OfDMQbahOWGZ9OCwQtQXKP1wYEQMqMsSRg==</elem>
+</table>
+<table>
+<elem key="bits">1024</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">e42c8062cf151779ff729ddf8ba6c9ac</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAABIwAAAIEAxAwq7HNZXHr7XEeYeKsbnaruPQyUK5IkSE/FxHesBaKQ37AsLjw8iacqUvcs8IuhPfiTtwuwU42zUHu1e1rmLpRlMyLQnjgJH1++fP5E0Qnxj4DrFr7aeRv1FqPkrnK/xCX46AdgUhs4+4YA04yfi8pOlaSEVucYaqWNhuqJkt8=</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="43132"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="44634"><state state="open" reason="syn-ack" reason_ttl="59"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="79"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="37957"/>
+<osmatch name="Sun OpenSolaris 2008.11" accuracy="94" line="99501">
+<osclass type="general purpose" vendor="Sun" osfamily="OpenSolaris" accuracy="94"><cpe>cpe:/o:sun:opensolaris</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 10" accuracy="94" line="99666">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="10" accuracy="94"><cpe>cpe:/o:sun:sunos:5.10</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 9 or 10, or OpenSolaris 2009.06 snv_111b" accuracy="94" line="100744">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="9" accuracy="94"><cpe>cpe:/o:sun:sunos:5.9</cpe></osclass>
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="10" accuracy="94"><cpe>cpe:/o:sun:sunos:5.10</cpe></osclass>
+<osclass type="general purpose" vendor="Sun" osfamily="OpenSolaris" accuracy="94"><cpe>cpe:/o:sun:opensolaris</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 9 or 10 (SPARC)" accuracy="92" line="100715">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="9" accuracy="92"><cpe>cpe:/o:sun:sunos:5.9</cpe></osclass>
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="10" accuracy="92"><cpe>cpe:/o:sun:sunos:5.10</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 9 or 10" accuracy="92" line="100667">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="9" accuracy="92"><cpe>cpe:/o:sun:sunos:5.9</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Storage 7210 NAS device" accuracy="91" line="99393">
+<osclass type="storage-misc" vendor="Sun" osfamily="embedded" accuracy="91"><cpe>cpe:/h:sun:storage_7210</cpe></osclass>
+</osmatch>
+<osmatch name="Oracle Solaris 11" accuracy="91" line="91701">
+<osclass type="general purpose" vendor="Oracle" osfamily="Solaris" osgen="11" accuracy="91"><cpe>cpe:/o:oracle:solaris:11</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 9" accuracy="90" line="100594">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="9" accuracy="90"><cpe>cpe:/o:sun:sunos:5.9</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 8" accuracy="90" line="100281">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="8" accuracy="90"><cpe>cpe:/o:sun:sunos:5.8</cpe></osclass>
+</osmatch>
+<osmatch name="Sun Solaris 8 (SPARC)" accuracy="89" line="100374">
+<osclass type="general purpose" vendor="Sun" osfamily="Solaris" osgen="8" accuracy="89"><cpe>cpe:/o:sun:sunos:5.8</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=9/6%OT=79%CT=1%CU=37957%PV=Y%DS=2%DC=T%G=Y%TM=5F557DC6&#xa;OS:%P=x86_64-pc-linux-gnu)SEQ(CI=I)SEQ(SP=92%GCD=1%ISR=A5%TI=I%CI=I%II=I%SS&#xa;OS:=S%TS=7)SEQ(CI=I%TS=7)SEQ(TI=I%TS=7)OPS(O1=NNT11M54DNW0NNS%O2=NNT11M54DN&#xa;OS:W0NNS%O3=NNT11M54DNW0%O4=NNT11M54DNW0NNS%O5=NNT11M54DNW0NNS%O6=NNT11M54D&#xa;OS:NNS)WIN(W1=C265%W2=C265%W3=C1CC%W4=C068%W5=C068%W6=C0B7)ECN(R=Y%DF=Y%T=3&#xa;OS:C%W=C421%O=M54DNW0NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=3C%S=O%A=S+%F=AS%RD=0%Q=)T2(&#xa;OS:R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%&#xa;OS:W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=&#xa;OS:)T7(R=N)U1(R=Y%DF=Y%T=FF%IPL=70%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)I&#xa;OS:E(R=Y%DFI=Y%T=FF%CD=S)&#xa;"/>
+</os>
+<uptime seconds="56319" lastboot="Sun Sep  6 03:45:59 2020"/>
+<distance value="2"/>
+<ipidsequence class="Incremental" values="F022,F023,F024"/>
+<tcptssequence class="100HZ" values="55EA98,55EAA3,55EAAC"/>
+<trace port="23" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="45.04"/>
+<hop ttl="2" ipaddr="10.10.10.76" rtt="45.10" host="sunday.htb"/>
+</trace>
+<times srtt="45488" rttvar="4143" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1599438278"/>
+<taskend task="NSE" time="1599438278"/>
+<taskbegin task="NSE" time="1599438278"/>
+<taskend task="NSE" time="1599438278"/>
+<taskbegin task="NSE" time="1599438278"/>
+<taskend task="NSE" time="1599438278"/>
+<runstats><finished time="1599438278" timestr="Sun Sep  6 19:24:38 2020" elapsed="56097.48" summary="Nmap done at Sun Sep  6 19:24:38 2020; 1 IP address (1 host up) scanned in 56097.48 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

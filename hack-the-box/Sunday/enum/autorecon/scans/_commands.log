@@ -1,0 +1,30 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/_full_tcp_nmap.xml" 10.10.10.76
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" 10.10.10.76
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" 10.10.10.76
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.76:79 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_79_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.76:111 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_111_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 111 --script="banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_111_nfs_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_111_nfs_nmap.xml" 10.10.10.76
+
+showmount -e 10.10.10.76 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_111_showmount.txt"
+
+nmap -vv --reason -Pn -sV -p 111 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_111_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_111_rpc_nmap.xml" 10.10.10.76
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.76:22022 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_22022_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22022 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_22022_ssh_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_22022_ssh_nmap.xml" 10.10.10.76
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.76:43132 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_43132_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 43132 --script="banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_43132_nfs_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_43132_nfs_nmap.xml" 10.10.10.76
+
+showmount -e 10.10.10.76 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_43132_showmount.txt"
+
+nmap -vv --reason -Pn -sV -p 43132 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_43132_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_43132_rpc_nmap.xml" 10.10.10.76
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.76:44634 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_44634_sslscan.txt"; fi
+

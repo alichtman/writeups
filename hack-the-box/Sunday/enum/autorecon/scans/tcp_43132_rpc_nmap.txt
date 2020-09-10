@@ -1,0 +1,11 @@
+# Nmap 7.80 scan initiated Sun Sep  6 19:23:59 2020 as: nmap -vv --reason -Pn -sV -p 43132 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_43132_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_43132_rpc_nmap.xml 10.10.10.76
+Nmap scan report for sunday.htb (10.10.10.76)
+Host is up, received user-set (0.045s latency).
+Scanned at 2020-09-06 19:23:59 CDT for 44s
+
+PORT      STATE SERVICE REASON         VERSION
+43132/tcp open  rpcbind syn-ack ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep  6 19:24:43 2020 -- 1 IP address (1 host up) scanned in 44.18 seconds

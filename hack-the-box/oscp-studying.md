@@ -18,7 +18,7 @@
 | Node        [ ]  | Conceal    [ ]  | Safe             [ ]  |               |
 | Valentine   [o]  | Chatterbox [ ]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
-| Sunday      [ ]  | BankRobber [ ]  |                       |               |
+| Sunday      [x]  | BankRobber [ ]  |                       |               |
 | Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
 | Magic       [x]  | Secnotes   [ ]  |                       |               |
 | Irked       [ ]  | Buff       [ ]  |                       |               |

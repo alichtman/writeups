@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Sep  6 19:23:59 2020 as: nmap -vv -&#45;reason -Pn -sV -p 43132 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_43132_nfs_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_43132_nfs_nmap.xml 10.10.10.76 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 43132 &quot;-&#45;script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_43132_nfs_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/tcp_43132_nfs_nmap.xml 10.10.10.76" start="1599438239" startstr="Sun Sep  6 19:23:59 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="43132"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1599438239"/>
+<taskend task="NSE" time="1599438239"/>
+<taskbegin task="NSE" time="1599438239"/>
+<taskend task="NSE" time="1599438239"/>
+<taskbegin task="NSE" time="1599438239"/>
+<taskend task="NSE" time="1599438239"/>
+<taskbegin task="SYN Stealth Scan" time="1599438239"/>
+<taskend task="SYN Stealth Scan" time="1599438239" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1599438239"/>
+<taskend task="Service scan" time="1599438266" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1599438266"/>
+<taskend task="NSE" time="1599438281"/>
+<taskbegin task="NSE" time="1599438281"/>
+<taskend task="NSE" time="1599438283"/>
+<taskbegin task="NSE" time="1599438283"/>
+<taskend task="NSE" time="1599438283"/>
+<host starttime="1599438239" endtime="1599438283"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.76" addrtype="ipv4"/>
+<hostnames>
+<hostname name="sunday.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="43132"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" method="probed" conf="10"/></port>
+</ports>
+<times srtt="51355" rttvar="51355" to="256775"/>
+</host>
+<taskbegin task="NSE" time="1599438283"/>
+<taskend task="NSE" time="1599438283"/>
+<taskbegin task="NSE" time="1599438283"/>
+<taskend task="NSE" time="1599438283"/>
+<taskbegin task="NSE" time="1599438283"/>
+<taskend task="NSE" time="1599438283"/>
+<runstats><finished time="1599438283" timestr="Sun Sep  6 19:24:43 2020" elapsed="44.96" summary="Nmap done at Sun Sep  6 19:24:43 2020; 1 IP address (1 host up) scanned in 44.96 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

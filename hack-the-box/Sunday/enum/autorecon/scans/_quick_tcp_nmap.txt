@@ -1,0 +1,17 @@
+# Nmap 7.80 scan initiated Sun Sep  6 03:49:30 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.76
+Increasing send delay for 10.10.10.76 from 0 to 5 due to 18 out of 59 dropped probes since last increase.
+Nmap scan report for sunday.htb (10.10.10.76)
+Host is up, received user-set (0.043s latency).
+Scanned at 2020-09-06 03:49:30 CDT for 222s
+Not shown: 997 closed ports
+Reason: 997 resets
+PORT     STATE    SERVICE       REASON         VERSION
+79/tcp   open     finger        syn-ack ttl 59 Sun Solaris fingerd
+|_finger: No one logged on\x0D
+111/tcp  open     rpcbind       syn-ack ttl 63
+1097/tcp filtered sunclustermgr no-response
+Service Info: OS: Solaris; CPE: cpe:/o:sun:sunos
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep  6 03:53:12 2020 -- 1 IP address (1 host up) scanned in 222.67 seconds

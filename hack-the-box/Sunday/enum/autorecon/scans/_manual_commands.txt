@@ -1,0 +1,23 @@
+[*] rpcbind on tcp/111
+
+	[-] RPC Client:
+
+		rpcclient -p 111 -U "" 10.10.10.76
+
+
+[*] ssh on tcp/22022
+
+	[-] Bruteforce logins:
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 22022 -o "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_22022_ssh_hydra.txt" ssh://10.10.10.76
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 22022 -O "/home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/tcp_22022_ssh_medusa.txt" -M ssh -h 10.10.10.76
+
+
+[*] rpcbind on tcp/43132
+
+	[-] RPC Client:
+
+		rpcclient -p 43132 -U "" 10.10.10.76
+
+

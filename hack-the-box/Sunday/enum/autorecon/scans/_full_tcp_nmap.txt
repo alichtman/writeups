@@ -1,0 +1,95 @@
+# Nmap 7.80 scan initiated Sun Sep  6 03:49:30 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Sunday/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.76
+Increasing send delay for 10.10.10.76 from 0 to 5 due to 11 out of 11 dropped probes since last increase.
+Warning: 10.10.10.76 giving up on port because retransmission cap hit (10).
+Nmap scan report for sunday.htb (10.10.10.76)
+Host is up, received user-set (0.046s latency).
+Scanned at 2020-09-06 03:49:30 CDT for 56068s
+Not shown: 64643 closed ports, 887 filtered ports
+Reason: 64643 resets, 870 no-responses and 17 host-unreaches
+PORT      STATE SERVICE REASON         VERSION
+79/tcp    open  finger? syn-ack ttl 59
+|_finger: No one logged on\x0D
+| fingerprint-strings: 
+|   GenericLines: 
+|     No one logged on
+|   HTTPOptions: 
+|     Login Name TTY Idle When Where
+|     OPTIONS ???
+|     HTTP/1.0 ???
+|   Hello: 
+|     Login Name TTY Idle When Where
+|     EHLO ???
+|   Help: 
+|     Login Name TTY Idle When Where
+|     HELP ???
+|   RTSPRequest: 
+|     Login Name TTY Idle When Where
+|     OPTIONS ???
+|     RTSP/1.0 ???
+|   SSLSessionReq, TerminalServerCookie: 
+|_    Login Name TTY Idle When Where
+111/tcp   open  rpcbind syn-ack ttl 63
+22022/tcp open  ssh     syn-ack ttl 59 SunSSH 1.3 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 d2:e5:cb:bd:33:c7:01:31:0b:3c:63:d9:82:d9:f1:4e (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAKQhj2N5gfwsseuHbx/yCXwOkphQCTzDyXaBw5SHg/vRBW9aYPsWUUV0XGZPlVtbhxFylTZGNZTWJyndzQL3aRcQNouwVH8NnQsT63s4uLKsAP3jx4afAwB7049PvisAxtDVMbqg94vxaJkh88VY/EMpASYNrLFtr1mZngrbAzOvAAAAFQCiLK6Oh21fvEjgZ0Yl0IRtONW/wwAAAIAxz1u+bPH+VE7upID2HEvYksXOItmohsDFt0oHmGMHf9TKwZvqQLZRix0eXYu8zLnTIdg7rVYSjGyRhuWeIkl1+0aIJL4/dzB+JthInTGFIngc83MtonLP4Sj3YL20wL9etVh8/M0ZOedntWrQcUW+8cUWZRlgW8q620HZKE8VqAAAAIB0s8wn1ufviVEKXct60uz2ZoduUgg07dfPfzvhpbw232KYUJ6lchTj2p2AV8cD0fk2lok2Qc6Kn/OKSjO9C0PlvG8WWkVVvlISUY4BEhtqtL3aof7PYp5nCrLK+2v+grCLxOvyYpT1OfDMQbahOWGZ9OCwQtQXKP1wYEQMqMsSRg==
+|   1024 e4:2c:80:62:cf:15:17:79:ff:72:9d:df:8b:a6:c9:ac (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAxAwq7HNZXHr7XEeYeKsbnaruPQyUK5IkSE/FxHesBaKQ37AsLjw8iacqUvcs8IuhPfiTtwuwU42zUHu1e1rmLpRlMyLQnjgJH1++fP5E0Qnxj4DrFr7aeRv1FqPkrnK/xCX46AdgUhs4+4YA04yfi8pOlaSEVucYaqWNhuqJkt8=
+43132/tcp open  rpcbind syn-ack ttl 63
+44634/tcp open  unknown syn-ack ttl 59
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port79-TCP:V=7.80%I=9%D=9/6%Time=5F557D46%P=x86_64-pc-linux-gnu%r(Gener
+SF:icLines,12,"No\x20one\x20logged\x20on\r\n")%r(Help,5D,"Login\x20\x20\x2
+SF:0\x20\x20\x20\x20Name\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20TTY\x20\x20\x20\x20\x20\x20\x20\x20\x20Idle\x20\x20\x20\x20Wh
+SF:en\x20\x20\x20\x20Where\r\nHELP\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\?\?\?\r\n")%r(HTTPOptions,93,"Login\x2
+SF:0\x20\x20\x20\x20\x20\x20Name\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20TTY\x20\x20\x20\x20\x20\x20\x20\x20\x20Idle\x20\x20\x
+SF:20\x20When\x20\x20\x20\x20Where\r\nOPTIONS\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\?\?\?\r\n/\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\?\?\?\r\nHTTP/1
+SF:\.0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\?\?\?\r\n")
+SF:%r(RTSPRequest,93,"Login\x20\x20\x20\x20\x20\x20\x20Name\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20TTY\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20Idle\x20\x20\x20\x20When\x20\x20\x20\x20Where\r\nOPTIONS\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\?\?\?\r\n/\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\?\?\?\r\nRTSP/1\.0\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\?\?\?\r\n")%r(Hello,5D,"Login\x20\x20\x20\x20\x20\x20\x
+SF:20Name\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20TTY\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20Idle\x20\x20\x20\x20When\x20\x20\x20\
+SF:x20Where\r\nEHLO\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\?\?\?\r\n")%r(SSLSessionReq,5D,"Login\x20\x20\x20\x20
+SF:\x20\x20\x20Name\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20TTY\x20\x20\x20\x20\x20\x20\x20\x20\x20Idle\x20\x20\x20\x20When\x2
+SF:0\x20\x20\x20Where\r\n\x16\x03\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\?\?\?\r\n")%r(TerminalServerCoo
+SF:kie,5D,"Login\x20\x20\x20\x20\x20\x20\x20Name\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20TTY\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20Idle\x20\x20\x20\x20When\x20\x20\x20\x20Where\r\n\x03\x20\x20\x20\x20
+SF:\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\?\
+SF:?\?\r\n");
+Aggressive OS guesses: Sun OpenSolaris 2008.11 (94%), Sun Solaris 10 (94%), Sun Solaris 9 or 10, or OpenSolaris 2009.06 snv_111b (94%), Sun Solaris 9 or 10 (SPARC) (92%), Sun Storage 7210 NAS device (92%), Sun Solaris 9 or 10 (91%), Sun Solaris 8 (91%), Oracle Solaris 11 (90%), Sun Solaris 9 (90%), Sun Solaris 8 (SPARC) (89%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=9/6%OT=79%CT=1%CU=42283%PV=Y%DS=2%DC=T%G=Y%TM=5F557D9E
+OS:%P=x86_64-pc-linux-gnu)SEQ(SP=9D%GCD=1%ISR=A5%TI=I%CI=I%II=I%SS=S%TS=7)S
+OS:EQ(CI=I)OPS(O1=NNT11M54DNW0NNS%O2=NNT11M54DNW0NNS%O3=NNT11M54DNW0%O4=NNT
+OS:11M54DNW0NNS%O5=NNT11M54DNW0NNS%O6=NNT11M54DNNS)WIN(W1=C265%W2=C265%W3=C
+OS:1CC%W4=C068%W5=C068%W6=C0B7)ECN(R=Y%DF=Y%T=3C%W=C421%O=M54DNW0NNS%CC=Y%Q
+OS:=)T1(R=Y%DF=Y%T=3C%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%
+OS:W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=
+OS:)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=N)U1(R=Y%DF=Y%T=FF%IPL
+OS:=70%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=Y%T=FF%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+1   42.17 ms 10.10.14.1
+2   42.23 ms sunday.htb (10.10.10.76)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep  6 19:23:58 2020 -- 1 IP address (1 host up) scanned in 56069.00 seconds
