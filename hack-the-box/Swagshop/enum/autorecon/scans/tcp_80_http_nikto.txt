@@ -1,0 +1,34 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.140
++ Target Hostname:    10.10.10.140
++ Target Port:        80
++ Start Time:         2020-09-10 02:46:13 (GMT-5)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.18 (Ubuntu)
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Apache/2.4.18 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ OSVDB-39272: /favicon.ico file identifies this app/server as: Magento Go CMS
++ OSVDB-39272: /skin/frontend/base/default/favicon.ico file identifies this app/server as: Magento Go CMS
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ DEBUG HTTP verb may show server debugging information. See http://msdn.microsoft.com/en-us/library/e8z01xdh%28VS.80%29.aspx for details.
++ OSVDB-3268: /app/: Directory indexing found.
++ OSVDB-3092: /app/: This might be interesting...
++ OSVDB-3268: /includes/: Directory indexing found.
++ OSVDB-3092: /includes/: This might be interesting...
++ OSVDB-3268: /lib/: Directory indexing found.
++ OSVDB-3092: /lib/: This might be interesting...
++ OSVDB-3092: /install.php: install.php file found.
++ OSVDB-3092: /LICENSE.txt: License file found may identify site software.
++ OSVDB-3233: /icons/README: Apache default file found.
++ /RELEASE_NOTES.txt: A database error may reveal internal details about the running database.
++ /RELEASE_NOTES.txt: Magento Shop Changelog identified.
++ /skin/adminhtml/default/default/media/editor.swf: Several Adobe Flash files that ship with Magento are vulnerable to DOM based Cross Site Scripting (XSS). See http://appcheck-ng.com/unpatched-vulnerabilites-in-magento-e-commerce-platform/
++ /skin/adminhtml/default/default/media/uploader.swf: Several Adobe Flash files that ship with Magento are vulnerable to DOM based Cross Site Scripting (XSS). See http://appcheck-ng.com/unpatched-vulnerabilites-in-magento-e-commerce-platform/
++ /skin/adminhtml/default/default/media/uploaderSingle.swf: Several Adobe Flash files that ship with Magento are vulnerable to DOM based Cross Site Scripting (XSS). See http://appcheck-ng.com/unpatched-vulnerabilites-in-magento-e-commerce-platform/
++ 7864 requests: 0 error(s) and 21 item(s) reported on remote host
++ End Time:           2020-09-10 02:53:58 (GMT-5) (465 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

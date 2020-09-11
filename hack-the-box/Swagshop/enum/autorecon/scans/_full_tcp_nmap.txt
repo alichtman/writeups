@@ -1,0 +1,75 @@
+# Nmap 7.80 scan initiated Thu Sep 10 02:46:02 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Swagshop/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Swagshop/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.140
+adjust_timeouts2: packet supposedly had rtt of -633402 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -633402 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -760597 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -760597 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -130415 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -130415 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -781730 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -781730 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -158166 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -158166 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -555006 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -555006 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -904640 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -904640 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -182999 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -182999 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1056248 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1056248 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1108632 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1108632 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -159199 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -159199 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -183841 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -183841 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -884804 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -884804 microseconds.  Ignoring time.
+Nmap scan report for swagshop.htb (10.10.10.140)
+Host is up, received user-set (0.042s latency).
+Scanned at 2020-09-10 02:46:02 CDT for 86s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b6:55:2b:d2:4e:8f:a3:81:72:61:37:9a:12:f6:24:ec (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCgTCefp89MPJm2oaJqietdslSBur+eCMVQRW19iUL2DQSdZrIctssf/ws4HWN9DuXWB1p7OR9GWQhjeFv+xdb8OLy6EQ72zQOk+cNU9ANi72FZIkpD5A5vHUyhhUSUcnn6hwWMWW4dp6BFVxczAiutSWBVIm2YLmcqwOEOJhfXLVvsVqu8KUmybJQWFaJIeLVHzVgrF1623ekDXMwT7Ktq49RkmqGGE+e4pRy5pWlL2BPVcrSv9nMRDkJTXuoGQ53CRcp9VVi2V7flxTd6547oSPck1N+71Xj/x17sMBDNfwik/Wj3YLjHImAlHNZtSKVUT9Ifqwm973YRV9qtqtGT
+|   256 2e:30:00:7a:92:f0:89:30:59:c1:77:56:ad:51:c0:ba (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEG18M3bq7HSiI8XlKW9ptWiwOvrIlftuWzPEmynfU6LN26hP/qMJModcHS+idmLoRmZnC5Og9sj5THIf0ZtxPY=
+|   256 4c:50:d5:f2:70:c5:fd:c4:b2:f0:bc:42:20:32:64:34 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINmmpsnVsVEZ9KB16eRdxpe75vnX8B/AZMmhrN2i4ES7
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: 88733EE53676A47FC354A61C32516E82
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Did not follow redirect to http://10.10.10.140/
+Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.9 (95%), Linux 3.8 - 3.11 (95%), Linux 4.4 (95%), Linux 3.18 (95%), Linux 4.2 (95%), Linux 4.8 (95%), Linux 4.9 (95%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=9/10%OT=22%CT=1%CU=33611%PV=Y%DS=2%DC=T%G=Y%TM=5F59DA1
+OS:0%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10F%TI=Z%CI=I%TS=8)SEQ(SP=1
+OS:05%GCD=1%ISR=10F%TI=Z%TS=8)OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT1
+OS:1NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=71
+OS:20%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=
+OS:)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W
+OS:=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+OS:T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S
+OS:+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUC
+OS:K=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 198.839 days (since Mon Feb 24 05:39:13 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 199/tcp)
+HOP RTT      ADDRESS
+1   40.78 ms 10.10.14.1
+2   40.83 ms swagshop.htb (10.10.10.140)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 10 02:47:28 2020 -- 1 IP address (1 host up) scanned in 86.53 seconds

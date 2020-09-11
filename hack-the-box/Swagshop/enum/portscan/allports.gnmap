@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Sep 10 02:46:14 2020 as: nmap -A -sVC -v -p- -Pn -oA allports swagshop.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.140 (swagshop.htb)	Status: Up
+Host: 10.10.10.140 (swagshop.htb)	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/	Ignored State: closed (65533)	Seq Index: 258	IP ID Seq: All zeros
+# Nmap done at Thu Sep 10 02:53:20 2020 -- 1 IP address (1 host up) scanned in 425.43 seconds

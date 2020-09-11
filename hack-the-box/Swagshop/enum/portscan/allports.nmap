@@ -1,0 +1,52 @@
+# Nmap 7.80 scan initiated Thu Sep 10 02:46:14 2020 as: nmap -A -sVC -v -p- -Pn -oA allports swagshop.htb
+Increasing send delay for 10.10.10.140 from 0 to 5 due to 294 out of 978 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of -637697 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -637697 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -636490 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -636490 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -637349 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -637349 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -638543 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -638543 microseconds.  Ignoring time.
+Nmap scan report for swagshop.htb (10.10.10.140)
+Host is up (0.046s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 b6:55:2b:d2:4e:8f:a3:81:72:61:37:9a:12:f6:24:ec (RSA)
+|   256 2e:30:00:7a:92:f0:89:30:59:c1:77:56:ad:51:c0:ba (ECDSA)
+|_  256 4c:50:d5:f2:70:c5:fd:c4:b2:f0:bc:42:20:32:64:34 (ED25519)
+80/tcp open  http    Apache httpd 2.4.18 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: 88733EE53676A47FC354A61C32516E82
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+|_http-title: Did not follow redirect to http://10.10.10.140/
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=9/10%OT=22%CT=1%CU=42197%PV=Y%DS=2%DC=T%G=Y%TM=5F59DB7
+OS:0%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=105%TI=Z%CI=I%II=I%TS=8)SEQ
+OS:(SP=102%GCD=1%ISR=105%TI=Z%CI=I%TS=8)OPS(O1=M54DST11NW7%O2=M54DST11NW7%O
+OS:3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)WIN(W1=7120%W2=
+OS:7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSN
+OS:W7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%D
+OS:F=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O
+OS:=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W
+OS:=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%R
+OS:IPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.002 days (since Thu Sep 10 02:50:22 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 5900/tcp)
+HOP RTT      ADDRESS
+1   41.10 ms 10.10.14.1
+2   41.15 ms swagshop.htb (10.10.10.140)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 10 02:53:20 2020 -- 1 IP address (1 host up) scanned in 425.43 seconds
