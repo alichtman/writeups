@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Mon Sep 14 21:00:25 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.95

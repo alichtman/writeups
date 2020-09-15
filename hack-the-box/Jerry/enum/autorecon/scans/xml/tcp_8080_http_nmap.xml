@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Sep 14 21:00:42 2020 as: nmap -vv -&#45;reason -Pn -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/tcp_8080_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/xml/tcp_8080_http_nmap.xml 10.10.10.95 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 8080 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/tcp_8080_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/xml/tcp_8080_http_nmap.xml 10.10.10.95" start="1600135242" startstr="Mon Sep 14 21:00:42 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="8080"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600135242"/>
+<taskend task="NSE" time="1600135242"/>
+<taskbegin task="NSE" time="1600135242"/>
+<taskend task="NSE" time="1600135242"/>
+<taskbegin task="NSE" time="1600135242"/>
+<taskend task="NSE" time="1600135242"/>
+<taskbegin task="SYN Stealth Scan" time="1600135242"/>
+<taskend task="SYN Stealth Scan" time="1600135242" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1600135242"/>
+<taskend task="Service scan" time="1600135249" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1600135249"/>
+<taskprogress task="NSE" time="1600135280" percent="90.49" remaining="4" etc="1600135283"/>
+<taskprogress task="NSE" time="1600135310" percent="91.80" remaining="6" etc="1600135315"/>
+<taskprogress task="NSE" time="1600135340" percent="92.79" remaining="8" etc="1600135347"/>
+<taskprogress task="NSE" time="1600135370" percent="92.79" remaining="10" etc="1600135379"/>
+<taskend task="NSE" time="1600135393"/>
+<taskbegin task="NSE" time="1600135393"/>
+<taskend task="NSE" time="1600135393"/>
+<taskbegin task="NSE" time="1600135393"/>
+<taskend task="NSE" time="1600135393"/>
+<host starttime="1600135242" endtime="1600135393"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.95" addrtype="ipv4"/>
+<hostnames>
+<hostname name="jerry.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache Tomcat/Coyote JSP engine" version="1.1" method="probed" conf="10"><cpe>cpe:/a:apache:coyote_http_connector:1.1</cpe></service><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=jerry.htb&#xa;  url                                   method&#xa;  http://jerry.htb:8080/manager/status  HTTP: Basic&#xa;  http://jerry.htb:8080/manager/html    HTTP: Basic&#xa;"/><script id="http-chrono" output="Request times for /; avg: 467.92ms; min: 271.69ms; max: 1004.74ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=jerry.htb&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/&#xa;    Line number: 265&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/RELEASE-NOTES.txt&#xa;    Line number: 60&#xa;    Comment: &#xa;        /**/&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 79&#xa;    Comment: &#xa;        &lt;!-&#45;PROJECT LOGO-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/realm-howto.html&#xa;    Line number: 1263&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/security-howto.html&#xa;    Line number: 570&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/setup.html&#xa;    Line number: 246&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/tomcat.css&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        */&#xa;    &#xa;    Path: http://jerry.htb:8080/examples/&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 81&#xa;    Comment: &#xa;        &lt;!-&#45;APACHE LOGO-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/manager-howto.html&#xa;    Line number: 1405&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/config/&#xa;    Line number: 149&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 91&#xa;    Comment: &#xa;        &lt;!-&#45;()-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 37&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;          */&#xa;    &#xa;    Path: http://jerry.htb:8080/&#xa;    Line number: 52&#xa;    Comment: &#xa;        &#xa;        &#xa;                        -&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 81&#xa;    Comment: &#xa;        &lt;!-&#45;RIGHT SIDE MAIN BODY-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 36&#xa;    Comment: &#xa;        /* To prevent &lt;pre&gt;s from taking the complete available width. */&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 129&#xa;    Comment: &#xa;        &lt;!-&#45;//-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 145&#xa;    Comment: &#xa;        &#xa;    &#xa;    Path: http://jerry.htb:8080/docs/cluster-howto.html&#xa;    Line number: 715&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 14&#xa;    Comment: &#xa;        /* Prevent border-collapsing for table child elements like &lt;div&gt; */&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/deployer-howto.html&#xa;    Line number: 395&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 145&#xa;    Comment: &#xa;        &lt;!-&#45;PAGE FOOTER-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 81&#xa;    Comment: &#xa;        &lt;!-&#45;HEADER SEPARATOR-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 81&#xa;    Comment: &#xa;        &lt;!-&#45;LEFT SIDE NAVIGATION-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 145&#xa;    Comment: &#xa;        &lt;!-&#45;FOOTER SEPARATOR-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 129&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;                      //-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/docs/appdev/&#xa;    Line number: 79&#xa;    Comment: &#xa;        &lt;!-&#45;PAGE HEADER-&#45;&gt;&#xa;    &#xa;    Path: http://jerry.htb:8080/manager/html&#xa;    Line number: 6&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;            -&#45;&gt;&#xa;"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Tue, 15 Sep 2020 09:06:56 GMT; +7h06m06s from local time."><elem key="date">2020-09-15T09:06:56+00:00</elem>
+<elem key="delta">25566.0</elem>
+</script><script id="http-default-accounts" output="&#xa;  [Apache Tomcat] at /manager/html/&#xa;    tomcat:s3cret&#xa;"><table key="Apache Tomcat">
+<elem key="cpe">cpe:/a:apache:tomcat</elem>
+<elem key="path">/manager/html/</elem>
+<table key="credentials">
+<table>
+<elem key="username">tomcat</elem>
+<elem key="password">s3cret</elem>
+</table>
+</table>
+</table>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /examples/: Sample scripts&#xa;  /manager/html/upload: Apache Tomcat (401 Unauthorized)&#xa;  /manager/html: Apache Tomcat (401 Unauthorized)&#xa;"/><script id="http-errors" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-favicon" output="Apache Tomcat"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Server: Apache-Coyote/1.1&#xa;  Content-Type: text/html;charset=ISO-8859-1&#xa;  Transfer-Encoding: chunked&#xa;  Date: Tue, 15 Sep 2020 09:06:58 GMT&#xa;  Connection: close&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-method-tamper" output="&#xa;  VULNERABLE:&#xa;  Authentication bypass by HTTP verb tampering&#xa;    State: VULNERABLE (Exploitable)&#xa;      This web server contains password protected resources vulnerable to authentication bypass&#xa;      vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the&#xa;       common HTTP methods and in misconfigured .htaccess files.&#xa;             &#xa;    Extra information:&#xa;      &#xa;  URIs suspected to be vulnerable to HTTP verb tampering:&#xa;    /manager/html [HEAD]&#xa;  &#xa;    References:&#xa;      http://www.mkit.com.ar/labs/htexploit/&#xa;      http://www.imperva.com/resources/glossary/http_verb_tampering.html&#xa;      http://capec.mitre.org/data/definitions/274.html&#xa;      https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29&#xa;"><table key="NMAP-5">
+<elem key="title">Authentication bypass by HTTP verb tampering</elem>
+<elem key="state">VULNERABLE (Exploitable)</elem>
+<table key="description">
+<elem>This web server contains password protected resources vulnerable to authentication bypass&#xa;vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the&#xa; common HTTP methods and in misconfigured .htaccess files.&#xa;       </elem>
+</table>
+<table key="extra_info">
+<elem>&#xa;URIs suspected to be vulnerable to HTTP verb tampering:&#xa;  /manager/html [HEAD]&#xa;</elem>
+</table>
+<table key="refs">
+<elem>http://www.mkit.com.ar/labs/htexploit/</elem>
+<elem>http://www.imperva.com/resources/glossary/http_verb_tampering.html</elem>
+<elem>http://capec.mitre.org/data/definitions/274.html</elem>
+<elem>https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29</elem>
+</table>
+</table>
+</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash f0fd167d7430ad20ada33662abc7a9f8&#xa;Credits query returned unknown hash f0fd167d7430ad20ada33662abc7a9f8"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Apache-Coyote/1.1"><elem>Apache-Coyote/1.1</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Apache Tomcat/7.0.88"><elem key="title">Apache Tomcat/7.0.88</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;127 names had status 200"/><script id="http-waf-detect" output="IDS/IPS/WAF detected:&#xa;jerry.htb:8080/?p4yl04d3=&lt;script&gt;alert(document.cookie)&lt;/script&gt;"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="55589" rttvar="55589" to="277945"/>
+</host>
+<taskbegin task="NSE" time="1600135393"/>
+<taskend task="NSE" time="1600135393"/>
+<taskbegin task="NSE" time="1600135393"/>
+<taskend task="NSE" time="1600135393"/>
+<taskbegin task="NSE" time="1600135393"/>
+<taskend task="NSE" time="1600135393"/>
+<runstats><finished time="1600135393" timestr="Mon Sep 14 21:03:13 2020" elapsed="151.05" summary="Nmap done at Mon Sep 14 21:03:13 2020; 1 IP address (1 host up) scanned in 151.05 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

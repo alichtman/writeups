@@ -1,0 +1,426 @@
+# Nmap 7.80 scan initiated Mon Sep 14 21:00:42 2020 as: nmap -vv --reason -Pn -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/tcp_8080_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/xml/tcp_8080_http_nmap.xml 10.10.10.95
+Nmap scan report for jerry.htb (10.10.10.95)
+Host is up, received user-set (0.056s latency).
+Scanned at 2020-09-14 21:00:42 CDT for 151s
+
+PORT     STATE SERVICE REASON          VERSION
+8080/tcp open  http    syn-ack ttl 127 Apache Tomcat/Coyote JSP engine 1.1
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=jerry.htb
+|   url                                   method
+|   http://jerry.htb:8080/manager/status  HTTP: Basic
+|_  http://jerry.htb:8080/manager/html    HTTP: Basic
+|_http-chrono: Request times for /; avg: 467.92ms; min: 271.69ms; max: 1004.74ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=jerry.htb
+|     
+|     Path: http://jerry.htb:8080/docs/
+|     Line number: 265
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/RELEASE-NOTES.txt
+|     Line number: 60
+|     Comment: 
+|         /**/
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 79
+|     Comment: 
+|         <!--PROJECT LOGO-->
+|     
+|     Path: http://jerry.htb:8080/docs/realm-howto.html
+|     Line number: 1263
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/security-howto.html
+|     Line number: 570
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/setup.html
+|     Line number: 246
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/tomcat.css
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         */
+|     
+|     Path: http://jerry.htb:8080/examples/
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         -->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 81
+|     Comment: 
+|         <!--APACHE LOGO-->
+|     
+|     Path: http://jerry.htb:8080/docs/manager-howto.html
+|     Line number: 1405
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/config/
+|     Line number: 149
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 91
+|     Comment: 
+|         <!--()-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 37
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|           */
+|     
+|     Path: http://jerry.htb:8080/
+|     Line number: 52
+|     Comment: 
+|         
+|         
+|                         -->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 81
+|     Comment: 
+|         <!--RIGHT SIDE MAIN BODY-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 36
+|     Comment: 
+|         /* To prevent <pre>s from taking the complete available width. */
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 129
+|     Comment: 
+|         <!--//-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 145
+|     Comment: 
+|         
+|     
+|     Path: http://jerry.htb:8080/docs/cluster-howto.html
+|     Line number: 715
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 14
+|     Comment: 
+|         /* Prevent border-collapsing for table child elements like <div> */
+|     
+|     Path: http://jerry.htb:8080/docs/deployer-howto.html
+|     Line number: 395
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 145
+|     Comment: 
+|         <!--PAGE FOOTER-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 81
+|     Comment: 
+|         <!--HEADER SEPARATOR-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 81
+|     Comment: 
+|         <!--LEFT SIDE NAVIGATION-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 145
+|     Comment: 
+|         <!--FOOTER SEPARATOR-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 129
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|                       //-->
+|     
+|     Path: http://jerry.htb:8080/docs/appdev/
+|     Line number: 79
+|     Comment: 
+|         <!--PAGE HEADER-->
+|     
+|     Path: http://jerry.htb:8080/manager/html
+|     Line number: 6
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|_            -->
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Tue, 15 Sep 2020 09:06:56 GMT; +7h06m06s from local time.
+| http-default-accounts: 
+|   [Apache Tomcat] at /manager/html/
+|_    tomcat:s3cret
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /examples/: Sample scripts
+|   /manager/html/upload: Apache Tomcat (401 Unauthorized)
+|_  /manager/html: Apache Tomcat (401 Unauthorized)
+|_http-errors: ERROR: Script execution failed (use -d to debug)
+|_http-favicon: Apache Tomcat
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Server: Apache-Coyote/1.1
+|   Content-Type: text/html;charset=ISO-8859-1
+|   Transfer-Encoding: chunked
+|   Date: Tue, 15 Sep 2020 09:06:58 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-method-tamper: 
+|   VULNERABLE:
+|   Authentication bypass by HTTP verb tampering
+|     State: VULNERABLE (Exploitable)
+|       This web server contains password protected resources vulnerable to authentication bypass
+|       vulnerabilities via HTTP verb tampering. This is often found in web servers that only limit access to the
+|        common HTTP methods and in misconfigured .htaccess files.
+|              
+|     Extra information:
+|       
+|   URIs suspected to be vulnerable to HTTP verb tampering:
+|     /manager/html [HEAD]
+|   
+|     References:
+|       http://www.mkit.com.ar/labs/htexploit/
+|       http://www.imperva.com/resources/glossary/http_verb_tampering.html
+|       http://capec.mitre.org/data/definitions/274.html
+|_      https://www.owasp.org/index.php/Testing_for_HTTP_Methods_and_XST_%28OWASP-CM-008%29
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash f0fd167d7430ad20ada33662abc7a9f8
+|_Credits query returned unknown hash f0fd167d7430ad20ada33662abc7a9f8
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Apache-Coyote/1.1
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Apache Tomcat/7.0.88
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|_    Snoopy
+| http-vhosts: 
+|_127 names had status 200
+| http-waf-detect: IDS/IPS/WAF detected:
+|_jerry.htb:8080/?p4yl04d3=<script>alert(document.cookie)</script>
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 14 21:03:13 2020 -- 1 IP address (1 host up) scanned in 151.05 seconds

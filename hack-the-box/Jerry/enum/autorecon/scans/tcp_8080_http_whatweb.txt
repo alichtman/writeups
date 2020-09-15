@@ -1,0 +1,38 @@
+WhatWeb report for http://10.10.10.95:8080
+Status    : 200 OK
+Title     : Apache Tomcat/7.0.88
+IP        : 10.10.10.95
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Apache-Coyote/1.1], Apache, HTML5
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Apache-Coyote/1.1 (from server string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Server: Apache-Coyote/1.1
+	Content-Type: text/html;charset=ISO-8859-1
+	Transfer-Encoding: chunked
+	Date: Tue, 15 Sep 2020 09:06:49 GMT
+	Connection: close
+	

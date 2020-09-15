@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Mon Sep 14 21:00:25 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jerry/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.95

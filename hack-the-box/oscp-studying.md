@@ -14,7 +14,7 @@
 | Cronos      [x]  | Servmon    [ ]  | Hawk             [ ]  | Control  [ ]  |
 | Sense       [x]  | Silo       [ ]  | Lightweight      [ ]  | Nest     [ ]  |
 | Solidstate  [o]  | Bounty     [ ]  | La Casa De Papel [ ]  | Sauna    [ ]  |
-| Kotarak     [ ]  | Jerry      [ ]  | Jail             [ ]  | Querier  [ ]  |
+| Kotarak     [!]  | Jerry      [x]  | Jail             [ ]  | Querier  [ ]  |
 | Node        [ ]  | Conceal    [ ]  | Safe             [ ]  |               |
 | Valentine   [o]  | Chatterbox [ ]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
@@ -23,7 +23,7 @@
 | Magic       [x]  | Secnotes   [ ]  |                       |               |
 | Irked       [ ]  | Buff       [ ]  |                       |               |
 | Friendzone  [ ]  |                 |                       |               |
-| Swagshop    [ ]  |                 |                       |               |
+| Swagshop    [!]  |                 |                       |               |
 | Networked   [ ]  |                 |                       |               |
 | Jarvis      [ ]  |                 |                       |               |
 | Mirai       [o]  |                 |                       |               |

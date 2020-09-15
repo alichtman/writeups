@@ -1,0 +1,2 @@
+# Nmap 7.80 scan initiated Mon Sep 14 21:00:34 2020 as: nmap -A -sVC -v -p- -Pn -oA allports jerry.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
