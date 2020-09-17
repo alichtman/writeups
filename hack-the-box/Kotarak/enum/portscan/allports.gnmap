@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Sun Sep 13 21:25:38 2020 as: nmap -A -sVC -v -p- -Pn -oA allports kotarak.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.55 (kotarak.htb)	Status: Up
+Host: 10.10.10.55 (kotarak.htb)	Ports: 22/open/tcp//ssh//OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)/, 8009/open/tcp//ajp13//Apache Jserv (Protocol v1.3)/, 8080/open/tcp//http//Apache Tomcat 8.5.5/, 60000/open/tcp//http//Apache httpd 2.4.18 ((Ubuntu))/	Ignored State: closed (65531)	Seq Index: 262	IP ID Seq: All zeros
+# Nmap done at Sun Sep 13 21:33:20 2020 -- 1 IP address (1 host up) scanned in 461.79 seconds

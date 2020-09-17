@@ -44,6 +44,7 @@ The credentials `ypwq:123` work.
 
 We see it's running `Magento 1.9.0`.
 
+TODO: Tried to use an RCE exploit (37811.py) and it failed with some errors I couldn't fix. No idea where to go from here, giving up for now.
 
 ## Reverse Shell
 

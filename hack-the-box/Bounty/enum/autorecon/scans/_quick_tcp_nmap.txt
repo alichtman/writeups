@@ -1,0 +1,18 @@
+# Nmap 7.80 scan initiated Mon Sep 14 21:31:58 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.93
+Nmap scan report for bounty.htb (10.10.10.93)
+Host is up, received user-set (0.044s latency).
+Scanned at 2020-09-14 21:31:59 CDT for 17s
+Not shown: 999 filtered ports
+Reason: 999 no-responses
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Bounty
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 14 21:32:16 2020 -- 1 IP address (1 host up) scanned in 17.43 seconds

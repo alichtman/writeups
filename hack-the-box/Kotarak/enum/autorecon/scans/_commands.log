@@ -1,0 +1,44 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/_full_tcp_nmap.xml" 10.10.10.55
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" 10.10.10.55
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" 10.10.10.55
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.55:22 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_22_ssh_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/tcp_22_ssh_nmap.xml" 10.10.10.55
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.55:8009 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8009_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.55:8080 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 8080 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/tcp_8080_http_nmap.xml" 10.10.10.55
+
+curl -sSik http://10.10.10.55:8080/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_index.html"
+
+curl -sSik http://10.10.10.55:8080/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.55:8080/ /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.55:8080 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.55:8080 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.55:8080/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_gobuster.txt"; else gobuster dir -u http://10.10.10.55:8080/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.55:60000 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 60000 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/tcp_60000_http_nmap.xml" 10.10.10.55
+
+curl -sSik http://10.10.10.55:60000/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_index.html"
+
+curl -sSik http://10.10.10.55:60000/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.55:60000/ /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.55:60000 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.55:60000 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.55:60000/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_gobuster.txt"; else gobuster dir -u http://10.10.10.55:60000/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_60000_http_gobuster.txt"; fi
+

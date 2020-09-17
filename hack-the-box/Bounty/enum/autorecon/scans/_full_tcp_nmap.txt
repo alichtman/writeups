@@ -1,0 +1,49 @@
+# Nmap 7.80 scan initiated Mon Sep 14 21:31:59 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.93
+adjust_timeouts2: packet supposedly had rtt of -707406 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -707406 microseconds.  Ignoring time.
+Nmap scan report for bounty.htb (10.10.10.93)
+Host is up, received user-set (0.044s latency).
+Scanned at 2020-09-14 21:31:59 CDT for 171s
+Not shown: 65534 filtered ports
+Reason: 65534 no-responses
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Bounty
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose|phone
+Running (JUST GUESSING): Microsoft Windows 7|8|Phone|2008|8.1|Vista (90%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Embedded Standard 7 (90%), Microsoft Windows 8.1 Update 1 (90%), Microsoft Windows Phone 7.5 or 8.0 (90%), Microsoft Windows 7 or Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 (90%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 R2 or Windows 8.1 (90%), Microsoft Windows Server 2008 R2 SP1 (90%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (90%), Microsoft Windows 7 (90%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=9/14%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F60284A%P=x86_64-pc-linux-gnu)
+SEQ(SP=107%GCD=1%ISR=10D%TS=7)
+OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Uptime guess: 0.002 days (since Mon Sep 14 21:31:32 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   43.63 ms 10.10.14.1
+2   43.63 ms bounty.htb (10.10.10.93)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Sep 14 21:34:50 2020 -- 1 IP address (1 host up) scanned in 171.16 seconds

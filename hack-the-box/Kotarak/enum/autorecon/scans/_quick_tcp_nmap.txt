@@ -1,0 +1,31 @@
+# Nmap 7.80 scan initiated Sun Sep 13 21:25:27 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.55
+Nmap scan report for kotarak.htb (10.10.10.55)
+Host is up, received user-set (0.048s latency).
+Scanned at 2020-09-13 21:25:28 CDT for 9s
+Not shown: 997 closed ports
+Reason: 997 resets
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 e2:d7:ca:0e:b7:cb:0a:51:f7:2e:75:ea:02:24:17:74 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDfAOLS+7h/C5JtTGQ7mr9dM70qpnhrk8tFSZFncNSMFyfw3JTg16I2KddMFRr3a/+qv+aAfF1VxyUuJl+tXlgvjgH3pRG/mDCl90U6zhz/WVqPaeu8TIu/1ph+mUZHyss/bCVrt5mnbb1nG/AeDnX/+IiUINIdkgMB6aIOtC+B+zKV/aIrk84HgV4IwfC03a2R7FRPwVzjCv97jhWjvqBEYt4UudazAmkBjgEC9xlJ9r8MjV/DrJ6M66rjCTeuLmiB3a/qz+CbC4k/uey2b5D0p5nxMGkINjgL8X1t8BbGj1qOAS+HWWxQETuwYNVpTLeNuy1bev4kd2BZyewut/p
+|   256 e8:f1:c0:d3:7d:9b:43:73:ad:37:3b:cb:e1:64:8e:e9 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEvZEilkawbySka+4LZlqha3pjcW2T4wq8WM1cwg/DscLCxypOIh2bRkMitpUOz1kMftIZSGNdmERXvi0znPWFI=
+|   256 6d:e9:26:ad:86:02:2d:68:e1:eb:ad:66:a0:60:17:b8 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8PURIGd2/vCi9d91JK1f8wlyKrIPLcBBVVFsP8YXQ3
+8009/tcp open  ajp13   syn-ack ttl 63 Apache Jserv (Protocol v1.3)
+| ajp-methods: 
+|   Supported methods: GET HEAD POST PUT DELETE OPTIONS
+|   Potentially risky methods: PUT DELETE
+|_  See https://nmap.org/nsedoc/scripts/ajp-methods.html
+8080/tcp open  http    syn-ack ttl 63 Apache Tomcat 8.5.5
+|_http-favicon: Apache Tomcat
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE OPTIONS
+|_  Potentially risky methods: PUT DELETE
+|_http-title: Apache Tomcat/8.5.5 - Error report
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 13 21:25:37 2020 -- 1 IP address (1 host up) scanned in 9.77 seconds

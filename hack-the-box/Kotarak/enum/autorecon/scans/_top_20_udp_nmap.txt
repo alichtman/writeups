@@ -1,0 +1,53 @@
+# Nmap 7.80 scan initiated Sun Sep 13 21:25:28 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.55
+adjust_timeouts2: packet supposedly had rtt of -89514 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -722194 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -722194 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -820197 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -820197 microseconds.  Ignoring time.
+Nmap scan report for kotarak.htb (10.10.10.55)
+Host is up, received user-set (0.053s latency).
+Scanned at 2020-09-13 21:25:28 CDT for 185s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    closed        domain       port-unreach ttl 63
+67/udp    closed        dhcps        port-unreach ttl 63
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   closed        msrpc        port-unreach ttl 63
+137/udp   open|filtered netbios-ns   no-response
+138/udp   closed        netbios-dgm  port-unreach ttl 63
+139/udp   closed        netbios-ssn  port-unreach ttl 63
+161/udp   closed        snmp         port-unreach ttl 63
+162/udp   open|filtered snmptrap     no-response
+445/udp   open|filtered microsoft-ds no-response
+500/udp   closed        isakmp       port-unreach ttl 63
+514/udp   closed        syslog       port-unreach ttl 63
+520/udp   closed        route        port-unreach ttl 63
+631/udp   closed        ipp          port-unreach ttl 63
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  closed        upnp         port-unreach ttl 63
+4500/udp  closed        nat-t-ike    port-unreach ttl 63
+49152/udp closed        unknown      port-unreach ttl 63
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: storage-misc|general purpose|media device
+Running: Buffalo embedded, Linux 2.6.X, Sony embedded, Google Android
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:google:android
+OS details: Buffalo Cloudstor NAS device, Linux 2.6.14 - 2.6.34, Linux 2.6.17 (Mandriva), Linux 2.6.23, Linux 2.6.24, Linux 2.6.32, Sony Bravia smart TV (Android)
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=9/13%OT=%CT=%CU=53%PV=Y%DS=2%DC=T%G=N%TM=5F5ED551%P=x8
+OS:6_64-pc-linux-gnu)SEQ(CI=I)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=
+OS:)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=
+OS:S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 1900/udp)
+HOP RTT      ADDRESS
+1   71.56 ms 10.10.14.1
+2   41.53 ms kotarak.htb (10.10.10.55)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 13 21:28:33 2020 -- 1 IP address (1 host up) scanned in 185.87 seconds

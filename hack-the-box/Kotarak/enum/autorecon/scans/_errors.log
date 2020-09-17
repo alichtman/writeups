@@ -1,0 +1,1 @@
+[*] Task tcp/8080/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.55:8080/ /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_screenshot.png; fi

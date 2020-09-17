@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Sep 14 21:32:08 2020 as: nmap -A -sVC -v -p- -Pn -oA allports bounty.htb -->
+<nmaprun scanner="nmap" args="nmap -A -sVC -v -p- -Pn -oA allports bounty.htb" start="1600137128" startstr="Mon Sep 14 21:32:08 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600137129"/>
+<taskend task="NSE" time="1600137129"/>
+<taskbegin task="NSE" time="1600137129"/>
+<taskend task="NSE" time="1600137129"/>
+<taskbegin task="NSE" time="1600137129"/>
+<taskend task="NSE" time="1600137129"/>
+<taskbegin task="SYN Stealth Scan" time="1600137129"/>
+<taskprogress task="SYN Stealth Scan" time="1600137160" percent="16.36" remaining="159" etc="1600137318"/>
+<taskprogress task="SYN Stealth Scan" time="1600137190" percent="36.59" remaining="106" etc="1600137296"/>
+<taskprogress task="SYN Stealth Scan" time="1600137226" percent="52.22" remaining="89" etc="1600137315"/>
+<taskprogress task="SYN Stealth Scan" time="1600137256" percent="75.24" remaining="42" etc="1600137298"/>
+<taskend task="SYN Stealth Scan" time="1600137281" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1600137281"/>
+<taskend task="Service scan" time="1600137287" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1600137293"/>
+<taskend task="Traceroute" time="1600137293"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1600137293"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1600137293"/>
+<taskbegin task="NSE" time="1600137293"/>
+<taskend task="NSE" time="1600137294"/>
+<taskbegin task="NSE" time="1600137294"/>
+<taskend task="NSE" time="1600137294"/>
+<taskbegin task="NSE" time="1600137294"/>
+<taskend task="NSE" time="1600137294"/>
+<host starttime="1600137129" endtime="1600137294"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.93" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bounty.htb" type="user"/>
+<hostname name="bounty.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script><script id="http-title" output="Bounty"><elem key="title">Bounty</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Embedded Standard 7" accuracy="90" line="77473">
+<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 8.1 Update 1" accuracy="90" line="77581">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="90"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="90" line="78869">
+<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="90"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 or Windows Server 2008 R2" accuracy="90" line="73917">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="90" line="74136">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 or Windows 8.1" accuracy="90" line="74462">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="90"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1" accuracy="90" line="74536">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1 or Windows 8" accuracy="90" line="74646">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="90"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="90" line="75992">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional or Windows 8" accuracy="90" line="76543">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="90"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="203" lastboot="Mon Sep 14 21:31:31 2020"/>
+<distance value="2"/>
+<tcpsequence index="258" difficulty="Good luck!" values="C28A2ADE,BC3F0B3,B7D40E7D,170AB03B,3C38BC3D,C65882BC"/>
+<ipidsequence class="Randomized" values="31C8,327D,332D,32AE,3489,341E"/>
+<tcptssequence class="100HZ" values="4DEC,4DF6,4E00,4DF9,4E13,4E0D"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="43.73"/>
+<hop ttl="2" ipaddr="10.10.10.93" rtt="43.71" host="bounty.htb"/>
+</trace>
+<times srtt="45382" rttvar="2973" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1600137294"/>
+<taskend task="NSE" time="1600137294"/>
+<taskbegin task="NSE" time="1600137294"/>
+<taskend task="NSE" time="1600137294"/>
+<taskbegin task="NSE" time="1600137294"/>
+<taskend task="NSE" time="1600137294"/>
+<runstats><finished time="1600137294" timestr="Mon Sep 14 21:34:54 2020" elapsed="165.74" summary="Nmap done at Mon Sep 14 21:34:54 2020; 1 IP address (1 host up) scanned in 165.74 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

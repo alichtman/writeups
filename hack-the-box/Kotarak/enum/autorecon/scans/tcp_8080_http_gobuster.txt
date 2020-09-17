@@ -1,0 +1,6 @@
+/docs (Status: 302) [Size: 0]
+/examples (Status: 302) [Size: 0]
+/favicon.ico (Status: 200) [Size: 21630]
+/host-manager (Status: 302) [Size: 0]
+/index.jsp (Status: 200) [Size: 11228]
+/manager (Status: 302) [Size: 0]

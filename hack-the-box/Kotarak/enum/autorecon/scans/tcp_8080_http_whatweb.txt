@@ -1,0 +1,34 @@
+WhatWeb report for http://10.10.10.55:8080
+Status    : 404 Not Found
+Title     : Apache Tomcat/8.5.5 - Error report
+IP        : 10.10.10.55
+Country   : RESERVED, ZZ
+
+Summary   : HTML5, Apache-Tomcat[8.5.5], Content-Language[en]
+
+Detected Plugins:
+[ Apache-Tomcat ]
+	Apache Tomcat Web Server 
+
+	Version      : 8.5.5 (from Footer)
+	Version      : 8.5.5 (from /RELEASE-NOTES.txt)
+	Aggressive function available (check plugin file or details).
+	Website     : http://tomcat.apache.org/
+
+[ Content-Language ]
+	Detect the content-language setting from the HTTP header. 
+
+	String       : en
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+HTTP Headers:
+	HTTP/1.1 404 
+	Content-Type: text/html;charset=utf-8
+	Content-Language: en
+	Content-Length: 992
+	Date: Mon, 14 Sep 2020 02:31:45 GMT
+	Connection: close
+	

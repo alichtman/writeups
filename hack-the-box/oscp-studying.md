@@ -13,7 +13,7 @@
 | Nineveh     [x]  | Grandpa    [x]  | Devoops          [ ]  | Sniper   [ ]  |
 | Cronos      [x]  | Servmon    [ ]  | Hawk             [ ]  | Control  [ ]  |
 | Sense       [x]  | Silo       [ ]  | Lightweight      [ ]  | Nest     [ ]  |
-| Solidstate  [o]  | Bounty     [ ]  | La Casa De Papel [ ]  | Sauna    [ ]  |
+| Solidstate  [o]  | Bounty     [x]  | La Casa De Papel [ ]  | Sauna    [ ]  |
 | Kotarak     [!]  | Jerry      [x]  | Jail             [ ]  | Querier  [ ]  |
 | Node        [ ]  | Conceal    [ ]  | Safe             [ ]  |               |
 | Valentine   [o]  | Chatterbox [ ]  |                       |               |

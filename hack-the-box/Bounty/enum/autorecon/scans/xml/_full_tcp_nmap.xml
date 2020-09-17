@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Sep 14 21:31:59 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.93 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bounty/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.93" start="1600137119" startstr="Mon Sep 14 21:31:59 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600137119"/>
+<taskend task="NSE" time="1600137119"/>
+<taskbegin task="NSE" time="1600137119"/>
+<taskend task="NSE" time="1600137119"/>
+<taskbegin task="NSE" time="1600137119"/>
+<taskend task="NSE" time="1600137119"/>
+<taskbegin task="SYN Stealth Scan" time="1600137119"/>
+<taskprogress task="SYN Stealth Scan" time="1600137150" percent="19.33" remaining="130" etc="1600137279"/>
+<taskprogress task="SYN Stealth Scan" time="1600137180" percent="40.15" remaining="91" etc="1600137271"/>
+<taskprogress task="SYN Stealth Scan" time="1600137210" percent="56.55" remaining="70" etc="1600137280"/>
+<taskprogress task="SYN Stealth Scan" time="1600137240" percent="70.66" remaining="51" etc="1600137290"/>
+<taskend task="SYN Stealth Scan" time="1600137277" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1600137278"/>
+<taskend task="Service scan" time="1600137284" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1600137288"/>
+<taskend task="Traceroute" time="1600137288"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1600137288"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1600137288"/>
+<taskbegin task="NSE" time="1600137288"/>
+<taskend task="NSE" time="1600137289"/>
+<taskbegin task="NSE" time="1600137289"/>
+<taskend task="NSE" time="1600137290"/>
+<taskbegin task="NSE" time="1600137290"/>
+<taskend task="NSE" time="1600137290"/>
+<host starttime="1600137119" endtime="1600137290"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.93" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bounty.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-responses" count="65534"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script><script id="http-title" output="Bounty"><elem key="title">Bounty</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Embedded Standard 7" accuracy="90" line="77473">
+<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 8.1 Update 1" accuracy="90" line="77581">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="90"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="90" line="78869">
+<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="90"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 or Windows Server 2008 R2" accuracy="90" line="73917">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008" accuracy="90" line="74026">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="90" line="74136">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 or Windows 8.1" accuracy="90" line="74462">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="90"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1" accuracy="90" line="74536">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1 or Windows 8" accuracy="90" line="74646">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="90"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="90" line="75992">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=9/14%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F60284A%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10D%TS=7)&#xa;OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="198" lastboot="Mon Sep 14 21:31:32 2020"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="37FAFE5C,CE16DB62,5EFB3D76,29BA8691,230DB9E1,8B7D9E0E"/>
+<ipidsequence class="Busy server or unknown class" values="18A8,1966,1A17,1AC0,1B5F,1C09"/>
+<tcptssequence class="100HZ" values="4C6E,4C78,4C82,4C8C,4C96,4CA1"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="43.63"/>
+<hop ttl="2" ipaddr="10.10.10.93" rtt="43.63" host="bounty.htb"/>
+</trace>
+<times srtt="44463" rttvar="1574" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1600137290"/>
+<taskend task="NSE" time="1600137290"/>
+<taskbegin task="NSE" time="1600137290"/>
+<taskend task="NSE" time="1600137290"/>
+<taskbegin task="NSE" time="1600137290"/>
+<taskend task="NSE" time="1600137290"/>
+<runstats><finished time="1600137290" timestr="Mon Sep 14 21:34:50 2020" elapsed="171.16" summary="Nmap done at Mon Sep 14 21:34:50 2020; 1 IP address (1 host up) scanned in 171.16 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

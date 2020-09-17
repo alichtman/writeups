@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Sep 13 21:25:28 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.55 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.55" start="1600050328" startstr="Sun Sep 13 21:25:28 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600050328"/>
+<taskend task="NSE" time="1600050328"/>
+<taskbegin task="NSE" time="1600050328"/>
+<taskend task="NSE" time="1600050328"/>
+<taskbegin task="NSE" time="1600050328"/>
+<taskend task="NSE" time="1600050328"/>
+<taskbegin task="SYN Stealth Scan" time="1600050328"/>
+<taskprogress task="SYN Stealth Scan" time="1600050359" percent="14.32" remaining="186" etc="1600050545"/>
+<taskend task="SYN Stealth Scan" time="1600050396" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1600050396"/>
+<taskend task="Service scan" time="1600050418" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1600050432"/>
+<taskend task="Traceroute" time="1600050432"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1600050432"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1600050432"/>
+<taskbegin task="NSE" time="1600050432"/>
+<taskprogress task="NSE" time="1600050463" percent="99.81" remaining="1" etc="1600050463"/>
+<taskend task="NSE" time="1600050463"/>
+<taskbegin task="NSE" time="1600050463"/>
+<taskend task="NSE" time="1600050465"/>
+<taskbegin task="NSE" time="1600050465"/>
+<taskend task="NSE" time="1600050465"/>
+<host starttime="1600050328" endtime="1600050465"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.55" addrtype="ipv4"/>
+<hostnames>
+<hostname name="kotarak.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65531">
+<extrareasons reason="resets" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.2" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 e2:d7:ca:0e:b7:cb:0a:51:f7:2e:75:ea:02:24:17:74 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDfAOLS+7h/C5JtTGQ7mr9dM70qpnhrk8tFSZFncNSMFyfw3JTg16I2KddMFRr3a/+qv+aAfF1VxyUuJl+tXlgvjgH3pRG/mDCl90U6zhz/WVqPaeu8TIu/1ph+mUZHyss/bCVrt5mnbb1nG/AeDnX/+IiUINIdkgMB6aIOtC+B+zKV/aIrk84HgV4IwfC03a2R7FRPwVzjCv97jhWjvqBEYt4UudazAmkBjgEC9xlJ9r8MjV/DrJ6M66rjCTeuLmiB3a/qz+CbC4k/uey2b5D0p5nxMGkINjgL8X1t8BbGj1qOAS+HWWxQETuwYNVpTLeNuy1bev4kd2BZyewut/p&#xa;  256 e8:f1:c0:d3:7d:9b:43:73:ad:37:3b:cb:e1:64:8e:e9 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEvZEilkawbySka+4LZlqha3pjcW2T4wq8WM1cwg/DscLCxypOIh2bRkMitpUOz1kMftIZSGNdmERXvi0znPWFI=&#xa;  256 6d:e9:26:ad:86:02:2d:68:e1:eb:ad:66:a0:60:17:b8 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAID8PURIGd2/vCi9d91JK1f8wlyKrIPLcBBVVFsP8YXQ3"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">e2d7ca0eb7cb0a51f72e75ea02241774</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDDfAOLS+7h/C5JtTGQ7mr9dM70qpnhrk8tFSZFncNSMFyfw3JTg16I2KddMFRr3a/+qv+aAfF1VxyUuJl+tXlgvjgH3pRG/mDCl90U6zhz/WVqPaeu8TIu/1ph+mUZHyss/bCVrt5mnbb1nG/AeDnX/+IiUINIdkgMB6aIOtC+B+zKV/aIrk84HgV4IwfC03a2R7FRPwVzjCv97jhWjvqBEYt4UudazAmkBjgEC9xlJ9r8MjV/DrJ6M66rjCTeuLmiB3a/qz+CbC4k/uey2b5D0p5nxMGkINjgL8X1t8BbGj1qOAS+HWWxQETuwYNVpTLeNuy1bev4kd2BZyewut/p</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">e8f1c0d37d9b4373ad373bcbe1648ee9</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEvZEilkawbySka+4LZlqha3pjcW2T4wq8WM1cwg/DscLCxypOIh2bRkMitpUOz1kMftIZSGNdmERXvi0znPWFI=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">6de926ad86022d68e1ebad66a06017b8</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAID8PURIGd2/vCi9d91JK1f8wlyKrIPLcBBVVFsP8YXQ3</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="8009"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ajp13" product="Apache Jserv" extrainfo="Protocol v1.3" method="probed" conf="10"/><script id="ajp-methods" output="&#xa;  Supported methods: GET HEAD POST PUT DELETE OPTIONS&#xa;  Potentially risky methods: PUT DELETE&#xa;  See https://nmap.org/nsedoc/scripts/ajp-methods.html&#xa;"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache Tomcat" version="8.5.5" method="probed" conf="10"><cpe>cpe:/a:apache:tomcat:8.5.5</cpe></service><script id="http-favicon" output="Apache Tomcat"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST PUT DELETE OPTIONS&#xa;  Potentially risky methods: PUT DELETE"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>PUT</elem>
+<elem>DELETE</elem>
+<elem>OPTIONS</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>PUT</elem>
+<elem>DELETE</elem>
+</table>
+</script><script id="http-title" output="Apache Tomcat/8.5.5 - Error report"><elem key="title">Apache Tomcat/8.5.5 - Error report</elem>
+</script></port>
+<port protocol="tcp" portid="60000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.18" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.18</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.18 (Ubuntu)"><elem>Apache/2.4.18 (Ubuntu)</elem>
+</script><script id="http-title" output="        Kotarak Web Hosting        "><elem key="title">&#xa;        Kotarak Web Hosting&#xa;        </elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="37522"/>
+<osmatch name="Linux 3.12" accuracy="95" line="63436">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="95" line="63553">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="95" line="63944">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="95" line="64238">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8 - 3.11" accuracy="95" line="66079">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="95" line="67510">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="95" line="67057">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.8" accuracy="95" line="67659">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="95" line="67713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=9/13%OT=22%CT=1%CU=37522%PV=Y%DS=2%DC=T%G=Y%TM=5F5ED52&#xa;OS:1%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10E%TI=Z%TS=8)SEQ(SP=102%GC&#xa;OS:D=1%ISR=10E%TI=Z%CI=I%TS=8)OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT1&#xa;OS:1NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=71&#xa;OS:20%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=&#xa;OS:)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W&#xa;OS:=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;OS:T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S&#xa;OS:+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUC&#xa;OS:K=G%RUD=G)U1(R=N)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="17179779" lastboot="Fri Feb 28 00:18:06 2020"/>
+<distance value="2"/>
+<tcpsequence index="258" difficulty="Good luck!" values="E9A96237,6EABEE4A,D183012B,AB45446,3ED61F09,A8265390"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FFFF861A,FFFF8632,FFFF864B,FFFF8665,FFFF867D,FFFF8697"/>
+<trace port="995" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="82.94"/>
+<hop ttl="2" ipaddr="10.10.10.55" rtt="83.00" host="kotarak.htb"/>
+</trace>
+<times srtt="54141" rttvar="17282" to="123269"/>
+</host>
+<taskbegin task="NSE" time="1600050465"/>
+<taskend task="NSE" time="1600050465"/>
+<taskbegin task="NSE" time="1600050465"/>
+<taskend task="NSE" time="1600050465"/>
+<taskbegin task="NSE" time="1600050465"/>
+<taskend task="NSE" time="1600050465"/>
+<runstats><finished time="1600050465" timestr="Sun Sep 13 21:27:45 2020" elapsed="137.25" summary="Nmap done at Sun Sep 13 21:27:45 2020; 1 IP address (1 host up) scanned in 137.25 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

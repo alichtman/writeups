@@ -1,0 +1,82 @@
+# Nmap 7.80 scan initiated Sun Sep 13 21:25:37 2020 as: nmap -vv --reason -Pn -sV -p 8080 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/tcp_8080_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Kotarak/enum/autorecon/scans/xml/tcp_8080_http_nmap.xml 10.10.10.55
+Nmap scan report for kotarak.htb (10.10.10.55)
+Host is up, received user-set (0.043s latency).
+Scanned at 2020-09-13 21:25:38 CDT for 121s
+
+PORT     STATE SERVICE REASON         VERSION
+8080/tcp open  http    syn-ack ttl 63 Apache Tomcat 8.5.5
+|_http-chrono: Request times for /; avg: 153.83ms; min: 151.44ms; max: 156.37ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Mon, 14 Sep 2020 02:31:53 GMT; +6m06s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /examples/: Sample scripts
+|   /manager/html/upload: Apache Tomcat (401 )
+|_  /manager/html: Apache Tomcat (401 )
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=kotarak.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://kotarak.htb:8080/
+|_http-favicon: Apache Tomcat
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Content-Type: text/html;charset=utf-8
+|   Content-Language: en
+|   Content-Length: 992
+|   Date: Mon, 14 Sep 2020 02:31:55 GMT
+|   Connection: close
+|   
+|_  (Request type: GET)
+|_http-iis-webdav-vuln: WebDAV is DISABLED. Server is not currently vulnerable.
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE OPTIONS
+|_  Potentially risky methods: PUT DELETE
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Apache Tomcat/8.5.5 - Error report
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 404
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Sep 13 21:27:39 2020 -- 1 IP address (1 host up) scanned in 121.90 seconds
