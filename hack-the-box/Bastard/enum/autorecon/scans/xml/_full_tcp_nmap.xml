@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Sep 17 02:53:58 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bastard/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bastard/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.9 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bastard/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bastard/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.9" start="1600329238" startstr="Thu Sep 17 02:53:58 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600329239"/>
+<taskend task="NSE" time="1600329239"/>
+<taskbegin task="NSE" time="1600329239"/>
+<taskend task="NSE" time="1600329239"/>
+<taskbegin task="NSE" time="1600329239"/>
+<taskend task="NSE" time="1600329239"/>
+<taskbegin task="SYN Stealth Scan" time="1600329239"/>
+<taskprogress task="SYN Stealth Scan" time="1600329270" percent="20.08" remaining="124" etc="1600329393"/>
+<taskprogress task="SYN Stealth Scan" time="1600329300" percent="39.98" remaining="92" etc="1600329392"/>
+<taskprogress task="SYN Stealth Scan" time="1600329330" percent="67.19" remaining="45" etc="1600329374"/>
+<taskend task="SYN Stealth Scan" time="1600329359" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1600329359"/>
+<taskend task="Service scan" time="1600329421" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1600329425"/>
+<taskend task="Traceroute" time="1600329426"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1600329426"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1600329426"/>
+<taskbegin task="NSE" time="1600329426"/>
+<taskend task="NSE" time="1600329450"/>
+<taskbegin task="NSE" time="1600329450"/>
+<taskend task="NSE" time="1600329461"/>
+<taskbegin task="NSE" time="1600329461"/>
+<taskend task="NSE" time="1600329461"/>
+<host starttime="1600329239" endtime="1600329461"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.9" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bastard.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65532"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="7.5" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:7.5</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-favicon" output="Unknown favicon MD5: CF2445DCB53A031C02F9B57E2199BC03"/><script id="http-generator" output="Drupal 7 (http://drupal.org)"/><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-robots.txt" output="36 disallowed entries &#xa;/includes/ /misc/ /modules/ /profiles/ /scripts/ &#xa;/themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt &#xa;/INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt &#xa;/LICENSE.txt /MAINTAINERS.txt /update.php /UPGRADE.txt /xmlrpc.php &#xa;/admin/ /comment/reply/ /filter/tips/ /node/add/ /search/ &#xa;/user/register/ /user/password/ /user/login/ /user/logout/ /?q=admin/ &#xa;/?q=comment/reply/ /?q=filter/tips/ /?q=node/add/ /?q=search/ &#xa;/?q=user/password/ /?q=user/register/ /?q=user/login/ /?q=user/logout/"/><script id="http-server-header" output="Microsoft-IIS/7.5"><elem>Microsoft-IIS/7.5</elem>
+</script><script id="http-title" output="Welcome to 10.10.10.9 | 10.10.10.9"><elem key="title">Welcome to 10.10.10.9 | 10.10.10.9</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1 or Windows 8" accuracy="90" line="74646">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="90"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="90" line="76298">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7" accuracy="90" line="79575">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="90"><cpe>cpe:/o:microsoft:windows_vista::-</cpe><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="90"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="89" line="74136">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 Professional or Windows 8" accuracy="89" line="76543">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="89"><cpe>cpe:/o:microsoft:windows_7::-:professional</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="89"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 R2" accuracy="89" line="77209">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="89"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1" accuracy="89" line="77277">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="89"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008::sp2</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP2" accuracy="88" line="79804">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="88"><cpe>cpe:/o:microsoft:windows_vista::sp2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008" accuracy="88" line="79847">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="88"><cpe>cpe:/o:microsoft:windows_vista::sp2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="88"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="88"><cpe>cpe:/o:microsoft:windows_server_2008</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Embedded Standard 7" accuracy="87" line="77473">
+<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="87"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=9/17%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F6316F5%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=FD%GCD=1%ISR=103%TI=I%II=I%SS=O%TS=7)&#xa;SEQ(SP=FD%GCD=1%ISR=103%II=I%TS=7)&#xa;OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="288" lastboot="Thu Sep 17 02:52:53 2020"/>
+<distance value="2"/>
+<tcpsequence index="253" difficulty="Good luck!" values="6CCE2D2D,800517FD,6F24F89F,4CB32984,B117630,234E76C5"/>
+<ipidsequence class="Busy server or unknown class" values="251F,2525,2533,2536,253A,2542"/>
+<tcptssequence class="100HZ" values="624B,6255,625F,6269,6273,627D"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="58.32"/>
+<hop ttl="2" ipaddr="10.10.10.9" rtt="58.30" host="bastard.htb"/>
+</trace>
+<times srtt="55915" rttvar="3802" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1600329461"/>
+<taskend task="NSE" time="1600329461"/>
+<taskbegin task="NSE" time="1600329461"/>
+<taskend task="NSE" time="1600329461"/>
+<taskbegin task="NSE" time="1600329461"/>
+<taskend task="NSE" time="1600329461"/>
+<runstats><finished time="1600329461" timestr="Thu Sep 17 02:57:41 2020" elapsed="223.19" summary="Nmap done at Thu Sep 17 02:57:41 2020; 1 IP address (1 host up) scanned in 223.19 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

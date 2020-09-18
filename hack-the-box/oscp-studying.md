@@ -8,10 +8,10 @@
 | Brainfuck   [ ]  | Blue       [x]  | Mango            [ ]  | Bart     [ ]  |
 | Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
 | Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [ ]  |
-| Nibbles     [o]  | Bastard    [ ]  | Jail             [ ]  | Netmon   [ ]  |
+| Nibbles     [o]  | Bastard    [x]  | Jail             [ ]  | Netmon   [ ]  |
 | Beep        [x]  | Granny     [x]  | Falafel          [ ]  | Sizzle   [ ]  |
 | Nineveh     [x]  | Grandpa    [x]  | Devoops          [ ]  | Sniper   [ ]  |
-| Cronos      [x]  | Servmon    [ ]  | Hawk             [ ]  | Control  [ ]  |
+| Cronos      [x]  | Servmon    [!]  | Hawk             [ ]  | Control  [ ]  |
 | Sense       [x]  | Silo       [ ]  | Lightweight      [ ]  | Nest     [ ]  |
 | Solidstate  [o]  | Bounty     [x]  | La Casa De Papel [ ]  | Sauna    [ ]  |
 | Kotarak     [!]  | Jerry      [x]  | Jail             [ ]  | Querier  [ ]  |

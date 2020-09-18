@@ -1,0 +1,110 @@
+WhatWeb report for http://10.10.10.9:80
+Status    : 200 OK
+Title     : Welcome to 10.10.10.9 | 10.10.10.9
+IP        : 10.10.10.9
+Country   : RESERVED, ZZ
+
+Summary   : X-Powered-By[PHP/5.3.28, ASP.NET], HTTPServer[Microsoft-IIS/7.5], UncommonHeaders[x-content-type-options,x-generator], Drupal, PasswordField[pass], MetaGenerator[Drupal 7 (http://drupal.org)], X-Frame-Options[SAMEORIGIN], JQuery, PHP[5.3.28,], Content-Language[en], Script[text/javascript], Microsoft-IIS[7.5]
+
+Detected Plugins:
+[ Content-Language ]
+	Detect the content-language setting from the HTTP header. 
+
+	String       : en
+
+[ Drupal ]
+	Drupal is an opensource CMS written in PHP. 
+
+	Aggressive function available (check plugin file or details).
+	Google Dorks: (1)
+	Website     : http://www.drupal.org
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/7.5 (from server string)
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its 
+	value. 
+
+	String       : Drupal 7 (http://drupal.org)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 7.5
+	Website     : http://www.iis.net/
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 5.3.28,
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ PasswordField ]
+	find password fields 
+
+	String       : pass (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/javascript
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : x-content-type-options,x-generator (from headers)
+
+[ X-Frame-Options ]
+	This plugin retrieves the X-Frame-Options value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : SAMEORIGIN
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/5.3.28, ASP.NET (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Cache-Control: no-cache, must-revalidate
+	Content-Type: text/html; charset=utf-8
+	Content-Language: en
+	Expires: Sun, 19 Nov 1978 05:00:00 GMT
+	Server: Microsoft-IIS/7.5
+	X-Powered-By: PHP/5.3.28
+	X-Content-Type-Options: nosniff
+	X-Frame-Options: SAMEORIGIN
+	X-Generator: Drupal 7 (http://drupal.org)
+	X-Powered-By: ASP.NET
+	Date: Thu, 17 Sep 2020 08:01:27 GMT
+	Connection: close
+	Content-Length: 7583
+	

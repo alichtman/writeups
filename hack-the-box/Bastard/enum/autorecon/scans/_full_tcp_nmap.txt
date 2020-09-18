@@ -1,0 +1,61 @@
+# Nmap 7.80 scan initiated Thu Sep 17 02:53:58 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bastard/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bastard/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.9
+Nmap scan report for bastard.htb (10.10.10.9)
+Host is up, received user-set (0.056s latency).
+Scanned at 2020-09-17 02:53:59 CDT for 222s
+Not shown: 65532 filtered ports
+Reason: 65532 no-responses
+PORT      STATE SERVICE REASON          VERSION
+80/tcp    open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+|_http-favicon: Unknown favicon MD5: CF2445DCB53A031C02F9B57E2199BC03
+|_http-generator: Drupal 7 (http://drupal.org)
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+| http-robots.txt: 36 disallowed entries 
+| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+| /LICENSE.txt /MAINTAINERS.txt /update.php /UPGRADE.txt /xmlrpc.php 
+| /admin/ /comment/reply/ /filter/tips/ /node/add/ /search/ 
+| /user/register/ /user/password/ /user/login/ /user/logout/ /?q=admin/ 
+| /?q=comment/reply/ /?q=filter/tips/ /?q=node/add/ /?q=search/ 
+|_/?q=user/password/ /?q=user/register/ /?q=user/login/ /?q=user/logout/
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: Welcome to 10.10.10.9 | 10.10.10.9
+135/tcp   open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|specialized|phone
+Running (JUST GUESSING): Microsoft Windows 2008|7|Vista|Phone|8.1 (90%)
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2:sp1 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_8.1
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 SP1 or Windows 8 (90%), Microsoft Windows 7 (90%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (90%), Microsoft Windows Server 2008 R2 (89%), Microsoft Windows 7 Professional or Windows 8 (89%), Microsoft Windows 7 SP1 or Windows Server 2008 R2 (89%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (89%), Microsoft Windows Vista SP2 (88%), Microsoft Windows Vista SP2, Windows 7 SP1, or Windows Server 2008 (88%), Microsoft Windows Embedded Standard 7 (87%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=9/17%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F6316F5%P=x86_64-pc-linux-gnu)
+SEQ(SP=FD%GCD=1%ISR=103%TI=I%II=I%SS=O%TS=7)
+SEQ(SP=FD%GCD=1%ISR=103%II=I%TS=7)
+OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Uptime guess: 0.003 days (since Thu Sep 17 02:52:53 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=253 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   58.32 ms 10.10.14.1
+2   58.30 ms bastard.htb (10.10.10.9)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Sep 17 02:57:41 2020 -- 1 IP address (1 host up) scanned in 223.19 seconds

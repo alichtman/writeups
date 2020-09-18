@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Thu Sep 17 02:54:10 2020 as: nmap -A -sVC -v -p- -Pn -oA allports bastard.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.9 (bastard.htb)	Status: Up
+Host: 10.10.10.9 (bastard.htb)	Ports: 80/open/tcp//http//Microsoft IIS httpd 7.5/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 49154/open/tcp//msrpc//Microsoft Windows RPC/	Ignored State: filtered (65532)	Seq Index: 260	IP ID Seq: Incremental
+# Nmap done at Thu Sep 17 02:57:48 2020 -- 1 IP address (1 host up) scanned in 218.31 seconds
