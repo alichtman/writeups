@@ -1,0 +1,77 @@
+# Nmap 7.80 scan initiated Fri Sep 18 04:47:33 2020 as: nmap -vv --reason -Pn -sV -p 50000 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/tcp_50000_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/xml/tcp_50000_http_nmap.xml 10.10.10.63
+Nmap scan report for jeeves.htb (10.10.10.63)
+Host is up, received user-set (0.043s latency).
+Scanned at 2020-09-18 04:47:33 CDT for 142s
+
+PORT      STATE SERVICE REASON          VERSION
+50000/tcp open  http    syn-ack ttl 127 Jetty 9.4.z-SNAPSHOT
+|_http-chrono: Request times for /; avg: 172.64ms; min: 153.60ms; max: 204.83ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Fri, 18 Sep 2020 14:53:52 GMT; +5h06m11s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=jeeves.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://jeeves.htb:50000/
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Connection: close
+|   Date: Fri, 18 Sep 2020 14:53:54 GMT
+|   Cache-Control: must-revalidate,no-cache,no-store
+|   Content-Type: text/html;charset=iso-8859-1
+|   Content-Length: 315
+|   Server: Jetty(9.4.z-SNAPSHOT)
+|   
+|_  (Request type: GET)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|_    Header: Cache-Control: must-revalidate,no-cache,no-store
+|_http-server-header: Jetty(9.4.z-SNAPSHOT)
+| http-sitemap-generator: 
+|   Directory structure:
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Error 404 Not Found
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 404
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Sep 18 04:49:55 2020 -- 1 IP address (1 host up) scanned in 142.07 seconds

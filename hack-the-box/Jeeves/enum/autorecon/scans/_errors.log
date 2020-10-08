@@ -1,0 +1,1 @@
+[*] Task tcp/50000/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.63:50000/ /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/tcp_50000_http_screenshot.png; fi

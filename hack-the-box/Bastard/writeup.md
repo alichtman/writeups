@@ -2,6 +2,8 @@
 
 ## Summary
 
+Drupalgeddon2/3 + Juicy Potato
+
 ## `/etc/hosts`
 
 I begin by adding an entry in `/etc/hosts` to resolve `bastard.htb` to `10.10.10.9`. I use this later in my report.
@@ -20,13 +22,13 @@ PORT      STATE SERVICE VERSION
 80/tcp    open  http    Microsoft IIS httpd 7.5
 |_http-favicon: Unknown favicon MD5: CF2445DCB53A031C02F9B57E2199BC03
 |_http-generator: Drupal 7 (http://drupal.org)
-| http-methods: 
+| http-methods:
 |   Supported Methods: OPTIONS TRACE GET HEAD POST
 |_  Potentially risky methods: TRACE
 | http-robots.txt: 36 disallowed entries (15 shown)
-| /includes/ /misc/ /modules/ /profiles/ /scripts/ 
-| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt 
-| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt 
+| /includes/ /misc/ /modules/ /profiles/ /scripts/
+| /themes/ /CHANGELOG.txt /cron.php /INSTALL.mysql.txt
+| /INSTALL.pgsql.txt /INSTALL.sqlite.txt /install.php /INSTALL.txt
 |_/LICENSE.txt /MAINTAINERS.txt
 |_http-server-header: Microsoft-IIS/7.5
 |_http-title: Welcome to 10.10.10.9 | 10.10.10.9

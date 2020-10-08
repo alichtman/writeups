@@ -1,0 +1,6 @@
+tcp/50000/curl-index - Matched Pattern: Powered by Jetty:// 9.4.z-SNAPSHOT</a><hr/>
+
+tcp/50000/nmap-http - Identified HTTP Server: Jetty(9.4.z-SNAPSHOT)
+
+tcp/80/nmap-http - Identified HTTP Server: Microsoft-IIS/10.0
+

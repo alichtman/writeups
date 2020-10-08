@@ -1,0 +1,40 @@
+WhatWeb report for http://10.10.10.63:80
+Status    : 200 OK
+Title     : Ask Jeeves
+IP        : 10.10.10.63
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Microsoft-IIS/10.0], HTML5, Microsoft-IIS[10.0]
+
+Detected Plugins:
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Last-Modified: Mon, 06 Nov 2017 02:34:40 GMT
+	Accept-Ranges: bytes
+	ETag: "2277f7cba756d31:0"
+	Server: Microsoft-IIS/10.0
+	Date: Fri, 18 Sep 2020 14:53:39 GMT
+	Connection: close
+	Content-Length: 503
+	

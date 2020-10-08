@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Sep 18 04:46:37 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.63 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.63" start="1600422397" startstr="Fri Sep 18 04:46:37 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600422397"/>
+<taskend task="NSE" time="1600422397"/>
+<taskbegin task="NSE" time="1600422397"/>
+<taskend task="NSE" time="1600422397"/>
+<taskbegin task="NSE" time="1600422397"/>
+<taskend task="NSE" time="1600422397"/>
+<taskbegin task="SYN Stealth Scan" time="1600422397"/>
+<taskprogress task="SYN Stealth Scan" time="1600422428" percent="18.38" remaining="138" etc="1600422566"/>
+<taskprogress task="SYN Stealth Scan" time="1600422470" percent="37.34" remaining="123" etc="1600422593"/>
+<taskprogress task="SYN Stealth Scan" time="1600422500" percent="56.19" remaining="81" etc="1600422580"/>
+<taskprogress task="SYN Stealth Scan" time="1600422530" percent="77.52" remaining="39" etc="1600422569"/>
+<taskend task="SYN Stealth Scan" time="1600422614" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1600422614"/>
+<taskend task="Service scan" time="1600422620" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1600422628"/>
+<taskend task="Traceroute" time="1600422628"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1600422628"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1600422628"/>
+<taskbegin task="NSE" time="1600422628"/>
+<taskprogress task="NSE" time="1600422659" percent="99.81" remaining="1" etc="1600422659"/>
+<taskend task="NSE" time="1600422668"/>
+<taskbegin task="NSE" time="1600422668"/>
+<taskend task="NSE" time="1600422668"/>
+<taskbegin task="NSE" time="1600422668"/>
+<taskend task="NSE" time="1600422668"/>
+<host starttime="1600422397" endtime="1600422668"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.63" addrtype="ipv4"/>
+<hostnames>
+<hostname name="jeeves.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Ask Jeeves"><elem key="title">Ask Jeeves</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows 7 - 10 microsoft-ds" extrainfo="workgroup: WORKGROUP" hostname="JEEVES" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="50000"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Jetty" version="9.4.z-SNAPSHOT" method="probed" conf="10"><cpe>cpe:/a:mortbay:jetty:9.4.z-snapshot</cpe></service><script id="http-server-header" output="Jetty(9.4.z-SNAPSHOT)"><elem>Jetty(9.4.z-SNAPSHOT)</elem>
+</script><script id="http-title" output="Error 404 Not Found"><elem key="title">Error 404 Not Found</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="89" line="74118">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="89"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 6.2-RELEASE" accuracy="85" line="27364">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="6.X" accuracy="85"><cpe>cpe:/o:freebsd:freebsd:6.2</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=9/18%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F64830C%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=10A%GCD=4%ISR=108%TS=9)&#xa;OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="394" lastboot="Fri Sep 18 04:44:34 2020"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="E22DE25B,17775E1,651DE72,8DEEAC83,ADAC63C0,6BE6A48F"/>
+<ipidsequence class="Busy server or unknown class" values="663C,66A1,670D,6772,67D2,6832"/>
+<tcptssequence class="1000HZ" values="56170,561D2,56237,5629C,562FE,56364"/>
+<hostscript><script id="clock-skew" output="mean: 5h06m10s, deviation: 0s, median: 5h06m10s"><elem key="median">18370</elem>
+<elem key="count">2</elem>
+<elem key="mean">18370</elem>
+<elem key="stddev">0</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 55172/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 51620/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 15713/udp): CLEAN (Timeout)&#xa;  Check 4 (port 48293/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-security-mode" output="&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-09-18T14:56:40&#xa;  start_date: 2020-09-18T14:50:59"><elem key="date">2020-09-18T14:56:40</elem>
+<elem key="start_date">2020-09-18T14:50:59</elem>
+</script></hostscript><trace port="445" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="45.81"/>
+<hop ttl="2" ipaddr="10.10.10.63" rtt="45.80" host="jeeves.htb"/>
+</trace>
+<times srtt="50545" rttvar="9848" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1600422668"/>
+<taskend task="NSE" time="1600422668"/>
+<taskbegin task="NSE" time="1600422668"/>
+<taskend task="NSE" time="1600422668"/>
+<taskbegin task="NSE" time="1600422668"/>
+<taskend task="NSE" time="1600422668"/>
+<runstats><finished time="1600422668" timestr="Fri Sep 18 04:51:08 2020" elapsed="271.37" summary="Nmap done at Fri Sep 18 04:51:08 2020; 1 IP address (1 host up) scanned in 271.37 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

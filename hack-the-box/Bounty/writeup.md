@@ -91,18 +91,10 @@ I upload `nc.exe` and `JuicyPotato.exe`, start a `nc` listener and get a root sh
 
 ![](img/2020-09-17-02-28-53.png)
 
-## Proof
+## Proofs
 
-> `> type "C:\Users\Administrator\Desktop\proof.txt" && whoami && ipconfig`
-> `> type "C:\Documents and Settings\Administrator\Desktop\proof.txt" && whoami && ipconfig`
-> `$ cat /root/proof.txt && whoami && /sbin/ifconfig`
+The `user.txt` file is hidden. Unhide it and it's printable.
 
-## Post Exploitation
+![](img/2020-09-17-02-32-08.png)
 
-## Clean Up
-
-## Remediation
-
-In order to remediate these issues, I suggest:
-
--
+![](img/2020-09-17-02-32-17.png)

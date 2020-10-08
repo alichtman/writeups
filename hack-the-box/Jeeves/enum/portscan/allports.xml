@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Sep 18 04:45:39 2020 as: nmap -A -v -p- -Pn -oA allports jeeves.htb -->
+<nmaprun scanner="nmap" args="nmap -A -v -p- -Pn -oA allports jeeves.htb" start="1600422339" startstr="Fri Sep 18 04:45:39 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600422339"/>
+<taskend task="NSE" time="1600422339"/>
+<taskbegin task="NSE" time="1600422339"/>
+<taskend task="NSE" time="1600422339"/>
+<taskbegin task="NSE" time="1600422339"/>
+<taskend task="NSE" time="1600422339"/>
+<taskbegin task="SYN Stealth Scan" time="1600422339"/>
+<taskprogress task="SYN Stealth Scan" time="1600422370" percent="4.02" remaining="741" etc="1600423111"/>
+<taskprogress task="SYN Stealth Scan" time="1600422400" percent="17.33" remaining="292" etc="1600422691"/>
+<taskprogress task="SYN Stealth Scan" time="1600422430" percent="41.70" remaining="128" etc="1600422557"/>
+<taskprogress task="SYN Stealth Scan" time="1600422460" percent="53.69" remaining="105" etc="1600422564"/>
+<taskprogress task="SYN Stealth Scan" time="1600422490" percent="69.99" remaining="65" etc="1600422555"/>
+<taskend task="SYN Stealth Scan" time="1600422532" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1600422532"/>
+<taskend task="Service scan" time="1600422538" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1600422545"/>
+<taskend task="Traceroute" time="1600422545"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1600422545"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1600422545"/>
+<taskbegin task="NSE" time="1600422545"/>
+<taskend task="NSE" time="1600422586"/>
+<taskbegin task="NSE" time="1600422586"/>
+<taskend task="NSE" time="1600422587"/>
+<taskbegin task="NSE" time="1600422587"/>
+<taskend task="NSE" time="1600422587"/>
+<host starttime="1600422339" endtime="1600422587"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.63" addrtype="ipv4"/>
+<hostnames>
+<hostname name="jeeves.htb" type="user"/>
+<hostname name="jeeves.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Microsoft IIS httpd" version="10.0" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:10.0</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: OPTIONS TRACE GET HEAD POST&#xa;  Potentially risky methods: TRACE"><table key="Supported Methods">
+<elem>OPTIONS</elem>
+<elem>TRACE</elem>
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+<table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Microsoft-IIS/10.0"><elem>Microsoft-IIS/10.0</elem>
+</script><script id="http-title" output="Ask Jeeves"><elem key="title">Ask Jeeves</elem>
+</script></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows 7 - 10 microsoft-ds" extrainfo="workgroup: WORKGROUP" hostname="JEEVES" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="50000"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Jetty" version="9.4.z-SNAPSHOT" method="probed" conf="10"><cpe>cpe:/a:mortbay:jetty:9.4.z-snapshot</cpe></service><script id="http-server-header" output="Jetty(9.4.z-SNAPSHOT)"><elem>Jetty(9.4.z-SNAPSHOT)</elem>
+</script><script id="http-title" output="Error 404 Not Found"><elem key="title">Error 404 Not Found</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="87" line="74118">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="87"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 6.2-RELEASE" accuracy="86" line="27364">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="6.X" accuracy="86"><cpe>cpe:/o:freebsd:freebsd:6.2</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="313" lastboot="Fri Sep 18 04:44:34 2020"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="528C9693,D56E486D,ECD0420B,C1E4806A,47500D05,B81F43FE"/>
+<ipidsequence class="Incrementing by 2" values="349E,34EC,3544,35A2,35F0,3650"/>
+<tcptssequence class="1000HZ" values="41B9C,41C01,41C6F,41CBD,41D20,41D83"/>
+<hostscript><script id="clock-skew" output="mean: 5h06m10s, deviation: 0s, median: 5h06m10s"><elem key="count">2</elem>
+<elem key="median">18370</elem>
+<elem key="stddev">0</elem>
+<elem key="mean">18370</elem>
+</script><script id="smb-os-discovery" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-09-18T14:55:17&#xa;  start_date: 2020-09-18T14:50:59"><elem key="date">2020-09-18T14:55:17</elem>
+<elem key="start_date">2020-09-18T14:50:59</elem>
+</script></hostscript><trace port="135" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="41.27"/>
+<hop ttl="2" ipaddr="10.10.10.63" rtt="41.28" host="jeeves.htb"/>
+</trace>
+<times srtt="43779" rttvar="4545" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1600422587"/>
+<taskend task="NSE" time="1600422587"/>
+<taskbegin task="NSE" time="1600422587"/>
+<taskend task="NSE" time="1600422587"/>
+<taskbegin task="NSE" time="1600422587"/>
+<taskend task="NSE" time="1600422587"/>
+<runstats><finished time="1600422587" timestr="Fri Sep 18 04:49:47 2020" elapsed="248.72" summary="Nmap done at Fri Sep 18 04:49:47 2020; 1 IP address (1 host up) scanned in 248.72 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -4,7 +4,7 @@
 
 | Linux            | Windows         | HARD Linux            | HARD Windows  |
 | ---              | ---             | ---                   |               |
-| Lame        [x]  | Legacy     [x]  | Book             [ ]  | Jeeves   [ ]  |
+| Lame        [x]  | Legacy     [x]  | Book             [ ]  | Jeeves   [x]  |
 | Brainfuck   [ ]  | Blue       [x]  | Mango            [ ]  | Bart     [ ]  |
 | Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
 | Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [ ]  |

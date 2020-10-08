@@ -1,0 +1,38 @@
+WhatWeb report for http://10.10.10.63:50000
+Status    : 404 Not Found
+Title     : Error 404 Not Found
+IP        : 10.10.10.63
+Country   : RESERVED, ZZ
+
+Summary   : PoweredBy[Jetty://], HTTPServer[Jetty(9.4.z-SNAPSHOT)], Jetty[9.4.z-SNAPSHOT]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Jetty(9.4.z-SNAPSHOT) (from server string)
+
+[ Jetty ]
+	Jetty is a pure Java application server. Jetty provides an 
+	HTTP server, HTTP client, and javax.servlet container. 
+
+	Version      : 9.4.z-SNAPSHOT
+	Google Dorks: (1)
+	Website     : http://jetty.codehaus.org/jetty/
+
+[ PoweredBy ]
+	This plugin identifies instances of 'Powered by x' text and 
+	attempts to extract the value for x. 
+
+	String       : Jetty://
+
+HTTP Headers:
+	HTTP/1.1 404 Not Found
+	Connection: close
+	Date: Fri, 18 Sep 2020 14:53:47 GMT
+	Cache-Control: must-revalidate,no-cache,no-store
+	Content-Type: text/html;charset=iso-8859-1
+	Content-Length: 315
+	Server: Jetty(9.4.z-SNAPSHOT)
+	

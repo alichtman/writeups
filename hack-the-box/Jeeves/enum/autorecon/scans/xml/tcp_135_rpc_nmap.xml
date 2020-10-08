@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Sep 18 04:47:28 2020 as: nmap -vv -&#45;reason -Pn -sV -p 135 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/tcp_135_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/xml/tcp_135_rpc_nmap.xml 10.10.10.63 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 135 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/tcp_135_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jeeves/enum/autorecon/scans/xml/tcp_135_rpc_nmap.xml 10.10.10.63" start="1600422448" startstr="Fri Sep 18 04:47:28 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="135"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1600422449"/>
+<taskend task="NSE" time="1600422449"/>
+<taskbegin task="NSE" time="1600422449"/>
+<taskend task="NSE" time="1600422449"/>
+<taskbegin task="SYN Stealth Scan" time="1600422449"/>
+<taskend task="SYN Stealth Scan" time="1600422449" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1600422449"/>
+<taskend task="Service scan" time="1600422455" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1600422455"/>
+<taskend task="NSE" time="1600422470"/>
+<taskbegin task="NSE" time="1600422470"/>
+<taskend task="NSE" time="1600422470"/>
+<host starttime="1600422449" endtime="1600422470"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.63" addrtype="ipv4"/>
+<hostnames>
+<hostname name="jeeves.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+</ports>
+<times srtt="40929" rttvar="40929" to="204645"/>
+</host>
+<taskbegin task="NSE" time="1600422470"/>
+<taskend task="NSE" time="1600422470"/>
+<taskbegin task="NSE" time="1600422470"/>
+<taskend task="NSE" time="1600422470"/>
+<runstats><finished time="1600422470" timestr="Fri Sep 18 04:47:50 2020" elapsed="21.77" summary="Nmap done at Fri Sep 18 04:47:50 2020; 1 IP address (1 host up) scanned in 21.77 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
