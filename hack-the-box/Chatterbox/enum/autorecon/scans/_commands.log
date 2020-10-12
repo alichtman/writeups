@@ -1,0 +1,24 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/xml/_full_tcp_nmap.xml" 10.10.10.74
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" 10.10.10.74
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" 10.10.10.74
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.74:9255 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 9255 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/xml/tcp_9255_http_nmap.xml" 10.10.10.74
+
+curl -sSik http://10.10.10.74:9255/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_index.html"
+
+curl -sSik http://10.10.10.74:9255/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.74:9255/ /home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.74:9255 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.74:9255 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.74:9255/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_gobuster.txt"; else gobuster dir -u http://10.10.10.74:9255/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9255_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.74:9256 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/tcp_9256_sslscan.txt"; fi
+

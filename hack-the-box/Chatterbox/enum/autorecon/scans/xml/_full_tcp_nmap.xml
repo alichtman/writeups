@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Oct  8 05:49:01 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.74 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Chatterbox/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.74" start="1602154141" startstr="Thu Oct  8 05:49:01 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1602154141"/>
+<taskend task="NSE" time="1602154141"/>
+<taskbegin task="NSE" time="1602154141"/>
+<taskend task="NSE" time="1602154141"/>
+<taskbegin task="NSE" time="1602154141"/>
+<taskend task="NSE" time="1602154141"/>
+<taskbegin task="SYN Stealth Scan" time="1602154141"/>
+<taskprogress task="SYN Stealth Scan" time="1602154181" percent="0.31"/>
+<taskprogress task="SYN Stealth Scan" time="1602154211" percent="0.53"/>
+<taskprogress task="SYN Stealth Scan" time="1602154241" percent="0.76"/>
+<taskprogress task="SYN Stealth Scan" time="1602154271" percent="0.99"/>
+<taskprogress task="SYN Stealth Scan" time="1602154301" percent="1.22" remaining="12948" etc="1602167248"/>
+<taskprogress task="SYN Stealth Scan" time="1602154973" percent="6.34" remaining="12291" etc="1602167264"/>
+<taskprogress task="SYN Stealth Scan" time="1602155594" percent="11.11" remaining="11626" etc="1602167219"/>
+<taskprogress task="SYN Stealth Scan" time="1602155624" percent="26.53" remaining="4108" etc="1602159731"/>
+<taskprogress task="SYN Stealth Scan" time="1602155654" percent="43.54" remaining="1962" etc="1602157616"/>
+<taskprogress task="SYN Stealth Scan" time="1602155684" percent="63.88" remaining="873" etc="1602156556"/>
+<taskprogress task="SYN Stealth Scan" time="1602155714" percent="74.88" remaining="528" etc="1602156242"/>
+<taskprogress task="SYN Stealth Scan" time="1602155744" percent="94.92" remaining="86" etc="1602155830"/>
+<taskend task="SYN Stealth Scan" time="1602155750" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1602155750"/>
+<taskend task="Service scan" time="1602155756" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1602155760"/>
+<taskend task="Traceroute" time="1602155760"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1602155760"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1602155760"/>
+<taskbegin task="NSE" time="1602155760"/>
+<taskend task="NSE" time="1602155761"/>
+<taskbegin task="NSE" time="1602155761"/>
+<taskend task="NSE" time="1602155761"/>
+<taskbegin task="NSE" time="1602155761"/>
+<taskend task="NSE" time="1602155761"/>
+<host starttime="1602154141" endtime="1602155761"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.74" addrtype="ipv4"/>
+<hostnames>
+<hostname name="chatterbox.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="9255"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="AChat chat system httpd" method="probed" conf="10"/><script id="http-favicon" output="Unknown favicon MD5: 0B6115FAE5429FEB9A494BEE6B18ABBE"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="AChat"><elem>AChat</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title."></script></port>
+<port protocol="tcp" portid="9256"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="achat" product="AChat chat system" method="probed" conf="10"/></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="9255"/>
+<osmatch name="Microsoft Windows 8.1 Update 1" accuracy="92" line="77581">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="92"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Phone 7.5 or 8.0" accuracy="92" line="78869">
+<osclass type="phone" vendor="Microsoft" osfamily="Windows" osgen="Phone" accuracy="92"><cpe>cpe:/o:microsoft:windows</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 or Windows Server 2008 R2" accuracy="91" line="73917">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="91" line="74136">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 or Windows 8.1" accuracy="91" line="74462">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8.1" accuracy="91"><cpe>cpe:/o:microsoft:windows_8.1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Server 2008 R2 SP1 or Windows 8" accuracy="91" line="74646">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="8" accuracy="91"><cpe>cpe:/o:microsoft:windows_8</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7" accuracy="91" line="75992">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1" accuracy="91" line="77277">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008::sp2</cpe><cpe>cpe:/o:microsoft:windows_server_2008:r2:sp1</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7" accuracy="91" line="79575">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="Vista" accuracy="91"><cpe>cpe:/o:microsoft:windows_vista::-</cpe><cpe>cpe:/o:microsoft:windows_vista::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="91"><cpe>cpe:/o:microsoft:windows_server_2008::sp1</cpe></osclass>
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows Embedded Standard 7" accuracy="91" line="77473">
+<osclass type="specialized" vendor="Microsoft" osfamily="Windows" osgen="7" accuracy="91"><cpe>cpe:/o:microsoft:windows_7</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=10/8%OT=9255%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5F7EF4F1%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10E%TI=I%II=I%SS=S%TS=7)&#xa;OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="1717" lastboot="Thu Oct  8 05:47:24 2020"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="8ADB2B34,DD193C9C,6148293D,F697220D,6632DED8,687805C5"/>
+<ipidsequence class="Incremental" values="55B,55C,55D,55E,55F,560"/>
+<tcptssequence class="100HZ" values="29E00,29E0A,29E14,29E1E,29E28,29E32"/>
+<trace port="9255" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="45.03"/>
+<hop ttl="2" ipaddr="10.10.10.74" rtt="45.03" host="chatterbox.htb"/>
+</trace>
+<times srtt="44365" rttvar="1062" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1602155761"/>
+<taskend task="NSE" time="1602155761"/>
+<taskbegin task="NSE" time="1602155761"/>
+<taskend task="NSE" time="1602155761"/>
+<taskbegin task="NSE" time="1602155761"/>
+<taskend task="NSE" time="1602155761"/>
+<runstats><finished time="1602155761" timestr="Thu Oct  8 06:16:01 2020" elapsed="1620.80" summary="Nmap done at Thu Oct  8 06:16:01 2020; 1 IP address (1 host up) scanned in 1620.80 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -16,7 +16,7 @@
 | Solidstate  [o]  | Bounty     [x]  | La Casa De Papel [ ]  | Sauna    [ ]  |
 | Kotarak     [!]  | Jerry      [x]  | Jail             [ ]  | Querier  [ ]  |
 | Node        [ ]  | Conceal    [ ]  | Safe             [ ]  |               |
-| Valentine   [o]  | Chatterbox [ ]  |                       |               |
+| Valentine   [o]  | Chatterbox [x]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
 | Sunday      [x]  | BankRobber [ ]  |                       |               |
 | Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
