@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Oct 12 04:56:37 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/xml/_full_tcp_nmap.xml irked.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/xml/_full_tcp_nmap.xml irked.htb" start="1602496597" startstr="Mon Oct 12 04:56:37 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1602496597"/>
+<taskend task="NSE" time="1602496597"/>
+<taskbegin task="NSE" time="1602496597"/>
+<taskend task="NSE" time="1602496597"/>
+<taskbegin task="NSE" time="1602496597"/>
+<taskend task="NSE" time="1602496597"/>
+<taskbegin task="SYN Stealth Scan" time="1602496597"/>
+<taskprogress task="SYN Stealth Scan" time="1602496739" percent="82.52" remaining="31" etc="1602496769"/>
+<taskprogress task="SYN Stealth Scan" time="1602496769" percent="82.63" remaining="37" etc="1602496805"/>
+<taskprogress task="SYN Stealth Scan" time="1602496808" percent="82.76" remaining="44" etc="1602496852"/>
+<taskend task="SYN Stealth Scan" time="1602496843" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1602496843"/>
+<taskend task="Service scan" time="1602496854" extrainfo="5 services on 1 host"/>
+<taskbegin task="Traceroute" time="1602496869"/>
+<taskend task="Traceroute" time="1602496869"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1602496869"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1602496869"/>
+<taskbegin task="NSE" time="1602496869"/>
+<taskend task="NSE" time="1602496869"/>
+<taskbegin task="NSE" time="1602496869"/>
+<taskprogress task="NSE" time="1602496900" percent="97.73" remaining="1" etc="1602496901"/>
+<taskend task="NSE" time="1602496929"/>
+<taskbegin task="NSE" time="1602496929"/>
+<taskend task="NSE" time="1602496929"/>
+<host starttime="1602496597" endtime="1602496929"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.117" addrtype="ipv4"/>
+<hostnames>
+<hostname name="irked.htb" type="user"/>
+<hostname name="irked.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="64851">
+<extrareasons reason="resets" count="64851"/>
+</extraports>
+<extraports state="filtered" count="679">
+<extrareasons reason="no-responses" count="679"/>
+</extraports>
+<port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100024  1          56189/tcp6  status&#xa;  100024  1          57511/udp6  status&#xa;  100024  1          57932/udp   status&#xa;  100024  1          59054/tcp   status&#xa;"><table key="100024">
+<table key="tcp6">
+<elem key="port">56189</elem>
+<elem key="owner">107</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="udp6">
+<elem key="port">57511</elem>
+<elem key="owner">107</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<elem key="port">57932</elem>
+<elem key="owner">107</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="tcp">
+<elem key="port">59054</elem>
+<elem key="owner">107</elem>
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+<table key="100000">
+<table key="local">
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">/run/rpcbind.sock</elem>
+</table>
+<table key="tcp6">
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="udp6">
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="tcp">
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="6697"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="irc" product="UnrealIRCd" hostname="irked.htb" method="probed" conf="10"><cpe>cpe:/a:unrealircd:unrealircd</cpe></service></port>
+<port protocol="tcp" portid="8067"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="irc" product="UnrealIRCd" hostname="irked.htb" method="probed" conf="10"><cpe>cpe:/a:unrealircd:unrealircd</cpe></service></port>
+<port protocol="tcp" portid="59054"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="status" version="1" extrainfo="RPC #100024" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="65534"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="irc" product="UnrealIRCd" hostname="irked.htb" method="probed" conf="10"><cpe>cpe:/a:unrealircd:unrealircd</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="111"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="42474"/>
+<osmatch name="Linux 3.12" accuracy="95" line="63436">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="95" line="63553">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="95" line="63944">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8 - 3.11" accuracy="95" line="66079">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="95" line="67510">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="95" line="64238">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="95" line="67057">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.8" accuracy="95" line="67659">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="95" line="67713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=10/12%OT=111%CT=1%CU=42474%PV=Y%DS=2%DC=T%G=Y%TM=5F842&#xa;OS:9A1%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=10E%TI=Z%CI=I%TS=8)OPS(O1&#xa;OS:=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW&#xa;OS:7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=&#xa;OS:Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%R&#xa;OS:D=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%&#xa;OS:DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%&#xa;OS:O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=4&#xa;OS:0%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="17179919" lastboot="Fri Mar 27 08:50:10 2020"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="38116667,7616B4A2,7AEDDFD,28B31374,AA57C28F,3F13CDF3"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="FFFFF4B7,FFFFF4D0,FFFFF4E9,FFFFF502,FFFFF51B,FFFFF534"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="43.39"/>
+<hop ttl="2" ipaddr="10.10.10.117" rtt="43.44" host="irked.htb"/>
+</trace>
+<times srtt="43267" rttvar="1524" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1602496929"/>
+<taskend task="NSE" time="1602496929"/>
+<taskbegin task="NSE" time="1602496929"/>
+<taskend task="NSE" time="1602496929"/>
+<taskbegin task="NSE" time="1602496929"/>
+<taskend task="NSE" time="1602496929"/>
+<runstats><finished time="1602496929" timestr="Mon Oct 12 05:02:09 2020" elapsed="332.79" summary="Nmap done at Mon Oct 12 05:02:09 2020; 1 IP address (1 host up) scanned in 332.79 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

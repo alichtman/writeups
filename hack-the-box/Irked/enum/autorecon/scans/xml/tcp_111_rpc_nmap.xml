@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Oct 12 04:56:50 2020 as: nmap -vv -&#45;reason -Pn -sV -p 111 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/tcp_111_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/xml/tcp_111_rpc_nmap.xml irked.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 111 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/tcp_111_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/xml/tcp_111_rpc_nmap.xml irked.htb" start="1602496610" startstr="Mon Oct 12 04:56:50 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="111"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1602496610"/>
+<taskend task="NSE" time="1602496610"/>
+<taskbegin task="NSE" time="1602496610"/>
+<taskend task="NSE" time="1602496610"/>
+<taskbegin task="SYN Stealth Scan" time="1602496610"/>
+<taskend task="SYN Stealth Scan" time="1602496610" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1602496610"/>
+<taskend task="Service scan" time="1602496616" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1602496616"/>
+<taskend task="NSE" time="1602496631"/>
+<taskbegin task="NSE" time="1602496631"/>
+<taskend task="NSE" time="1602496632"/>
+<host starttime="1602496610" endtime="1602496632"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.117" addrtype="ipv4"/>
+<hostnames>
+<hostname name="irked.htb" type="user"/>
+<hostname name="irked.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="111"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="rpcbind" version="2-4" extrainfo="RPC #100000" method="probed" conf="10"/><script id="rpcinfo" output="&#xa;  program version    port/proto  service&#xa;  100000  2,3,4        111/tcp   rpcbind&#xa;  100000  2,3,4        111/udp   rpcbind&#xa;  100000  3,4          111/tcp6  rpcbind&#xa;  100000  3,4          111/udp6  rpcbind&#xa;  100024  1          56189/tcp6  status&#xa;  100024  1          57511/udp6  status&#xa;  100024  1          57932/udp   status&#xa;  100024  1          59054/tcp   status&#xa;"><table key="100000">
+<table key="local">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="addr">/run/rpcbind.sock</elem>
+<elem key="owner">superuser</elem>
+</table>
+<table key="tcp6">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>2</elem>
+<elem>3</elem>
+<elem>4</elem>
+</table>
+<elem key="port">111</elem>
+<elem key="owner">superuser</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+<table key="100024">
+<table key="tcp6">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">56189</elem>
+<elem key="owner">107</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="udp6">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">57511</elem>
+<elem key="owner">107</elem>
+<elem key="addr">::</elem>
+</table>
+<table key="tcp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">59054</elem>
+<elem key="owner">107</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+<table key="udp">
+<table key="version">
+<elem>1</elem>
+</table>
+<elem key="port">57932</elem>
+<elem key="owner">107</elem>
+<elem key="addr">0.0.0.0</elem>
+</table>
+</table>
+</script></port>
+</ports>
+<times srtt="49704" rttvar="49704" to="248520"/>
+</host>
+<taskbegin task="NSE" time="1602496632"/>
+<taskend task="NSE" time="1602496632"/>
+<taskbegin task="NSE" time="1602496632"/>
+<taskend task="NSE" time="1602496632"/>
+<runstats><finished time="1602496632" timestr="Mon Oct 12 04:57:12 2020" elapsed="22.85" summary="Nmap done at Mon Oct 12 04:57:12 2020; 1 IP address (1 host up) scanned in 22.85 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

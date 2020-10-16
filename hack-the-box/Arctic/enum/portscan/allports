@@ -1,0 +1,11 @@
+# Nmap 7.80 scan initiated Sun Oct 11 23:19:39 2020 as: nmap -A -v -p- -Pn -oN allports arctic.htb
+Nmap scan report for arctic.htb (10.10.10.11)
+Host is up (0.10s latency).
+Not shown: 65534 filtered ports
+PORT      STATE SERVICE VERSION
+49154/tcp open  msrpc   Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 12 02:57:55 2020 -- 1 IP address (1 host up) scanned in 13096.51 seconds

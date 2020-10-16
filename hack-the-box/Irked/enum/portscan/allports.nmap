@@ -1,0 +1,64 @@
+# Nmap 7.80 scan initiated Mon Oct 12 05:02:11 2020 as: nmap -A -v -p 22,80,111,6697,8067,59054,65534 -Pn -oA allports irked.htb
+adjust_timeouts2: packet supposedly had rtt of -181172 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -181172 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -180531 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -180531 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -416868 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -416868 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -805905 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -805905 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -833707 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -833707 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -832091 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -832091 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -60082 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -60082 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -183944 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -183944 microseconds.  Ignoring time.
+Nmap scan report for irked.htb (10.10.10.117)
+Host is up (0.044s latency).
+
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 6.7p1 Debian 5+deb8u4 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 6a:5d:f5:bd:cf:83:78:b6:75:31:9b:dc:79:c5:fd:ad (DSA)
+|   2048 75:2e:66:bf:b9:3c:cc:f7:7e:84:8a:8b:f0:81:02:33 (RSA)
+|   256 c8:a3:a2:5e:34:9a:c4:9b:90:53:f7:50:bf:ea:25:3b (ECDSA)
+|_  256 8d:1b:43:c7:d0:1a:4c:05:cf:82:ed:c1:01:63:a2:0c (ED25519)
+80/tcp    open  http    Apache httpd 2.4.10 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.10 (Debian)
+|_http-title: Site doesn't have a title (text/html).
+111/tcp   open  rpcbind 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          56189/tcp6  status
+|   100024  1          57511/udp6  status
+|   100024  1          57932/udp   status
+|_  100024  1          59054/tcp   status
+6697/tcp  open  irc     UnrealIRCd (Admin email djmardov@irked.htb)
+8067/tcp  open  irc     UnrealIRCd (Admin email djmardov@irked.htb)
+59054/tcp open  status  1 (RPC #100024)
+65534/tcp open  irc     UnrealIRCd (Admin email djmardov@irked.htb)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.18 (95%), Linux 3.2 - 4.9 (95%), Linux 3.8 - 3.11 (95%), Linux 4.4 (95%), Linux 4.8 (95%), Linux 4.2 (95%), Linux 4.9 (95%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.002 days (since Mon Oct 12 05:01:18 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT      ADDRESS
+1   49.31 ms 10.10.14.1
+2   49.33 ms irked.htb (10.10.10.117)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 12 05:03:28 2020 -- 1 IP address (1 host up) scanned in 77.84 seconds

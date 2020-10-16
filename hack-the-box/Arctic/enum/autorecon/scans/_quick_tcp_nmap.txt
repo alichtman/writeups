@@ -1,0 +1,15 @@
+# Nmap 7.80 scan initiated Sun Oct 11 23:19:12 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Arctic/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Arctic/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.11
+Nmap scan report for arctic.htb (10.10.10.11)
+Host is up, received user-set (0.050s latency).
+Scanned at 2020-10-11 23:19:12 CDT for 32s
+Not shown: 997 filtered ports
+Reason: 997 no-responses
+PORT      STATE SERVICE REASON          VERSION
+135/tcp   open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+8500/tcp  open  fmtp?   syn-ack ttl 127
+49154/tcp open  unknown syn-ack ttl 127
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct 11 23:19:44 2020 -- 1 IP address (1 host up) scanned in 32.95 seconds

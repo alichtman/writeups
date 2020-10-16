@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Oct 12 03:16:20 2020 as: nmap -A -v -p 135,8500,49154 -Pn -oA allports silo.htb -->
+<nmaprun scanner="nmap" args="nmap -A -v -p 135,8500,49154 -Pn -oA allports silo.htb" start="1602490580" startstr="Mon Oct 12 03:16:20 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="135,8500,49154"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1602490580"/>
+<taskend task="NSE" time="1602490580"/>
+<taskbegin task="NSE" time="1602490580"/>
+<taskend task="NSE" time="1602490580"/>
+<taskbegin task="NSE" time="1602490580"/>
+<taskend task="NSE" time="1602490580"/>
+<taskbegin task="SYN Stealth Scan" time="1602490580"/>
+<taskend task="SYN Stealth Scan" time="1602490583" extrainfo="3 total ports"/>
+<taskbegin task="Service scan" time="1602490583"/>
+<taskbegin task="Traceroute" time="1602490593"/>
+<taskend task="Traceroute" time="1602490602"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1602490602"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1602490602"/>
+<taskbegin task="NSE" time="1602490602"/>
+<taskend task="NSE" time="1602490602"/>
+<taskbegin task="NSE" time="1602490602"/>
+<taskend task="NSE" time="1602490602"/>
+<taskbegin task="NSE" time="1602490602"/>
+<taskend task="NSE" time="1602490602"/>
+<host starttime="1602490580" endtime="1602490602"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.82" addrtype="ipv4"/>
+<hostnames>
+<hostname name="silo.htb" type="user"/>
+<hostname name="silo.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8500"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="fmtp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="49154"><state state="filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os></os>
+<trace proto="icmp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="42.44"/>
+<hop ttl="9" ipaddr="10.10.14.1" rtt="1034.15"/>
+<hop ttl="10" ipaddr="10.10.14.1" rtt="1034.15"/>
+<hop ttl="12" ipaddr="10.10.14.1" rtt="1037.79"/>
+<hop ttl="13" ipaddr="10.10.14.1" rtt="1037.79"/>
+<hop ttl="14" ipaddr="10.10.14.1" rtt="1037.80"/>
+</trace>
+</host>
+<taskbegin task="NSE" time="1602490602"/>
+<taskend task="NSE" time="1602490602"/>
+<taskbegin task="NSE" time="1602490602"/>
+<taskend task="NSE" time="1602490602"/>
+<taskbegin task="NSE" time="1602490602"/>
+<taskend task="NSE" time="1602490602"/>
+<runstats><finished time="1602490602" timestr="Mon Oct 12 03:16:42 2020" elapsed="22.07" summary="Nmap done at Mon Oct 12 03:16:42 2020; 1 IP address (1 host up) scanned in 22.07 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

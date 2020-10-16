@@ -7,7 +7,7 @@
 | Lame        [x]  | Legacy     [x]  | Book             [ ]  | Jeeves   [x]  |
 | Brainfuck   [ ]  | Blue       [x]  | Mango            [ ]  | Bart     [ ]  |
 | Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
-| Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [ ]  |
+| Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [!]  |
 | Nibbles     [o]  | Bastard    [x]  | Jail             [ ]  | Netmon   [ ]  |
 | Beep        [x]  | Granny     [x]  | Falafel          [ ]  | Sizzle   [ ]  |
 | Nineveh     [x]  | Grandpa    [x]  | Devoops          [ ]  | Sniper   [ ]  |

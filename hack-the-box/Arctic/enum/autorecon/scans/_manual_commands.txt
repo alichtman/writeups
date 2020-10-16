@@ -1,0 +1,7 @@
+[*] msrpc on tcp/135
+
+	[-] RPC Client:
+
+		rpcclient -p 135 -U "" 10.10.10.11
+
+

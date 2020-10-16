@@ -1,0 +1,21 @@
+# Nmap 7.80 scan initiated Mon Oct 12 04:56:49 2020 as: nmap -vv --reason -Pn -sV -p 111 "--script=banner,(rpcinfo or nfs*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/tcp_111_nfs_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Irked/enum/autorecon/scans/xml/tcp_111_nfs_nmap.xml irked.htb
+Nmap scan report for irked.htb (10.10.10.117)
+Host is up, received user-set (0.044s latency).
+Scanned at 2020-10-12 04:56:49 CDT for 23s
+
+PORT    STATE SERVICE REASON         VERSION
+111/tcp open  rpcbind syn-ack ttl 63 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100000  2,3,4        111/tcp   rpcbind
+|   100000  2,3,4        111/udp   rpcbind
+|   100000  3,4          111/tcp6  rpcbind
+|   100000  3,4          111/udp6  rpcbind
+|   100024  1          56189/tcp6  status
+|   100024  1          57511/udp6  status
+|   100024  1          57932/udp   status
+|_  100024  1          59054/tcp   status
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 12 04:57:12 2020 -- 1 IP address (1 host up) scanned in 22.76 seconds

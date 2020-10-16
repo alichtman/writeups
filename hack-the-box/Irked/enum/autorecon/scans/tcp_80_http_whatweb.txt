@@ -1,0 +1,41 @@
+WhatWeb report for http://irked.htb:80
+Status    : 200 OK
+Title     : <None>
+IP        : 10.10.10.117
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Debian Linux][Apache/2.4.10 (Debian)], Apache[2.4.10]
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.10 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Debian Linux
+	String       : Apache/2.4.10 (Debian) (from server string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Mon, 12 Oct 2020 10:03:28 GMT
+	Server: Apache/2.4.10 (Debian)
+	Last-Modified: Mon, 14 May 2018 18:00:02 GMT
+	ETag: "48-56c2e413aa86b-gzip"
+	Accept-Ranges: bytes
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 83
+	Connection: close
+	Content-Type: text/html
+	

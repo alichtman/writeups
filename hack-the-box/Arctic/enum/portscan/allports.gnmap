@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Mon Oct 12 03:16:20 2020 as: nmap -A -v -p 135,8500,49154 -Pn -oA allports silo.htb
+# Ports scanned: TCP(3;135,8500,49154) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.82 (silo.htb)	Status: Up
+Host: 10.10.10.82 (silo.htb)	Ports: 135/filtered/tcp//msrpc///, 8500/filtered/tcp//fmtp///, 49154/filtered/tcp//unknown///
+# Nmap done at Mon Oct 12 03:16:42 2020 -- 1 IP address (1 host up) scanned in 22.07 seconds

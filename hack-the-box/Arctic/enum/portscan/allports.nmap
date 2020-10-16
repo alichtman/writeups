@@ -1,0 +1,25 @@
+# Nmap 7.80 scan initiated Mon Oct 12 03:16:20 2020 as: nmap -A -v -p 135,8500,49154 -Pn -oA allports silo.htb
+Nmap scan report for silo.htb (10.10.10.82)
+Host is up.
+
+PORT      STATE    SERVICE VERSION
+135/tcp   filtered msrpc
+8500/tcp  filtered fmtp
+49154/tcp filtered unknown
+Too many fingerprints match this host to give specific OS details
+
+TRACEROUTE (using proto 1/icmp)
+HOP RTT        ADDRESS
+1   42.44 ms   10.10.14.1
+2   ... 8
+9   1034.15 ms 10.10.14.1
+10  1034.15 ms 10.10.14.1
+11  ...
+12  1037.79 ms 10.10.14.1
+13  1037.79 ms 10.10.14.1
+14  1037.80 ms 10.10.14.1
+15  ... 30
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 12 03:16:42 2020 -- 1 IP address (1 host up) scanned in 22.07 seconds
