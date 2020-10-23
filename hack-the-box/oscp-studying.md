@@ -21,7 +21,7 @@
 | Sunday      [x]  | BankRobber [ ]  |                       |               |
 | Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
 | Magic       [x]  | Secnotes   [ ]  |                       |               |
-| Irked       [ ]  | Buff       [ ]  |                       |               |
+| Irked       [x]  | Buff       [ ]  |                       |               |
 | Friendzone  [ ]  |                 |                       |               |
 | Swagshop    [!]  |                 |                       |               |
 | Networked   [ ]  |                 |                       |               |
