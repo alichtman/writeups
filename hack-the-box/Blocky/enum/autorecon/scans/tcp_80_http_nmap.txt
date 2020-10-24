@@ -1,0 +1,222 @@
+# Nmap 7.80 scan initiated Fri Oct 23 14:05:08 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/writeups/hack-the-box/Blocky/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/writeups/hack-the-box/Blocky/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.37
+Nmap scan report for blocky.htb (10.10.10.37)
+Host is up, received user-set (0.12s latency).
+Scanned at 2020-10-23 14:05:10 EDT for 78s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.18 ((Ubuntu))
+|_http-chrono: Request times for /; avg: 1405.44ms; min: 718.29ms; max: 2826.48ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=blocky.htb
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 71
+|     Comment: 
+|         <!-- .site-branding-text -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 98
+|     Comment: 
+|         <!-- .entry-header -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 110
+|     Comment: 
+|         <!-- #primary -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 150
+|     Comment: 
+|         <!-- .site-info -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 109
+|     Comment: 
+|         <!-- #main -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 76
+|     Comment: 
+|         <!-- .site-branding -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 152
+|     Comment: 
+|         <!-- #colophon -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 81
+|     Comment: 
+|         <!-- #masthead -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 107
+|     Comment: 
+|         <!-- #post-## -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 156
+|     Comment: 
+|         /* <![CDATA[ */
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 37
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         <link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://10.10.10.37/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=1.0' type='text/css' media='all' />
+|         <![endif]-->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 75
+|     Comment: 
+|         <!-- .wrap -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 158
+|     Comment: 
+|         /* ]]> */
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 154
+|     Comment: 
+|         <!-- #page -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 40
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         <script type='text/javascript' src='http://10.10.10.37/wp-content/themes/twentyseventeen/assets/js/html5.js?ver=3.7.3'></script>
+|         <![endif]-->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 78
+|     Comment: 
+|         <!-- .custom-header -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 153
+|     Comment: 
+|         <!-- .site-content-contain -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 143
+|     Comment: 
+|         <!-- #content -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 104
+|     Comment: 
+|         <!-- .entry-content -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 98
+|     Comment: 
+|         <!-- .entry-meta -->
+|     
+|     Path: http://blocky.htb:80/
+|     Line number: 139
+|     Comment: 
+|_        <!-- #secondary -->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=blocky.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://blocky.htb:80/
+|     Form id: search-form-5f931d082b7c1
+|_    Form action: http://10.10.10.37/
+|_http-date: Fri, 23 Oct 2020 18:12:21 GMT; +6m51s from local time.
+|_http-devframework: Wordpress detected. Found common traces on /
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /wiki/: Wiki
+|   /wp-login.php: Possible admin folder
+|   /phpmyadmin/: phpMyAdmin
+|   /readme.html: Wordpress version: 2 
+|   /: WordPress version: 4.8
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|_  /readme.html: Interesting, a readme.
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=blocky.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://blocky.htb:80/%5c%22
+|_http-feed: ERROR: Script execution failed (use -d to debug)
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-generator: WordPress 4.8
+| http-grep: 
+|   (1) http://blocky.htb:80/: 
+|     (1) ip: 
+|_      + 10.10.10.37
+| http-headers: 
+|   Date: Fri, 23 Oct 2020 18:12:23 GMT
+|   Server: Apache/2.4.18 (Ubuntu)
+|   Link: <http://10.10.10.37/index.php/wp-json/>; rel="https://api.w.org/"
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+|_http-php-version: Credits query returned unknown hash 1f43efe4beaa01aecfa40ff2bb9bcfa7
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: BlockyCraft &#8211; Under Construction!
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+| 113 names had status 200
+|_14 names had status ERROR
+| http-wordpress-enum: 
+| Search limited to top 100 themes/plugins
+|   themes
+|     twentyfifteen 1.8
+|     twentysixteen 1.3
+|     twentyseventeen 1.3
+|   plugins
+|_    akismet 3.3.2
+| http-wordpress-users: 
+| Username found: notch
+|_Search stopped at ID #25. Increase the upper limit if necessary with 'http-wordpress-users.limit'
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 23 14:06:28 2020 -- 1 IP address (1 host up) scanned in 79.94 seconds

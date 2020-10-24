@@ -5,7 +5,7 @@
 | Linux            | Windows         | HARD Linux            | HARD Windows  |
 | ---              | ---             | ---                   |               |
 | Lame        [x]  | Legacy     [x]  | Book             [ ]  | Jeeves   [x]  |
-| Brainfuck   [ ]  | Blue       [x]  | Mango            [ ]  | Bart     [ ]  |
+| Brainfuck   [ ]  | Blue       [x]  | Mango            [o]  | Bart     [ ]  |
 | Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
 | Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [!]  |
 | Nibbles     [o]  | Bastard    [x]  | Jail             [ ]  | Netmon   [ ]  |
@@ -22,14 +22,14 @@
 | Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
 | Magic       [x]  | Secnotes   [ ]  |                       |               |
 | Irked       [x]  | Buff       [ ]  |                       |               |
-| Friendzone  [ ]  |                 |                       |               |
+| Friendzone  [!]  |                 |                       |               |
 | Swagshop    [!]  |                 |                       |               |
 | Networked   [ ]  |                 |                       |               |
 | Jarvis      [ ]  |                 |                       |               |
 | Mirai       [o]  |                 |                       |               |
 | Popcorn     [ ]  |                 |                       |               |
 | Haircut     [ ]  |                 |                       |               |
-| Blocky      [ ]  |                 |                       |               |
+| Blocky      [x]  |                 |                       |               |
 | Frolic      [ ]  |                 |                       |               |
 | Postman     [ ]  |                 |                       |               |
 

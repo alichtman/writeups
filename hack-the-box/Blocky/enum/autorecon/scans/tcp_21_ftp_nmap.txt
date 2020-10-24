@@ -1,0 +1,14 @@
+# Nmap 7.80 scan initiated Fri Oct 23 14:05:08 2020 as: nmap -vv --reason -Pn -sV -p 21 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/writeups/hack-the-box/Blocky/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/writeups/hack-the-box/Blocky/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.37
+Nmap scan report for blocky.htb (10.10.10.37)
+Host is up, received user-set (0.093s latency).
+Scanned at 2020-10-23 14:05:09 EDT for 2s
+
+PORT   STATE SERVICE REASON         VERSION
+21/tcp open  ftp     syn-ack ttl 63 ProFTPD 1.3.5a
+|_banner: 220 ProFTPD 1.3.5a Server (Debian) [::ffff:10.10.10.37]
+|_sslv2-drown: 
+Service Info: OS: Unix
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Oct 23 14:05:11 2020 -- 1 IP address (1 host up) scanned in 3.32 seconds
