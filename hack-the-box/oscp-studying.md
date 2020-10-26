@@ -28,7 +28,7 @@
 | Jarvis      [ ]  |                 |                       |               |
 | Mirai       [o]  |                 |                       |               |
 | Popcorn     [ ]  |                 |                       |               |
-| Haircut     [ ]  |                 |                       |               |
+| Haircut     [x]  |                 |                       |               |
 | Blocky      [x]  |                 |                       |               |
 | Frolic      [ ]  |                 |                       |               |
 | Postman     [ ]  |                 |                       |               |

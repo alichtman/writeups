@@ -1,0 +1,5 @@
+http://haircut.htb/index.html (Status: 200)
+http://haircut.htb/uploads (Status: 301)
+http://haircut.htb/test.html (Status: 200)
+http://haircut.htb/hair.html (Status: 200)
+http://haircut.htb/exposed.php (Status: 200)

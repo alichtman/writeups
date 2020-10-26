@@ -1,0 +1,14 @@
+HTTP/1.1 404 Not Found
+Server: nginx/1.10.0 (Ubuntu)
+Date: Sat, 24 Oct 2020 20:20:19 GMT
+Content-Type: text/html
+Content-Length: 178
+Connection: keep-alive
+
+<html>
+<head><title>404 Not Found</title></head>
+<body bgcolor="white">
+<center><h1>404 Not Found</h1></center>
+<hr><center>nginx/1.10.0 (Ubuntu)</center>
+</body>
+</html>

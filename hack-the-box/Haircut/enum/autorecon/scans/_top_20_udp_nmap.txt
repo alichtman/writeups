@@ -1,0 +1,47 @@
+# Nmap 7.80 scan initiated Sat Oct 24 16:13:05 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/writeups/hack-the-box/Haircut/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/writeups/hack-the-box/Haircut/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.24
+Nmap scan report for haircut.htb (10.10.10.24)
+Host is up, received user-set (0.11s latency).
+Scanned at 2020-10-24 16:13:06 EDT for 242s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open|filtered domain       no-response
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   closed        msrpc        port-unreach ttl 63
+137/udp   open|filtered netbios-ns   no-response
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   closed        netbios-ssn  port-unreach ttl 63
+161/udp   open|filtered snmp         no-response
+162/udp   open|filtered snmptrap     no-response
+445/udp   closed        microsoft-ds port-unreach ttl 63
+500/udp   closed        isakmp       port-unreach ttl 63
+514/udp   open|filtered syslog       no-response
+520/udp   closed        route        port-unreach ttl 63
+631/udp   closed        ipp          port-unreach ttl 63
+1434/udp  open|filtered ms-sql-m     no-response
+1900/udp  open|filtered upnp         no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=10/24%OT=%CT=%CU=135%PV=Y%DS=2%DC=T%G=N%TM=5F948BC4%P=x86_64-pc-linux-gnu)
+SEQ(CI=I%II=I)
+SEQ(CI=I)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 139/udp)
+HOP RTT      ADDRESS
+1   95.26 ms 10.10.14.1
+2   95.75 ms haircut.htb (10.10.10.24)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Oct 24 16:17:08 2020 -- 1 IP address (1 host up) scanned in 242.96 seconds

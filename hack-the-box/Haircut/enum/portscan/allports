@@ -1,0 +1,1 @@
+# Nmap 7.80 scan initiated Sat Oct 24 16:13:20 2020 as: nmap -A -v -p- -sVC -Pn -oN allports haircut.htb

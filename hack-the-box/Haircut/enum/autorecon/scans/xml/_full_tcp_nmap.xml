@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Oct 24 16:13:05 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/writeups/hack-the-box/Haircut/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/writeups/hack-the-box/Haircut/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.24 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/writeups/hack-the-box/Haircut/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/writeups/hack-the-box/Haircut/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.24" start="1603570385" startstr="Sat Oct 24 16:13:05 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603570385"/>
+<taskend task="NSE" time="1603570385"/>
+<taskbegin task="NSE" time="1603570385"/>
+<taskend task="NSE" time="1603570385"/>
+<taskbegin task="NSE" time="1603570385"/>
+<taskend task="NSE" time="1603570385"/>
+<taskbegin task="SYN Stealth Scan" time="1603570385"/>
+<taskprogress task="SYN Stealth Scan" time="1603570416" percent="5.50" remaining="533" etc="1603570949"/>
+<taskprogress task="SYN Stealth Scan" time="1603570446" percent="6.65" remaining="856" etc="1603571302"/>
+<taskprogress task="SYN Stealth Scan" time="1603570476" percent="7.55" remaining="1114" etc="1603571590"/>
+<taskprogress task="SYN Stealth Scan" time="1603570506" percent="8.01" remaining="1390" etc="1603571895"/>
+<taskprogress task="SYN Stealth Scan" time="1603570536" percent="8.84" remaining="1559" etc="1603572094"/>
+<taskprogress task="SYN Stealth Scan" time="1603570581" percent="11.76" remaining="1471" etc="1603572051"/>
+<taskprogress task="SYN Stealth Scan" time="1603570614" percent="14.19" remaining="1385" etc="1603571999"/>
+<taskprogress task="SYN Stealth Scan" time="1603570674" percent="16.46" remaining="1467" etc="1603572141"/>
+<taskprogress task="SYN Stealth Scan" time="1603570737" percent="18.41" remaining="1560" etc="1603572297"/>
+<taskprogress task="SYN Stealth Scan" time="1603571319" percent="38.98" remaining="1463" etc="1603572781"/>
+<taskprogress task="SYN Stealth Scan" time="1603571490" percent="45.16" remaining="1342" etc="1603572832"/>
+<taskprogress task="SYN Stealth Scan" time="1603571757" percent="52.95" remaining="1220" etc="1603572976"/>
+<taskprogress task="SYN Stealth Scan" time="1603571901" percent="58.21" remaining="1089" etc="1603572989"/>
+<taskprogress task="SYN Stealth Scan" time="1603572083" percent="63.94" remaining="958" etc="1603573041"/>
+<taskprogress task="SYN Stealth Scan" time="1603572242" percent="69.29" remaining="823" etc="1603573065"/>
+<taskprogress task="SYN Stealth Scan" time="1603572386" percent="74.43" remaining="688" etc="1603573074"/>
+<taskprogress task="SYN Stealth Scan" time="1603572524" percent="79.48" remaining="553" etc="1603573076"/>
+<taskprogress task="SYN Stealth Scan" time="1603572683" percent="84.64" remaining="417" etc="1603573100"/>
+<taskprogress task="SYN Stealth Scan" time="1603573102" percent="89.05" remaining="335" etc="1603573436"/>
+<taskprogress task="SYN Stealth Scan" time="1603573438" percent="92.18" remaining="259" etc="1603573697"/>
+<taskprogress task="SYN Stealth Scan" time="1603573699" percent="94.58" remaining="190" etc="1603573889"/>
+<taskprogress task="SYN Stealth Scan" time="1603573891" percent="96.37" remaining="133" etc="1603574023"/>
+<taskprogress task="SYN Stealth Scan" time="1603574023" percent="97.61" remaining="90" etc="1603574112"/>
+<taskprogress task="SYN Stealth Scan" time="1603574113" percent="98.43" remaining="60" etc="1603574172"/>
+<taskprogress task="SYN Stealth Scan" time="1603574173" percent="98.99" remaining="39" etc="1603574212"/>
+<taskend task="SYN Stealth Scan" time="1603574400" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1603574400"/>
+<taskend task="Service scan" time="1603574406" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1603574418"/>
+<taskend task="Traceroute" time="1603574418"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1603574418"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1603574418"/>
+<taskbegin task="NSE" time="1603574418"/>
+<taskend task="NSE" time="1603574420"/>
+<taskbegin task="NSE" time="1603574420"/>
+<taskend task="NSE" time="1603574421"/>
+<taskbegin task="NSE" time="1603574421"/>
+<taskend task="NSE" time="1603574421"/>
+<host starttime="1603570386" endtime="1603574421"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.24" addrtype="ipv4"/>
+<hostnames>
+<hostname name="haircut.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="resets" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.2" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 e9:75:c1:e4:b3:63:3c:93:f2:c6:18:08:36:48:ce:36 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDo4pezhJs9c3u8vPWIL9eW4qxQOrHCslAdMftg/p1HDLCKc+9otg+MmQMlxF7jzEu8vJ0GPfg5ONRxlsfx1mwmAXmKLh9GK4WD2pFbg4iFiAO/BAUjs3dNdR1S9wR6F+yRc2jgIyKFJO3JohZZFnM6BrTkZO7+IkSF6b3z2qzaWorHZW04XHdbxKjVCHpU5ewWQ5B32ScKRJE8bsi04Z2lE5vk1NWK15gOqmuyEBK8fcQpD1zCI6bPc5qZlwrRv4r4krCb1h8zYtAwVnoZdtYVopfACgWHxqe+/8YqS8qo4nPfEXq8LkUc2VWmFztWMCBuwVFvW8Pf34VDD4dEiIwz&#xa;  256 87:00:ab:a9:8f:6f:4b:ba:fb:c6:7a:55:a8:60:b2:68 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLrPH0YEefX9y/Kyg9prbVSPe3U7fH06/909UK8mAIm3eb6PWCCwXYC7xZcow1ILYvxF1GTaXYTHeDF6VqX0dzc=&#xa;  256 b6:1b:5c:a9:26:5c:dc:61:b7:75:90:6c:88:51:6e:54 (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA+vUE7P+f2aiWmwJRuLE2qsDHrzJUzJLleMvKmIHoKM"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">e975c1e4b3633c93f2c618083648ce36</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDo4pezhJs9c3u8vPWIL9eW4qxQOrHCslAdMftg/p1HDLCKc+9otg+MmQMlxF7jzEu8vJ0GPfg5ONRxlsfx1mwmAXmKLh9GK4WD2pFbg4iFiAO/BAUjs3dNdR1S9wR6F+yRc2jgIyKFJO3JohZZFnM6BrTkZO7+IkSF6b3z2qzaWorHZW04XHdbxKjVCHpU5ewWQ5B32ScKRJE8bsi04Z2lE5vk1NWK15gOqmuyEBK8fcQpD1zCI6bPc5qZlwrRv4r4krCb1h8zYtAwVnoZdtYVopfACgWHxqe+/8YqS8qo4nPfEXq8LkUc2VWmFztWMCBuwVFvW8Pf34VDD4dEiIwz</elem>
+<elem key="bits">2048</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">8700aba98f6f4bbafbc67a55a860b268</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBLrPH0YEefX9y/Kyg9prbVSPe3U7fH06/909UK8mAIm3eb6PWCCwXYC7xZcow1ILYvxF1GTaXYTHeDF6VqX0dzc=</elem>
+<elem key="bits">256</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">b61b5ca9265cdc61b775906c88516e54</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIA+vUE7P+f2aiWmwJRuLE2qsDHrzJUzJLleMvKmIHoKM</elem>
+<elem key="bits">256</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.0" extrainfo="Ubuntu" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.10.0 (Ubuntu)"><elem>nginx/1.10.0 (Ubuntu)</elem>
+</script><script id="http-title" output=" HTB Hairdresser "><elem key="title"> HTB Hairdresser </elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="30544"/>
+<osmatch name="Linux 3.12" accuracy="95" line="63436">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="95" line="63553">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="95" line="63944">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.8 - 3.11" accuracy="95" line="66079">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.8" accuracy="95" line="67659">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.8</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.4" accuracy="95" line="67510">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.9" accuracy="95" line="67713">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.9</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="95" line="64238">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 4.2" accuracy="95" line="67057">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4.2</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=10/24%OT=22%CT=1%CU=30544%PV=Y%DS=2%DC=T%G=Y%TM=5F949A&#xa;OS:95%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=108%TI=Z%CI=I%II=I%TS=8)OP&#xa;OS:S(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST&#xa;OS:11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)EC&#xa;OS:N(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=&#xa;OS:AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(&#xa;OS:R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%&#xa;OS:F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N&#xa;OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%C&#xa;OS:D=S)&#xa;"/>
+</os>
+<uptime seconds="3136" lastboot="Sat Oct 24 16:28:05 2020"/>
+<distance value="2"/>
+<tcpsequence index="262" difficulty="Good luck!" values="140FD5F4,5B31D627,668EA9A9,2988743,B70EAF7E,B3AB1F82"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="other" values="CDA78,CDA91,CDAAA,CDAC3,CDADD,CDAFF"/>
+<trace port="111" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="80.29"/>
+<hop ttl="2" ipaddr="10.10.10.24" rtt="80.45" host="haircut.htb"/>
+</trace>
+<times srtt="74442" rttvar="7922" to="106130"/>
+</host>
+<taskbegin task="NSE" time="1603574421"/>
+<taskend task="NSE" time="1603574421"/>
+<taskbegin task="NSE" time="1603574421"/>
+<taskend task="NSE" time="1603574421"/>
+<taskbegin task="NSE" time="1603574421"/>
+<taskend task="NSE" time="1603574421"/>
+<runstats><finished time="1603574421" timestr="Sat Oct 24 17:20:21 2020" elapsed="4035.83" summary="Nmap done at Sat Oct 24 17:20:21 2020; 1 IP address (1 host up) scanned in 4035.83 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
