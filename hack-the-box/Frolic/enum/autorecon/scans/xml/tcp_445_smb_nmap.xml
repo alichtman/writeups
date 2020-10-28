@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Oct 26 17:03:17 2020 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_445_smb_nmap.txt -oX /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml 10.10.10.111 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_445_smb_nmap.txt -oX /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml 10.10.10.111" start="1603746197" startstr="Mon Oct 26 17:03:17 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603746198"/>
+<taskend task="NSE" time="1603746198"/>
+<taskbegin task="NSE" time="1603746198"/>
+<taskend task="NSE" time="1603746198"/>
+<taskbegin task="NSE" time="1603746198"/>
+<taskend task="NSE" time="1603746198"/>
+<taskbegin task="SYN Stealth Scan" time="1603746198"/>
+<taskend task="SYN Stealth Scan" time="1603746198" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1603746198"/>
+<taskend task="Service scan" time="1603746204" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1603746204"/>
+<taskprogress task="NSE" time="1603746235" percent="98.57" remaining="1" etc="1603746235"/>
+<taskprogress task="NSE" time="1603746265" percent="98.57" remaining="1" etc="1603746266"/>
+<taskprogress task="NSE" time="1603746295" percent="98.57" remaining="2" etc="1603746296"/>
+<taskprogress task="NSE" time="1603746325" percent="98.57" remaining="2" etc="1603746327"/>
+<taskprogress task="NSE" time="1603746355" percent="98.57" remaining="3" etc="1603746357"/>
+<taskprogress task="NSE" time="1603746385" percent="98.57" remaining="3" etc="1603746388"/>
+<taskprogress task="NSE" time="1603746415" percent="98.57" remaining="4" etc="1603746418"/>
+<taskprogress task="NSE" time="1603746445" percent="98.57" remaining="4" etc="1603746448"/>
+<taskprogress task="NSE" time="1603746475" percent="98.57" remaining="4" etc="1603746479"/>
+<taskprogress task="NSE" time="1603746505" percent="98.57" remaining="5" etc="1603746509"/>
+<taskend task="NSE" time="1603746506"/>
+<taskbegin task="NSE" time="1603746506"/>
+<taskend task="NSE" time="1603746514"/>
+<taskbegin task="NSE" time="1603746514"/>
+<taskend task="NSE" time="1603746514"/>
+<host starttime="1603746198" endtime="1603746514"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.111" addrtype="ipv4"/>
+<hostnames>
+<hostname name="frolic.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="netbios-ssn" product="Samba smbd" version="4.3.11-Ubuntu" extrainfo="workgroup: WORKGROUP" hostname="FROLIC" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+</ports>
+<hostscript><script id="nbstat" output="NetBIOS name: FROLIC, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  FROLIC&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  FROLIC&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  FROLIC&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/><script id="smb-enum-domains" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-groups" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-enum-sessions" output="&#xa;  &lt;nobody&gt;&#xa;"/><script id="smb-enum-shares" output="&#xa;  account_used: guest&#xa;  \\10.10.10.111\IPC$: &#xa;    Type: STYPE_IPC_HIDDEN&#xa;    Comment: IPC Service (frolic server (Samba, Ubuntu))&#xa;    Users: 8&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\tmp&#xa;    Anonymous access: READ/WRITE&#xa;    Current user access: READ/WRITE&#xa;  \\10.10.10.111\print$: &#xa;    Type: STYPE_DISKTREE&#xa;    Comment: Printer Drivers&#xa;    Users: 0&#xa;    Max Users: &lt;unlimited&gt;&#xa;    Path: C:\var\lib\samba\printers&#xa;    Anonymous access: &lt;none&gt;&#xa;    Current user access: &lt;none&gt;"><elem key="account_used">guest</elem>
+<table key="\\10.10.10.111\IPC$">
+<elem key="Type">STYPE_IPC_HIDDEN</elem>
+<elem key="Comment">IPC Service (frolic server (Samba, Ubuntu))</elem>
+<elem key="Users">8</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\tmp</elem>
+<elem key="Anonymous access">READ/WRITE</elem>
+<elem key="Current user access">READ/WRITE</elem>
+</table>
+<table key="\\10.10.10.111\print$">
+<elem key="Type">STYPE_DISKTREE</elem>
+<elem key="Comment">Printer Drivers</elem>
+<elem key="Users">0</elem>
+<elem key="Max Users">&lt;unlimited&gt;</elem>
+<elem key="Path">C:\var\lib\samba\printers</elem>
+<elem key="Anonymous access">&lt;none&gt;</elem>
+<elem key="Current user access">&lt;none&gt;</elem>
+</table>
+</script><script id="smb-enum-users" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-mbenum" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-os-discovery" output="&#xa;  OS: Windows 6.1 (Samba 4.3.11-Ubuntu)&#xa;  Computer name: frolic&#xa;  NetBIOS computer name: FROLIC\x00&#xa;  Domain name: \x00&#xa;  FQDN: frolic&#xa;  System time: 2020-10-27T02:40:20+05:30&#xa;"><elem key="os">Windows 6.1</elem>
+<elem key="lanmanager">Samba 4.3.11-Ubuntu</elem>
+<elem key="server">FROLIC\x00</elem>
+<elem key="date">2020-10-27T02:40:20+05:30</elem>
+<elem key="fqdn">frolic</elem>
+<elem key="domain_dns">\x00</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+</script><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-system-info" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-vuln-ms10-061" output="false">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.02: &#xa;    Distributed File System&#xa;    Multi-credit operations&#xa;  3.11: &#xa;    Distributed File System&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-10-26T21:10:20&#xa;  start_date: N/A"><elem key="date">2020-10-26T21:10:20</elem>
+<elem key="start_date">N/A</elem>
+</script></hostscript><times srtt="56042" rttvar="56042" to="280210"/>
+</host>
+<taskbegin task="NSE" time="1603746514"/>
+<taskend task="NSE" time="1603746514"/>
+<taskbegin task="NSE" time="1603746514"/>
+<taskend task="NSE" time="1603746514"/>
+<taskbegin task="NSE" time="1603746514"/>
+<taskend task="NSE" time="1603746514"/>
+<runstats><finished time="1603746514" timestr="Mon Oct 26 17:08:34 2020" elapsed="317.33" summary="Nmap done at Mon Oct 26 17:08:34 2020; 1 IP address (1 host up) scanned in 317.33 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,99 @@
+# Nmap 7.80 scan initiated Mon Oct 26 17:03:12 2020 as: nmap -A -v -p- -sVC -Pn -oN allports frolic.htb
+adjust_timeouts2: packet supposedly had rtt of -176369 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -176369 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -201761 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -201761 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -626396 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -626396 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -451551 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -451551 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -932075 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -932075 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -60479 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -60479 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -100096 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -100096 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -198734 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -198734 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -373654 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -373654 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -116127 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -116127 microseconds.  Ignoring time.
+Nmap scan report for frolic.htb (10.10.10.111)
+Host is up (0.052s latency).
+Not shown: 65530 closed ports
+PORT     STATE SERVICE     VERSION
+22/tcp   open  ssh         OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 87:7b:91:2a:0f:11:b6:57:1e:cb:9f:77:cf:35:e2:21 (RSA)
+|   256 b7:9b:06:dd:c2:5e:28:44:78:41:1e:67:7d:1e:b7:62 (ECDSA)
+|_  256 21:cf:16:6d:82:a4:30:c3:c6:9c:d7:38:ba:b5:02:b0 (ED25519)
+139/tcp  open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+1880/tcp open  http        Node.js (Express middleware)
+|_http-favicon: Unknown favicon MD5: 818DD6AFD0D0F9433B21774F89665EEA
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Node-RED
+9999/tcp open  http        nginx 1.10.3 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: Welcome to nginx!
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=10/26%OT=22%CT=1%CU=42728%PV=Y%DS=2%DC=T%G=Y%TM=5F9739
+OS:FE%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10D%TI=Z%CI=I%TS=8)SEQ(SP=
+OS:104%GCD=1%ISR=10D%TI=Z%TS=8)OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT
+OS:11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7
+OS:120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q
+OS:=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%
+OS:W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=
+OS:)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=
+OS:S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RU
+OS:CK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 199.638 days (since Fri Apr 10 01:46:16 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: FROLIC; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -1h43m04s, deviation: 3h10m30s, median: 6m54s
+| nbstat: NetBIOS name: FROLIC, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   FROLIC<00>           Flags: <unique><active>
+|   FROLIC<03>           Flags: <unique><active>
+|   FROLIC<20>           Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|_  WORKGROUP<1e>        Flags: <group><active>
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: frolic
+|   NetBIOS computer name: FROLIC\x00
+|   Domain name: \x00
+|   FQDN: frolic
+|_  System time: 2020-10-27T02:41:51+05:30
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-10-26T21:11:50
+|_  start_date: N/A
+
+TRACEROUTE (using port 993/tcp)
+HOP RTT      ADDRESS
+1   55.39 ms 10.10.14.1
+2   55.42 ms frolic.htb (10.10.10.111)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 26 17:05:02 2020 -- 1 IP address (1 host up) scanned in 110.54 seconds

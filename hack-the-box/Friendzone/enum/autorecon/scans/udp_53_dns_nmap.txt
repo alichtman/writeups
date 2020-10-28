@@ -1,0 +1,23 @@
+# Nmap 7.80 scan initiated Wed Oct 21 16:31:47 2020 as: nmap -vv --reason -Pn -sU -sV -p 53 "--script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/udp_53_dns_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/udp_53_dns_nmap.xml 10.10.10.123
+Nmap scan report for friendzone.htb (10.10.10.123)
+Host is up, received user-set (0.12s latency).
+Scanned at 2020-10-21 16:31:47 EDT for 420s
+
+PORT   STATE SERVICE REASON              VERSION
+53/udp open  domain  udp-response ttl 63 ISC BIND 9.11.3-1ubuntu1.2 (Ubuntu Linux)
+|_dns-cache-snoop: 0 of 100 tested domains are cached.
+| dns-nsec-enum: 
+|_  No NSEC records found
+| dns-nsec3-enum: 
+|_  DNSSEC NSEC3 not supported
+| dns-nsid: 
+|_  bind.version: 9.11.3-1ubuntu1.2-Ubuntu
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| dns-brute: 
+|_  DNS Brute-force hostnames: No results.
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 21 16:38:47 2020 -- 1 IP address (1 host up) scanned in 420.49 seconds

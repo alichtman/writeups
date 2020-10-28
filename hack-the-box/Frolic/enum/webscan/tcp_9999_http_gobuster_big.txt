@@ -1,0 +1,5 @@
+http://frolic.htb:9999/admin (Status: 301)
+http://frolic.htb:9999/test (Status: 301)
+http://frolic.htb:9999/dev (Status: 301)
+http://frolic.htb:9999/backup (Status: 301)
+http://frolic.htb:9999/loop (Status: 301)

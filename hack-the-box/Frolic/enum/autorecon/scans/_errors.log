@@ -1,0 +1,1 @@
+[*] Task tcp/1880/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.111:1880/ /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_screenshot.png; fi

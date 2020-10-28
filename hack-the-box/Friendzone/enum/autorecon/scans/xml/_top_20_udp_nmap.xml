@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Oct 21 16:22:42 2020 as: nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.123" start="1603311762" startstr="Wed Oct 21 16:22:42 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="20" services="53,67-69,123,135,137-139,161-162,445,500,514,520,631,1434,1900,4500,49152"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603311764"/>
+<taskend task="NSE" time="1603311764"/>
+<taskbegin task="NSE" time="1603311764"/>
+<taskend task="NSE" time="1603311764"/>
+<taskbegin task="NSE" time="1603311764"/>
+<taskend task="NSE" time="1603311764"/>
+<taskbegin task="UDP Scan" time="1603311764"/>
+<taskend task="UDP Scan" time="1603311765" extrainfo="20 total ports"/>
+<taskbegin task="Service scan" time="1603311765"/>
+<taskprogress task="Service scan" time="1603311947" percent="21.43" remaining="668" etc="1603312614"/>
+<taskend task="Service scan" time="1603312008" extrainfo="14 services on 1 host"/>
+<taskbegin task="Traceroute" time="1603312012"/>
+<taskend task="Traceroute" time="1603312013"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1603312013"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1603312026"/>
+<taskbegin task="NSE" time="1603312026"/>
+<taskprogress task="NSE" time="1603312057" percent="98.82" remaining="1" etc="1603312057"/>
+<taskprogress task="NSE" time="1603312087" percent="98.98" remaining="1" etc="1603312088"/>
+<taskend task="NSE" time="1603312107"/>
+<taskbegin task="NSE" time="1603312107"/>
+<taskend task="NSE" time="1603312110"/>
+<taskbegin task="NSE" time="1603312110"/>
+<taskend task="NSE" time="1603312110"/>
+<host starttime="1603311764" endtime="1603312110"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.123" addrtype="ipv4"/>
+<hostnames>
+<hostname name="friendzone.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="53"><state state="open" reason="udp-response" reason_ttl="63"/><service name="domain" product="ISC BIND" version="9.11.3-1ubuntu1.2" extrainfo="Ubuntu Linux" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.11.3-1ubuntu1.2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="dns-nsid" output="&#xa;  bind.version: 9.11.3-1ubuntu1.2-Ubuntu"><elem key="bind.version">9.11.3-1ubuntu1.2-Ubuntu</elem>
+</script></port>
+<port protocol="udp" portid="67"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="69"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="tftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="udp" portid="135"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="63"/><service name="netbios-ns" product="Samba nmbd netbios-ns" extrainfo="workgroup: WORKGROUP" hostname="FRIENDZONE" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="udp" portid="138"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="161"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="snmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="162"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmptrap" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="520"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="route" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1434"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ms-sql-m" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="4500"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="162"/>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=10/21%OT=%CT=%CU=162%PV=Y%DS=2%DC=T%G=N%TM=5F9099EE%P=x86_64-pc-linux-gnu)&#xa;SEQ(CI=I)&#xa;T5(R=Y%DF=Y%T=43%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=43%W=0%S=O%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=43%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)&#xa;U1(R=N)&#xa;U1(R=Y%DF=N%T=43%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=N)&#xa;IE(R=Y%DFI=N%T=43%CD=S)&#xa;"/>
+</os>
+<distance value="2"/>
+<hostscript><script id="nbstat" output="NetBIOS name: FRIENDZONE, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  FRIENDZONE&lt;00&gt;       Flags: &lt;unique&gt;&lt;active&gt;&#xa;  FRIENDZONE&lt;03&gt;       Flags: &lt;unique&gt;&lt;active&gt;&#xa;  FRIENDZONE&lt;20&gt;       Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/></hostscript><trace port="445" proto="udp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="683.84"/>
+<hop ttl="2" ipaddr="10.10.10.123" rtt="683.00" host="friendzone.htb"/>
+</trace>
+<times srtt="441615" rttvar="274664" to="1540271"/>
+</host>
+<taskbegin task="NSE" time="1603312110"/>
+<taskend task="NSE" time="1603312110"/>
+<taskbegin task="NSE" time="1603312110"/>
+<taskend task="NSE" time="1603312110"/>
+<taskbegin task="NSE" time="1603312110"/>
+<taskend task="NSE" time="1603312110"/>
+<runstats><finished time="1603312110" timestr="Wed Oct 21 16:28:30 2020" elapsed="348.43" summary="Nmap done at Wed Oct 21 16:28:30 2020; 1 IP address (1 host up) scanned in 348.43 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

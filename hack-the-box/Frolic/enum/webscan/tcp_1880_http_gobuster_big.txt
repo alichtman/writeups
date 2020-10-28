@@ -1,0 +1,2 @@
+http://frolic.htb:1880/red (Status: 301)
+http://frolic.htb:1880/vendor (Status: 301)

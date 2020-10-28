@@ -1,0 +1,124 @@
+[*] ssh on tcp/22
+
+	[-] Bruteforce logins:
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 22 -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_22_ssh_hydra.txt" ssh://10.10.10.111
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 22 -O "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_22_ssh_medusa.txt" -M ssh -h 10.10.10.111
+
+
+[*] netbios-ssn on tcp/139
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_139_smb_ms06-025.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_139_smb_ms06-025.xml" 10.10.10.111
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_139_smb_ms07-029.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_139_smb_ms07-029.xml" 10.10.10.111
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_139_smb_ms08-067.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_139_smb_ms08-067.xml" 10.10.10.111
+
+
+[*] netbios-ssn on tcp/445
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_445_smb_ms06-025.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_445_smb_ms06-025.xml" 10.10.10.111
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_445_smb_ms07-029.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_445_smb_ms07-029.xml" 10.10.10.111
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_445_smb_ms08-067.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/tcp_445_smb_ms08-067.xml" 10.10.10.111
+
+
+[*] http on tcp/9999
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://10.10.10.111:9999/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_dirsearch_big.txt"
+
+		dirsearch -u http://10.10.10.111:9999/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://10.10.10.111:9999/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_dirb_big.txt"
+
+		dirb http://10.10.10.111:9999/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://10.10.10.111:9999/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_gobuster_big.txt"
+
+		gobuster dir -u http://10.10.10.111:9999/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://10.10.10.111:9999/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_gobuster_big.txt"
+
+		gobuster -u http://10.10.10.111:9999/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://10.10.10.111:9999/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 9999 -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_auth_hydra.txt" http-get://10.10.10.111/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 9999 -O "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_auth_medusa.txt" -M http -h 10.10.10.111 -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 9999 -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_form_hydra.txt" http-post-form://10.10.10.111/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 9999 -O "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_9999_http_form_medusa.txt" -M web-form -h 10.10.10.111 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+
+[*] http on tcp/1880
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://10.10.10.111:1880/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_dirsearch_big.txt"
+
+		dirsearch -u http://10.10.10.111:1880/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://10.10.10.111:1880/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_dirb_big.txt"
+
+		dirb http://10.10.10.111:1880/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://10.10.10.111:1880/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_gobuster_big.txt"
+
+		gobuster dir -u http://10.10.10.111:1880/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://10.10.10.111:1880/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_gobuster_big.txt"
+
+		gobuster -u http://10.10.10.111:1880/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://10.10.10.111:1880/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 1880 -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_auth_hydra.txt" http-get://10.10.10.111/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 1880 -O "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_auth_medusa.txt" -M http -h 10.10.10.111 -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 1880 -o "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_form_hydra.txt" http-post-form://10.10.10.111/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 1880 -O "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/tcp_1880_http_form_medusa.txt" -M web-form -h 10.10.10.111 -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+
+[*] netbios-ns on udp/137
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sU -sV -p 137 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/udp_137_smb_ms06-025.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/udp_137_smb_ms06-025.xml" 10.10.10.111
+
+		nmap -vv --reason -Pn -sU -sV -p 137 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/udp_137_smb_ms07-029.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/udp_137_smb_ms07-029.xml" 10.10.10.111
+
+		nmap -vv --reason -Pn -sU -sV -p 137 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/udp_137_smb_ms08-067.txt" -oX "/home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/udp_137_smb_ms08-067.xml" 10.10.10.111
+
+

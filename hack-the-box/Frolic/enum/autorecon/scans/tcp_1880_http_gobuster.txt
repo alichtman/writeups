@@ -1,0 +1,6 @@
+/favicon.ico (Status: 200) [Size: 16958]
+/flows (Status: 401) [Size: 12]
+/icons (Status: 401) [Size: 12]
+/red (Status: 301) [Size: 173]
+/settings (Status: 401) [Size: 12]
+/vendor (Status: 301) [Size: 179]

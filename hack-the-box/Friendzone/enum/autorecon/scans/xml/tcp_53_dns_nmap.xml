@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Oct 21 16:26:12 2020 as: nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_53_dns_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_53_dns_nmap.xml 10.10.10.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 53 &quot;-&#45;script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_53_dns_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_53_dns_nmap.xml 10.10.10.123" start="1603311972" startstr="Wed Oct 21 16:26:12 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="53"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603311973"/>
+<taskend task="NSE" time="1603311973"/>
+<taskbegin task="NSE" time="1603311973"/>
+<taskend task="NSE" time="1603311973"/>
+<taskbegin task="NSE" time="1603311973"/>
+<taskend task="NSE" time="1603311973"/>
+<taskbegin task="SYN Stealth Scan" time="1603311974"/>
+<taskend task="SYN Stealth Scan" time="1603311974" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1603311974"/>
+<taskend task="Service scan" time="1603311981" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1603311981"/>
+<taskprogress task="NSE" time="1603312012" percent="90.00" remaining="4" etc="1603312015"/>
+<taskprogress task="NSE" time="1603312042" percent="90.00" remaining="7" etc="1603312049"/>
+<taskprogress task="NSE" time="1603312072" percent="90.00" remaining="11" etc="1603312082"/>
+<taskprogress task="NSE" time="1603312102" percent="90.00" remaining="14" etc="1603312115"/>
+<taskprogress task="NSE" time="1603312132" percent="90.00" remaining="17" etc="1603312149"/>
+<taskprogress task="NSE" time="1603312162" percent="90.00" remaining="21" etc="1603312182"/>
+<taskprogress task="NSE" time="1603312192" percent="90.00" remaining="24" etc="1603312215"/>
+<taskprogress task="NSE" time="1603312222" percent="90.00" remaining="27" etc="1603312249"/>
+<taskprogress task="NSE" time="1603312252" percent="90.00" remaining="31" etc="1603312282"/>
+<taskprogress task="NSE" time="1603312282" percent="90.00" remaining="34" etc="1603312315"/>
+<taskprogress task="NSE" time="1603312312" percent="91.67" remaining="31" etc="1603312342"/>
+<taskprogress task="NSE" time="1603312342" percent="91.67" remaining="33" etc="1603312375"/>
+<taskprogress task="NSE" time="1603312372" percent="91.67" remaining="36" etc="1603312408"/>
+<taskprogress task="NSE" time="1603312402" percent="91.67" remaining="39" etc="1603312440"/>
+<taskprogress task="NSE" time="1603312432" percent="95.00" remaining="24" etc="1603312456"/>
+<taskend task="NSE" time="1603312436"/>
+<taskbegin task="NSE" time="1603312436"/>
+<taskend task="NSE" time="1603312436"/>
+<taskbegin task="NSE" time="1603312436"/>
+<taskend task="NSE" time="1603312436"/>
+<host starttime="1603311974" endtime="1603312436"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.123" addrtype="ipv4"/>
+<hostnames>
+<hostname name="friendzone.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="domain" product="ISC BIND" version="9.11.3-1ubuntu1.2" extrainfo="Ubuntu Linux" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:isc:bind:9.11.3-1ubuntu1.2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="dns-nsec-enum" output="&#xa;  No NSEC records found&#xa;"/><script id="dns-nsec3-enum" output="&#xa;  DNSSEC NSEC3 not supported&#xa;"/><script id="dns-nsid" output="&#xa;  bind.version: 9.11.3-1ubuntu1.2-Ubuntu"><elem key="bind.version">9.11.3-1ubuntu1.2-Ubuntu</elem>
+</script></port>
+</ports>
+<hostscript><script id="dns-brute" output="&#xa;  DNS Brute-force hostnames: No results."><table key="DNS Brute-force hostnames">
+</table>
+</script></hostscript><times srtt="170016" rttvar="170016" to="850080"/>
+</host>
+<taskbegin task="NSE" time="1603312437"/>
+<taskend task="NSE" time="1603312437"/>
+<taskbegin task="NSE" time="1603312437"/>
+<taskend task="NSE" time="1603312437"/>
+<taskbegin task="NSE" time="1603312437"/>
+<taskend task="NSE" time="1603312437"/>
+<runstats><finished time="1603312436" timestr="Wed Oct 21 16:33:56 2020" elapsed="464.18" summary="Nmap done at Wed Oct 21 16:33:56 2020; 1 IP address (1 host up) scanned in 464.18 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

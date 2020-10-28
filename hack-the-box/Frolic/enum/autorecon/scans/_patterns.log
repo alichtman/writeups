@@ -1,0 +1,4 @@
+tcp/9999/nmap-http - Identified HTTP Server: nginx/1.10.3 (Ubuntu)
+
+tcp/9999/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+

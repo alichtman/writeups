@@ -1,0 +1,27 @@
+# Nmap 7.80 scan initiated Mon Oct 26 17:07:31 2020 as: nmap -vv --reason -Pn -sU -sV -p 137 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=unsafe=1 -oN /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/udp_137_smb_nmap.txt -oX /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/udp_137_smb_nmap.xml 10.10.10.111
+Nmap scan report for frolic.htb (10.10.10.111)
+Host is up, received user-set (0.050s latency).
+Scanned at 2020-10-26 17:07:32 EDT for 0s
+
+PORT    STATE SERVICE    REASON              VERSION
+137/udp open  netbios-ns udp-response ttl 63 Samba nmbd netbios-ns (workgroup: WORKGROUP)
+Service Info: Host: FROLIC
+
+Host script results:
+| nbstat: NetBIOS name: FROLIC, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   FROLIC<00>           Flags: <unique><active>
+|   FROLIC<03>           Flags: <unique><active>
+|   FROLIC<20>           Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 26 17:07:32 2020 -- 1 IP address (1 host up) scanned in 1.42 seconds

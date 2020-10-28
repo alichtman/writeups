@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Oct 21 16:26:12 2020 as: nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.123" start="1603311972" startstr="Wed Oct 21 16:26:12 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603311973"/>
+<taskend task="NSE" time="1603311973"/>
+<taskbegin task="NSE" time="1603311973"/>
+<taskend task="NSE" time="1603311973"/>
+<taskbegin task="NSE" time="1603311973"/>
+<taskend task="NSE" time="1603311973"/>
+<taskbegin task="SYN Stealth Scan" time="1603311973"/>
+<taskend task="SYN Stealth Scan" time="1603311974" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1603311974"/>
+<taskend task="Service scan" time="1603311974" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1603311974"/>
+<taskend task="NSE" time="1603311978"/>
+<taskbegin task="NSE" time="1603311978"/>
+<taskend task="NSE" time="1603311978"/>
+<taskbegin task="NSE" time="1603311978"/>
+<taskend task="NSE" time="1603311978"/>
+<host starttime="1603311974" endtime="1603311978"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.123" addrtype="ipv4"/>
+<hostnames>
+<hostname name="friendzone.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="banner" output="220 (vsFTPd 3.0.3)"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="137565" rttvar="137565" to="687825"/>
+</host>
+<taskbegin task="NSE" time="1603311978"/>
+<taskend task="NSE" time="1603311978"/>
+<taskbegin task="NSE" time="1603311978"/>
+<taskend task="NSE" time="1603311978"/>
+<taskbegin task="NSE" time="1603311978"/>
+<taskend task="NSE" time="1603311978"/>
+<runstats><finished time="1603311978" timestr="Wed Oct 21 16:26:18 2020" elapsed="6.09" summary="Nmap done at Wed Oct 21 16:26:18 2020; 1 IP address (1 host up) scanned in 6.09 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

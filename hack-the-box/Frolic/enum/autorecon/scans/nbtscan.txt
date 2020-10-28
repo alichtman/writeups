@@ -1,0 +1,18 @@
+Doing NBT name scan for addresses from 10.10.10.111
+
+
+NetBIOS Name Table for Host 10.10.10.111:
+
+Incomplete packet, 227 bytes long.
+Name             Service          Type             
+----------------------------------------
+FROLIC           Workstation Service
+FROLIC           Messenger Service
+FROLIC           File Server Service
+__MSBROWSE__  Master Browser
+WORKGROUP        Domain Name
+WORKGROUP        Master Browser
+WORKGROUP        Browser Service Elections
+
+Adapter address: 00:00:00:00:00:00
+----------------------------------------

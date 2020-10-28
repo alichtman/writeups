@@ -1,0 +1,6 @@
+
+	Sharename       Type      Comment
+	---------       ----      -------
+	print$          Disk      Printer Drivers
+	IPC$            IPC       IPC Service (frolic server (Samba, Ubuntu))
+SMB1 disabled -- no workgroup available

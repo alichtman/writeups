@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Oct 26 17:02:55 2020 as: nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.111 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.111" start="1603746175" startstr="Mon Oct 26 17:02:55 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="20" services="53,67-69,123,135,137-139,161-162,445,500,514,520,631,1434,1900,4500,49152"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603746176"/>
+<taskend task="NSE" time="1603746176"/>
+<taskbegin task="NSE" time="1603746176"/>
+<taskend task="NSE" time="1603746176"/>
+<taskbegin task="NSE" time="1603746176"/>
+<taskend task="NSE" time="1603746176"/>
+<taskbegin task="UDP Scan" time="1603746176"/>
+<taskend task="UDP Scan" time="1603746189" extrainfo="20 total ports"/>
+<taskbegin task="Service scan" time="1603746189"/>
+<taskend task="Service scan" time="1603746432" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1603746435"/>
+<taskend task="Traceroute" time="1603746436"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1603746436"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1603746436"/>
+<taskbegin task="NSE" time="1603746436"/>
+<taskend task="NSE" time="1603746450"/>
+<taskbegin task="NSE" time="1603746450"/>
+<taskend task="NSE" time="1603746451"/>
+<taskbegin task="NSE" time="1603746451"/>
+<taskend task="NSE" time="1603746451"/>
+<host starttime="1603746176" endtime="1603746451"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.111" addrtype="ipv4"/>
+<hostnames>
+<hostname name="frolic.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="53"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="67"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="69"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="tftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="udp" portid="135"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="open" reason="udp-response" reason_ttl="63"/><service name="netbios-ns" product="Samba nmbd netbios-ns" extrainfo="workgroup: WORKGROUP" hostname="FROLIC" method="probed" conf="10"><cpe>cpe:/a:samba:samba</cpe></service></port>
+<port protocol="udp" portid="138"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="161"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="162"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmptrap" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="isakmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="514"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="520"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="route" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1434"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ms-sql-m" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="4500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="53"/>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=10/26%OT=%CT=%CU=53%PV=Y%DS=2%DC=T%G=N%TM=5F973A93%P=x86_64-pc-linux-gnu)&#xa;SEQ(CI=I)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<distance value="2"/>
+<hostscript><script id="nbstat" output="NetBIOS name: FROLIC, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: &lt;unknown&gt; (unknown)&#xa;Names:&#xa;  FROLIC&lt;00&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  FROLIC&lt;03&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  FROLIC&lt;20&gt;           Flags: &lt;unique&gt;&lt;active&gt;&#xa;  \x01\x02__MSBROWSE__\x02&lt;01&gt;  Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;00&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1d&gt;        Flags: &lt;unique&gt;&lt;active&gt;&#xa;  WORKGROUP&lt;1e&gt;        Flags: &lt;group&gt;&lt;active&gt;&#xa;Statistics:&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00&#xa;  00 00 00 00 00 00 00 00 00 00 00 00 00 00"/></hostscript><trace port="67" proto="udp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="53.79"/>
+<hop ttl="2" ipaddr="10.10.10.111" rtt="219.08" host="frolic.htb"/>
+</trace>
+<times srtt="97863" rttvar="68796" to="373047"/>
+</host>
+<taskbegin task="NSE" time="1603746451"/>
+<taskend task="NSE" time="1603746451"/>
+<taskbegin task="NSE" time="1603746451"/>
+<taskend task="NSE" time="1603746451"/>
+<taskbegin task="NSE" time="1603746451"/>
+<taskend task="NSE" time="1603746451"/>
+<runstats><finished time="1603746451" timestr="Mon Oct 26 17:07:31 2020" elapsed="275.90" summary="Nmap done at Mon Oct 26 17:07:31 2020; 1 IP address (1 host up) scanned in 275.90 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

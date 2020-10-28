@@ -1,0 +1,90 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/_full_tcp_nmap.xml" 10.10.10.123
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" 10.10.10.123
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" 10.10.10.123
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:21 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_21_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 21 --script="banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_21_ftp_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml" 10.10.10.123
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:22 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_22_ssh_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_22_ssh_nmap.xml" 10.10.10.123
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:53 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_53_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_53_dns_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_53_dns_nmap.xml" 10.10.10.123
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:80 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_80_http_nmap.xml" 10.10.10.123
+
+curl -sSik http://10.10.10.123:80/ -m 10 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_index.html"
+
+curl -sSik http://10.10.10.123:80/robots.txt -m 10 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.123:80/ /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.123:80 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.123:80 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.123:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://10.10.10.123:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:139 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_139_smb_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_139_smb_nmap.xml" 10.10.10.123
+
+enum4linux -a -M -l -d 10.10.10.123 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 10.10.10.123 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbclient.txt"
+
+smbmap -H 10.10.10.123 -P 139 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 139 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.123 -P 139 -R 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 139 -R 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.123 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-execute-command.txt"
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:443 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 443 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_http_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_443_https_nmap.xml" 10.10.10.123
+
+curl -sSik https://10.10.10.123:443/ -m 10 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_https_index.html"
+
+curl -sSik https://10.10.10.123:443/robots.txt -m 10 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_https_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://10.10.10.123:443/ /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_https_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v https://10.10.10.123:443 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_https_whatweb.txt"
+
+nikto -ask=no -h https://10.10.10.123:443 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_https_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u https://10.10.10.123:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_https_gobuster.txt"; else gobuster dir -u https://10.10.10.123:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_443_https_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:445 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_445_smb_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml" 10.10.10.123
+
+smbmap -H 10.10.10.123 -P 445 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 445 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.123 -P 445 -R 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 445 -R 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.123 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:53 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/udp_53_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/udp_53_dns_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/udp_53_dns_nmap.xml" 10.10.10.123
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.123:137 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/udp_137_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sU -sV -p 137 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/udp_137_smb_nmap.txt" -oX "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/udp_137_smb_nmap.xml" 10.10.10.123
+
+nbtscan -rvh 10.10.10.123 2>&1 | tee "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/nbtscan.txt"
+
+smbmap -H 10.10.10.123 -P 137 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 137 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.123 -P 137 -R 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 137 -R 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.123 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.123 -P 137 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/smbmap-execute-command.txt"
+

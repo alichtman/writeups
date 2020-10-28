@@ -1,0 +1,46 @@
+WhatWeb report for http://10.10.10.111:1880
+Status    : 200 OK
+Title     : Node-RED
+IP        : 10.10.10.111
+Country   : RESERVED, ZZ
+
+Summary   : X-Powered-By[Express], X-UA-Compatible[IE=edge], HTML5, Script[text/x-red], Bootstrap
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : text/x-red
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : Express (from x-powered-by string)
+
+[ X-UA-Compatible ]
+	This plugin retrieves the X-UA-Compatible value from the 
+	HTTP header and meta http-equiv tag. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc817574.aspx 
+
+	String       : IE=edge
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	X-Powered-By: Express
+	Content-Type: text/html; charset=utf-8
+	Content-Length: 7312
+	ETag: W/"1c90-2msLZbgbt5dpKWOdY6Gfpk0FcpE"
+	Date: Mon, 26 Oct 2020 21:11:46 GMT
+	Connection: close
+	

@@ -1,0 +1,119 @@
+# Nmap 7.80 scan initiated Mon Oct 26 17:02:55 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/writeups/hack-the-box/Frolic/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.111
+adjust_timeouts2: packet supposedly had rtt of -705139 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -705139 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -672069 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -672069 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -73887 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -73887 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -76465 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -76465 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -177968 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -177968 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -174863 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -174863 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -583064 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -583064 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -152646 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -152646 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -153549 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -153549 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -377168 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -377168 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -624302 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -624302 microseconds.  Ignoring time.
+Nmap scan report for frolic.htb (10.10.10.111)
+Host is up, received user-set (0.054s latency).
+Scanned at 2020-10-26 17:02:56 EDT for 114s
+Not shown: 65530 closed ports
+Reason: 65530 resets
+PORT     STATE SERVICE     REASON         VERSION
+22/tcp   open  ssh         syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 87:7b:91:2a:0f:11:b6:57:1e:cb:9f:77:cf:35:e2:21 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3HUqxhCShF9I6uBmGCX6yXz56Iibv7WW2fBKsKA9yVqmoupPdDKac1U3/PIioRNHkPC03r5ZXsqfALwjIWEits7toO4K+9VSFU6d0qhmpUZW3WwiyxdcPxmTQLpU8InXZpMOwjpGJTTwqxsMIxNdPk0FP/MtqEzQI45MOr7IQOGcEAsmcJ1Cy3aRDAnp77NBWYA316l7Xb8WA/aWoHEyS/6Qf3XzeARf0yZ6YwYg4TTsaeQtfRr4HWZBDs7fLrrWUzN0ivb9izy9YgqrOJ5ZKQI4A1yn0CxZNsiweIT8gopM1KrfinPGiKbGbSNVvTX2dHYyISh6Y2bp1D5vum6SH
+|   256 b7:9b:06:dd:c2:5e:28:44:78:41:1e:67:7d:1e:b7:62 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDSjEcHeA/VoBi4PaoyxwM1Rx1vpoQofoJPYTxBuQLXRujf3gqn491cWpd2CDh2mF/3w2kEGsrWRwqD4LZmz+Sk=
+|   256 21:cf:16:6d:82:a4:30:c3:c6:9c:d7:38:ba:b5:02:b0 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINVT+d0lX5zwXTOY4h4+MfU6kt/q3EmGVWIXnMsomQq5
+139/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp  open  netbios-ssn syn-ack ttl 63 Samba smbd 4.3.11-Ubuntu (workgroup: WORKGROUP)
+1880/tcp open  http        syn-ack ttl 63 Node.js (Express middleware)
+|_http-favicon: Unknown favicon MD5: 818DD6AFD0D0F9433B21774F89665EEA
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Node-RED
+9999/tcp open  http        syn-ack ttl 63 nginx 1.10.3 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: nginx/1.10.3 (Ubuntu)
+|_http-title: Welcome to nginx!
+Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.9 (95%), Linux 3.8 - 3.11 (95%), Linux 4.8 (95%), Linux 4.4 (95%), Linux 4.9 (95%), Linux 3.18 (95%), Linux 4.2 (95%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=10/26%OT=22%CT=1%CU=33384%PV=Y%DS=2%DC=T%G=Y%TM=5F9739
+OS:F2%P=x86_64-pc-linux-gnu)SEQ(SP=105%GCD=1%ISR=109%TI=Z%TS=8)SEQ(SP=105%G
+OS:CD=1%ISR=109%TI=Z%CI=I%TS=8)SEQ(SP=105%GCD=1%ISR=109%TI=Z%CI=I%II=I%TS=8
+OS:)OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54
+OS:DST11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120
+OS:)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+
+OS:%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+OS:T5(R=N)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T6(R=N)T6(R=Y%DF=Y%T
+OS:=40%W=0%S=O%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(
+OS:R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 199.638 days (since Fri Apr 10 01:46:16 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host: FROLIC; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -1h43m04s, deviation: 3h10m31s, median: 6m54s
+| nbstat: NetBIOS name: FROLIC, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   FROLIC<00>           Flags: <unique><active>
+|   FROLIC<03>           Flags: <unique><active>
+|   FROLIC<20>           Flags: <unique><active>
+|   \x01\x02__MSBROWSE__\x02<01>  Flags: <group><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1d>        Flags: <unique><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 30857/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 50509/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 36186/udp): CLEAN (Timeout)
+|   Check 4 (port 55198/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 6.1 (Samba 4.3.11-Ubuntu)
+|   Computer name: frolic
+|   NetBIOS computer name: FROLIC\x00
+|   Domain name: \x00
+|   FQDN: frolic
+|_  System time: 2020-10-27T02:41:40+05:30
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-10-26T21:11:40
+|_  start_date: N/A
+
+TRACEROUTE (using port 111/tcp)
+HOP RTT      ADDRESS
+1   53.84 ms 10.10.14.1
+2   53.90 ms frolic.htb (10.10.10.111)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Oct 26 17:04:50 2020 -- 1 IP address (1 host up) scanned in 114.49 seconds

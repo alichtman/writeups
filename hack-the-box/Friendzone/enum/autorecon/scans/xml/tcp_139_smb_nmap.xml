@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Oct 21 16:26:18 2020 as: nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_139_smb_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_139_smb_nmap.xml 10.10.10.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 139 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_139_smb_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_139_smb_nmap.xml 10.10.10.123" start="1603311978" startstr="Wed Oct 21 16:26:18 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="139"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603311979"/>
+<taskend task="NSE" time="1603311979"/>
+<taskbegin task="NSE" time="1603311979"/>
+<taskend task="NSE" time="1603311979"/>
+<taskbegin task="NSE" time="1603311979"/>
+<taskend task="NSE" time="1603311979"/>
+<taskbegin task="SYN Stealth Scan" time="1603311979"/>
+<taskend task="SYN Stealth Scan" time="1603311979" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1603311980"/>
+<taskend task="Service scan" time="1603311992" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1603311992"/>
+<taskprogress task="NSE" time="1603312023" percent="78.57" remaining="9" etc="1603312031"/>
+<taskprogress task="NSE" time="1603312053" percent="87.14" remaining="10" etc="1603312062"/>
+<taskprogress task="NSE" time="1603312083" percent="97.14" remaining="3" etc="1603312086"/>
+<taskprogress task="NSE" time="1603312113" percent="97.14" remaining="4" etc="1603312117"/>
+<taskprogress task="NSE" time="1603312143" percent="97.14" remaining="5" etc="1603312147"/>
+<taskprogress task="NSE" time="1603312173" percent="98.57" remaining="3" etc="1603312176"/>
+<taskprogress task="NSE" time="1603312203" percent="98.57" remaining="4" etc="1603312206"/>
+<taskprogress task="NSE" time="1603312233" percent="98.57" remaining="4" etc="1603312236"/>
+<taskprogress task="NSE" time="1603312263" percent="98.57" remaining="4" etc="1603312267"/>
+<taskend task="NSE" time="1603312282"/>
+<taskbegin task="NSE" time="1603312282"/>

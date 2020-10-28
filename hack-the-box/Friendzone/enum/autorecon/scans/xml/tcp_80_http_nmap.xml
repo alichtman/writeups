@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Oct 21 16:26:13 2020 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.123 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.123" start="1603311973" startstr="Wed Oct 21 16:26:13 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1603311974"/>
+<taskend task="NSE" time="1603311974"/>
+<taskbegin task="NSE" time="1603311974"/>
+<taskend task="NSE" time="1603311974"/>
+<taskbegin task="NSE" time="1603311974"/>
+<taskend task="NSE" time="1603311974"/>
+<taskbegin task="SYN Stealth Scan" time="1603311974"/>
+<taskend task="SYN Stealth Scan" time="1603311974" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1603311974"/>
+<taskend task="Service scan" time="1603311981" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1603311981"/>
+<taskprogress task="NSE" time="1603312012" percent="79.45" remaining="9" etc="1603312020"/>
+<taskprogress task="NSE" time="1603312042" percent="96.72" remaining="3" etc="1603312044"/>
+<taskprogress task="NSE" time="1603312072" percent="98.69" remaining="2" etc="1603312073"/>
+<taskprogress task="NSE" time="1603312102" percent="99.35" remaining="1" etc="1603312103"/>
+<taskend task="NSE" time="1603312128"/>
+<taskbegin task="NSE" time="1603312128"/>
+<taskend task="NSE" time="1603312130"/>
+<taskbegin task="NSE" time="1603312130"/>
+<taskend task="NSE" time="1603312130"/>
+<host starttime="1603311974" endtime="1603312130"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.123" addrtype="ipv4"/>
+<hostnames>
+<hostname name="friendzone.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.29" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.29</cpe></service><script id="http-aspnet-debug" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-chrono" output="Request times for /; avg: 1768.82ms; min: 554.64ms; max: 2767.08ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Wed, 21 Oct 2020 20:33:22 GMT; +6m49s from local time."><elem key="date">2020-10-21T20:33:22+00:00</elem>
+<elem key="delta">409.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /wordpress/: Blog&#xa;  /robots.txt: Robots file&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-grep" output="&#xa;  (1) http://friendzone.htb:80/: &#xa;    (1) email: &#xa;      + info@friendzoneportal.red"><table key="(1) http://friendzone.htb:80/">
+<table key="(1) email">
+<elem>+ info@friendzoneportal.red</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Wed, 21 Oct 2020 20:33:21 GMT&#xa;  Server: Apache/2.4.29 (Ubuntu)&#xa;  Last-Modified: Fri, 05 Oct 2018 22:52:00 GMT&#xa;  ETag: &quot;144-577831e9005e6&quot;&#xa;  Accept-Ranges: bytes&#xa;  Content-Length: 324&#xa;  Vary: Accept-Encoding&#xa;  Connection: close&#xa;  Content-Type: text/html&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: HEAD GET POST OPTIONS"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>GET</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Apache/2.4.29 (Ubuntu)"><elem>Apache/2.4.29 (Ubuntu)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; jpg: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1; jpg: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Friend Zone Escape software"><elem key="title">Friend Zone Escape software</elem>
+</script><script id="http-traceroute" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-useragent-tester" output="&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;  Change in Status Code: &#xa;    Wget/1.13.4 (linux-gnu): 200&#xa;    WWW-Mechanize/1.34: 200&#xa;    PECL::HTTP: 200&#xa;    http client: 200"><table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+</table>
+<table key="Change in Status Code">
+<elem key="Wget/1.13.4 (linux-gnu)">200</elem>
+<elem key="WWW-Mechanize/1.34">200</elem>
+<elem key="PECL::HTTP">200</elem>
+<elem key="http client">200</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;62 names had status 200&#xa;65 names had status ERROR"/><script id="http-vuln-cve2014-3704" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="152561" rttvar="152561" to="762805"/>
+</host>
+<taskbegin task="NSE" time="1603312130"/>
+<taskend task="NSE" time="1603312130"/>
+<taskbegin task="NSE" time="1603312130"/>
+<taskend task="NSE" time="1603312130"/>
+<taskbegin task="NSE" time="1603312130"/>
+<taskend task="NSE" time="1603312130"/>
+<runstats><finished time="1603312130" timestr="Wed Oct 21 16:28:50 2020" elapsed="157.50" summary="Nmap done at Wed Oct 21 16:28:50 2020; 1 IP address (1 host up) scanned in 157.50 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

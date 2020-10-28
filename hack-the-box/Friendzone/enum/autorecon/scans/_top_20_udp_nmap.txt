@@ -1,0 +1,67 @@
+# Nmap 7.80 scan initiated Wed Oct 21 16:22:42 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/writeups/hack-the-box/Friendzone/enum/autorecon/scans/xml/_top_20_udp_nmap.xml 10.10.10.123
+Nmap scan report for friendzone.htb (10.10.10.123)
+Host is up, received user-set (0.44s latency).
+Scanned at 2020-10-21 16:22:44 EDT for 346s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    open          domain       udp-response ttl 63 ISC BIND 9.11.3-1ubuntu1.2 (Ubuntu Linux)
+| dns-nsid: 
+|_  bind.version: 9.11.3-1ubuntu1.2-Ubuntu
+67/udp    open|filtered dhcps        no-response
+68/udp    open|filtered dhcpc        no-response
+69/udp    open|filtered tftp         no-response
+123/udp   open|filtered ntp          no-response
+135/udp   open|filtered msrpc        no-response
+137/udp   open          netbios-ns   udp-response ttl 63 Samba nmbd netbios-ns (workgroup: WORKGROUP)
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   open|filtered snmp         no-response
+162/udp   closed        snmptrap     port-unreach ttl 63
+445/udp   closed        microsoft-ds port-unreach ttl 63
+500/udp   closed        isakmp       port-unreach ttl 63
+514/udp   open|filtered syslog       no-response
+520/udp   closed        route        port-unreach ttl 63
+631/udp   closed        ipp          port-unreach ttl 63
+1434/udp  closed        ms-sql-m     port-unreach ttl 63
+1900/udp  open|filtered upnp         no-response
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp open|filtered unknown      no-response
+Device type: storage-misc|phone|general purpose|media device
+Running: Buffalo embedded, Google Android 6.X, Linux 2.6.X|3.X, Sony embedded
+OS CPE: cpe:/o:google:android:6.0.1 cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3.13 cpe:/o:google:android
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=10/21%OT=%CT=%CU=162%PV=Y%DS=2%DC=T%G=N%TM=5F9099EE%P=x86_64-pc-linux-gnu)
+SEQ(CI=I)
+T5(R=Y%DF=Y%T=43%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=43%W=0%S=O%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=43%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)
+U1(R=N)
+U1(R=Y%DF=N%T=43%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=N)
+IE(R=Y%DFI=N%T=43%CD=S)
+
+Network Distance: 2 hops
+Service Info: Host: FRIENDZONE; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| nbstat: NetBIOS name: FRIENDZONE, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   FRIENDZONE<00>       Flags: <unique><active>
+|   FRIENDZONE<03>       Flags: <unique><active>
+|   FRIENDZONE<20>       Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|   00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+|_  00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
+TRACEROUTE (using port 445/udp)
+HOP RTT       ADDRESS
+1   683.84 ms 10.10.14.1
+2   683.00 ms friendzone.htb (10.10.10.123)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Oct 21 16:28:30 2020 -- 1 IP address (1 host up) scanned in 348.43 seconds
