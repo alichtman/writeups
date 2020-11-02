@@ -30,7 +30,7 @@
 | Popcorn     [ ]  |                 |                       |               |
 | Haircut     [x]  |                 |                       |               |
 | Blocky      [x]  |                 |                       |               |
-| Frolic      [ ]  |                 |                       |               |
+| Frolic      [x]  |                 |                       |               |
 | Postman     [ ]  |                 |                       |               |
 
 ## Legend

