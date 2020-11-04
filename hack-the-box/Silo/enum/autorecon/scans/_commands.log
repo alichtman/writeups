@@ -1,0 +1,130 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/_full_tcp_nmap.xml" silo.htb
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" silo.htb
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_80_http_nmap.xml" silo.htb
+
+curl -sSik http://silo.htb:80/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_index.html"
+
+curl -sSik http://silo.htb:80/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://silo.htb:80/ /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://silo.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://silo.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://silo.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://silo.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:135 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_135_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_135_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_135_rpc_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:139 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_139_smb_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_139_smb_nmap.xml" silo.htb
+
+enum4linux -a -M -l -d silo.htb 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I silo.htb 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbclient.txt"
+
+smbmap -H silo.htb -P 139 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H silo.htb -P 139 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-share-permissions.txt"
+
+smbmap -H silo.htb -P 139 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H silo.htb -P 139 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-list-contents.txt"
+
+smbmap -H silo.htb -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H silo.htb -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:445 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_445_smb_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml" silo.htb
+
+smbmap -H silo.htb -P 445 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H silo.htb -P 445 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-share-permissions.txt"
+
+smbmap -H silo.htb -P 445 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H silo.htb -P 445 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-list-contents.txt"
+
+smbmap -H silo.htb -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H silo.htb -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:1521 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_1521_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 1521 --script="banner,(oracle* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_1521_oracle_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_1521_oracle_nmap.xml" silo.htb
+
+tnscmd10g ping -h silo.htb -p 1521 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_1521_oracle_tnscmd_ping.txt"
+
+tnscmd10g version -h silo.htb -p 1521 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_1521_oracle_tnscmd_version.txt"
+
+oscanner -v -s silo.htb -P 1521 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_1521_oracle_scanner.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49152 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49152_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49152 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49152_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49152_rpc_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49153 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49153_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49153 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49153_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49153_rpc_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49154 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49154_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49154 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49154_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49154_rpc_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49155 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49155_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49155 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49155_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49155_rpc_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49159 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49159_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49159 --script="banner,(oracle* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49159_oracle_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49159_oracle_nmap.xml" silo.htb
+
+tnscmd10g ping -h silo.htb -p 49159 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49159_oracle_tnscmd_ping.txt"
+
+tnscmd10g version -h silo.htb -p 49159 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49159_oracle_tnscmd_version.txt"
+
+oscanner -v -s silo.htb -P 49159 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49159_oracle_scanner.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49160 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49160_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49160 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49160_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49160_rpc_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49161 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49161_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49161 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49161_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49161_rpc_nmap.xml" silo.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:5985 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 5985 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_5985_http_nmap.xml" silo.htb
+
+curl -sSik http://silo.htb:5985/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_index.html"
+
+curl -sSik http://silo.htb:5985/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://silo.htb:5985/ /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://silo.htb:5985 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_whatweb.txt"
+
+nikto -ask=no -h http://silo.htb:5985 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://silo.htb:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_gobuster.txt"; else gobuster dir -u http://silo.htb:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:47001 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 47001 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_47001_http_nmap.xml" silo.htb
+
+curl -sSik http://silo.htb:47001/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_index.html"
+
+curl -sSik http://silo.htb:47001/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://silo.htb:47001/ /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://silo.htb:47001 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_whatweb.txt"
+
+nikto -ask=no -h http://silo.htb:47001 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://silo.htb:47001/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_gobuster.txt"; else gobuster dir -u http://silo.htb:47001/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour silo.htb:49162 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49162_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49162 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49162_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49162_rpc_nmap.xml" silo.htb
+

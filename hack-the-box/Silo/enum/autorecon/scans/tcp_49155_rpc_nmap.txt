@@ -1,0 +1,12 @@
+# Nmap 7.80 scan initiated Mon Nov  2 17:58:18 2020 as: nmap -vv --reason -Pn -sV -p 49155 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_49155_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_49155_rpc_nmap.xml silo.htb
+Nmap scan report for silo.htb (10.10.10.82)
+Host is up, received user-set (0.43s latency).
+Scanned at 2020-11-02 17:58:18 CST for 72s
+
+PORT      STATE SERVICE REASON          VERSION
+49155/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  2 17:59:30 2020 -- 1 IP address (1 host up) scanned in 71.56 seconds

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Nov  2 17:57:44 2020 as: nmap -vv -&#45;reason -Pn -sV -p 1521 &quot;-&#45;script=banner,(oracle* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_1521_oracle_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_1521_oracle_nmap.xml silo.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 1521 &quot;-&#45;script=banner,(oracle* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_1521_oracle_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_1521_oracle_nmap.xml silo.htb" start="1604361464" startstr="Mon Nov  2 17:57:44 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="1521"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1604361464"/>
+<taskend task="NSE" time="1604361464"/>
+<taskbegin task="NSE" time="1604361464"/>
+<taskend task="NSE" time="1604361464"/>
+<taskbegin task="NSE" time="1604361464"/>
+<taskend task="NSE" time="1604361464"/>
+<taskbegin task="SYN Stealth Scan" time="1604361464"/>
+<taskend task="SYN Stealth Scan" time="1604361464" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1604361464"/>
+<taskend task="Service scan" time="1604361471" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1604361471"/>
+<taskend task="NSE" time="1604361486"/>
+<taskbegin task="NSE" time="1604361486"/>
+<taskend task="NSE" time="1604361486"/>
+<taskbegin task="NSE" time="1604361486"/>
+<taskend task="NSE" time="1604361486"/>
+<host starttime="1604361464" endtime="1604361486"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.82" addrtype="ipv4"/>
+<hostnames>
+<hostname name="silo.htb" type="user"/>
+<hostname name="silo.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="1521"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="oracle-tns" product="Oracle TNS listener" version="11.2.0.2.0" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:oracle:database_server:11.2.0.2.0</cpe></service></port>
+</ports>
+<times srtt="109395" rttvar="109395" to="546975"/>
+</host>
+<taskbegin task="NSE" time="1604361486"/>
+<taskend task="NSE" time="1604361486"/>
+<taskbegin task="NSE" time="1604361486"/>
+<taskend task="NSE" time="1604361486"/>
+<taskbegin task="NSE" time="1604361486"/>
+<taskend task="NSE" time="1604361486"/>
+<runstats><finished time="1604361486" timestr="Mon Nov  2 17:58:06 2020" elapsed="21.65" summary="Nmap done at Mon Nov  2 17:58:06 2020; 1 IP address (1 host up) scanned in 21.65 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

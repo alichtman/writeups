@@ -1,0 +1,15 @@
+Oracle Scanner 1.0.6 by patrik@cqure.net
+--------------------------------------------------
+[-] Checking host silo.htb
+[x] Failed to enumerate sids from host
+[-] Loading services/sids from service file
+[x] Removing SID ORCL
+Plugin ork.plugins.CheckOracleVersion failed
+Plugin ork.plugins.GetPrivilegesForAccounts failed
+Plugin ork.plugins.GetRoles failed
+[-] Getting database links
+Plugin ork.plugins.GetPasswordPolicy failed
+Plugin ork.plugins.GetPasswordPolicyForAccounts failed
+Plugin ork.plugins.GetAccountHashes failed
+Plugin ork.plugins.GetPrivilegesForRoles failed
+Plugin ork.plugins.GetAuditInfo failed

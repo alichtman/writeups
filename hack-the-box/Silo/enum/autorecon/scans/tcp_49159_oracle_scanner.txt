@@ -1,0 +1,51 @@
+Oracle Scanner 1.0.6 by patrik@cqure.net
+--------------------------------------------------
+[-] Checking host silo.htb
+[x] Failed to enumerate sids from host
+[-] Loading services/sids from service file
+java.lang.NullPointerException
+	at oracle.net.ns.NSProtocol.connect(Unknown Source)
+	at oracle.jdbc.driver.T4CConnection.connect(T4CConnection.java:708)
+	at oracle.jdbc.driver.T4CConnection.logon(T4CConnection.java:219)
+	at oracle.jdbc.driver.PhysicalConnection.<init>(PhysicalConnection.java:344)
+	at oracle.jdbc.driver.T4CConnection.<init>(T4CConnection.java:148)
+	at oracle.jdbc.driver.T4CDriverExtension.getConnection(T4CDriverExtension.java:32)
+	at oracle.jdbc.driver.OracleDriver.connect(OracleDriver.java:545)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:677)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:228)
+	at ork.OracleDBConnection.login(OracleDBConnection.java:161)
+	at ork.plugins.EnumerateSids.scan(EnumerateSids.java:108)
+	at ork.OracleScanner.main(OracleScanner.java:220)
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+Plugin ork.plugins.CheckOracleVersion failed
+[x] SIDs have not been retrieved
+Plugin ork.plugins.GetPrivilegesForAccounts failed
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+Plugin ork.plugins.GetRoles failed
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[-] Getting database links
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+Plugin ork.plugins.GetPasswordPolicy failed
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+Plugin ork.plugins.GetPasswordPolicyForAccounts failed
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+Plugin ork.plugins.GetAccountHashes failed
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+Plugin ork.plugins.GetPrivilegesForRoles failed
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+[x] SIDs have not been retrieved
+Plugin ork.plugins.GetAuditInfo failed

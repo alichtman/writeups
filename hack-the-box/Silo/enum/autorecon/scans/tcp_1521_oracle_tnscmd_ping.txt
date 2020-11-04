@@ -1,0 +1,4 @@
+sending (CONNECT_DATA=(COMMAND=ping)) to silo.htb:1521
+connect writing 87 bytes
+reading
+.A......"..5(DESCRIPTION=(TMP=)(VSNNUM=0)(ERR=0)(ALIAS=LISTENER))

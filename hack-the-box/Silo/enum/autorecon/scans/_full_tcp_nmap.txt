@@ -1,0 +1,115 @@
+# Nmap 7.80 scan initiated Mon Nov  2 17:54:18 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/_full_tcp_nmap.xml silo.htb
+Increasing send delay for 10.10.10.82 from 0 to 5 due to 224 out of 745 dropped probes since last increase.
+Warning: 10.10.10.82 giving up on port because retransmission cap hit (10).
+Nmap scan report for silo.htb (10.10.10.82)
+Host is up, received user-set (0.041s latency).
+Scanned at 2020-11-02 17:54:19 CST for 22668s
+Not shown: 65488 closed ports
+Reason: 65488 resets
+PORT      STATE    SERVICE           REASON          VERSION
+80/tcp    open     http              syn-ack ttl 127 Microsoft IIS httpd 8.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/8.5
+|_http-title: IIS Windows Server
+135/tcp   open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+139/tcp   open     netbios-ssn       syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp   open     microsoft-ds      syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+754/tcp   filtered krb_prop          no-response
+1521/tcp  open     oracle-tns        syn-ack ttl 127 Oracle TNS listener 11.2.0.2.0 (unauthorized)
+3151/tcp  filtered nm-assessor       no-response
+5985/tcp  open     http              syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+7368/tcp  filtered unknown           no-response
+7901/tcp  filtered tnos-sp           no-response
+8358/tcp  filtered unknown           no-response
+8611/tcp  filtered canon-bjnp1       no-response
+9662/tcp  filtered unknown           no-response
+10177/tcp filtered unknown           no-response
+10298/tcp filtered unknown           no-response
+13962/tcp filtered unknown           no-response
+13976/tcp filtered unknown           no-response
+14105/tcp filtered unknown           no-response
+16177/tcp filtered unknown           no-response
+21981/tcp filtered unknown           no-response
+25384/tcp filtered unknown           no-response
+28529/tcp filtered unknown           no-response
+28671/tcp filtered unknown           no-response
+29920/tcp filtered unknown           no-response
+32405/tcp filtered unknown           no-response
+43354/tcp filtered unknown           no-response
+43979/tcp filtered unknown           no-response
+45369/tcp filtered unknown           no-response
+47001/tcp open     http              syn-ack ttl 127 Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+49152/tcp open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+49153/tcp open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+49154/tcp open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+49155/tcp open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+49159/tcp open     oracle-tns        syn-ack ttl 127 Oracle TNS listener (requires service name)
+49160/tcp open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+49161/tcp open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+49162/tcp open     msrpc             syn-ack ttl 127 Microsoft Windows RPC
+51855/tcp filtered unknown           no-response
+52400/tcp filtered unknown           no-response
+57102/tcp filtered unknown           no-response
+58253/tcp filtered unknown           no-response
+61441/tcp filtered netprowler-sensor no-response
+61837/tcp filtered unknown           no-response
+63285/tcp filtered unknown           no-response
+63672/tcp filtered unknown           no-response
+64351/tcp filtered unknown           no-response
+65089/tcp filtered unknown           no-response
+Aggressive OS guesses: Microsoft Windows Server 2012 (96%), Microsoft Windows Server 2012 R2 (96%), Microsoft Windows Server 2012 R2 Update 1 (96%), Microsoft Windows 7, Windows Server 2012, or Windows 8.1 Update 1 (96%), Microsoft Windows Server 2012 or Server 2012 R2 (95%), Microsoft Windows Vista SP1 (95%), Microsoft Windows Server 2008 SP2 Datacenter Version (94%), Microsoft Windows Server 2008 R2 (93%), Microsoft Windows Home Server 2011 (Windows Server 2008 R2) (93%), Microsoft Windows Server 2008 SP1 (93%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/3%OT=80%CT=1%CU=30147%PV=Y%DS=2%DC=T%G=Y%TM=5FA0F4B
+OS:7%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=10A%TI=I%CI=I%II=I%SS=S%TS=
+OS:7)OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M5
+OS:4DNW8ST11%O6=M54DST11)WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=200
+OS:0)ECN(R=Y%DF=Y%T=80%W=2000%O=M54DNW8NNS%CC=Y%Q=)T1(R=Y%DF=Y%T=80%S=O%A=S
+OS:+%F=AS%RD=0%Q=)T2(R=Y%DF=Y%T=80%W=0%S=Z%A=S%F=AR%O=%RD=0%Q=)T3(R=Y%DF=Y%
+OS:T=80%W=0%S=Z%A=O%F=AR%O=%RD=0%Q=)T4(R=Y%DF=Y%T=80%W=0%S=A%A=O%F=R%O=%RD=
+OS:0%Q=)T5(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=80%W=0%
+OS:S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(
+OS:R=Y%DF=N%T=80%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=
+OS:N%T=80%CD=Z)
+
+Uptime guess: 0.263 days (since Mon Nov  2 17:53:49 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 7m03s, deviation: 0s, median: 7m02s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 52728/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 52707/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 38458/udp): CLEAN (Timeout)
+|   Check 4 (port 65142/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: supported
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-11-03T06:19:04
+|_  start_date: 2020-11-03T00:01:06
+
+TRACEROUTE (using port 256/tcp)
+HOP RTT      ADDRESS
+1   49.77 ms 10.10.14.1
+2   49.83 ms silo.htb (10.10.10.82)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov  3 00:12:07 2020 -- 1 IP address (1 host up) scanned in 22669.08 seconds

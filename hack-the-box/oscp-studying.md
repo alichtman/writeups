@@ -12,7 +12,7 @@
 | Beep        [x]  | Granny     [x]  | Falafel          [ ]  | Sizzle   [ ]  |
 | Nineveh     [x]  | Grandpa    [x]  | Devoops          [ ]  | Sniper   [ ]  |
 | Cronos      [x]  | Servmon    [!]  | Hawk             [ ]  | Control  [ ]  |
-| Sense       [x]  | Silo       [ ]  | Lightweight      [ ]  | Nest     [ ]  |
+| Sense       [x]  | Silo       [x]  | Lightweight      [ ]  | Nest     [ ]  |
 | Solidstate  [o]  | Bounty     [x]  | La Casa De Papel [ ]  | Sauna    [ ]  |
 | Kotarak     [!]  | Jerry      [x]  | Jail             [ ]  | Querier  [ ]  |
 | Node        [ ]  | Conceal    [ ]  | Safe             [ ]  |               |

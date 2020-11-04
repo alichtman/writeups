@@ -1,0 +1,4 @@
+sending (CONNECT_DATA=(COMMAND=version)) to silo.htb:49159
+connect writing 90 bytes
+reading
+.&......"..(DESCRIPTION=(ERR=12504)).

@@ -1,0 +1,247 @@
+[*] http on tcp/80
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://silo.htb:80/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_dirsearch_big.txt"
+
+		dirsearch -u http://silo.htb:80/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://silo.htb:80/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_dirb_big.txt"
+
+		dirb http://silo.htb:80/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://silo.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_gobuster_big.txt"
+
+		gobuster dir -u http://silo.htb:80/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://silo.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_gobuster_big.txt"
+
+		gobuster -u http://silo.htb:80/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://silo.htb:80/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 80 -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_auth_hydra.txt" http-get://silo.htb/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 80 -O "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_auth_medusa.txt" -M http -h silo.htb -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 80 -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_form_hydra.txt" http-post-form://silo.htb/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 80 -O "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_80_http_form_medusa.txt" -M web-form -h silo.htb -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+
+[*] msrpc on tcp/135
+
+	[-] RPC Client:
+
+		rpcclient -p 135 -U "" silo.htb
+
+
+[*] netbios-ssn on tcp/139
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_139_smb_ms06-025.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_139_smb_ms06-025.xml" silo.htb
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_139_smb_ms07-029.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_139_smb_ms07-029.xml" silo.htb
+
+		nmap -vv --reason -Pn -sV -p 139 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_139_smb_ms08-067.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_139_smb_ms08-067.xml" silo.htb
+
+
+[*] microsoft-ds on tcp/445
+
+	[-] Nmap scans for SMB vulnerabilities that could potentially cause a DoS if scanned (according to Nmap). Be careful:
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms06-025" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_445_smb_ms06-025.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_445_smb_ms06-025.xml" silo.htb
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms07-029" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_445_smb_ms07-029.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_445_smb_ms07-029.xml" silo.htb
+
+		nmap -vv --reason -Pn -sV -p 445 --script="smb-vuln-ms08-067" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_445_smb_ms08-067.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/xml/tcp_445_smb_ms08-067.xml" silo.htb
+
+
+[*] oracle-tns on tcp/1521
+
+	[-] Brute-force SIDs using Nmap
+
+	[-] Install ODAT (https://github.com/quentinhardy/odat) and run the following commands:
+
+		python odat.py tnscmd -s silo.htb -p 1521 --ping
+
+		python odat.py tnscmd -s silo.htb -p 1521 --version
+
+		python odat.py tnscmd -s silo.htb -p 1521 --status
+
+		python odat.py sidguesser -s silo.htb -p 1521
+
+		python odat.py passwordguesser -s silo.htb -p 1521 -d <sid> --accounts-file accounts/accounts_multiple.txt
+
+		python odat.py tnspoison -s silo.htb -p 1521 -d <sid> --test-module
+
+	[-] Install Oracle Instant Client (https://github.com/rapid7/metasploit-framework/wiki/How-to-get-Oracle-Support-working-with-Kali-Linux) and then bruteforce with patator:
+
+		patator oracle_login host=silo.htb port=1521 user=COMBO00 password=COMBO01 0=/usr/share/seclists/Passwords/Default-Credentials/oracle-betterdefaultpasslist.txt -x ignore:code=ORA-01017 -x ignore:code=ORA-28000
+
+
+[*] msrpc on tcp/49152
+
+	[-] RPC Client:
+
+		rpcclient -p 49152 -U "" silo.htb
+
+
+[*] msrpc on tcp/49153
+
+	[-] RPC Client:
+
+		rpcclient -p 49153 -U "" silo.htb
+
+
+[*] msrpc on tcp/49154
+
+	[-] RPC Client:
+
+		rpcclient -p 49154 -U "" silo.htb
+
+
+[*] msrpc on tcp/49155
+
+	[-] RPC Client:
+
+		rpcclient -p 49155 -U "" silo.htb
+
+
+[*] oracle-tns on tcp/49159
+
+	[-] Brute-force SIDs using Nmap
+
+	[-] Install ODAT (https://github.com/quentinhardy/odat) and run the following commands:
+
+		python odat.py tnscmd -s silo.htb -p 49159 --ping
+
+		python odat.py tnscmd -s silo.htb -p 49159 --version
+
+		python odat.py tnscmd -s silo.htb -p 49159 --status
+
+		python odat.py sidguesser -s silo.htb -p 49159
+
+		python odat.py passwordguesser -s silo.htb -p 49159 -d <sid> --accounts-file accounts/accounts_multiple.txt
+
+		python odat.py tnspoison -s silo.htb -p 49159 -d <sid> --test-module
+
+	[-] Install Oracle Instant Client (https://github.com/rapid7/metasploit-framework/wiki/How-to-get-Oracle-Support-working-with-Kali-Linux) and then bruteforce with patator:
+
+		patator oracle_login host=silo.htb port=49159 user=COMBO00 password=COMBO01 0=/usr/share/seclists/Passwords/Default-Credentials/oracle-betterdefaultpasslist.txt -x ignore:code=ORA-01017 -x ignore:code=ORA-28000
+
+
+[*] msrpc on tcp/49160
+
+	[-] RPC Client:
+
+		rpcclient -p 49160 -U "" silo.htb
+
+
+[*] msrpc on tcp/49161
+
+	[-] RPC Client:
+
+		rpcclient -p 49161 -U "" silo.htb
+
+
+[*] http on tcp/5985
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://silo.htb:5985/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_dirsearch_big.txt"
+
+		dirsearch -u http://silo.htb:5985/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://silo.htb:5985/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_dirb_big.txt"
+
+		dirb http://silo.htb:5985/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://silo.htb:5985/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_gobuster_big.txt"
+
+		gobuster dir -u http://silo.htb:5985/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://silo.htb:5985/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_gobuster_big.txt"
+
+		gobuster -u http://silo.htb:5985/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://silo.htb:5985/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 5985 -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_auth_hydra.txt" http-get://silo.htb/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 5985 -O "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_auth_medusa.txt" -M http -h silo.htb -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 5985 -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_form_hydra.txt" http-post-form://silo.htb/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 5985 -O "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_5985_http_form_medusa.txt" -M web-form -h silo.htb -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+
+[*] http on tcp/47001
+
+	[-] (dirsearch) Multi-threaded recursive directory/file enumeration for web servers using various wordlists:
+
+		dirsearch -u http://silo.htb:47001/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/seclists/Discovery/Web-Content/big.txt --plain-text-report="/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_dirsearch_big.txt"
+
+		dirsearch -u http://silo.htb:47001/ -t 16 -r -e txt,html,php,asp,aspx,jsp -f -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt --plain-text-report="/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_dirsearch_dirbuster.txt"
+
+	[-] (dirb) Recursive directory/file enumeration for web servers using various wordlists (same as dirsearch above):
+
+		dirb http://silo.htb:47001/ /usr/share/seclists/Discovery/Web-Content/big.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_dirb_big.txt"
+
+		dirb http://silo.htb:47001/ /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -l -r -S -X ",.txt,.html,.php,.asp,.aspx,.jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_dirb_dirbuster.txt"
+
+	[-] (gobuster v3) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster dir -u http://silo.htb:47001/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_gobuster_big.txt"
+
+		gobuster dir -u http://silo.htb:47001/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -z -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_gobuster_dirbuster.txt"
+
+	[-] (gobuster v1 & v2) Directory/file enumeration for web servers using various wordlists (same as dirb above):
+
+		gobuster -u http://silo.htb:47001/ -w /usr/share/seclists/Discovery/Web-Content/big.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_gobuster_big.txt"
+
+		gobuster -u http://silo.htb:47001/ -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -e -k -l -s "200,204,301,302,307,403,500" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_gobuster_dirbuster.txt"
+
+	[-] (wpscan) WordPress Security Scanner (useful if WordPress is found):
+
+		wpscan --url http://silo.htb:47001/ --no-update -e vp,vt,tt,cb,dbe,u,m --plugins-detection aggressive --plugins-version-detection aggressive -f cli-no-color 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_wpscan.txt"
+
+	[-] Credential bruteforcing commands (don't run these without modifying them):
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 47001 -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_auth_hydra.txt" http-get://silo.htb/path/to/auth/area
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 47001 -O "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_auth_medusa.txt" -M http -h silo.htb -m DIR:/path/to/auth/area
+
+		hydra -L "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e nsr -s 47001 -o "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_form_hydra.txt" http-post-form://silo.htb/path/to/login.php:username=^USER^&password=^PASS^:invalid-login-message
+
+		medusa -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -P "/usr/share/seclists/Passwords/darkweb2017-top100.txt" -e ns -n 47001 -O "/home/kali/Desktop/Development/writeups/hack-the-box/Silo/enum/autorecon/scans/tcp_47001_http_form_medusa.txt" -M web-form -h silo.htb -m FORM:/path/to/login.php -m FORM-DATA:"post?username=&password=" -m DENY-SIGNAL:"invalid login message"
+
+
+[*] msrpc on tcp/49162
+
+	[-] RPC Client:
+
+		rpcclient -p 49162 -U "" silo.htb
+
+

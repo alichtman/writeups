@@ -1,0 +1,12 @@
+nmap-quick - Matched Pattern: unauthorized
+
+tcp/1521/nmap-oracle - Matched Pattern: unauthorized
+
+tcp/80/nmap-http - Identified HTTP Server: Microsoft-IIS/8.5
+
+nmap-full-tcp - Matched Pattern: unauthorized
+
+tcp/5985/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+
+tcp/47001/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+
