@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Nov 11 18:23:44 2020 as: nmap -A -v -p- -Pn -oA allports devoops.htb -->
+<nmaprun scanner="nmap" args="nmap -A -v -p- -Pn -oA allports devoops.htb" start="1605140624" startstr="Wed Nov 11 18:23:44 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1605140624"/>
+<taskend task="NSE" time="1605140624"/>
+<taskbegin task="NSE" time="1605140624"/>
+<taskend task="NSE" time="1605140624"/>
+<taskbegin task="NSE" time="1605140624"/>
+<taskend task="NSE" time="1605140624"/>
+<taskbegin task="SYN Stealth Scan" time="1605140624"/>
+<taskend task="SYN Stealth Scan" time="1605140675" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1605140675"/>
+<taskend task="Service scan" time="1605140681" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1605140697"/>
+<taskend task="Traceroute" time="1605140697"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1605140697"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1605140697"/>
+<taskbegin task="NSE" time="1605140697"/>
+<taskend task="NSE" time="1605140699"/>
+<taskbegin task="NSE" time="1605140699"/>
+<taskend task="NSE" time="1605140699"/>
+<taskbegin task="NSE" time="1605140699"/>
+<taskend task="NSE" time="1605140699"/>
+<host starttime="1605140624" endtime="1605140699"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.91" addrtype="ipv4"/>
+<hostnames>
+<hostname name="devoops.htb" type="user"/>
+<hostname name="devoops.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="closed" count="65533">
+<extrareasons reason="resets" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.2p2 Ubuntu 4ubuntu2.4" extrainfo="Ubuntu Linux; protocol 2.0" ostype="Linux" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.2p2</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 42:90:e3:35:31:8d:8b:86:17:2a:fb:38:90:da:c4:95 (RSA)&#xa;  256 b7:b6:dc:c4:4c:87:9b:75:2a:00:89:83:ed:b2:80:31 (ECDSA)&#xa;  256 d5:2f:19:53:b2:8e:3a:4b:b3:dd:3c:1f:c0:37:0d:00 (ED25519)"><table>
+<elem key="bits">2048</elem>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">4290e335318d8b86172afb3890dac495</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDhnygpNZx4gdup8MisoZInL7I8UYHXjDzYzj8wISuATvYEQRGckobDZXz5xrdYuLX/X7RQrASXGODJBtOuViqdBQKKdTOwz2x+Sr/gZl3tauZsibsP0wx2DPcHJcY5WekLDcjes+WVpis+4YXb1TL5qKg5R88cGHH63lgkisidTUDp55lRuu9ocE0ZdS0fNrN4RJCATerQ9pCmKo4ZnFD83gAkEg0DNdlLAdxzB7BPE/k//ZJiRr06TfibO3S9Vsh/d+PenuWDKJPsA7CrCW3hfVUsJxsH8WDNrFTLko27jleSP1gmpPm/m/KeYmY17VGWrpCjN2WuStW+RV78h1xD</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">b7b6dcc44c879b752a008983edb28031</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOEYP1w+H8Uuvfh0fzjA15tqYhqxIhiT8ODPLI4qTBvrM8pZIGErdFlMYGV3rhJAYqGJD05LsvJxC8zozRFmZuw=</elem>
+</table>
+<table>
+<elem key="bits">256</elem>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">d52f1953b28e3a4bb3dd3c1fc0370d00</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIOKHzgVfUX3pUOQ+WBd7PUmFYowgwBWRHpz6EEAsWVEy</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="5000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Gunicorn" version="19.7.1" method="probed" conf="10"><cpe>cpe:/a:gunicorn:gunicorn:19.7.1</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: HEAD OPTIONS GET"><table key="Supported Methods">
+<elem>HEAD</elem>
+<elem>OPTIONS</elem>
+<elem>GET</elem>
+</table>
+</script><script id="http-server-header" output="gunicorn/19.7.1"><elem>gunicorn/19.7.1</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=utf-8)."></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<portused state="closed" proto="tcp" portid="1"/>
+<portused state="closed" proto="udp" portid="34129"/>
+<osmatch name="Linux 3.2 - 4.9" accuracy="95" line="65105">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="95" line="63962">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="95" line="64256">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="95"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="94" line="8344">
+<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="94"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="94"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="93" line="62708">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="93" line="64455">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.10 - 4.11" accuracy="93" line="63230">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Oracle VM Server 3.4.2 (Linux 4.1)" accuracy="93" line="91868">
+<osclass type="specialized" vendor="Oracle" osfamily="VM Server" osgen="3.X" accuracy="93"><cpe>cpe:/o:oracle:vm_server:3.4.2</cpe></osclass>
+<osclass type="specialized" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="93"><cpe>cpe:/o:linux:linux_kernel:4.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.12" accuracy="92" line="63436">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.12</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.13" accuracy="92" line="63553">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3.13</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="OS:SCAN(V=7.80%E=4%D=11/11%OT=22%CT=1%CU=34129%PV=Y%DS=2%DC=T%G=Y%TM=5FAC80&#xa;OS:DB%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%TS=A)OPS(O1=&#xa;OS:M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7&#xa;OS:%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y&#xa;OS:%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD&#xa;OS:=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%D&#xa;OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O&#xa;OS:=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40&#xa;OS:%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="878421" lastboot="Sun Nov  1 14:24:38 2020"/>
+<distance value="2"/>
+<tcpsequence index="260" difficulty="Good luck!" values="6E35009A,533992E6,804BE83B,F4D13AB0,3FC6D3EB,E9119C04"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="345B97F1,345B9855,345B98BA,345B991E,345B9982,345B99E5"/>
+<trace port="554" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="39.04"/>
+<hop ttl="2" ipaddr="10.10.10.91" rtt="39.09" host="devoops.htb"/>
+</trace>
+<times srtt="39845" rttvar="822" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1605140699"/>
+<taskend task="NSE" time="1605140699"/>
+<taskbegin task="NSE" time="1605140699"/>
+<taskend task="NSE" time="1605140699"/>
+<taskbegin task="NSE" time="1605140699"/>
+<taskend task="NSE" time="1605140699"/>
+<runstats><finished time="1605140699" timestr="Wed Nov 11 18:24:59 2020" elapsed="75.41" summary="Nmap done at Wed Nov 11 18:24:59 2020; 1 IP address (1 host up) scanned in 75.41 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

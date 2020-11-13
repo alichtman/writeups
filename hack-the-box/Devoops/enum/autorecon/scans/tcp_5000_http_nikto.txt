@@ -1,0 +1,17 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.91
++ Target Hostname:    devoops.htb
++ Target Port:        5000
++ Start Time:         2020-11-11 18:24:02 (GMT-6)
+---------------------------------------------------------------------------
++ Server: gunicorn/19.7.1
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Allowed HTTP Methods: HEAD, OPTIONS, GET 
++ 7787 requests: 0 error(s) and 4 item(s) reported on remote host
++ End Time:           2020-11-11 18:37:06 (GMT-6) (784 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

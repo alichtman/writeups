@@ -1,0 +1,63 @@
+# Nmap 7.80 scan initiated Wed Nov 11 18:23:44 2020 as: nmap -A -v -p- -Pn -oA allports devoops.htb
+adjust_timeouts2: packet supposedly had rtt of -211643 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -211643 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1312166 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1312166 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -186018 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -186018 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1137298 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1137298 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -186362 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -186362 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1137585 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1137585 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -136282 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -136282 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -861239 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -861239 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -185434 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -185434 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -588116 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -588116 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1061047 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1061047 microseconds.  Ignoring time.
+Nmap scan report for devoops.htb (10.10.10.91)
+Host is up (0.040s latency).
+Not shown: 65533 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 42:90:e3:35:31:8d:8b:86:17:2a:fb:38:90:da:c4:95 (RSA)
+|   256 b7:b6:dc:c4:4c:87:9b:75:2a:00:89:83:ed:b2:80:31 (ECDSA)
+|_  256 d5:2f:19:53:b2:8e:3a:4b:b3:dd:3c:1f:c0:37:0d:00 (ED25519)
+5000/tcp open  http    Gunicorn 19.7.1
+| http-methods: 
+|_  Supported Methods: HEAD OPTIONS GET
+|_http-server-header: gunicorn/19.7.1
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/11%OT=22%CT=1%CU=34129%PV=Y%DS=2%DC=T%G=Y%TM=5FAC80
+OS:DB%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=10C%TI=Z%CI=I%TS=A)OPS(O1=
+OS:M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7
+OS:%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y
+OS:%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD
+OS:=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%D
+OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O
+OS:=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40
+OS:%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 10.167 days (since Sun Nov  1 14:24:38 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 554/tcp)
+HOP RTT      ADDRESS
+1   39.04 ms 10.10.14.1
+2   39.09 ms devoops.htb (10.10.10.91)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 11 18:24:59 2020 -- 1 IP address (1 host up) scanned in 75.41 seconds

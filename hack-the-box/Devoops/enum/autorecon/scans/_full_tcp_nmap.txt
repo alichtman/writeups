@@ -1,0 +1,56 @@
+# Nmap 7.80 scan initiated Wed Nov 11 18:23:33 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Devoops/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Devoops/enum/autorecon/scans/xml/_full_tcp_nmap.xml devoops.htb
+adjust_timeouts2: packet supposedly had rtt of -713385 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -713385 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -464568 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -464568 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -639343 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -639343 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -638941 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -638941 microseconds.  Ignoring time.
+Nmap scan report for devoops.htb (10.10.10.91)
+Host is up, received user-set (0.041s latency).
+Scanned at 2020-11-11 18:23:33 CST for 70s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT     STATE SERVICE REASON         VERSION
+22/tcp   open  ssh     syn-ack ttl 63 OpenSSH 7.2p2 Ubuntu 4ubuntu2.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 42:90:e3:35:31:8d:8b:86:17:2a:fb:38:90:da:c4:95 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDhnygpNZx4gdup8MisoZInL7I8UYHXjDzYzj8wISuATvYEQRGckobDZXz5xrdYuLX/X7RQrASXGODJBtOuViqdBQKKdTOwz2x+Sr/gZl3tauZsibsP0wx2DPcHJcY5WekLDcjes+WVpis+4YXb1TL5qKg5R88cGHH63lgkisidTUDp55lRuu9ocE0ZdS0fNrN4RJCATerQ9pCmKo4ZnFD83gAkEg0DNdlLAdxzB7BPE/k//ZJiRr06TfibO3S9Vsh/d+PenuWDKJPsA7CrCW3hfVUsJxsH8WDNrFTLko27jleSP1gmpPm/m/KeYmY17VGWrpCjN2WuStW+RV78h1xD
+|   256 b7:b6:dc:c4:4c:87:9b:75:2a:00:89:83:ed:b2:80:31 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOEYP1w+H8Uuvfh0fzjA15tqYhqxIhiT8ODPLI4qTBvrM8pZIGErdFlMYGV3rhJAYqGJD05LsvJxC8zozRFmZuw=
+|   256 d5:2f:19:53:b2:8e:3a:4b:b3:dd:3c:1f:c0:37:0d:00 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOKHzgVfUX3pUOQ+WBd7PUmFYowgwBWRHpz6EEAsWVEy
+5000/tcp open  http    syn-ack ttl 63 Gunicorn 19.7.1
+| http-methods: 
+|_  Supported Methods: HEAD OPTIONS GET
+|_http-server-header: gunicorn/19.7.1
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+Aggressive OS guesses: Linux 3.2 - 4.9 (94%), Linux 3.16 (93%), Linux 3.18 (93%), Crestron XPanel control system (93%), ASUS RT-N56U WAP (Linux 3.4) (92%), Linux 3.10 - 4.11 (90%), Linux 3.12 (90%), Linux 3.13 (90%), Linux 3.13 - 3.16 (90%), Linux 3.8 - 3.11 (90%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/11%OT=22%CT=1%CU=35790%PV=Y%DS=2%DC=T%G=Y%TM=5FAC80
+OS:CB%P=x86_64-pc-linux-gnu)SEQ(SP=102%GCD=1%ISR=10C%TI=Z%TS=A)SEQ(SP=102%G
+OS:CD=1%ISR=10C%TI=Z%CI=RI%TS=A)SEQ(TI=Z%CI=RI%TS=A)OPS(O1=M54DST11NW7%O2=M
+OS:54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)WIN
+OS:(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=721
+OS:0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(
+OS:R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T4(R=N)T5(R=N)T5(R=Y%DF=
+OS:Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=N)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%
+OS:F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N
+OS:%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)U1(R=N)IE(R=Y%DFI=N
+OS:%T=40%CD=S)
+
+Uptime guess: 10.167 days (since Sun Nov  1 14:24:38 2020)
+Network Distance: 2 hops
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT      ADDRESS
+1   39.46 ms 10.10.14.1
+2   40.61 ms devoops.htb (10.10.10.91)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 11 18:24:43 2020 -- 1 IP address (1 host up) scanned in 70.35 seconds
