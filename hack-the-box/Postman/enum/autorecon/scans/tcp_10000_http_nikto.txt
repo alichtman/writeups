@@ -1,0 +1,34 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.160
++ Target Hostname:    postman.htb
++ Target Port:        10000
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /O=Webmin Webserver on Postman/CN=*/emailAddress=root@Postman
+                   Ciphers:  TLS_AES_256_GCM_SHA384
+                   Issuer:   /O=Webmin Webserver on Postman/CN=*/emailAddress=root@Postman
++ Start Time:         2020-11-15 19:58:38 (GMT-6)
+---------------------------------------------------------------------------
++ Server: MiniServ/1.910
++ Cookie redirect created without the secure flag
++ Cookie redirect created without the httponly flag
++ Cookie testing created without the httponly flag
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header 'auth-type' found, with contents: auth-required=1
++ The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ The site uses SSL and Expect-CT header is not present.
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Server is using a wildcard certificate: *
++ Hostname 'postman.htb' does not match certificate's names: *
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ MiniServ - This is the Webmin Unix administrator. It should not be running unless required.
++ OSVDB-44056: /sips/sipssys/users/a/admin/user: SIPS v0.2.2 allows user account info (including password) to be retrieved remotely.
++ /ht_root/wwwroot/-/local/httpd$map.conf: WASD reveals the http configuration file. Upgrade to a later version and secure according to the documents on the WASD web site.
++ /local/httpd$map.conf: WASD reveals the http configuration file. Upgrade to a later version and secure according to the documents on the WASD web site.
++ /..\..\..\..\..\..\temp\temp.class: Cisco ACS 2.6.x and 3.0.1 (build 40) allows authenticated remote users to retrieve any file from the system. Upgrade to the latest version.
++ OSVDB-3092: /css/: This might be interesting...
++ 7802 requests: 7 error(s) and 17 item(s) reported on remote host
++ End Time:           2020-11-15 20:47:06 (GMT-6) (2908 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

@@ -1,0 +1,6 @@
+http://postman.htb/images (Status: 301)
+http://postman.htb/upload (Status: 301)
+http://postman.htb/css (Status: 301)
+http://postman.htb/js (Status: 301)
+http://postman.htb/fonts (Status: 301)
+http://postman.htb/server-status (Status: 403)

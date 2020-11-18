@@ -1,0 +1,22 @@
+WhatWeb report for http://postman.htb:10000
+Status    : 200 OK
+Title     : <None>
+IP        : 10.10.10.160
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[MiniServ/1.910]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : MiniServ/1.910 (from server string)
+
+HTTP Headers:
+	HTTP/1.0 200 Document follows
+	Server: MiniServ/1.910
+	Date: Mon, 16 Nov 2020 02:05:55 GMT
+	Content-type: text/html; Charset=iso-8859-1
+	Connection: close
+	

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sun Nov 15 19:58:35 2020 as: nmap -vv -&#45;reason -Pn -sV -p 10000 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Postman/enum/autorecon/scans/tcp_10000_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Postman/enum/autorecon/scans/xml/tcp_10000_http_nmap.xml postman.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 10000 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Postman/enum/autorecon/scans/tcp_10000_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Postman/enum/autorecon/scans/xml/tcp_10000_http_nmap.xml postman.htb" start="1605491915" startstr="Sun Nov 15 19:58:35 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="10000"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1605491916"/>
+<taskend task="NSE" time="1605491916"/>
+<taskbegin task="NSE" time="1605491916"/>
+<taskend task="NSE" time="1605491916"/>
+<taskbegin task="NSE" time="1605491916"/>
+<taskend task="NSE" time="1605491916"/>
+<taskbegin task="SYN Stealth Scan" time="1605491916"/>
+<taskend task="SYN Stealth Scan" time="1605491916" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1605491916"/>
+<taskend task="Service scan" time="1605491922" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1605491922"/>
+<taskprogress task="NSE" time="1605491969" percent="83.17" remaining="10" etc="1605491979"/>
+<taskprogress task="NSE" time="1605492009" percent="84.49" remaining="16" etc="1605492025"/>
+<taskprogress task="NSE" time="1605492050" percent="85.15" remaining="23" etc="1605492072"/>
+<taskprogress task="NSE" time="1605492090" percent="85.81" remaining="28" etc="1605492118"/>
+<taskprogress task="NSE" time="1605492130" percent="86.47" remaining="33" etc="1605492163"/>
+<taskprogress task="NSE" time="1605492170" percent="87.46" remaining="36" etc="1605492206"/>
+<taskprogress task="NSE" time="1605492210" percent="88.78" remaining="37" etc="1605492246"/>
+<taskprogress task="NSE" time="1605492250" percent="89.44" remaining="39" etc="1605492289"/>
+<taskprogress task="NSE" time="1605492290" percent="90.10" remaining="41" etc="1605492330"/>
+<taskprogress task="NSE" time="1605492330" percent="91.42" remaining="39" etc="1605492368"/>
+<taskprogress task="NSE" time="1605492370" percent="92.41" remaining="37" etc="1605492407"/>
+<taskprogress task="NSE" time="1605492410" percent="93.07" remaining="37" etc="1605492446"/>
+<taskprogress task="NSE" time="1605492451" percent="93.40" remaining="38" etc="1605492488"/>
+<taskprogress task="NSE" time="1605492491" percent="94.06" remaining="36" etc="1605492527"/>
+<taskprogress task="NSE" time="1605492531" percent="95.05" remaining="32" etc="1605492563"/>
+<taskprogress task="NSE" time="1605492571" percent="95.71" remaining="30" etc="1605492600"/>
+<taskprogress task="NSE" time="1605492611" percent="96.37" remaining="26" etc="1605492637"/>
+<taskprogress task="NSE" time="1605492651" percent="97.70" remaining="18" etc="1605492668"/>
+<taskprogress task="NSE" time="1605492695" percent="98.69" remaining="11" etc="1605492705"/>
+<taskend task="NSE" time="1605492707"/>
+<taskbegin task="NSE" time="1605492707"/>
+<taskend task="NSE" time="1605492707"/>
+<taskbegin task="NSE" time="1605492707"/>
+<taskend task="NSE" time="1605492707"/>
+<host starttime="1605491916" endtime="1605492707"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.160" addrtype="ipv4"/>
+<hostnames>
+<hostname name="postman.htb" type="user"/>
+<hostname name="postman.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="10000"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="MiniServ" version="1.910" extrainfo="Webmin httpd" method="probed" conf="10"/><script id="http-chrono" output="Request times for /; avg: 56179.65ms; min: 147.82ms; max: 200225.75ms"/><script id="http-comments-displayer" output="Couldn&apos;t find any comments."/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-date" output="Mon, 16 Nov 2020 02:06:06 GMT; +7m17s from local time."><elem key="date">2020-11-16T02:06:06+00:00</elem>
+<elem key="delta">437.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-errors" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-favicon" output="Unknown favicon MD5: 91549383E709F4F1DD6C8DAB07890301"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-headers" output="&#xa;  Server: MiniServ/1.910&#xa;  Date: Mon, 16 Nov 2020 02:06:06 GMT&#xa;  Content-type: text/html; Charset=iso-8859-1&#xa;  Connection: close&#xa;  &#xa;  (Request type: GET)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="&#xa;Litespeed Web Server Source Code Disclosure (CVE-2010-2333)&#xa;/index.php source code:&#xa;&lt;h1&gt;Error - Document follows&lt;/h1&gt;&#xa;&lt;p&gt;This web server is running in SSL mode. Try the URL &lt;a href=&apos;https://Postman:10000/&apos;&gt;https://Postman:10000/&lt;/a&gt; instead.&lt;br&gt;&lt;/p&gt;&#xa;"/><script id="http-majordomo2-dir-traversal" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-malware-host" output="false">false</script><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 91549383e709f4f1dd6c8dab07890301&#xa;Credits query returned unknown hash 91549383e709f4f1dd6c8dab07890301"/><script id="http-phpmyadmin-dir-traversal" output="&#xa;  VULNERABLE:&#xa;  phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion&#xa;    State: UNKNOWN (unable to test)&#xa;    IDs:  CVE:CVE-2005-3299&#xa;      PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.&#xa;      &#xa;    Disclosure date: 2005-10-nil&#xa;    Extra information:&#xa;      ../../../../../etc/passwd :&#xa;  &lt;h1&gt;Error - Document follows&lt;/h1&gt;&#xa;  &lt;p&gt;This web server is running in SSL mode. Try the URL &lt;a href=&apos;https://Postman:10000/&apos;&gt;https://Postman:10000/&lt;/a&gt; instead.&lt;br&gt;&lt;/p&gt;&#xa;  &#xa;    References:&#xa;      http://www.exploit-db.com/exploits/1244/&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299&#xa;"><table key="CVE-2005-3299">
+<elem key="title">phpMyAdmin grab_globals.lib.php subform Parameter Traversal Local File Inclusion</elem>
+<elem key="state">UNKNOWN (unable to test)</elem>
+<table key="ids">
+<elem>CVE:CVE-2005-3299</elem>
+</table>
+<table key="description">
+<elem>PHP file inclusion vulnerability in grab_globals.lib.php in phpMyAdmin 2.6.4 and 2.6.4-pl1 allows remote attackers to include local files via the $__redirect parameter, possibly involving the subform array.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="dat">10</elem>
+<elem key="month">10</elem>
+<elem key="year">2005</elem>
+</table>
+</table>
+<elem key="disclosure">2005-10-nil</elem>
+<table key="extra_info">
+<elem>../../../../../etc/passwd :&#xa;&lt;h1&gt;Error - Document follows&lt;/h1&gt;&#xa;&lt;p&gt;This web server is running in SSL mode. Try the URL &lt;a href=&apos;https://Postman:10000/&apos;&gt;https://Postman:10000/&lt;/a&gt; instead.&lt;br&gt;&lt;/p&gt;&#xa;</elem>
+</table>
+<table key="refs">
+<elem>http://www.exploit-db.com/exploits/1244/</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2005-3299</elem>
+</table>
+</table>
+</script><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;"></script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;  Longest directory structure:&#xa;    Depth: 0&#xa;    Dir: /&#xa;  Total files found (by extension):&#xa;    Other: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Site doesn&apos;t have a title (text/html; Charset=iso-8859-1)."></script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;127 names had status 200"/><script id="http-vuln-cve2006-3392" output="&#xa;  VULNERABLE:&#xa;  Webmin File Disclosure&#xa;    State: VULNERABLE (Exploitable)&#xa;    IDs:  CVE:CVE-2006-3392&#xa;      Webmin before 1.290 and Usermin before 1.220 calls the simplify_path function before decoding HTML.&#xa;      This allows arbitrary files to be read, without requiring authentication, using &quot;..%01&quot; sequences&#xa;      to bypass the removal of &quot;../&quot; directory traversal sequences.&#xa;      &#xa;    Disclosure date: 2006-06-29&#xa;    References:&#xa;      http://www.exploit-db.com/exploits/1997/&#xa;      http://www.rapid7.com/db/modules/auxiliary/admin/webmin/file_disclosure&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3392&#xa;"><table key="CVE-2006-3392">
+<elem key="title">Webmin File Disclosure</elem>
+<elem key="state">VULNERABLE (Exploitable)</elem>
+<table key="ids">
+<elem>CVE:CVE-2006-3392</elem>
+</table>
+<table key="description">
+<elem>Webmin before 1.290 and Usermin before 1.220 calls the simplify_path function before decoding HTML.&#xa;This allows arbitrary files to be read, without requiring authentication, using &quot;..%01&quot; sequences&#xa;to bypass the removal of &quot;../&quot; directory traversal sequences.&#xa;</elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">29</elem>
+<elem key="month">06</elem>
+<elem key="year">2006</elem>
+</table>
+</table>
+<elem key="disclosure">2006-06-29</elem>
+<table key="refs">
+<elem>http://www.exploit-db.com/exploits/1997/</elem>
+<elem>http://www.rapid7.com/db/modules/auxiliary/admin/webmin/file_disclosure</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2006-3392</elem>
+</table>
+</table>
+</script><script id="http-vuln-cve2017-1001000" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="149801" rttvar="149801" to="749005"/>
+</host>
+<taskbegin task="NSE" time="1605492707"/>
+<taskend task="NSE" time="1605492707"/>
+<taskbegin task="NSE" time="1605492707"/>
+<taskend task="NSE" time="1605492707"/>
+<taskbegin task="NSE" time="1605492707"/>
+<taskend task="NSE" time="1605492707"/>
+<runstats><finished time="1605492707" timestr="Sun Nov 15 20:11:47 2020" elapsed="792.03" summary="Nmap done at Sun Nov 15 20:11:47 2020; 1 IP address (1 host up) scanned in 792.03 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

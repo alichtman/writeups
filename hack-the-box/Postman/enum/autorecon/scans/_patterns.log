@@ -1,0 +1,6 @@
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.4.29 (Ubuntu)
+
+tcp/10000/nmap-http - Identified HTTP Server: MiniServ/1.910
+
+tcp/10000/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+

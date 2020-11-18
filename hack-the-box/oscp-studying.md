@@ -27,11 +27,11 @@
 | Networked   [ ]  |                 |                       |               |
 | Jarvis      [ ]  |                 |                       |               |
 | Mirai       [o]  |                 |                       |               |
-| Popcorn     [ ]  |                 |                       |               |
+| Popcorn     [x]  |                 |                       |               |
 | Haircut     [x]  |                 |                       |               |
 | Blocky      [x]  |                 |                       |               |
 | Frolic      [x]  |                 |                       |               |
-| Postman     [ ]  |                 |                       |               |
+| Postman     [x]  |                 |                       |               |
 
 ## Legend
 

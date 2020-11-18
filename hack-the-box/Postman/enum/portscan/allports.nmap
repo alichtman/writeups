@@ -1,0 +1,71 @@
+# Nmap 7.80 scan initiated Sun Nov 15 19:58:10 2020 as: nmap -A -v -p- -Pn -oA allports postman.htb
+adjust_timeouts2: packet supposedly had rtt of -713206 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -713206 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -712782 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -712782 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -361314 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -361314 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -862572 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -862572 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -517296 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -517296 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1685813 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1685813 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -332459 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -332459 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -419003 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -419003 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -411213 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -411213 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -696562 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -696562 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -723177 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -723177 microseconds.  Ignoring time.
+Nmap scan report for postman.htb (10.10.10.160)
+Host is up (0.052s latency).
+Not shown: 65531 closed ports
+PORT      STATE SERVICE VERSION
+22/tcp    open  ssh     OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 46:83:4f:f1:38:61:c0:1c:74:cb:b5:d1:4a:68:4d:77 (RSA)
+|   256 2d:8d:27:d2:df:15:1a:31:53:05:fb:ff:f0:62:26:89 (ECDSA)
+|_  256 ca:7c:82:aa:5a:d3:72:ca:8b:8a:38:3a:80:41:a0:45 (ED25519)
+80/tcp    open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: E234E3E8040EFB1ACD7028330A956EBF
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: The Cyber Geek's Personal Website
+6379/tcp  open  redis   Redis key-value store 4.0.9
+10000/tcp open  http    MiniServ 1.910 (Webmin httpd)
+|_http-favicon: Unknown favicon MD5: 91549383E709F4F1DD6C8DAB07890301
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/15%OT=22%CT=1%CU=37851%PV=Y%DS=2%DC=T%G=Y%TM=5FB1DD
+OS:43%P=x86_64-pc-linux-gnu)SEQ(SP=108%GCD=1%ISR=10B%TI=Z%CI=Z%TS=A)OPS(O1=
+OS:M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7
+OS:%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y
+OS:%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD
+OS:=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%D
+OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T5(R=N)T6(R=Y%DF=Y%T=40%W=0%S=A%A=
+OS:Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF
+OS:=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40
+OS:%CD=S)
+
+Uptime guess: 32.017 days (since Wed Oct 14 20:36:19 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=264 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT      ADDRESS
+1   55.03 ms 10.10.14.1
+2   55.08 ms postman.htb (10.10.10.160)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 15 20:00:35 2020 -- 1 IP address (1 host up) scanned in 145.28 seconds

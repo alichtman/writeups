@@ -1,0 +1,73 @@
+# Nmap 7.80 scan initiated Sun Nov 15 19:57:58 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Postman/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Postman/enum/autorecon/scans/xml/_full_tcp_nmap.xml postman.htb
+adjust_timeouts2: packet supposedly had rtt of -411894 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -411894 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -837564 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -837564 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -938559 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -938559 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -463156 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -463156 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -447983 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -447983 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1361753 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1361753 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1361007 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1361007 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -462088 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -462088 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1087266 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1087266 microseconds.  Ignoring time.
+Nmap scan report for postman.htb (10.10.10.160)
+Host is up, received user-set (0.043s latency).
+Scanned at 2020-11-15 19:57:58 CST for 160s
+Not shown: 65531 closed ports
+Reason: 65531 resets
+PORT      STATE SERVICE REASON         VERSION
+22/tcp    open  ssh     syn-ack ttl 63 OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 46:83:4f:f1:38:61:c0:1c:74:cb:b5:d1:4a:68:4d:77 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDem1MnCQG+yciWyLak5YeSzxh4HxjCgxKVfNc1LN+vE1OecEx+cu0bTD5xdQJmyKEkpZ+AVjhQo/esF09a94eMNKcp+bhK1g3wqzLyr6kwE0wTncuKD2bA9LCKOcM6W5GpHKUywB5A/TMPJ7UXeygHseFUZEa+yAYlhFKTt6QTmkLs64sqCna+D/cvtKaB4O9C+DNv5/W66caIaS/B/lPeqLiRoX1ad/GMacLFzqCwgaYeZ9YBnwIstsDcvK9+kCaUE7g2vdQ7JtnX0+kVlIXRi0WXta+BhWuGFWtOV0NYM9IDRkGjSXA4qOyUOBklwvienPt1x2jBrjV8v3p78Tzz
+|   256 2d:8d:27:d2:df:15:1a:31:53:05:fb:ff:f0:62:26:89 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBIRgCn2sRihplwq7a2XuFsHzC9hW+qA/QsZif9QKAEBiUK6jv/B+UxDiPJiQp3KZ3tX6Arff/FC0NXK27c3EppI=
+|   256 ca:7c:82:aa:5a:d3:72:ca:8b:8a:38:3a:80:41:a0:45 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIF3FKsLVdJ5BN8bLpf80Gw89+4wUslxhI3wYfnS+53Xd
+80/tcp    open  http    syn-ack ttl 63 Apache httpd 2.4.29 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: E234E3E8040EFB1ACD7028330A956EBF
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: The Cyber Geek's Personal Website
+6379/tcp  open  redis   syn-ack ttl 63 Redis key-value store 4.0.9
+10000/tcp open  http    syn-ack ttl 63 MiniServ 1.910 (Webmin httpd)
+|_http-favicon: Unknown favicon MD5: 91549383E709F4F1DD6C8DAB07890301
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Site doesn't have a title (text/html; Charset=iso-8859-1).
+Aggressive OS guesses: Linux 3.2 - 4.9 (95%), Linux 3.1 (94%), Linux 3.2 (94%), AXIS 210A or 211 Network Camera (Linux 2.6.17) (94%), Linux 3.16 (93%), Linux 3.18 (93%), ASUS RT-N56U WAP (Linux 3.4) (93%), Oracle VM Server 3.4.2 (Linux 4.1) (93%), Android 4.1.1 (92%), Android 4.2.2 (Linux 3.4) (92%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/15%OT=22%CT=1%CU=44053%PV=Y%DS=2%DC=T%G=Y%TM=5FB1DD
+OS:46%P=x86_64-pc-linux-gnu)SEQ(SP=107%GCD=1%ISR=10A%TI=Z%CI=Z%TS=A)SEQ(SP=
+OS:107%GCD=1%ISR=10A%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M54DST11NW7%O2=M54DST11NW7%
+OS:O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)WIN(W1=7120%W2
+OS:=7120%W3=7120%W4=7120%W5=7120%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNS
+OS:NW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%
+OS:DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%
+OS:O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%
+OS:W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%
+OS:RIPCK=G%RUCK=G%RUD=G)U1(R=N)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 32.017 days (since Wed Oct 14 20:36:19 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 1723/tcp)
+HOP RTT      ADDRESS
+1   39.72 ms 10.10.14.1
+2   41.72 ms postman.htb (10.10.10.160)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 15 20:00:38 2020 -- 1 IP address (1 host up) scanned in 160.53 seconds
