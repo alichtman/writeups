@@ -1,0 +1,116 @@
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/_quick_tcp_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/_quick_tcp_nmap.xml" 10.10.10.175
+
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/_full_tcp_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/_full_tcp_nmap.xml" 10.10.10.175
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/_top_20_udp_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/_top_20_udp_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:53 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_53_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 53 --script="banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_53_dns_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_53_dns_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:80 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_80_http_nmap.xml" 10.10.10.175
+
+curl -sSik http://10.10.10.175:80/ -m 10 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_index.html"
+
+curl -sSik http://10.10.10.175:80/robots.txt -m 10 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.175:80/ /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.175:80 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.175:80 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.175:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://10.10.10.175:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:88 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_88_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 88 --script="banner,krb5-enum-users" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_88_kerberos_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_88_kerberos_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:135 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_135_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_135_rpc_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_135_rpc_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:139 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_139_smb_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_139_smb_nmap.xml" 10.10.10.175
+
+enum4linux -a -M -l -d 10.10.10.175 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I 10.10.10.175 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbclient.txt"
+
+smbmap -H 10.10.10.175 -P 139 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.175 -P 139 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.175 -P 139 -R 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.175 -P 139 -R 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.175 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.175 -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:389 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_389_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 389 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_389_ldap_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_389_ldap_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:445 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_445_smb_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_445_smb_nmap.xml" 10.10.10.175
+
+smbmap -H 10.10.10.175 -P 445 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H 10.10.10.175 -P 445 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-share-permissions.txt"
+
+smbmap -H 10.10.10.175 -P 445 -R 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H 10.10.10.175 -P 445 -R 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-list-contents.txt"
+
+smbmap -H 10.10.10.175 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H 10.10.10.175 -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:464 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_464_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 464 --script="banner,krb5-enum-users" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_464_kerberos_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_464_kerberos_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:593 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_593_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:636 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_636_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:3268 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_3268_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 3268 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_3268_ldap_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_3268_ldap_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:3269 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_3269_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:5985 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 5985 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_5985_http_nmap.xml" 10.10.10.175
+
+curl -sSik http://10.10.10.175:5985/ -m 10 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_index.html"
+
+curl -sSik http://10.10.10.175:5985/robots.txt -m 10 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://10.10.10.175:5985/ /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://10.10.10.175:5985 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_whatweb.txt"
+
+nikto -ask=no -h http://10.10.10.175:5985 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://10.10.10.175:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_gobuster.txt"; else gobuster dir -u http://10.10.10.175:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_5985_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:9389 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_9389_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:49667 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49667_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49667 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49667_rpc_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_49667_rpc_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:49673 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49673_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:49674 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49674_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49674 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49674_rpc_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_49674_rpc_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:49676 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49676_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49676 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49676_rpc_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_49676_rpc_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:49686 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49686_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49686 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_49686_rpc_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_49686_rpc_nmap.xml" 10.10.10.175
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour 10.10.10.175:50791 2>&1 | tee "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_50791_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 50791 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_50791_rpc_nmap.txt" -oX "/home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_50791_rpc_nmap.xml" 10.10.10.175
+

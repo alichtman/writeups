@@ -1,0 +1,69 @@
+# Resolute
+
+## IP: 10.10.10.169
+
+## OS: Windows
+
+```bash
+$ nmap -vvv -sCV -oN resolute.nmap 10.10.10.169
+# Nmap 7.80 scan initiated Tue Apr  7 09:54:18 2020 as: nmap -vvv -sCV -oN resolute.nmap 10.10.10.169
+Increasing send delay for 10.10.10.169 from 0 to 5 due to 62 out of 205 dropped probes since last increase.
+Nmap scan report for 10.10.10.169
+Host is up, received conn-refused (0.091s latency).
+Scanned at 2020-04-07 09:54:19 CDT for 175s
+Not shown: 989 closed ports
+Reason: 989 conn-refused
+PORT     STATE SERVICE      REASON  VERSION
+53/tcp   open  domain?      syn-ack
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+88/tcp   open  kerberos-sec syn-ack Microsoft Windows Kerberos (server time: 2020-04-07 15:04:45Z)
+135/tcp  open  msrpc        syn-ack Microsoft Windows RPC
+139/tcp  open  netbios-ssn  syn-ack Microsoft Windows netbios-ssn
+389/tcp  open  ldap         syn-ack Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds syn-ack Windows Server 2016 Standard 14393 microsoft-ds (workgroup: MEGABANK)
+464/tcp  open  kpasswd5?    syn-ack
+593/tcp  open  ncacn_http   syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped   syn-ack
+3268/tcp open  ldap         syn-ack Microsoft Windows Active Directory LDAP (Domain: megabank.local, Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped   syn-ack
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.80%I=7%D=4/7%Time=5E8C9433%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,20,"\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x
+SF:04bind\0\0\x10\0\x03");
+Service Info: Host: RESOLUTE; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h30m07s, deviation: 4h02m30s, median: 10m06s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 34943/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 52471/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 55070/udp): CLEAN (Timeout)
+|   Check 4 (port 10918/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: Resolute
+|   NetBIOS computer name: RESOLUTE\x00
+|   Domain name: megabank.local
+|   Forest name: megabank.local
+|   FQDN: Resolute.megabank.local
+|_  System time: 2020-04-07T08:05:09-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2020-04-07T15:05:10
+|_  start_date: 2020-04-07T15:03:30
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr  7 09:57:14 2020 -- 1 IP address (1 host up) scanned in 175.33 seconds

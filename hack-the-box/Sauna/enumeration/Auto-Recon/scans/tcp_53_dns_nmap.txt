@@ -1,0 +1,24 @@
+# Nmap 7.80 scan initiated Mon Apr  6 21:14:33 2020 as: nmap -vv --reason -Pn -sV -p 53 "--script=banner,(dns* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_53_dns_nmap.txt -oX /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_53_dns_nmap.xml 10.10.10.175
+Nmap scan report for 10.10.10.175
+Host is up, received user-set (0.20s latency).
+Scanned at 2020-04-06 21:14:34 CDT for 164s
+
+PORT   STATE SERVICE REASON  VERSION
+53/tcp open  domain? syn-ack
+|_dns-nsec-enum: Can't determine domain for host 10.10.10.175; use dns-nsec-enum.domains script arg.
+|_dns-nsec3-enum: Can't determine domain for host 10.10.10.175; use dns-nsec3-enum.domains script arg.
+| fingerprint-strings: 
+|   DNSVersionBindReqTCP: 
+|     version
+|_    bind
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port53-TCP:V=7.80%I=7%D=4/6%Time=5E8BE215%P=x86_64-pc-linux-gnu%r(DNSVe
+SF:rsionBindReqTCP,20,"\0\x1e\0\x06\x81\x04\0\x01\0\0\0\0\0\0\x07version\x
+SF:04bind\0\0\x10\0\x03");
+
+Host script results:
+|_dns-brute: Can't guess domain of "10.10.10.175"; use dns-brute.domain script argument.
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Apr  6 21:17:18 2020 -- 1 IP address (1 host up) scanned in 164.89 seconds

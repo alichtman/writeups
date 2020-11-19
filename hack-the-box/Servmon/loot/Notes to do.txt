@@ -1,0 +1,5 @@
+1) Change the password for NVMS - Complete
+2) Lock down the NSClient Access - Complete
+3) Upload the passwords
+4) Remove public access to NVMS
+5) Place the secret files in SharePoint

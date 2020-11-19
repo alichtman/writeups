@@ -1,0 +1,1128 @@
+# Nmap 7.80 scan initiated Mon Apr  6 21:14:33 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_80_http_nmap.txt -oX /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_80_http_nmap.xml 10.10.10.175
+Nmap scan report for 10.10.10.175
+Host is up, received user-set (0.045s latency).
+Scanned at 2020-04-06 21:14:34 CDT for 316s
+
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Microsoft IIS httpd 10.0
+|_http-chrono: Request times for /; avg: 1307.84ms; min: 303.56ms; max: 3652.40ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.175
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 2168
+|     Comment: 
+|         /*-- //Responsive design --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1056
+|     Comment: 
+|         /* //comments */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1548
+|     Comment: 
+|         /*-- /single --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 99
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 240
+|     Comment: 
+|         /* Giving a background-color to the nav container. */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1373
+|     Comment: 
+|         /* courses right title */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 267
+|     Comment: 
+|         /* Positioning the navigation items inline */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 334
+|     Comment: 
+|         
+|         
+|         
+|         */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1102
+|     Comment: 
+|         /* right side */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 885
+|     Comment: 
+|         /*--mid --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1733
+|     Comment: 
+|         /* //footer */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 106
+|     Comment: 
+|         <!-- /contact -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 99
+|     Comment: 
+|         <!-- //header -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1550
+|     Comment: 
+|         /*-- //single --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 57
+|     Comment: 
+|         <!-- nav -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1747
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/index.html
+|     Line number: 102
+|     Comment: 
+|         <!-- banner -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 320
+|     Comment: 
+|         /* Fisrt Tier Dropdown */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 198
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 838
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/slider.css
+|     Line number: 163
+|     Comment: 
+|         /* arrows left and right */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 460
+|     Comment: 
+|         /* Hide Dropdowns by Default */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1635
+|     Comment: 
+|         /*--//placeholder-color--*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 2168
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 147
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1615
+|     Comment: 
+|         /*--placeholder-color--*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 381
+|     Comment: 
+|         /* Hide the navigation menu by default */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 346
+|     Comment: 
+|         /* Change ' +' in order to change the Dropdown symbol */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1435
+|     Comment: 
+|         /* //left side */
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 106
+|     Comment: 
+|         <!-- //banner-botttom -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 634
+|     Comment: 
+|         /*-- features --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 86
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1036
+|     Comment: 
+|         /* comments */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 290
+|     Comment: 
+|         /* Background color change on Hover */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 86
+|     Comment: 
+|         <!-- //nav -->
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 106
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 102
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 36
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 632
+|     Comment: 
+|         /*-- //banner bottom --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 201
+|     Comment: 
+|         /* header */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 179
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 100
+|     Comment: 
+|         <!-- /banner-inner -->
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 416
+|     Comment: 
+|         <!-- //news-letter -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 33
+|     Comment: 
+|         <!-- Style-CSS -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 838
+|     Comment: 
+|         /* //about */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 388
+|     Comment: 
+|         /* Stylinf the toggle lable */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 256
+|     Comment: 
+|         
+|          * and adding "position:reltive" */
+|     
+|     Path: http://10.10.10.175:80/css/slider.css
+|     Line number: 9
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1332
+|     Comment: 
+|         /* Categories */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 542
+|     Comment: 
+|         /*-- // header --*/
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 287
+|     Comment: 
+|         <!-- right side -->
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 288
+|     Comment: 
+|         <!--mid -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1147
+|     Comment: 
+|         /* //event */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1169
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/font-awesome.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+|          *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+|          */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 741
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 40
+|     Comment: 
+|         <!-- //Fonts -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 274
+|     Comment: 
+|         /* Styling the links */
+|     
+|     Path: http://10.10.10.175:80/css/font-awesome.css
+|     Line number: 181
+|     Comment: 
+|         /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+|            readers do not read off random characters that represent icons */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1627
+|     Comment: 
+|         /* Firefox 19+ */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1489
+|     Comment: 
+|         /* //responsive */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 181
+|     Comment: 
+|         <!-- products -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1168
+|     Comment: 
+|         /* //tags */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 416
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1489
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 235
+|     Comment: 
+|         <!-- //products -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 147
+|     Comment: 
+|         <!-- //contact -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 30
+|     Comment: 
+|         <!-- Bootstrap-Core-CSS -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 884
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 884
+|     Comment: 
+|         /*-- //products --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1101
+|     Comment: 
+|         /* //single page */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1551
+|     Comment: 
+|         /*-- footer --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 69
+|     Comment: 
+|         /*-- header --*/
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 286
+|     Comment: 
+|         <!-- /full-grid -->
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 179
+|     Comment: 
+|         <!-- //banner bottom -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 341
+|     Comment: 
+|         /* has to be the same number as the "width" of "nav ul ul li" */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 393
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 286
+|     Comment: 
+|         <!-- //left side -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 300
+|     Comment: 
+|         
+|          * and giving it a position of absolute */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 352
+|     Comment: 
+|         
+|         --------------------------------------------- */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1381
+|     Comment: 
+|         /*// courses right title */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 148
+|     Comment: 
+|         <!-- //features -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 37
+|     Comment: 
+|         <!-- /Fonts -->
+|     
+|     Path: http://10.10.10.175:80/css/bootstrap.css
+|     Line number: 8975
+|     Comment: 
+|         /*# sourceMappingURL=bootstrap.css.map */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 396
+|     Comment: 
+|         <!-- /news-letter -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 933
+|     Comment: 
+|         /*-- //mid --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 105
+|     Comment: 
+|         <!-- //banner -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1405
+|     Comment: 
+|         /* left side */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 13
+|     Comment: 
+|         <!-- Meta tag Keywords -->
+|     
+|     Path: http://10.10.10.175:80/css/bootstrap.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap v4.0.0 (https://getbootstrap.com)
+|          * Copyright 2011-2018 The Bootstrap Authors
+|          * Copyright 2011-2018 Twitter, Inc.
+|          * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|          */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1777
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 305
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1766
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 994
+|     Comment: 
+|         /*-- //blog --*/
+|     
+|     Path: http://10.10.10.175:80/css/font-awesome.css
+|     Line number: 79
+|     Comment: 
+|         /* Deprecated as of 4.4.0 */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 150
+|     Comment: 
+|         <!-- banner bottom -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 305
+|     Comment: 
+|         /* has to be the same number as the "line-height" of "nav a" */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 568
+|     Comment: 
+|         /*-- /banner-bottom --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 40
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 153
+|     Comment: 
+|         <!-- footer -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 34
+|     Comment: 
+|         <!-- font-awesome-icons -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 152
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 88
+|     Comment: 
+|         <!-- search -->
+|     
+|     Path: http://10.10.10.175:80/index.html
+|     Line number: 180
+|     Comment: 
+|         <!-- //slider -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 102
+|     Comment: 
+|         <!-- //banner-inner -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 55
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1733
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1169
+|     Comment: 
+|         /* //right side */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 55
+|     Comment: 
+|         <!-- //logo -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1550
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1547
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 315
+|     Comment: 
+|         /* Display Dropdowns on Hover */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1372
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1769
+|     Comment: 
+|         /*-- to-top --*/
+|     
+|     Path: http://10.10.10.175:80/css/font-awesome.css
+|     Line number: 5
+|     Comment: 
+|         /* FONT PATH
+|          * -------------------------- */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 287
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 996
+|     Comment: 
+|         /* single page */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1777
+|     Comment: 
+|         /*-- //to-top --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1196
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1168
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1147
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1101
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 36
+|     Comment: 
+|         <!-- //font-awesome-icons -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 994
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/font-awesome.css
+|     Line number: 22
+|     Comment: 
+|         /* makes the font 33% larger relative to the icon container */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 933
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 649
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 202
+|     Comment: 
+|         /* CSS Document */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 422
+|     Comment: 
+|         /* Display Dropdown when clicked on Parent Lable */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 633
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 343
+|     Comment: 
+|         <!-- /services -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 430
+|     Comment: 
+|         /* Change menu item's width to 100% */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 27
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 542
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1437
+|     Comment: 
+|         /* responsive */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1357
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/slider.css
+|     Line number: 162
+|     Comment: 
+|         /*#region MODULES */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 47
+|     Comment: 
+|         <!-- header -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1766
+|     Comment: 
+|         /*-- //footer --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1180
+|     Comment: 
+|         /* button */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 235
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1747
+|     Comment: 
+|         /* //copyright */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1735
+|     Comment: 
+|         /* copyright */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 305
+|     Comment: 
+|         <!-- //mid-->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 576
+|     Comment: 
+|         /*-- banner bottom --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1636
+|     Comment: 
+|         /* footer grids */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 27
+|     Comment: 
+|         <!-- //Meta tag Keywords -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1622
+|     Comment: 
+|         /* Firefox 18- */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1547
+|     Comment: 
+|         /*-- //contact --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1490
+|     Comment: 
+|         /*-- /contact --*/
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 105
+|     Comment: 
+|         <!-- /features -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 285
+|     Comment: 
+|         <!-- //footer bottom -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1116
+|     Comment: 
+|         /* event */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1780
+|     Comment: 
+|         /*-- Responsive design --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 741
+|     Comment: 
+|         /*-- //stats --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1372
+|     Comment: 
+|         /* //search */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1358
+|     Comment: 
+|         /* search */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1357
+|     Comment: 
+|         /* //Categories */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1196
+|     Comment: 
+|         /* //button */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1149
+|     Comment: 
+|         /* tags */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 51
+|     Comment: 
+|         <!-- logo -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 148
+|     Comment: 
+|         <!-- /map-->
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 112
+|     Comment: 
+|         <!-- left side -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 633
+|     Comment: 
+|         /*-- //banner-bottom --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 92
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 287
+|     Comment: 
+|         <!-- //footer -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 743
+|     Comment: 
+|         /* about */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 44
+|     Comment: 
+|         <!-- mian-content -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 951
+|     Comment: 
+|         /*-- blog --*/
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 286
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 92
+|     Comment: 
+|         <!-- //search -->
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 506
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 839
+|     Comment: 
+|         /*-- products --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 198
+|     Comment: 
+|         /*-- //banner style --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 701
+|     Comment: 
+|         /*-- /stats --*/
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 285
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 649
+|     Comment: 
+|         /*-- //features --*/
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 632
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 236
+|     Comment: 
+|         <!--/banner-bottom -->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 468
+|     Comment: 
+|         /* Hide menus on hover */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 152
+|     Comment: 
+|         <!-- //map-->
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1435
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 1056
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 382
+|     Comment: 
+|         /* Also hide the  */
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 393
+|     Comment: 
+|         <!-- //services -->
+|     
+|     Path: http://10.10.10.175:80/css/slider.css
+|     Line number: 9
+|     Comment: 
+|         
+|         
+|         
+|         
+|         /*-- //banner style --*/
+|     
+|     Path: http://10.10.10.175:80/index.html
+|     Line number: 180
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 28
+|     Comment: 
+|         <!-- Custom-Files -->
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Line number: 148
+|     Comment: 
+|         
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 247
+|     Comment: 
+|         
+|          * we need to add a clear after the container. */
+|     
+|     Path: http://10.10.10.175:80/css/style.css
+|     Line number: 70
+|     Comment: 
+|         /* banner style */
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 67
+|     Comment: 
+|         <!-- First Tier Drop Down -->
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Line number: 506
+|     Comment: 
+|         <!-- //right side -->
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Line number: 105
+|     Comment: 
+|_        
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.10.10.175
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.10.10.175:80/
+|     Form id: email
+|     Form action: #
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Form id: 
+|     Form action: #
+|     
+|     Path: http://10.10.10.175:80/single.html
+|     Form id: 
+|     Form action: #
+|     
+|     Path: http://10.10.10.175:80/index.html
+|     Form id: email
+|     Form action: #
+|     
+|     Path: http://10.10.10.175:80/about.html
+|     Form id: email
+|     Form action: #
+|     
+|     Path: http://10.10.10.175:80/contact.html
+|     Form id: 
+|_    Form action: #
+|_http-date: Tue, 07 Apr 2020 10:17:52 GMT; +8h03m06s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: Couldn't find any error pages.
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (2) http://10.10.10.175:80/: 
+|     (2) email: 
+|       + example@email.com
+|_      + info@example.com
+| http-headers: 
+|   Content-Length: 32797
+|   Content-Type: text/html
+|   Last-Modified: Thu, 23 Jan 2020 17:14:44 GMT
+|   Accept-Ranges: bytes
+|   ETag: "4bdc4b9b10d2d51:0"
+|   Server: Microsoft-IIS/10.0
+|   Date: Tue, 07 Apr 2020 10:17:51 GMT
+|   Connection: close
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash a6db27665d31623aa877c4f1bb77ada7
+|_Credits query returned unknown hash a6db27665d31623aa877c4f1bb77ada7
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Microsoft-IIS/10.0
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; html: 5
+|     /css/
+|       css: 4
+|     /images/
+|       jpg: 10
+|   Longest directory structure:
+|     Depth: 1
+|     Dir: /images/
+|   Total files found (by extension):
+|_    Other: 1; css: 4; html: 5; jpg: 10
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Egotistical Bank :: Home
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Apr  6 21:19:50 2020 -- 1 IP address (1 host up) scanned in 317.38 seconds

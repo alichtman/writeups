@@ -1,0 +1,11 @@
+# Nmap 7.80 scan initiated Mon Apr  6 21:15:15 2020 as: nmap -vv --reason -Pn -sV -p 464 --script=banner,krb5-enum-users -oN /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/tcp_464_kerberos_nmap.txt -oX /home/alichtman/tools/enum/AutoRecon/results/10.10.10.175/scans/xml/tcp_464_kerberos_nmap.xml 10.10.10.175
+Nmap scan report for 10.10.10.175
+Host is up, received user-set (0.044s latency).
+Scanned at 2020-04-06 21:15:15 CDT for 27s
+
+PORT    STATE SERVICE   REASON  VERSION
+464/tcp open  kpasswd5? syn-ack
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Apr  6 21:15:42 2020 -- 1 IP address (1 host up) scanned in 27.50 seconds
