@@ -1,0 +1,51 @@
+# Nmap 7.80 scan initiated Fri Nov 13 05:13:26 2020 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jarvis/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jarvis/enum/autorecon/scans/xml/_top_20_udp_nmap.xml jarvis.htb
+adjust_timeouts2: packet supposedly had rtt of -111080 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -710872 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -710872 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -862116 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -862116 microseconds.  Ignoring time.
+Nmap scan report for jarvis.htb (10.10.10.143)
+Host is up, received user-set (0.042s latency).
+Scanned at 2020-11-13 05:13:27 CST for 186s
+
+PORT      STATE         SERVICE      REASON              VERSION
+53/udp    closed        domain       port-unreach ttl 63
+67/udp    open|filtered dhcps        no-response
+68/udp    closed        dhcpc        port-unreach ttl 63
+69/udp    closed        tftp         port-unreach ttl 63
+123/udp   closed        ntp          port-unreach ttl 63
+135/udp   open|filtered msrpc        no-response
+137/udp   open|filtered netbios-ns   no-response
+138/udp   closed        netbios-dgm  port-unreach ttl 63
+139/udp   open|filtered netbios-ssn  no-response
+161/udp   open|filtered snmp         no-response
+162/udp   open|filtered snmptrap     no-response
+445/udp   closed        microsoft-ds port-unreach ttl 63
+500/udp   closed        isakmp       port-unreach ttl 63
+514/udp   closed        syslog       port-unreach ttl 63
+520/udp   closed        route        port-unreach ttl 63
+631/udp   closed        ipp          port-unreach ttl 63
+1434/udp  closed        ms-sql-m     port-unreach ttl 63
+1900/udp  open|filtered upnp         no-response
+4500/udp  closed        nat-t-ike    port-unreach ttl 63
+49152/udp closed        unknown      port-unreach ttl 63
+Too many fingerprints match this host to give specific OS details
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=11/13%OT=%CT=%CU=53%PV=Y%DS=2%DC=T%G=N%TM=5FAE6B11%P=x86_64-pc-linux-gnu)
+SEQ(CI=Z)
+T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)
+IE(R=Y%DFI=N%T=40%CD=S)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 53/udp)
+HOP RTT      ADDRESS
+1   39.33 ms 10.10.14.1
+2   38.45 ms jarvis.htb (10.10.10.143)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 13 05:16:33 2020 -- 1 IP address (1 host up) scanned in 186.54 seconds

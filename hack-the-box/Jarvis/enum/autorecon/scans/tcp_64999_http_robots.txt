@@ -1,0 +1,11 @@
+HTTP/1.1 404 Not Found
+Date: Fri, 13 Nov 2020 11:21:38 GMT
+Server: Apache/2.4.25 (Debian)
+Last-Modified: Mon, 04 Mar 2019 02:10:40 GMT
+ETag: "36-5833b43634c39"
+Accept-Ranges: bytes
+Content-Length: 54
+IronWAF: 2.0.3
+Content-Type: text/html
+
+Hey you have been banned for 90 seconds, don't be bad

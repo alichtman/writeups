@@ -1,0 +1,7 @@
+http://jarvis.htb/images (Status: 301)
+http://jarvis.htb/css (Status: 301)
+http://jarvis.htb/js (Status: 301)
+http://jarvis.htb/fonts (Status: 301)
+http://jarvis.htb/phpmyadmin (Status: 301)
+http://jarvis.htb/sass (Status: 301)
+http://jarvis.htb/server-status (Status: 403)

@@ -18,14 +18,14 @@
 | Node        [#]  | Conceal    [ ]  | Safe             [ ]  |               |
 | Valentine   [o]  | Chatterbox [x]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
-| Sunday      [x]  | BankRobber [ ]  |                       |               |
+| Sunday      [x]  | BankRobber [$]  |                       |               |
 | Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
 | Magic       [x]  | Secnotes   [ ]  |                       |               |
 | Irked       [x]  | Buff       [ ]  |                       |               |
 | Friendzone  [!]  |                 |                       |               |
 | Swagshop    [!]  |                 |                       |               |
 | Networked   [ ]  |                 |                       |               |
-| Jarvis      [ ]  |                 |                       |               |
+| Jarvis      [x]  |                 |                       |               |
 | Mirai       [o]  |                 |                       |               |
 | Popcorn     [x]  |                 |                       |               |
 | Haircut     [x]  |                 |                       |               |
@@ -41,3 +41,4 @@
 | o    | Done previously but should redo if time permits.  |
 | !    | In Progress                                       |
 | #    | Do After OSCP                                     |
+| $    | MUST DO BOXES                                     |

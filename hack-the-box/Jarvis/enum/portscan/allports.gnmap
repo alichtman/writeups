@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Fri Nov 13 05:13:38 2020 as: nmap -A -v -p- -Pn -oA allports jarvis.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.143 (jarvis.htb)	Status: Up
+Host: 10.10.10.143 (jarvis.htb)	Ports: 22/open/tcp//ssh//OpenSSH 7.4p1 Debian 10+deb9u6 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.25 ((Debian))/, 64999/open/tcp//http//Apache httpd 2.4.25 ((Debian))/	Ignored State: closed (65532)	Seq Index: 253	IP ID Seq: All zeros
+# Nmap done at Fri Nov 13 05:14:46 2020 -- 1 IP address (1 host up) scanned in 68.62 seconds

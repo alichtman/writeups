@@ -1,0 +1,627 @@
+# Nmap 7.80 scan initiated Fri Nov 13 05:13:36 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Jarvis/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Jarvis/enum/autorecon/scans/xml/tcp_80_http_nmap.xml jarvis.htb
+Nmap scan report for jarvis.htb (10.10.10.143)
+Host is up, received user-set (0.051s latency).
+Scanned at 2020-11-13 05:13:36 CST for 36s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.25 ((Debian))
+|_http-chrono: Request times for /; avg: 309.38ms; min: 285.94ms; max: 362.07ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=jarvis.htb
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 309
+|     Comment: 
+|          // component: input + button
+|     
+|     Path: http://jarvis.htb:80/js/jquery.easing.1.3.js
+|     Line number: 174
+|     Comment: 
+|         /*
+|          *
+|          * TERMS OF USE - EASING EQUATIONS
+|          * 
+|          * Open source under the BSD License. 
+|          * 
+|          * Copyright \xC3\x83\xE2\x80\x9A\xC3\x82\xC2\xA9 2001 Robert Penner
+|          * All rights reserved.
+|          * 
+|          * Redistribution and use in source and binary forms, with or without modification, 
+|          * are permitted provided that the following conditions are met:
+|          * 
+|          * Redistributions of source code must retain the above copyright notice, this list of 
+|          * conditions and the following disclaimer.
+|          * Redistributions in binary form must reproduce the above copyright notice, this list 
+|          * of conditions and the following disclaimer in the documentation and/or other materials 
+|          * provided with the distribution.
+|          * 
+|          * Neither the name of the author nor the names of contributors may be used to endorse 
+|          * or promote products derived from this software without specific prior written permission.
+|          * 
+|          * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+|          * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+|          * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+|          *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+|          *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+|          *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+|          * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+|          *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+|          * OF THE POSSIBILITY OF SUCH DAMAGE. 
+|          *
+|          */
+|     
+|     Path: http://jarvis.htb:80/js/modernizr-2.6.2.min.js
+|     Line number: 1
+|     Comment: 
+|         /* Modernizr 2.6.2 (Custom Build) | MIT & BSD
+|          * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-addtest-prefixed-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-load
+|          */
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1133
+|     Comment: 
+|          // left
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1
+|     Comment: 
+|         /* =========================================================
+|          * bootstrap-datepicker.js
+|          * Repo: https://github.com/eternicode/bootstrap-datepicker/
+|          * Demo: http://eternicode.github.io/bootstrap-datepicker/
+|          * Docs: http://bootstrap-datepicker.readthedocs.org/
+|          * Forked from http://www.eyecon.ro/bootstrap-datepicker
+|          * =========================================================
+|          * Started by Stefan Petre; improvements by Andrew Rowls + contributors
+|          *
+|          * Licensed under the Apache License, Version 2.0 (the "License");
+|          * you may not use this file except in compliance with the License.
+|          * You may obtain a copy of the License at
+|          *
+|          * http://www.apache.org/licenses/LICENSE-2.0
+|          *
+|          * Unless required by applicable law or agreed to in writing, software
+|          * distributed under the License is distributed on an "AS IS" BASIS,
+|          * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+|          * See the License for the specific language governing permissions and
+|          * limitations under the License.
+|          * ========================================================= */
+|     
+|     Path: http://jarvis.htb:80/js/magnific-popup-options.js
+|     Line number: 12
+|     Comment: 
+|          // By default it's false, so don't forget to enable it
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1189
+|     Comment: 
+|          // spacebar
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 37
+|     Comment: 
+|         <!-- Owl Carousel -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 26
+|     Comment: 
+|         <!-- Icomoon Icon Fonts-->
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 325
+|     Comment: 
+|          // inline datepicker
+|     
+|     Path: http://jarvis.htb:80/css/animate.css
+|     Line number: 3
+|     Comment: 
+|         /*!
+|         Animate.css - http://daneden.me/animate
+|         Licensed under the MIT license - http://opensource.org/licenses/MIT
+|         
+|         Copyright (c) 2015 Daniel Eden
+|         */
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 52
+|     Comment: 
+|         <!--[if lt IE 9]>
+|         	<script src="js/respond.min.js"></script>
+|         	<![endif]-->
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1162
+|     Comment: 
+|          // down
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 260
+|     Comment: 
+|         <!-- Owl carousel -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 34
+|     Comment: 
+|         <!-- Flexslider  -->
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1652
+|     Comment: 
+|         /* DATEPICKER DATA-API
+|         	* ================== */
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 28
+|     Comment: 
+|         <!-- Bootstrap  -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 254
+|     Comment: 
+|         <!-- Bootstrap -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 252
+|     Comment: 
+|         <!-- jQuery Easing -->
+|     
+|     Path: http://jarvis.htb:80/css/animate.css
+|     Line number: 1415
+|     Comment: 
+|         /*visibility: visible;*/
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1134
+|     Comment: 
+|          // right
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1115
+|     Comment: 
+|          // allow escape to hide and re-show picker
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 267
+|     Comment: 
+|         <!-- Main -->
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 72
+|     Comment: 
+|         /* ====================================================================================================================
+|          * DEFAULT THEME
+|          * ====================================================================================================================*/
+|     
+|     Path: http://jarvis.htb:80/css/animate.css
+|     Line number: 1196
+|     Comment: 
+|         /*-webkit-transform: translate3d(0, -100%, 0);
+|             transform: translate3d(0, -100%, 0);*/
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 51
+|     Comment: 
+|         <!-- FOR IE9 below -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 258
+|     Comment: 
+|         <!-- Flexslider -->
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 297
+|     Comment: 
+|          // single input
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 12
+|     Comment: 
+|         /* ====================================================================================================================
+|          * FONT-FACE
+|          * ====================================================================================================================*/
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 263
+|     Comment: 
+|         /* ====================================================================================================================
+|          * RESPONSIVE
+|          * ====================================================================================================================*/
+|     
+|     Path: http://jarvis.htb:80/js/magnific-popup-options.js
+|     Line number: 2
+|     Comment: 
+|          // MagnificPopup
+|     
+|     Path: http://jarvis.htb:80/css/bootstrap-datepicker.css
+|     Line number: 16
+|     Comment: 
+|         /*.dow {
+|         		border-top: 1px solid #ddd !important;
+|         	}*/
+|     
+|     Path: http://jarvis.htb:80/css/bootstrap-datepicker.css
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Datepicker for Bootstrap
+|          *
+|          * Copyright 2012 Stefan Petre
+|          * Improvements by Andrew Rowls
+|          * Licensed under the Apache License v2.0
+|          * http://www.apache.org/licenses/LICENSE-2.0
+|          *
+|          */
+|     
+|     Path: http://jarvis.htb:80/index.php
+|     Line number: 463
+|     Comment: 
+|         <!-- end half -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 24
+|     Comment: 
+|         <!-- Animate.css -->
+|     
+|     Path: http://jarvis.htb:80/js/jquery.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v2.1.4 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
+|     
+|     Path: http://jarvis.htb:80/index.php
+|     Line number: 338
+|     Comment: 
+|         <!-- Tab panes -->
+|     
+|     Path: http://jarvis.htb:80/js/magnific-popup-options.js
+|     Line number: 15
+|     Comment: 
+|          // CSS transition easing function
+|     
+|     Path: http://jarvis.htb:80/js/magnific-popup-options.js
+|     Line number: 14
+|     Comment: 
+|          // duration of the effect, in milliseconds
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1643
+|     Comment: 
+|         /* DATEPICKER NO CONFLICT
+|         	* =================== */
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * jQuery FlexSlider v2.6.0
+|          * http://www.woothemes.com/flexslider/
+|          *
+|          * Copyright 2012 WooThemes
+|          * Free to use under the GPLv2 and later license.
+|          * http://www.gnu.org/licenses/gpl-2.0.html
+|          *
+|          * Contributing author: Tyler Smith (@mbmufffin)
+|          *
+|          */
+|     
+|     Path: http://jarvis.htb:80/js/respond.min.js
+|     Line number: 2
+|     Comment: 
+|         /*! Respond.js v1.4.2: min/max-width media query polyfill * Copyright 2013 Scott Jehl
+|          * Licensed under https://github.com/scottjehl/Respond/blob/master/LICENSE-MIT
+|          *  */
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1123
+|     Comment: 
+|          // escape
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 56
+|     Comment: 
+|         /*content: "\0020";*/
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 46
+|     Comment: 
+|         <!-- Theme style  -->
+|     
+|     Path: http://jarvis.htb:80/css/animate.css
+|     Line number: 133
+|     Comment: 
+|         /* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+|     
+|     Path: http://jarvis.htb:80/js/jquery.waypoints.min.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|         Waypoints - 4.0.0
+|         Copyright \xC3\x82\xC2\xA9 2011-2015 Caleb Troughton
+|         Licensed under the MIT license.
+|         https://github.com/imakewebthings/waypoints/blog/master/licenses.txt
+|         */
+|     
+|     Path: http://jarvis.htb:80/js/jquery.easing.1.3.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * jQuery Easing v1.3 - http://gsgd.co.uk/sandbox/jquery/easing/
+|          *
+|          * Uses the built in easing capabilities added In jQuery 1.1
+|          * to offer multiple easing options
+|          *
+|          * TERMS OF USE - jQuery Easing
+|          * 
+|          * Open source under the BSD License. 
+|          * 
+|          * Copyright \xC3\x83\xE2\x80\x9A\xC3\x82\xC2\xA9 2008 George McGinley Smith
+|          * All rights reserved.
+|          * 
+|          * Redistribution and use in source and binary forms, with or without modification, 
+|          * are permitted provided that the following conditions are met:
+|          * 
+|          * Redistributions of source code must retain the above copyright notice, this list of 
+|          * conditions and the following disclaimer.
+|          * Redistributions in binary form must reproduce the above copyright notice, this list 
+|          * of conditions and the following disclaimer in the documentation and/or other materials 
+|          * provided with the distribution.
+|          * 
+|          * Neither the name of the author nor the names of contributors may be used to endorse 
+|          * or promote products derived from this software without specific prior written permission.
+|          * 
+|          * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY 
+|          * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+|          * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+|          *  COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+|          *  EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
+|          *  GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED 
+|          * AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING
+|          *  NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED 
+|          * OF THE POSSIBILITY OF SUCH DAMAGE. 
+|          *
+|         */
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 250
+|     Comment: 
+|         <!-- jQuery -->
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 40
+|     Comment: 
+|         /* ====================================================================================================================
+|          * BASE STYLES
+|          * ====================================================================================================================*/
+|     
+|     Path: http://jarvis.htb:80/js/jquery.magnific-popup.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! Magnific Popup - v0.9.9 - 2014-09-06
+|         * http://dimsemenov.com/plugins/magnific-popup/
+|         * Copyright (c) 2014 Dmitry Semenov; */
+|     
+|     Path: http://jarvis.htb:80/fonts/flaticon/font/flaticon.css
+|     Line number: 29
+|     Comment: 
+|         /*margin-left: 20px;*/
+|     
+|     Path: http://jarvis.htb:80/css/animate.css
+|     Line number: 1266
+|     Comment: 
+|         /*-webkit-transform: translate3d(-100%, 0, 0);
+|             transform: translate3d(-100%, 0, 0);*/
+|     
+|     Path: http://jarvis.htb:80/fonts/flaticon/font/flaticon.css
+|     Line number: 1
+|     Comment: 
+|         /*
+|           	Flaticon icon font: Flaticon
+|           	Creation date: 07/01/2018 05:23
+|           	*/
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 41
+|     Comment: 
+|         <!-- Date Picker -->
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 22
+|     Comment: 
+|         /* ====================================================================================================================
+|          * RESETS
+|          * ====================================================================================================================*/
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1207
+|     Comment: 
+|          // tab
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1193
+|     Comment: 
+|          // enter
+|     
+|     Path: http://jarvis.htb:80/fonts/flaticon/font/flaticon.css
+|     Line number: 27
+|     Comment: 
+|         /*font-size: 20px;*/
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 1161
+|     Comment: 
+|          // up
+|     
+|     Path: http://jarvis.htb:80/css/animate.css
+|     Line number: 1407
+|     Comment: 
+|         /*-webkit-transform: translate3d(0, 100%, 0);
+|             transform: translate3d(0, 100%, 0);*/
+|     
+|     Path: http://jarvis.htb:80/css/animate.css
+|     Line number: 1336
+|     Comment: 
+|         /*-webkit-transform: translate3d(100%, 0, 0);
+|             transform: translate3d(100%, 0, 0);*/
+|     
+|     Path: http://jarvis.htb:80/js/jquery.easing.1.3.js
+|     Line number: 38
+|     Comment: 
+|         
+|         // t: current time, b: begInnIng value, c: change In value, d: duration
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 43
+|     Comment: 
+|         <!-- Flaticons  -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 12
+|     Comment: 
+|         <!-- Facebook and Twitter integration -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 31
+|     Comment: 
+|         <!-- Magnific Popup -->
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 256
+|     Comment: 
+|         <!-- Waypoints -->
+|     
+|     Path: http://jarvis.htb:80/css/flexslider.css
+|     Line number: 15
+|     Comment: 
+|         /*@font-face {
+|           font-family: 'flexslider-icon';
+|           src: url('fonts/flexslider-icon.eot');
+|           src: url('fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('fonts/flexslider-icon.woff') format('woff'), url('fonts/flexslider-icon.ttf') format('truetype'), url('fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+|           font-weight: normal;
+|           font-style: normal;
+|         }*/
+|     
+|     Path: http://jarvis.htb:80/dining-bar.php
+|     Line number: 49
+|     Comment: 
+|         <!-- Modernizr JS -->
+|     
+|     Path: http://jarvis.htb:80/js/bootstrap-datepicker.js
+|     Line number: 241
+|     Comment: 
+|_         // no action
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Fri, 13 Nov 2020 11:20:59 GMT; +7m15s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /phpmyadmin/: phpMyAdmin
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.25 (debian)'
+|   /images/: Potentially interesting directory w/ listing on 'apache/2.4.25 (debian)'
+|_  /js/: Potentially interesting directory w/ listing on 'apache/2.4.25 (debian)'
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=jarvis.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|   	http://jarvis.htb:80/css/owl.theme.default.min.css
+|   
+|   Error Code: 404
+|   	http://jarvis.htb:80/js/jquery.flexslider-min.js
+|   
+|   Error Code: 404
+|   	http://jarvis.htb:80/room.php?cod=1
+|   
+|   Error Code: 404
+|   	http://jarvis.htb:80/css/icomoon.css
+|   
+|   Error Code: 404
+|   	http://jarvis.htb:80/room.php?cod=4
+|   
+|   Error Code: 404
+|_  	http://jarvis.htb:80/css/magnific-popup.css
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-grep: 
+|   (1) http://jarvis.htb:80/: 
+|     (1) email: 
+|_      + supersecurehotel@logger.htb
+| http-headers: 
+|   Date: Fri, 13 Nov 2020 11:21:02 GMT
+|   Server: Apache/2.4.25 (Debian)
+|   Set-Cookie: PHPSESSID=l07dke1d2b2trq2c9l140813h4; path=/
+|   Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|   Cache-Control: no-store, no-cache, must-revalidate
+|   Pragma: no-cache
+|   IronWAF: 2.0.3
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 53c185dc01c288f0d5311840c7bfce3d
+|_Credits query returned unknown hash 53c185dc01c288f0d5311840c7bfce3d
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-store, no-cache, must-revalidate
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: Thu, 19 Nov 1981 08:52:00 GMT
+|_http-server-header: Apache/2.4.25 (Debian)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 4
+|     /css/
+|       css: 4
+|     /fonts/flaticon/font/
+|       css: 1
+|     /images/
+|       jpg: 3
+|     /js/
+|       js: 4
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /fonts/flaticon/font/
+|   Total files found (by extension):
+|_    Other: 1; css: 5; jpg: 3; js: 4; php: 4
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Stark Hotel
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 13 05:14:12 2020 -- 1 IP address (1 host up) scanned in 36.07 seconds

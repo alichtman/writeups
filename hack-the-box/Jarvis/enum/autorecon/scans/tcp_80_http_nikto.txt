@@ -1,0 +1,25 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.143
++ Target Hostname:    jarvis.htb
++ Target Port:        80
++ Start Time:         2020-11-13 05:13:36 (GMT-6)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.25 (Debian)
++ Cookie PHPSESSID created without the httponly flag
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ Uncommon header 'ironwaf' found, with contents: 2.0.3
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Apache/2.4.25 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ OSVDB-3268: /images/: Directory indexing found.
++ Uncommon header 'x-ob_mode' found, with contents: 1
++ OSVDB-3233: /icons/README: Apache default file found.
++ /phpmyadmin/: phpMyAdmin directory found
++ OSVDB-3092: /phpmyadmin/README: phpMyAdmin is for managing MySQL databases, and should be protected or limited to authorized hosts.
++ 7786 requests: 0 error(s) and 12 item(s) reported on remote host
++ End Time:           2020-11-13 05:20:04 (GMT-6) (388 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested
