@@ -1,0 +1,12 @@
+# Nmap 7.80 scan initiated Sat Nov 28 21:11:28 2020 as: nmap -vv --reason -Pn -sV -p 49667 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bastion/enum/autorecon/scans/tcp_49667_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bastion/enum/autorecon/scans/xml/tcp_49667_rpc_nmap.xml 10.10.10.134
+Nmap scan report for bastion.htb (10.10.10.134)
+Host is up, received user-set (0.040s latency).
+Scanned at 2020-11-28 21:11:28 CST for 70s
+
+PORT      STATE SERVICE REASON          VERSION
+49667/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Nov 28 21:12:38 2020 -- 1 IP address (1 host up) scanned in 69.70 seconds

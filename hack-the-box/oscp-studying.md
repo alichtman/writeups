@@ -18,8 +18,8 @@
 | Node        [#]  | Conceal    [ ]  | Safe             [ ]  |               |
 | Valentine   [o]  | Chatterbox [x]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
-| Sunday      [x]  | BankRobber [$]  |                       |               |
-| Tartarsauce [ ]  | Bastion    [ ]  |                       |               |
+| Sunday      [x]  | BankRobber [x]  |                       |               |
+| Tartarsauce [ ]  | Bastion    [x]  |                       |               |
 | Magic       [x]  | Secnotes   [ ]  |                       |               |
 | Irked       [x]  | Buff       [ ]  |                       |               |
 | Friendzone  [!]  |                 |                       |               |

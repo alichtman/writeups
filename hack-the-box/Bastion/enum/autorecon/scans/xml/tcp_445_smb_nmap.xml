@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Nov 28 21:03:30 2020 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bastion/enum/autorecon/scans/tcp_445_smb_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bastion/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml 10.10.10.134 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bastion/enum/autorecon/scans/tcp_445_smb_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bastion/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml 10.10.10.134" start="1606619010" startstr="Sat Nov 28 21:03:30 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1606619011"/>
+<taskend task="NSE" time="1606619011"/>
+<taskbegin task="NSE" time="1606619011"/>
+<taskend task="NSE" time="1606619011"/>
+<taskbegin task="NSE" time="1606619011"/>
+<taskend task="NSE" time="1606619011"/>
+<taskbegin task="SYN Stealth Scan" time="1606619011"/>
+<taskend task="SYN Stealth Scan" time="1606619011" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1606619011"/>
+<taskend task="Service scan" time="1606619017" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1606619017"/>
+<taskprogress task="NSE" time="1606619048" percent="92.86" remaining="3" etc="1606619050"/>
+<taskprogress task="NSE" time="1606619078" percent="98.57" remaining="1" etc="1606619079"/>
+<taskend task="NSE" time="1606619093"/>
+<taskbegin task="NSE" time="1606619093"/>
