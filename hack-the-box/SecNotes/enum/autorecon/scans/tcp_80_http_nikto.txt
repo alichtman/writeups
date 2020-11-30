@@ -1,0 +1,22 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.97
++ Target Hostname:    10.10.10.97
++ Target Port:        80
++ Start Time:         2020-11-29 02:35:47 (GMT-6)
+---------------------------------------------------------------------------
++ Server: Microsoft-IIS/10.0
++ Cookie PHPSESSID created without the httponly flag
++ Retrieved x-powered-by header: PHP/7.2.7
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Root page / redirects to: login.php
++ No CGI Directories found (use '-C all' to force check all possible dirs)
++ Allowed HTTP Methods: OPTIONS, TRACE, GET, HEAD, POST 
++ Public HTTP Methods: OPTIONS, TRACE, GET, HEAD, POST 
++ /login.php: Admin login page/section found.
++ 7863 requests: 0 error(s) and 8 item(s) reported on remote host
++ End Time:           2020-11-29 02:42:45 (GMT-6) (418 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

@@ -1,0 +1,48 @@
+# Nmap 7.80 scan initiated Sun Nov 29 02:34:34 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/SecNotes/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/SecNotes/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.97
+Nmap scan report for secnotes.htb (10.10.10.97)
+Host is up, received user-set (0.21s latency).
+Scanned at 2020-11-29 02:34:34 CST for 72s
+Not shown: 998 filtered ports
+Reason: 998 no-responses
+PORT    STATE SERVICE      REASON          VERSION
+80/tcp  open  http         syn-ack ttl 127 Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+| http-title: Secure Notes - Login
+|_Requested resource was login.php
+445/tcp open  microsoft-ds syn-ack ttl 127 Windows 10 Enterprise 17134 microsoft-ds (workgroup: HTB)
+Service Info: Host: SECNOTES; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h47m31s, deviation: 4h37m09s, median: 7m30s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 25086/tcp): CLEAN (Timeout)
+|   Check 2 (port 37549/tcp): CLEAN (Timeout)
+|   Check 3 (port 53444/udp): CLEAN (Timeout)
+|   Check 4 (port 62684/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows 10 Enterprise 17134 (Windows 10 Enterprise 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: SECNOTES
+|   NetBIOS computer name: SECNOTES\x00
+|   Workgroup: HTB\x00
+|_  System time: 2020-11-29T00:42:40-08:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-11-29T08:42:41
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 29 02:35:46 2020 -- 1 IP address (1 host up) scanned in 72.68 seconds

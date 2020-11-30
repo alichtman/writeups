@@ -1,0 +1,133 @@
+WhatWeb report for http://10.10.10.97:80
+Status    : 302 Found
+Title     : <None>
+IP        : 10.10.10.97
+Country   : RESERVED, ZZ
+
+Summary   : X-Powered-By[PHP/7.2.7], HTTPServer[Microsoft-IIS/10.0], Cookies[PHPSESSID], PHP[7.2.7], RedirectLocation[login.php], Microsoft-IIS[10.0]
+
+Detected Plugins:
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : PHPSESSID
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 7.2.7
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : login.php (from location)
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/7.2.7 (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 302 Found
+	Cache-Control: no-store, no-cache, must-revalidate
+	Pragma: no-cache
+	Content-Type: text/html; charset=UTF-8
+	Expires: Thu, 19 Nov 1981 08:52:00 GMT
+	Location: login.php
+	Server: Microsoft-IIS/10.0
+	X-Powered-By: PHP/7.2.7
+	Set-Cookie: PHPSESSID=a7u9fnsr7id9uojek6pb6b4lep; path=/
+	Date: Sun, 29 Nov 2020 08:43:19 GMT
+	Connection: close
+	Content-Length: 0
+	
+WhatWeb report for http://10.10.10.97/login.php
+Status    : 200 OK
+Title     : Secure Notes - Login
+IP        : 10.10.10.97
+Country   : RESERVED, ZZ
+
+Summary   : X-Powered-By[PHP/7.2.7], HTTPServer[Microsoft-IIS/10.0], PasswordField[password], HTML5, PHP[7.2.7], Bootstrap[3.3.7], Microsoft-IIS[10.0]
+
+Detected Plugins:
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Version      : 3.3.7
+	Website     : https://getbootstrap.com/
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+[ PHP ]
+	PHP is a widely-used general-purpose scripting language 
+	that is especially suited for Web development and can be 
+	embedded into HTML. This plugin identifies PHP errors, 
+	modules and versions and extracts the local file path and 
+	username if present. 
+
+	Version      : 7.2.7
+	Google Dorks: (2)
+	Website     : http://www.php.net/
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+[ X-Powered-By ]
+	X-Powered-By HTTP header 
+
+	String       : PHP/7.2.7 (from x-powered-by string)
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html; charset=UTF-8
+	Server: Microsoft-IIS/10.0
+	X-Powered-By: PHP/7.2.7
+	Date: Sun, 29 Nov 2020 08:43:22 GMT
+	Connection: close
+	Content-Length: 1223
+	

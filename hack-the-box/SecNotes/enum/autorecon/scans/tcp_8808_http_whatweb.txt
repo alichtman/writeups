@@ -1,0 +1,36 @@
+WhatWeb report for http://10.10.10.97:8808
+Status    : 200 OK
+Title     : IIS Windows
+IP        : 10.10.10.97
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Microsoft-IIS/10.0], Microsoft-IIS[10.0]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : Microsoft-IIS/10.0 (from server string)
+
+[ Microsoft-IIS ]
+	Microsoft Internet Information Services (IIS) for Windows 
+	Server is a flexible, secure and easy-to-manage Web server 
+	for hosting anything on the Web. From media streaming to 
+	web application hosting, IIS's scalable and open 
+	architecture is ready to handle the most demanding tasks. 
+
+	Version      : 10.0
+	Website     : http://www.iis.net/
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Content-Type: text/html
+	Last-Modified: Thu, 21 Jun 2018 15:26:03 GMT
+	Accept-Ranges: bytes
+	ETag: "733dc72a749d41:0"
+	Server: Microsoft-IIS/10.0
+	Date: Sun, 29 Nov 2020 08:48:07 GMT
+	Connection: close
+	Content-Length: 696
+	

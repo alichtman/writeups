@@ -1,0 +1,62 @@
+# Nmap 7.80 scan initiated Sun Nov 29 02:34:22 2020 as: nmap -A -v -p- -Pn -oN allports secnotes.htb
+adjust_timeouts2: packet supposedly had rtt of -193529 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -193529 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -180158 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -180158 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -212259 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -212259 microseconds.  Ignoring time.
+Nmap scan report for secnotes.htb (10.10.10.97)
+Host is up (0.053s latency).
+Not shown: 65532 filtered ports
+PORT     STATE SERVICE      VERSION
+80/tcp   open  http         Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+| http-title: Secure Notes - Login
+|_Requested resource was login.php
+445/tcp  open  microsoft-ds Windows 10 Enterprise 17134 microsoft-ds (workgroup: HTB)
+8808/tcp open  http         Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: Host: SECNOTES; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h47m31s, deviation: 4h37m08s, median: 7m30s
+| smb-os-discovery: 
+|   OS: Windows 10 Enterprise 17134 (Windows 10 Enterprise 6.3)
+|   OS CPE: cpe:/o:microsoft:windows_10::-
+|   Computer name: SECNOTES
+|   NetBIOS computer name: SECNOTES\x00
+|   Workgroup: HTB\x00
+|_  System time: 2020-11-29T00:46:42-08:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-11-29T08:46:43
+|_  start_date: N/A
+
+TRACEROUTE (using port 445/tcp)
+HOP RTT      ADDRESS
+1   52.38 ms 10.10.14.1
+2   52.35 ms secnotes.htb (10.10.10.97)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Nov 29 02:39:50 2020 -- 1 IP address (1 host up) scanned in 328.53 seconds

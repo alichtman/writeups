@@ -20,7 +20,7 @@
 | Poison      [x]  | Forest     [ ]  |                       |               |
 | Sunday      [x]  | BankRobber [x]  |                       |               |
 | Tartarsauce [ ]  | Bastion    [x]  |                       |               |
-| Magic       [x]  | Secnotes   [ ]  |                       |               |
+| Magic       [x]  | Secnotes   [x]  |                       |               |
 | Irked       [x]  | Buff       [ ]  |                       |               |
 | Friendzone  [!]  |                 |                       |               |
 | Swagshop    [!]  |                 |                       |               |
@@ -33,12 +33,12 @@
 | Frolic      [x]  |                 |                       |               |
 | Postman     [x]  |                 |                       |               |
 
-## Legend
+## Key
 
-| Key  | Meaning                                           |
-| ---  | ---                                               |
-| x    | Done for OSCP prep                                |
-| o    | Done previously but should redo if time permits.  |
-| !    | In Progress                                       |
-| #    | Do After OSCP                                     |
-| $    | MUST DO BOXES                                     |
+| Symbol | Meaning                                           |
+| ---    | ---                                               |
+| x      | Done for OSCP prep                                |
+| o      | Done previously but should redo if time permits.  |
+| !      | In Progress                                       |
+| #      | Do After OSCP                                     |
+| $      | MUST DO BOXES                                     |
