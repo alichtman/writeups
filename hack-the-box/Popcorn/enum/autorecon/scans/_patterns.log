@@ -1,0 +1,4 @@
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.2.12 (Ubuntu)
+
+tcp/80/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Nov  9 21:19:21 2020 as: nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Popcorn/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Popcorn/enum/autorecon/scans/xml/_top_20_udp_nmap.xml popcorn.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sU -A -&#45;top-ports=20 -&#45;version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Popcorn/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Popcorn/enum/autorecon/scans/xml/_top_20_udp_nmap.xml popcorn.htb" start="1604978361" startstr="Mon Nov  9 21:19:21 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="udp" protocol="udp" numservices="20" services="53,67-69,123,135,137-139,161-162,445,500,514,520,631,1434,1900,4500,49152"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1604978362"/>
+<taskend task="NSE" time="1604978362"/>
+<taskbegin task="NSE" time="1604978362"/>
+<taskend task="NSE" time="1604978362"/>
+<taskbegin task="NSE" time="1604978362"/>
+<taskend task="NSE" time="1604978362"/>
+<taskbegin task="UDP Scan" time="1604978362"/>
+<taskend task="UDP Scan" time="1604978369" extrainfo="20 total ports"/>
+<taskbegin task="Service scan" time="1604978369"/>
+<taskprogress task="Service scan" time="1604978494" percent="14.29" remaining="750" etc="1604979244"/>
+<taskend task="Service scan" time="1604978521" extrainfo="7 services on 1 host"/>
+<taskbegin task="Traceroute" time="1604978524"/>
+<taskend task="Traceroute" time="1604978524"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1604978524"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1604978524"/>
+<taskbegin task="NSE" time="1604978524"/>
+<taskend task="NSE" time="1604978547"/>
+<taskbegin task="NSE" time="1604978547"/>
+<taskend task="NSE" time="1604978548"/>
+<taskbegin task="NSE" time="1604978548"/>
+<taskend task="NSE" time="1604978548"/>
+<host starttime="1604978362" endtime="1604978548"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.6" addrtype="ipv4"/>
+<hostnames>
+<hostname name="popcorn.htb" type="user"/>
+<hostname name="popcorn.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="udp" portid="53"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="udp" portid="67"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="dhcps" method="table" conf="3"/></port>
+<port protocol="udp" portid="68"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="dhcpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="69"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="tftp" method="table" conf="3"/></port>
+<port protocol="udp" portid="123"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ntp" method="table" conf="3"/></port>
+<port protocol="udp" portid="135"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="msrpc" method="table" conf="3"/></port>
+<port protocol="udp" portid="137"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-ns" method="table" conf="3"/></port>
+<port protocol="udp" portid="138"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-dgm" method="table" conf="3"/></port>
+<port protocol="udp" portid="139"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="netbios-ssn" method="table" conf="3"/></port>
+<port protocol="udp" portid="161"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmp" method="table" conf="3"/></port>
+<port protocol="udp" portid="162"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="snmptrap" method="table" conf="3"/></port>
+<port protocol="udp" portid="445"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="microsoft-ds" method="table" conf="3"/></port>
+<port protocol="udp" portid="500"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="isakmp" method="table" conf="3"/><script id="ike-version" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="udp" portid="514"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="syslog" method="table" conf="3"/></port>
+<port protocol="udp" portid="520"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="route" method="table" conf="3"/></port>
+<port protocol="udp" portid="631"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="ipp" method="table" conf="3"/></port>
+<port protocol="udp" portid="1434"><state state="open|filtered" reason="no-response" reason_ttl="0"/><service name="ms-sql-m" method="table" conf="3"/></port>
+<port protocol="udp" portid="1900"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="upnp" method="table" conf="3"/></port>
+<port protocol="udp" portid="4500"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="nat-t-ike" method="table" conf="3"/></port>
+<port protocol="udp" portid="49152"><state state="closed" reason="port-unreach" reason_ttl="63"/><service name="unknown" method="table" conf="3"/></port>
+</ports>
+<os><portused state="closed" proto="udp" portid="68"/>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=11/9%OT=%CT=%CU=68%PV=Y%DS=2%DC=T%G=N%TM=5FAA0774%P=x86_64-pc-linux-gnu)&#xa;SEQ(CI=Z)&#xa;T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)&#xa;IE(R=Y%DFI=N%T=40%CD=S)&#xa;"/>
+</os>
+<distance value="2"/>
+<trace port="162" proto="udp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="183.17"/>
+<hop ttl="2" ipaddr="10.10.10.6" rtt="183.29" host="popcorn.htb"/>
+</trace>
+<times srtt="60789" rttvar="37753" to="211801"/>
+</host>
+<taskbegin task="NSE" time="1604978548"/>
+<taskend task="NSE" time="1604978548"/>
+<taskbegin task="NSE" time="1604978548"/>
+<taskend task="NSE" time="1604978548"/>
+<taskbegin task="NSE" time="1604978548"/>
+<taskend task="NSE" time="1604978548"/>
+<runstats><finished time="1604978548" timestr="Mon Nov  9 21:22:28 2020" elapsed="187.14" summary="Nmap done at Mon Nov  9 21:22:28 2020; 1 IP address (1 host up) scanned in 187.14 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,5 @@
+# Nmap 7.80 scan initiated Mon Nov  9 21:19:51 2020 as: nmap -A -v -p- -Pn -oA allports popcorn.htb
+# Ports scanned: TCP(65535;1-65535) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.10.10.6 (popcorn.htb)	Status: Up
+Host: 10.10.10.6 (popcorn.htb)	Ports: 22/open/tcp//ssh//OpenSSH 5.1p1 Debian 6ubuntu2 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.2.12 ((Ubuntu))/	Ignored State: closed (65533)	Seq Index: 190	IP ID Seq: All zeros
+# Nmap done at Mon Nov  9 21:30:00 2020 -- 1 IP address (1 host up) scanned in 608.77 seconds

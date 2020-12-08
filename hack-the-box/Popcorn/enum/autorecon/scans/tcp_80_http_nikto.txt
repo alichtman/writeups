@@ -1,0 +1,61 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.6
++ Target Hostname:    popcorn.htb
++ Target Port:        80
++ Start Time:         2020-11-09 21:19:34 (GMT-6)
+---------------------------------------------------------------------------
++ Server: Apache/2.2.12 (Ubuntu)
++ Server may leak inodes via ETags, header found with file /, inode: 43621, size: 177, mtime: Fri Mar 17 12:07:05 2017
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Uncommon header 'tcn' found, with contents: list
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: index.html
++ Apache/2.2.12 appears to be outdated (current is at least Apache/2.4.37). Apache 2.2.34 is the EOL for the 2.x branch.
++ Retrieved x-powered-by header: PHP/5.2.10-2ubuntu6.10
++ /test: Output from the phpinfo() function was found.
++ OSVDB-112004: /test: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6271).
++ OSVDB-112004: /test: Site appears vulnerable to the 'shellshock' vulnerability (http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-6278).
++ Allowed HTTP Methods: GET, HEAD, POST, OPTIONS 
++ /test.php: Output from the phpinfo() function was found.
++ /test/: Output from the phpinfo() function was found.
++ OSVDB-3092: /test/: This might be interesting...
++ /test/jsp/buffer1.jsp: Output from the phpinfo() function was found.
++ /test/jsp/buffer2.jsp: Output from the phpinfo() function was found.
++ /test/jsp/buffer3.jsp: Output from the phpinfo() function was found.
++ /test/jsp/buffer4.jsp: Output from the phpinfo() function was found.
++ /test/jsp/declaration/IntegerOverflow.jsp: Output from the phpinfo() function was found.
++ /test/jsp/extends1.jsp: Output from the phpinfo() function was found.
++ /test/jsp/extends2.jsp: Output from the phpinfo() function was found.
++ /test/jsp/Language.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageAutoFlush.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageDouble.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageExtends.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageImport2.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageInfo.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageInvalid.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageIsErrorPage.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageIsThreadSafe.jsp: Output from the phpinfo() function was found.
++ /test/jsp/pageSession.jsp: Output from the phpinfo() function was found.
++ /test/realPath.jsp: Output from the phpinfo() function was found.
++ OSVDB-3233: /test.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ /test/phpinfo.php: Output from the phpinfo() function was found.
++ OSVDB-3233: /test/phpinfo.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ /test/phpinfo.php3: Output from the phpinfo() function was found.
++ OSVDB-3233: /test/phpinfo.php3: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ /test/test.php: Output from the phpinfo() function was found.
++ OSVDB-3233: /test/test.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ /test/info.php: Output from the phpinfo() function was found.
++ OSVDB-3233: /test/info.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ /test/index.php: Output from the phpinfo() function was found.
++ OSVDB-3233: /test/index.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ /test/php_info.php: Output from the phpinfo() function was found.
++ OSVDB-3233: /test/php_info.php: PHP is installed, and a test script which runs phpinfo() was found. This gives a lot of system information.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ OSVDB-3092: /test.php: This might be interesting...
++ 8597 requests: 2 error(s) and 49 item(s) reported on remote host
++ End Time:           2020-11-09 21:33:27 (GMT-6) (833 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

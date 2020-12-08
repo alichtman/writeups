@@ -1,0 +1,4 @@
+http://popcorn.htb/index (Status: 200)
+http://popcorn.htb/test (Status: 200)
+http://popcorn.htb/torrent (Status: 301)
+http://popcorn.htb/rename (Status: 301)

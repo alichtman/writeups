@@ -1,0 +1,65 @@
+# Nmap 7.80 scan initiated Mon Nov  9 21:19:51 2020 as: nmap -A -v -p- -Pn -oA allports popcorn.htb
+Increasing send delay for 10.10.10.6 from 0 to 5 due to 259 out of 861 dropped probes since last increase.
+adjust_timeouts2: packet supposedly had rtt of -210856 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -210856 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -761252 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -761252 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -762118 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -762118 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -463780 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -463780 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -185415 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -185415 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -636373 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -636373 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1010991 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1010991 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -115073 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -115073 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -178813 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -178813 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -278898 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -278898 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -304038 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -304038 microseconds.  Ignoring time.
+Nmap scan report for popcorn.htb (10.10.10.6)
+Host is up (0.059s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 5.1p1 Debian 6ubuntu2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 3e:c8:1b:15:21:15:50:ec:6e:63:bc:c5:6b:80:7b:38 (DSA)
+|_  2048 aa:1f:79:21:b8:42:f4:8a:38:bd:b8:05:ef:1a:07:4d (RSA)
+80/tcp open  http    Apache httpd 2.2.12 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.12 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/9%OT=22%CT=1%CU=41002%PV=Y%DS=2%DC=T%G=Y%TM=5FAA093
+OS:8%P=x86_64-pc-linux-gnu)SEQ(SP=BE%GCD=1%ISR=C3%TI=Z%CI=Z%TS=8)SEQ(SP=BE%
+OS:GCD=1%ISR=C3%TI=Z%CI=Z%II=I%TS=8)OPS(O1=M54DST11NW6%O2=M54DST11NW6%O3=M5
+OS:4DNNT11NW6%O4=M54DST11NW6%O5=M54DST11NW6%O6=M54DST11)WIN(W1=16A0%W2=16A0
+OS:%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M54DNNSNW6%C
+OS:C=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=
+OS:16A0%S=O%A=S+%F=AS%O=M54DST11NW6%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T
+OS:=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(
+OS:R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.005 days (since Mon Nov  9 21:22:08 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=190 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT       ADDRESS
+1   110.74 ms 10.10.14.1
+2   109.64 ms popcorn.htb (10.10.10.6)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  9 21:30:00 2020 -- 1 IP address (1 host up) scanned in 608.77 seconds

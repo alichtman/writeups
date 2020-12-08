@@ -1,0 +1,82 @@
+# Nmap 7.80 scan initiated Mon Nov  9 21:19:21 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Popcorn/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Popcorn/enum/autorecon/scans/xml/_full_tcp_nmap.xml popcorn.htb
+adjust_timeouts2: packet supposedly had rtt of -128312 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -128312 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -136089 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -136089 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -125515 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -125515 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -137844 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -137844 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -137705 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -137705 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -126199 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -126199 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -129417 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -129417 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -146997 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -146997 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -596359 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -596359 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -335430 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -335430 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -228969 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -228969 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1147296 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1147296 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -209203 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -209203 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -210214 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -210214 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -797464 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -797464 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -846984 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -846984 microseconds.  Ignoring time.
+Nmap scan report for popcorn.htb (10.10.10.6)
+Host is up, received user-set (0.047s latency).
+Scanned at 2020-11-09 21:19:22 CST for 491s
+Not shown: 65533 closed ports
+Reason: 65533 resets
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 5.1p1 Debian 6ubuntu2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 3e:c8:1b:15:21:15:50:ec:6e:63:bc:c5:6b:80:7b:38 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAIAn8zzHM1eVS/OaLgV6dgOKaT+kyvjU0pMUqZJ3AgvyOrxHa2m+ydNk8cixF9lP3Z8gLwquTxJDuNJ05xnz9/DzZClqfNfiqrZRACYXsquSAab512kkl+X6CexJYcDVK4qyuXRSEgp4OFY956Aa3CCL7TfZxn+N57WrsBoTEb9PAAAAFQDMosEYukWOzwL00PlxxLC+lBadWQAAAIAhp9/JSROW1jeMX4hCS6Q/M8D1UJYyat9aXoHKg8612mSo/OH8Ht9ULA2vrt06lxoC3O8/1pVD8oztKdJgfQlWW5fLujQajJ+nGVrwGvCRkNjcI0Sfu5zKow+mOG4irtAmAXwPoO5IQJmP0WOgkr+3x8nWazHymoQlCUPBMlDPvgAAAIBmZAfIvcEQmRo8Ef1RaM8vW6FHXFtKFKFWkSJ42XTl3opaSsLaJrgvpimA+wc4bZbrFc4YGsPc+kZbvXN3iPUvQqEldak3yUZRRL3hkF3g3iWjmkpMG/fxNgyJhyDy5tkNRthJWWZoSzxS7sJyPCn6HzYvZ+lKxPNODL+TROLkmQ==
+|   2048 aa:1f:79:21:b8:42:f4:8a:38:bd:b8:05:ef:1a:07:4d (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAyBXr3xI9cjrxMH2+DB7lZ6ctfgrek3xenkLLv2vJhQQpQ2ZfBrvkXLsSjQHHwgEbNyNUL+M1OmPFaUPTKiPVP9co0DEzq0RAC+/T4shxnYmxtACC0hqRVQ1HpE4AVjSagfFAmqUvyvSdbGvOeX7WC00SZWPgavL6pVq0qdRm3H22zIVw/Ty9SKxXGmN0qOBq6Lqs2FG8A14fJS9F8GcN9Q7CVGuSIO+UUH53KDOI+vzZqrFbvfz5dwClD19ybduWo95sdUUq/ECtoZ3zuFb6ROI5JJGNWFb6NqfTxAM43+ffZfY28AjB1QntYkezb1Bs04k8FYxb5H7JwhWewoe8xQ==
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.2.12 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.2.12 (Ubuntu)
+|_http-title: Site doesn't have a title (text/html).
+Device type: general purpose|phone|WAP|printer|specialized|storage-misc
+Running (JUST GUESSING): Linux 2.6.X|2.4.X (95%), Google Android 2.X (95%), AVM embedded (94%), Canon embedded (94%), Epson embedded (94%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:2.4.20 cpe:/o:google:android:2.3.5 cpe:/h:avm:fritz%21box_fon_wlan_7240 cpe:/h:canon:imagerunner_advance_c3320i cpe:/h:canon:imagerunner_advance_c3325 cpe:/h:epson:wf-2660 cpe:/o:linux:linux_kernel:2.4
+Aggressive OS guesses: Linux 2.6.17 - 2.6.36 (95%), Linux 2.6.32 (95%), Linux 2.4.20 (Red Hat 7.2) (95%), Linux 2.6.17 (95%), Android 2.3.5 (Linux 2.6) (95%), Linux 2.6.30 (95%), Linux 2.6.35 (95%), AVM FRITZ!Box FON WLAN 7240 WAP (94%), Canon imageRUNNER ADVANCE C3320i or C3325 copier (94%), Epson WF-2660 printer (94%)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.80%E=4%D=11/9%OT=22%CT=1%CU=39614%PV=Y%DS=2%DC=T%G=Y%TM=5FAA08A
+OS:5%P=x86_64-pc-linux-gnu)SEQ(SP=C7%GCD=1%ISR=CA%TI=Z%CI=Z%TS=8)SEQ(SP=C7%
+OS:GCD=1%ISR=CA%TI=Z%CI=Z%II=I%TS=8)OPS(O1=M54DST11NW6%O2=M54DST11NW6%O3=M5
+OS:4DNNT11NW6%O4=M54DST11NW6%O5=M54DST11NW6%O6=M54DST11)WIN(W1=16A0%W2=16A0
+OS:%W3=16A0%W4=16A0%W5=16A0%W6=16A0)ECN(R=Y%DF=Y%T=40%W=16D0%O=M54DNNSNW6%C
+OS:C=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=Y%DF=Y%T=40%W=
+OS:16A0%S=O%A=S+%F=AS%O=M54DST11NW6%RD=0%Q=)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=
+OS:R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T
+OS:=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=
+OS:0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(
+OS:R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 0.004 days (since Mon Nov  9 21:21:30 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=199 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 3389/tcp)
+HOP RTT      ADDRESS
+1   41.04 ms 10.10.14.1
+2   41.23 ms popcorn.htb (10.10.10.6)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov  9 21:27:33 2020 -- 1 IP address (1 host up) scanned in 492.25 seconds
