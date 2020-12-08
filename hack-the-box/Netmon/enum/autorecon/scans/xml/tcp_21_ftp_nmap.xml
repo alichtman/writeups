@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Nov 30 03:05:27 2020 as: nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.152 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.152" start="1606727127" startstr="Mon Nov 30 03:05:27 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1606727127"/>
+<taskend task="NSE" time="1606727127"/>
+<taskbegin task="NSE" time="1606727127"/>
+<taskend task="NSE" time="1606727127"/>
+<taskbegin task="NSE" time="1606727127"/>
+<taskend task="NSE" time="1606727127"/>
+<taskbegin task="SYN Stealth Scan" time="1606727127"/>
+<taskend task="SYN Stealth Scan" time="1606727127" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1606727127"/>
+<taskend task="Service scan" time="1606727127" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1606727127"/>
+<taskend task="NSE" time="1606727128"/>
+<taskbegin task="NSE" time="1606727128"/>
+<taskend task="NSE" time="1606727128"/>
+<taskbegin task="NSE" time="1606727128"/>
+<taskend task="NSE" time="1606727128"/>
+<host starttime="1606727127" endtime="1606727128"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.152" addrtype="ipv4"/>
+<hostnames>
+<hostname name="netmon.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service><script id="banner" output="220 Microsoft FTP Service"/><script id="ftp-anon" output="Anonymous FTP login allowed (FTP code 230)&#xa;02-02-19  11:18PM                 1024 .rnd&#xa;02-25-19  09:15PM       &lt;DIR&gt;          inetpub&#xa;07-16-16  08:18AM       &lt;DIR&gt;          PerfLogs&#xa;02-25-19  09:56PM       &lt;DIR&gt;          Program Files&#xa;02-02-19  11:28PM       &lt;DIR&gt;          Program Files (x86)&#xa;02-03-19  07:08AM       &lt;DIR&gt;          Users&#xa;02-25-19  10:49PM       &lt;DIR&gt;          Windows"/><script id="ftp-syst" output="&#xa;  SYST: Windows_NT"><elem key="SYST">Windows_NT</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="43901" rttvar="43901" to="219505"/>
+</host>
+<taskbegin task="NSE" time="1606727128"/>
+<taskend task="NSE" time="1606727128"/>
+<taskbegin task="NSE" time="1606727128"/>
+<taskend task="NSE" time="1606727128"/>
+<taskbegin task="NSE" time="1606727128"/>
+<taskend task="NSE" time="1606727128"/>
+<runstats><finished time="1606727128" timestr="Mon Nov 30 03:05:28 2020" elapsed="0.96" summary="Nmap done at Mon Nov 30 03:05:28 2020; 1 IP address (1 host up) scanned in 0.96 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

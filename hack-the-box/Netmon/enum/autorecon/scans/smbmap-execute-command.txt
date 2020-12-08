@@ -1,0 +1,6 @@
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.10.10.152
+[!] Authentication error on 10.10.10.152
+[!] Authentication error on 10.10.10.152
+[!] RPC Authentication error occurred
+[!] Authentication error on 10.10.10.152

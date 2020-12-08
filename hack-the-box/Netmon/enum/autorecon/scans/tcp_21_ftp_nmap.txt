@@ -1,0 +1,24 @@
+# Nmap 7.80 scan initiated Mon Nov 30 03:05:27 2020 as: nmap -vv --reason -Pn -sV -p 21 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.152
+Nmap scan report for netmon.htb (10.10.10.152)
+Host is up, received user-set (0.044s latency).
+Scanned at 2020-11-30 03:05:27 CST for 1s
+
+PORT   STATE SERVICE REASON          VERSION
+21/tcp open  ftp     syn-ack ttl 127 Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 02-02-19  11:18PM                 1024 .rnd
+| 02-25-19  09:15PM       <DIR>          inetpub
+| 07-16-16  08:18AM       <DIR>          PerfLogs
+| 02-25-19  09:56PM       <DIR>          Program Files
+| 02-02-19  11:28PM       <DIR>          Program Files (x86)
+| 02-03-19  07:08AM       <DIR>          Users
+|_02-25-19  10:49PM       <DIR>          Windows
+| ftp-syst: 
+|_  SYST: Windows_NT
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov 30 03:05:28 2020 -- 1 IP address (1 host up) scanned in 0.96 seconds

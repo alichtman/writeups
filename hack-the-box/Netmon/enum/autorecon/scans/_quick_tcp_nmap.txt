@@ -1,0 +1,55 @@
+# Nmap 7.80 scan initiated Mon Nov 30 03:05:07 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.152
+Nmap scan report for netmon.htb (10.10.10.152)
+Host is up, received user-set (0.041s latency).
+Scanned at 2020-11-30 03:05:07 CST for 20s
+Not shown: 995 closed ports
+Reason: 995 resets
+PORT    STATE SERVICE      REASON          VERSION
+21/tcp  open  ftp          syn-ack ttl 127 Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+| 02-02-19  11:18PM                 1024 .rnd
+| 02-25-19  09:15PM       <DIR>          inetpub
+| 07-16-16  08:18AM       <DIR>          PerfLogs
+| 02-25-19  09:56PM       <DIR>          Program Files
+| 02-02-19  11:28PM       <DIR>          Program Files (x86)
+| 02-03-19  07:08AM       <DIR>          Users
+|_02-25-19  10:49PM       <DIR>          Windows
+| ftp-syst: 
+|_  SYST: Windows_NT
+80/tcp  open  http         syn-ack ttl 127 Indy httpd 18.1.37.13946 (Paessler PRTG bandwidth monitor)
+|_http-favicon: Unknown favicon MD5: 36B3EF286FA4BEFBB797A0966B456479
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: PRTG/18.1.37.13946
+| http-title: Welcome | PRTG Network Monitor (NETMON)
+|_Requested resource was /index.htm
+|_http-trane-info: Problem with XML parsing of /evox/about
+135/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp open  netbios-ssn  syn-ack ttl 127 Microsoft Windows netbios-ssn
+445/tcp open  microsoft-ds syn-ack ttl 127 Microsoft Windows Server 2008 R2 - 2012 microsoft-ds
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 7m32s, deviation: 0s, median: 7m32s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 33374/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 52171/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 15668/udp): CLEAN (Timeout)
+|   Check 4 (port 18139/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-11-30T09:12:54
+|_  start_date: 2020-11-30T09:10:03
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov 30 03:05:27 2020 -- 1 IP address (1 host up) scanned in 20.01 seconds

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Nov 30 03:07:55 2020 as: nmap -vv -&#45;reason -Pn -sV -p 49664 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_49664_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_49664_rpc_nmap.xml 10.10.10.152 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 49664 -&#45;script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_49664_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_49664_rpc_nmap.xml 10.10.10.152" start="1606727275" startstr="Mon Nov 30 03:07:55 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="49664"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1606727275"/>
+<taskend task="NSE" time="1606727275"/>
+<taskbegin task="NSE" time="1606727275"/>
+<taskend task="NSE" time="1606727275"/>
+<taskbegin task="SYN Stealth Scan" time="1606727275"/>
+<taskend task="SYN Stealth Scan" time="1606727275" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1606727275"/>
+<taskend task="Service scan" time="1606727306" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1606727306"/>
+<taskend task="NSE" time="1606727323"/>
+<taskbegin task="NSE" time="1606727323"/>
+<taskend task="NSE" time="1606727323"/>
+<host starttime="1606727275" endtime="1606727323"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.152" addrtype="ipv4"/>
+<hostnames>
+<hostname name="netmon.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="49664"><state state="open" reason="syn-ack" reason_ttl="127"/></port>
+</ports>
+<times srtt="38424" rttvar="38424" to="192120"/>
+</host>
+<taskbegin task="NSE" time="1606727323"/>
+<taskend task="NSE" time="1606727323"/>
+<taskbegin task="NSE" time="1606727323"/>
+<taskend task="NSE" time="1606727323"/>
+<runstats><finished time="1606727323" timestr="Mon Nov 30 03:08:43 2020" elapsed="47.70" summary="Nmap done at Mon Nov 30 03:08:43 2020; 1 IP address (1 host up) scanned in 47.70 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

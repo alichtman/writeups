@@ -1,0 +1,60 @@
+WhatWeb report for http://10.10.10.152:80
+Status    : 302 Found
+Title     : <None>
+IP        : 10.10.10.152
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[PRTG/18.1.37.13946], PRTG-Network-Monitor[18.1.37.13946,PRTG], UncommonHeaders[x-content-type-options], X-XSS-Protection[1; mode=block], RedirectLocation[/index.htm]
+
+Detected Plugins:
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	String       : PRTG/18.1.37.13946 (from server string)
+
+[ PRTG-Network-Monitor ]
+	PRTG Network Monitor - Availability and Bandwidth 
+	Monitoring 
+
+	Version      : PRTG
+	Version      : 18.1.37.13946
+	Google Dorks: (1)
+	Website     : http://www.paessler.com/prtg
+
+[ RedirectLocation ]
+	HTTP Server string location. used with http-status 301 and 
+	302 
+
+	String       : /index.htm (from location)
+
+[ UncommonHeaders ]
+	Uncommon HTTP server headers. The blacklist includes all 
+	the standard headers and many non standard but common ones. 
+	Interesting but fairly common headers should have their own 
+	plugins, eg. x-powered-by, server and x-aspnet-version. 
+	Info about headers can be found at www.http-stats.com 
+
+	String       : x-content-type-options (from headers)
+
+[ X-XSS-Protection ]
+	This plugin retrieves the X-XSS-Protection value from the 
+	HTTP header. - More Info: 
+	http://msdn.microsoft.com/en-us/library/cc288472%28VS.85%29.
+	aspx
+
+	String       : 1; mode=block
+
+HTTP Headers:
+	HTTP/1.1 302 Moved Temporarily
+	Connection: close
+	Content-Type: text/html; charset=ISO-8859-1
+	Content-Length: 0
+	Date: Mon, 30 Nov 2020 09:13:01 GMT
+	Expires: 0
+	Cache-Control: no-cache
+	X-Content-Type-Options: nosniff
+	X-XSS-Protection: 1; mode=block
+	Server: PRTG/18.1.37.13946
+	Location: /index.htm
+	

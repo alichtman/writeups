@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Mon Nov 30 03:05:45 2020 as: nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_445_smb_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml 10.10.10.152 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 445 &quot;-&#45;script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -&#45;script-args=unsafe=1 -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_445_smb_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml 10.10.10.152" start="1606727145" startstr="Mon Nov 30 03:05:45 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="445"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1606727145"/>
+<taskend task="NSE" time="1606727145"/>
+<taskbegin task="NSE" time="1606727145"/>
+<taskend task="NSE" time="1606727145"/>
+<taskbegin task="NSE" time="1606727145"/>
+<taskend task="NSE" time="1606727145"/>
+<taskbegin task="SYN Stealth Scan" time="1606727145"/>
+<taskend task="SYN Stealth Scan" time="1606727145" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1606727145"/>
+<taskend task="Service scan" time="1606727151" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1606727151"/>
+<taskprogress task="NSE" time="1606727182" percent="94.29" remaining="2" etc="1606727184"/>
+<taskend task="NSE" time="1606727191"/>
+<taskbegin task="NSE" time="1606727191"/>
+<taskend task="NSE" time="1606727193"/>
+<taskbegin task="NSE" time="1606727193"/>
+<taskend task="NSE" time="1606727193"/>
+<host starttime="1606727145" endtime="1606727193"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.152" addrtype="ipv4"/>
+<hostnames>
+<hostname name="netmon.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows Server 2008 R2 - 2012 microsoft-ds" ostype="Windows Server 2008 R2 - 2012" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smb-enum-services" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<hostscript><script id="smb-mbenum" output="&#xa;  ERROR: Failed to connect to browser service: No accounts left to try"/><script id="smb-print-text" output="false">false</script><script id="smb-protocols" output="&#xa;  dialects: &#xa;    NT LM 0.12 (SMBv1) [dangerous, but default]&#xa;    2.02&#xa;    2.10&#xa;    3.00&#xa;    3.02&#xa;    3.11"><table key="dialects">
+<elem>NT LM 0.12 (SMBv1) [dangerous, but default]</elem>
+<elem>2.02</elem>
+<elem>2.10</elem>
+<elem>3.00</elem>
+<elem>3.02</elem>
+<elem>3.11</elem>
+</table>
+</script><script id="smb-security-mode" output="&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb-vuln-ms10-061" output="No accounts left to try">false</script><script id="smb2-capabilities" output="&#xa;  2.02: &#xa;    Distributed File System&#xa;  2.10: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.00: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.02: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations&#xa;  3.11: &#xa;    Distributed File System&#xa;    Leasing&#xa;    Multi-credit operations"><table key="2.02">
+<elem>Distributed File System</elem>
+</table>
+<table key="2.10">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.00">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.02">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+<table key="3.11">
+<elem>Distributed File System</elem>
+<elem>Leasing</elem>
+<elem>Multi-credit operations</elem>
+</table>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-11-30T09:13:42&#xa;  start_date: 2020-11-30T09:10:03"><elem key="date">2020-11-30T09:13:42</elem>
+<elem key="start_date">2020-11-30T09:10:03</elem>
+</script></hostscript><times srtt="41072" rttvar="41072" to="205360"/>
+</host>
+<taskbegin task="NSE" time="1606727193"/>
+<taskend task="NSE" time="1606727193"/>
+<taskbegin task="NSE" time="1606727193"/>
+<taskend task="NSE" time="1606727193"/>
+<taskbegin task="NSE" time="1606727193"/>
+<taskend task="NSE" time="1606727193"/>
+<runstats><finished time="1606727193" timestr="Mon Nov 30 03:06:33 2020" elapsed="47.72" summary="Nmap done at Mon Nov 30 03:06:33 2020; 1 IP address (1 host up) scanned in 47.72 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

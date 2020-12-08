@@ -1,0 +1,8 @@
+tcp/21/nmap-ftp - Anonymous FTP Enabled!
+
+tcp/80/nmap-http - Identified HTTP Server: PRTG/18.1.37.13946
+
+tcp/5985/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+
+tcp/47001/nmap-http - Identified HTTP Server: Microsoft-HTTPAPI/2.0
+

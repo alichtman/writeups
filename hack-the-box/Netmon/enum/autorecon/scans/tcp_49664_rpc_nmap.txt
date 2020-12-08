@@ -1,0 +1,11 @@
+# Nmap 7.80 scan initiated Mon Nov 30 03:07:55 2020 as: nmap -vv --reason -Pn -sV -p 49664 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_49664_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_49664_rpc_nmap.xml 10.10.10.152
+Nmap scan report for netmon.htb (10.10.10.152)
+Host is up, received user-set (0.038s latency).
+Scanned at 2020-11-30 03:07:55 CST for 48s
+
+PORT      STATE SERVICE REASON          VERSION
+49664/tcp open  unknown syn-ack ttl 127
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov 30 03:08:43 2020 -- 1 IP address (1 host up) scanned in 47.70 seconds

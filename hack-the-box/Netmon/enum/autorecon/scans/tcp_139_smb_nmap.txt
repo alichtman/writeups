@@ -1,0 +1,52 @@
+# Nmap 7.80 scan initiated Mon Nov 30 03:05:27 2020 as: nmap -vv --reason -Pn -sV -p 139 "--script=banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args=unsafe=1 -oN /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/tcp_139_smb_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Netmon/enum/autorecon/scans/xml/tcp_139_smb_nmap.xml 10.10.10.152
+Nmap scan report for netmon.htb (10.10.10.152)
+Host is up, received user-set (0.039s latency).
+Scanned at 2020-11-30 03:05:27 CST for 52s
+
+PORT    STATE SERVICE     REASON          VERSION
+139/tcp open  netbios-ssn syn-ack ttl 127 Microsoft Windows netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-mbenum: 
+|_  ERROR: Failed to connect to browser service: No accounts left to try
+|_smb-print-text: false
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|     2.10
+|     3.00
+|     3.02
+|_    3.11
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb-vuln-ms10-061: No accounts left to try
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|   3.00: 
+|     Distributed File System
+|     Leasing
+|   3.02: 
+|     Distributed File System
+|     Leasing
+|   3.11: 
+|     Distributed File System
+|_    Leasing
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-11-30T09:13:09
+|_  start_date: 2020-11-30T09:10:03
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Nov 30 03:06:19 2020 -- 1 IP address (1 host up) scanned in 52.66 seconds
