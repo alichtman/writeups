@@ -8,7 +8,7 @@
 | Brainfuck   [ ]  | Blue       [x]  | Mango            [o]  | Bart     [ ]  |
 | Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
 | Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [x]  |
-| Nibbles     [o]  | Bastard    [x]  | Jail             [ ]  | Netmon   [ ]  |
+| Nibbles     [o]  | Bastard    [x]  | Jail             [ ]  | Netmon   [x]  |
 | Beep        [x]  | Granny     [x]  | Falafel          [ ]  | Sizzle   [ ]  |
 | Nineveh     [x]  | Grandpa    [x]  | Devoops          [x]  | Sniper   [ ]  |
 | Cronos      [x]  | Servmon    [!]  | Hawk             [ ]  | Control  [ ]  |
@@ -22,8 +22,8 @@
 | Tartarsauce [ ]  | Bastion    [x]  |                       |               |
 | Magic       [x]  | Secnotes   [x]  |                       |               |
 | Irked       [x]  | Buff       [ ]  |                       |               |
-| Friendzone  [!]  |                 |                       |               |
-| Swagshop    [!]  |                 |                       |               |
+| Friendzone  [!]  | Fuse       [ ]  |                       |               |
+| Swagshop    [!]  | BlackField [ ]  |                       |               |
 | Networked   [ ]  |                 |                       |               |
 | Jarvis      [x]  |                 |                       |               |
 | Mirai       [o]  |                 |                       |               |
@@ -32,6 +32,12 @@
 | Blocky      [x]  |                 |                       |               |
 | Frolic      [x]  |                 |                       |               |
 | Postman     [x]  |                 |                       |               |
+| Admirer     [ ]  |                 |                       |               |
+| Blunder     [ ]  |                 |                       |               |
+| Tabby       [ ]  |                 |                       |               |
+| Doctor      [x]  |                 |                       |               |
+| Quick       [ ]  |                 |                       |               |
+
 
 ## Key
 
