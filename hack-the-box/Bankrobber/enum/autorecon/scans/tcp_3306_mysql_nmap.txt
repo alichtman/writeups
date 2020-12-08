@@ -1,0 +1,15 @@
+# Nmap 7.80 scan initiated Tue Nov 17 21:41:17 2020 as: nmap -vv --reason -Pn -sV -p 3306 "--script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_3306_mysql_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_3306_mysql_nmap.xml bankrobber.htb
+Nmap scan report for bankrobber.htb (10.10.10.154)
+Host is up, received user-set (0.040s latency).
+Scanned at 2020-11-17 21:41:17 CST for 1s
+
+PORT     STATE SERVICE REASON          VERSION
+3306/tcp open  mysql   syn-ack ttl 127 MariaDB (unauthorized)
+| banner: F\x00\x00\x00\xFFj\x04Host '10.10.14.27' is not allowed to conn
+|_ect to this MariaDB server
+|_mysql-empty-password: Host '10.10.14.27' is not allowed to connect to this MariaDB server
+|_mysql-vuln-cve2012-2122: ERROR: Script execution failed (use -d to debug)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov 17 21:41:18 2020 -- 1 IP address (1 host up) scanned in 0.85 seconds

@@ -1,0 +1,68 @@
+# Nmap 7.80 scan initiated Tue Nov 17 21:38:59 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/_quick_tcp_nmap.xml bankrobber.htb
+Nmap scan report for bankrobber.htb (10.10.10.154)
+Host is up, received user-set (0.043s latency).
+Scanned at 2020-11-17 21:39:00 CST for 57s
+Not shown: 996 filtered ports
+Reason: 996 no-responses
+PORT     STATE SERVICE      REASON          VERSION
+80/tcp   open  http         syn-ack ttl 127 Apache httpd 2.4.39 ((Win64) OpenSSL/1.1.1b PHP/7.3.4)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+|_http-title: E-coin
+443/tcp  open  ssl/http     syn-ack ttl 127 Apache httpd 2.4.39 ((Win64) OpenSSL/1.1.1b PHP/7.3.4)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+|_http-title: E-coin
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0
+| SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp  open  microsoft-ds syn-ack ttl 127 Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+3306/tcp open  mysql        syn-ack ttl 127 MariaDB (unauthorized)
+Service Info: Host: BANKROBBER; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h07m20s, deviation: 0s, median: 1h07m20s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 26952/tcp): CLEAN (Timeout)
+|   Check 2 (port 54587/tcp): CLEAN (Timeout)
+|   Check 3 (port 52758/udp): CLEAN (Timeout)
+|   Check 4 (port 42205/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-11-18T04:46:40
+|_  start_date: 2020-11-18T04:44:35
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov 17 21:39:57 2020 -- 1 IP address (1 host up) scanned in 58.09 seconds

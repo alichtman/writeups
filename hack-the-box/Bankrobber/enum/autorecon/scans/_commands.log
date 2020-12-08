@@ -1,0 +1,56 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/_full_tcp_nmap.xml" bankrobber.htb
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" bankrobber.htb
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" bankrobber.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour bankrobber.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_80_http_nmap.xml" bankrobber.htb
+
+curl -sSik http://bankrobber.htb:80/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_index.html"
+
+curl -sSik http://bankrobber.htb:80/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://bankrobber.htb:80/ /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://bankrobber.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://bankrobber.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://bankrobber.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://bankrobber.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_80_http_gobuster.txt"; fi
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour bankrobber.htb:443 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 443 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_443_https_nmap.xml" bankrobber.htb
+
+curl -sSik https://bankrobber.htb:443/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_https_index.html"
+
+curl -sSik https://bankrobber.htb:443/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_https_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://bankrobber.htb:443/ /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_https_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v https://bankrobber.htb:443 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_https_whatweb.txt"
+
+nikto -ask=no -h https://bankrobber.htb:443 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_https_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u https://bankrobber.htb:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_https_gobuster.txt"; else gobuster dir -u https://bankrobber.htb:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_https_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour bankrobber.htb:445 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_445_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 445 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_445_smb_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_445_smb_nmap.xml" bankrobber.htb
+
+enum4linux -a -M -l -d bankrobber.htb 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I bankrobber.htb 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/smbclient.txt"
+
+smbmap -H bankrobber.htb -P 445 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H bankrobber.htb -P 445 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/smbmap-share-permissions.txt"
+
+smbmap -H bankrobber.htb -P 445 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H bankrobber.htb -P 445 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/smbmap-list-contents.txt"
+
+smbmap -H bankrobber.htb -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H bankrobber.htb -P 445 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour bankrobber.htb:3306 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_3306_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 3306 --script="banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_3306_mysql_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_3306_mysql_nmap.xml" bankrobber.htb
+

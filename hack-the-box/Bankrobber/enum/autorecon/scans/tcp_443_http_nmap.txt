@@ -1,0 +1,903 @@
+# Nmap 7.80 scan initiated Tue Nov 17 21:39:58 2020 as: nmap -vv --reason -Pn -sV -p 443 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_443_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_443_https_nmap.xml bankrobber.htb
+Nmap scan report for bankrobber.htb (10.10.10.154)
+Host is up, received user-set (0.043s latency).
+Scanned at 2020-11-17 21:39:58 CST for 133s
+
+PORT    STATE SERVICE  REASON          VERSION
+443/tcp open  ssl/http syn-ack ttl 127 Apache httpd 2.4.39 ((Win64) OpenSSL/1.1.1b PHP/7.3.4)
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=bankrobber.htb
+|   url                                   method
+|   https://bankrobber.htb:443/           FORM
+|_  https://bankrobber.htb:443/login.php  FORM
+|_http-chrono: Request times for /; avg: 868.65ms; min: 407.04ms; max: 1050.41ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=bankrobber.htb
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 76
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 145
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 344
+|     Comment: 
+|          // We are using a div with id="map" seen below in the <body>
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.sticky.js
+|     Line number: 4
+|     Comment: 
+|         
+|         // Improvements by German M. Bravo (Kronuz) and Ruud Kamphuis (ruudk)
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 320
+|     Comment: 
+|          //  Start Google map 
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 70
+|     Comment: 
+|         <!-- Start register Area -->
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 132
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 135
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 62
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 338
+|     Comment: 
+|          // How you would like to style the map. 
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 83
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 9
+|     Comment: 
+|         <!-- Author Meta -->
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 106
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 114
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 343
+|     Comment: 
+|          // Get the HTML DOM element that will contain your map 
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 46
+|     Comment: 
+|         <!-- #nav-menu-container -->
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 4
+|     Comment: 
+|          // contact form
+|     
+|     Path: https://bankrobber.htb:443/js/vendor/bootstrap.min.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|           * Bootstrap v4.0.0 (https://getbootstrap.com)
+|           * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+|           * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+|           */
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 146
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 129
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 350
+|     Comment: 
+|          // Let's also add a marker while we're at it
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 14
+|     Comment: 
+|          // form submit method get/post
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 50
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 176
+|     Comment: 
+|         <!-- End footer Area -->
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.sticky.js
+|     Line number: 2
+|     Comment: 
+|         
+|         // =============
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.sticky.js
+|     Line number: 10
+|     Comment: 
+|         
+|         //       It will only set the 'top' and 'position' of your element, you
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|          */
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 49
+|     Comment: 
+|         <!-- #header -->
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 13
+|     Comment: 
+|         <!-- Meta Keyword -->
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 11
+|     Comment: 
+|         <!-- Meta Description -->
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 2
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 124
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/css/magnific-popup.css
+|     Line number: 1
+|     Comment: 
+|         /* Magnific Popup CSS */
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.sticky.js
+|     Line number: 8
+|     Comment: 
+|         
+|         // Website: http://labs.anthonygarand.com/sticky
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 165
+|     Comment: 
+|         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 126
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 44
+|     Comment: 
+|          // Initiate superfish on nav menu
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 118
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 121
+|     Comment: 
+|         <!-- start footer Area -->
+|     
+|     Path: https://bankrobber.htb:443/css/magnific-popup.css
+|     Line number: 301
+|     Comment: 
+|         /**
+|                * Remove all paddings around the image on small screen
+|                */
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 93
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 139
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/waypoints.min.js
+|     Line number: 2
+|     Comment: 
+|         /*
+|         jQuery Waypoints - v2.0.3
+|         Copyright (c) 2011-2013 Caleb Troughton
+|         Dual licensed under the MIT license and GPL license.
+|         https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
+|         */
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 53
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 64
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 24
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 13
+|     Comment: 
+|          // form action url
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 94
+|     Comment: 
+|         <!-- End register Area -->
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 24
+|     Comment: 
+|          // reset submit button text
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.magnific-popup.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! Magnific Popup - v1.1.0 - 2016-02-20
+|         * http://dimsemenov.com/plugins/magnific-popup/
+|         * Copyright (c) 2016 Dmitry Semenov; */
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 23
+|     Comment: 
+|          // reset form
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 22
+|     Comment: 
+|          // fade in response data
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 332
+|     Comment: 
+|          // How zoomed in you want the map to start at (always required)
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 329
+|     Comment: 
+|          // Basic options for a simple Google Map
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 19
+|     Comment: 
+|          // change submit button text
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 16
+|     Comment: 
+|          // serialize form data
+|     
+|     Path: https://bankrobber.htb:443/js/superfish.min.js
+|     Line number: 1
+|     Comment: 
+|         /*
+|          * jQuery Superfish Menu Plugin - v1.7.9
+|          * Copyright (c) 2016 Joel Birch
+|          *
+|          * Dual licensed under the MIT and GPL licenses:
+|          *	http://www.opensource.org/licenses/mit-license.php
+|          *	http://www.gnu.org/licenses/gpl.html
+|          */
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.sticky.js
+|     Line number: 140
+|     Comment: 
+|          // should be more efficient than using $window.scroll(scroller) and $window.resize(resizer):
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 15
+|     Comment: 
+|          // request type html/json/xml
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 90
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 150
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 8
+|     Comment: 
+|          // form submit event
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 6
+|     Comment: 
+|          // alert div for show alert message
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 68
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 123
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 1
+|     Comment: 
+|          // -------   Mail Send ajax
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 127
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 72
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 141
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 347
+|     Comment: 
+|          // Create the Google Map using our element and options defined above
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 70
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 339
+|     Comment: 
+|          // This is where you would paste any style found on Snazzy Maps.
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 15
+|     Comment: 
+|         <!-- meta character set -->
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 336
+|     Comment: 
+|          // New York
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 335
+|     Comment: 
+|          // The latitude and longitude to center the map (always required)
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 111
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 21
+|     Comment: 
+|         <!--
+|         		CSS
+|         		============================================= -->
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 137
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 78
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/css/linearicons.css
+|     Line number: 22
+|     Comment: 
+|         /* Better Font Rendering =========== */
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 156
+|     Comment: 
+|          // Header scroll class
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 92
+|     Comment: 
+|          // Smooth scroll for the menu and links with .scrollto classes
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 10
+|     Comment: 
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|         
+|          */
+|     
+|     Path: https://bankrobber.htb:443/css/magnific-popup.css
+|     Line number: 244
+|     Comment: 
+|         /* Main image in popup */
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 36
+|     Comment: 
+|          //  Counter Js 
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 155
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 10
+|     Comment: 
+|          // prevent default form submit
+|     
+|     Path: https://bankrobber.htb:443/js/parallax.min.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * parallax.js v1.5.0 (http://pixelcog.github.io/parallax.js/)
+|          * @copyright 2016 PixelCog, Inc.
+|          * @license MIT (https://github.com/pixelcog/parallax.js/blob/master/LICENSE)
+|          */
+|     
+|     Path: https://bankrobber.htb:443/css/font-awesome.min.css
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|          */
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.sticky.js
+|     Line number: 6
+|     Comment: 
+|         
+|         // Created: 2/14/2011
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.nice-select.min.js
+|     Line number: 1
+|     Comment: 
+|         /*  jQuery Nice Select - v1.0
+|             https://github.com/hernansartorio/jquery-nice-select
+|             Made by Hern\xC3\xA1n Sartorio  */
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 43
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 330
+|     Comment: 
+|          // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 16
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/css/magnific-popup.css
+|     Line number: 255
+|     Comment: 
+|         /* The shadow behind the image */
+|     
+|     Path: https://bankrobber.htb:443/js/mail-script.js
+|     Line number: 5
+|     Comment: 
+|          // submit button
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 122
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 7
+|     Comment: 
+|         <!-- Favicon-->
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 148
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 125
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 5
+|     Comment: 
+|         <!-- Mobile Specific Meta -->
+|     
+|     Path: https://bankrobber.htb:443/js/jquery.counterup.min.js
+|     Line number: 1
+|     Comment: 
+|         /*!
+|         * jquery.counterup.js 1.0
+|         *
+|         * Copyright 2013, Benjamin Intal http://gambit.ph @bfintal
+|         * Released under the GPL v2 License
+|         *
+|         * Date: Nov 26, 2013
+|         */
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 143
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 17
+|     Comment: 
+|         <!-- Site Title -->
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 108
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 52
+|     Comment: 
+|          // Mobile Navigation
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 20
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/hoverIntent.js
+|     Line number: 56
+|     Comment: 
+|         
+|     
+|     Path: https://bankrobber.htb:443/js/main.js
+|     Line number: 322
+|     Comment: 
+|          // When the window has finished loading create our google map below
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Line number: 68
+|     Comment: 
+|_        <!-- End banner Area -->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=bankrobber.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: https://bankrobber.htb:443/
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: https://bankrobber.htb:443/
+|     Form id: 
+|     Form action: register.php
+|     
+|     Path: https://bankrobber.htb:443/
+|     Form id: 
+|     Form action: #
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Form id: 
+|     Form action: login.php
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Form id: 
+|     Form action: register.php
+|     
+|     Path: https://bankrobber.htb:443/login.php
+|     Form id: 
+|_    Form action: #
+|_http-date: Wed, 18 Nov 2020 04:47:33 GMT; +1h07m21s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /admin/: Possible admin folder
+|   /admin/index.php: Possible admin folder
+|   /Admin/: Possible admin folder
+|   /css/: Potentially interesting directory w/ listing on 'apache/2.4.39 (win64) openssl/1.1.1b php/7.3.4'
+|   /icons/: Potentially interesting folder w/ directory listing
+|   /img/: Potentially interesting directory w/ listing on 'apache/2.4.39 (win64) openssl/1.1.1b php/7.3.4'
+|   /js/: Potentially interesting directory w/ listing on 'apache/2.4.39 (win64) openssl/1.1.1b php/7.3.4'
+|_  /user/: Potentially interesting folder
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=bankrobber.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	https://bankrobber.htb:443/index.html
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Wed, 18 Nov 2020 04:47:39 GMT
+|   Server: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+|   X-Powered-By: PHP/7.3.4
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash b35e6691e11621cc602ac95d2491d2fe
+| Credits query returned unknown hash b35e6691e11621cc602ac95d2491d2fe
+|_Version from header x-powered-by: PHP/7.3.4
+| http-referer-checker: 
+| Spidering limited to: maxpagecount=30
+|   https://cdnjs.cloudflare.com:443/ajax/libs/popper.js/1.12.9/umd/popper.min.js
+|_  https://maps.googleapis.com:443/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA
+| http-security-headers: 
+|   Strict_Transport_Security: 
+|_    HSTS not configured in HTTPS Server
+|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 2; php: 1
+|     /css/
+|       css: 3
+|     /img/
+|       png: 2
+|     /js/
+|       js: 10
+|     /js/vendor/
+|       js: 1
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /js/vendor/
+|   Total files found (by extension):
+|_    Other: 2; css: 3; js: 11; php: 1; png: 2
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: E-coin
+| http-trace: TRACE is enabled
+| Headers:
+| Date: Wed, 18 Nov 2020 04:47:41 GMT
+| Server: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+| Connection: close
+| Transfer-Encoding: chunked
+|_Content-Type: message/http
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|     WWW-Mechanize/1.34
+|   Change in Status Code: 
+|_    libwww: 400
+| http-vhosts: 
+| 125 names had status 200
+| ftp0.htb : 400
+|_www2.htb : 400
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0
+| SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 8
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+| ssl-enum-ciphers: 
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Weak certificate signature: SHA1
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Weak certificate signature: SHA1
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CHACHA20_POLY1305_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM_8 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_256_CCM (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_256_GCM_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_ARIA_256_GCM_SHA384 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM_8 (dh 1024) - A
+|       TLS_DHE_RSA_WITH_AES_128_CCM (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_ARIA_128_GCM_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_ARIA_128_GCM_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_256_CBC_SHA384 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA256 (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A
+|       TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (ecdh_x25519) - A
+|       TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A
+|       TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CCM_8 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CCM (rsa 1024) - A
+|       TLS_RSA_WITH_ARIA_256_GCM_SHA384 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CCM_8 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CCM (rsa 1024) - A
+|       TLS_RSA_WITH_ARIA_128_GCM_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_DHE_RSA_WITH_SEED_CBC_SHA (dh 1024) - A
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: server
+|     warnings: 
+|       Weak certificate signature: SHA1
+|_  least strength: A
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov 17 21:42:11 2020 -- 1 IP address (1 host up) scanned in 133.98 seconds

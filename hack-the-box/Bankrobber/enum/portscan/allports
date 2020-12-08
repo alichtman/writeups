@@ -1,0 +1,63 @@
+# Nmap 7.80 scan initiated Tue Nov 17 21:39:11 2020 as: nmap -A -v -p- -Pn -oN allports bankrobber.htb
+Nmap scan report for bankrobber.htb (10.10.10.154)
+Host is up (0.12s latency).
+Not shown: 65531 filtered ports
+PORT     STATE SERVICE      VERSION
+80/tcp   open  http         Apache httpd 2.4.39 ((Win64) OpenSSL/1.1.1b PHP/7.3.4)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+|_http-title: E-coin
+443/tcp  open  ssl/http     Apache httpd 2.4.39 ((Win64) OpenSSL/1.1.1b PHP/7.3.4)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+|_http-title: E-coin
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0
+|_SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+445/tcp  open  microsoft-ds Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+3306/tcp open  mysql        MariaDB (unauthorized)
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running (JUST GUESSING): Microsoft Windows 2008|10 (90%), FreeBSD 6.X (86%)
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:freebsd:freebsd:6.2 cpe:/o:microsoft:windows_10
+Aggressive OS guesses: Microsoft Windows Server 2008 R2 (90%), FreeBSD 6.2-RELEASE (86%), Microsoft Windows 10 1511 - 1607 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.006 days (since Tue Nov 17 21:36:56 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: Host: BANKROBBER; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h07m19s, deviation: 0s, median: 1h07m19s
+|_smb-os-discovery: ERROR: Script execution failed (use -d to debug)
+| smb-security-mode: 
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2020-11-18T04:52:41
+|_  start_date: 2020-11-18T04:44:35
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT       ADDRESS
+1   41.01 ms  10.10.14.1
+2   117.57 ms bankrobber.htb (10.10.10.154)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Nov 17 21:45:57 2020 -- 1 IP address (1 host up) scanned in 405.68 seconds

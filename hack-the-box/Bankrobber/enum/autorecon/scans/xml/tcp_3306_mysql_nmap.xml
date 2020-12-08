@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Nov 17 21:41:17 2020 as: nmap -vv -&#45;reason -Pn -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_3306_mysql_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_3306_mysql_nmap.xml bankrobber.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 3306 &quot;-&#45;script=banner,(mysql* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/tcp_3306_mysql_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/tcp_3306_mysql_nmap.xml bankrobber.htb" start="1605670877" startstr="Tue Nov 17 21:41:17 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="3306"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1605670877"/>
+<taskend task="NSE" time="1605670877"/>
+<taskbegin task="NSE" time="1605670877"/>
+<taskend task="NSE" time="1605670877"/>
+<taskbegin task="NSE" time="1605670877"/>
+<taskend task="NSE" time="1605670877"/>
+<taskbegin task="SYN Stealth Scan" time="1605670877"/>
+<taskend task="SYN Stealth Scan" time="1605670877" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1605670877"/>
+<taskend task="Service scan" time="1605670877" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1605670877"/>
+<taskend task="NSE" time="1605670878"/>
+<taskbegin task="NSE" time="1605670878"/>
+<taskend task="NSE" time="1605670878"/>
+<taskbegin task="NSE" time="1605670878"/>
+<taskend task="NSE" time="1605670878"/>
+<host starttime="1605670877" endtime="1605670878"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.154" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bankrobber.htb" type="user"/>
+<hostname name="bankrobber.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysql" product="MariaDB" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb</cpe></service><script id="banner" output="F\x00\x00\x00\xFFj\x04Host &apos;10.10.14.27&apos; is not allowed to conn&#xa;ect to this MariaDB server"/><script id="mysql-empty-password" output="Host &apos;10.10.14.27&apos; is not allowed to connect to this MariaDB server"/><script id="mysql-vuln-cve2012-2122" output="ERROR: Script execution failed (use -d to debug)"/></port>
+</ports>
+<times srtt="40396" rttvar="40396" to="201980"/>
+</host>
+<taskbegin task="NSE" time="1605670878"/>
+<taskend task="NSE" time="1605670878"/>
+<taskbegin task="NSE" time="1605670878"/>
+<taskend task="NSE" time="1605670878"/>
+<taskbegin task="NSE" time="1605670878"/>
+<taskend task="NSE" time="1605670878"/>
+<runstats><finished time="1605670878" timestr="Tue Nov 17 21:41:18 2020" elapsed="0.85" summary="Nmap done at Tue Nov 17 21:41:18 2020; 1 IP address (1 host up) scanned in 0.85 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

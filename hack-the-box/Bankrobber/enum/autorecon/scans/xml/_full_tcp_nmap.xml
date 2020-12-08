@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Tue Nov 17 21:38:59 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/_full_tcp_nmap.xml bankrobber.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Bankrobber/enum/autorecon/scans/xml/_full_tcp_nmap.xml bankrobber.htb" start="1605670739" startstr="Tue Nov 17 21:38:59 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1605670740"/>
+<taskend task="NSE" time="1605670740"/>
+<taskbegin task="NSE" time="1605670740"/>
+<taskend task="NSE" time="1605670740"/>
+<taskbegin task="NSE" time="1605670740"/>
+<taskend task="NSE" time="1605670740"/>
+<taskbegin task="SYN Stealth Scan" time="1605670740"/>
+<taskprogress task="SYN Stealth Scan" time="1605670771" percent="9.43" remaining="298" etc="1605671069"/>
+<taskprogress task="SYN Stealth Scan" time="1605670801" percent="17.98" remaining="279" etc="1605671079"/>
+<taskprogress task="SYN Stealth Scan" time="1605670840" percent="25.20" remaining="297" etc="1605671137"/>
+<taskprogress task="SYN Stealth Scan" time="1605670954" percent="43.81" remaining="275" etc="1605671228"/>
+<taskprogress task="SYN Stealth Scan" time="1605670984" percent="50.07" remaining="244" etc="1605671227"/>
+<taskprogress task="SYN Stealth Scan" time="1605671014" percent="56.43" remaining="212" etc="1605671226"/>
+<taskprogress task="SYN Stealth Scan" time="1605671044" percent="63.59" remaining="175" etc="1605671218"/>
+<taskprogress task="SYN Stealth Scan" time="1605671074" percent="74.40" remaining="115" etc="1605671189"/>
+<taskprogress task="SYN Stealth Scan" time="1605671104" percent="90.85" remaining="37" etc="1605671141"/>
+<taskend task="SYN Stealth Scan" time="1605671126" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1605671126"/>
+<taskend task="Service scan" time="1605671139" extrainfo="4 services on 1 host"/>
+<taskbegin task="Traceroute" time="1605671143"/>
+<taskend task="Traceroute" time="1605671143"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1605671143"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1605671143"/>
+<taskbegin task="NSE" time="1605671143"/>
+<taskprogress task="NSE" time="1605671174" percent="99.81" remaining="1" etc="1605671174"/>
+<taskend task="NSE" time="1605671184"/>
+<taskbegin task="NSE" time="1605671184"/>
+<taskend task="NSE" time="1605671185"/>
+<taskbegin task="NSE" time="1605671185"/>
+<taskend task="NSE" time="1605671185"/>
+<host starttime="1605670740" endtime="1605671185"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.154" addrtype="ipv4"/>
+<hostnames>
+<hostname name="bankrobber.htb" type="user"/>
+<hostname name="bankrobber.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.39" extrainfo="(Win64) OpenSSL/1.1.1b PHP/7.3.4" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.39</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4"><elem>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4</elem>
+</script><script id="http-title" output="E-coin"><elem key="title">E-coin</elem>
+</script></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.39" extrainfo="(Win64) OpenSSL/1.1.1b PHP/7.3.4" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.39</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4"><elem>Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4</elem>
+</script><script id="http-title" output="E-coin"><elem key="title">E-coin</elem>
+</script><script id="ssl-cert" output="Subject: commonName=localhost&#xa;Issuer: commonName=localhost&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha1WithRSAEncryption&#xa;Not valid before: 2009-11-10T23:48:47&#xa;Not valid after:  2019-11-08T23:48:47&#xa;MD5:   a0a4 4cc9 9e84 b26f 9e63 9f9e d229 dee0&#xa;SHA-1: b023 8c54 7a90 5bfa 119c 4e8b acca eacf 3649 1ff6&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">localhost</elem>
+</table>
+<table key="pubkey">
+<elem key="exponent">userdata: 0x55b2d185d118</elem>
+<elem key="bits">1024</elem>
+<elem key="type">rsa</elem>
+<elem key="modulus">userdata: 0x55b2d2200708</elem>
+</table>
+<elem key="sig_algo">sha1WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notAfter">2019-11-08T23:48:47</elem>
+<elem key="notBefore">2009-11-10T23:48:47</elem>
+</table>
+<elem key="md5">a0a44cc99e84b26f9e639f9ed229dee0</elem>
+<elem key="sha1">b0238c547a905bfa119c4e8baccaeacf36491ff6</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls&#xa;b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD&#xa;VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj&#xa;7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o&#xa;J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT&#xa;gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD&#xa;gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd&#xa;aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL&#xa;vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="tls-alpn" output="&#xa;  http/1.1"><elem>http/1.1</elem>
+</script></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="microsoft-ds" product="Microsoft Windows 7 - 10 microsoft-ds" extrainfo="workgroup: WORKGROUP" hostname="BANKROBBER" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="mysql" product="MariaDB" extrainfo="unauthorized" method="probed" conf="10"><cpe>cpe:/a:mariadb:mariadb</cpe></service></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Microsoft Windows Server 2008 R2" accuracy="90" line="74118">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="2008" accuracy="90"><cpe>cpe:/o:microsoft:windows_server_2008:r2</cpe></osclass>
+</osmatch>
+<osmatch name="Microsoft Windows 10 1511 - 1607" accuracy="85" line="69178">
+<osclass type="general purpose" vendor="Microsoft" osfamily="Windows" osgen="10" accuracy="85"><cpe>cpe:/o:microsoft:windows_10</cpe></osclass>
+</osmatch>
+<osmatch name="FreeBSD 6.2-RELEASE" accuracy="85" line="27364">
+<osclass type="general purpose" vendor="FreeBSD" osfamily="FreeBSD" osgen="6.X" accuracy="85"><cpe>cpe:/o:freebsd:freebsd:6.2</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=11/17%OT=80%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5FB49911%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=105%GCD=1%ISR=10B%II=I%TS=A)&#xa;OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)&#xa;WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)&#xa;ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<uptime seconds="568" lastboot="Tue Nov 17 21:36:57 2020"/>
+<distance value="2"/>
+<tcpsequence index="261" difficulty="Good luck!" values="47442250,2AFD0593,882A2BC8,D2D97011,3F4F65B9,51908F9B"/>
+<ipidsequence class="Busy server or unknown class" values="1326,139F,13C3,1449,14C4,1531"/>
+<tcptssequence class="1000HZ" values="805F2,80645,8067E,8070F,80778,807C3"/>
+<hostscript><script id="clock-skew" output="mean: 1h07m20s, deviation: 0s, median: 1h07m20s"><elem key="count">2</elem>
+<elem key="mean">4040</elem>
+<elem key="median">4040</elem>
+<elem key="stddev">0</elem>
+</script><script id="p2p-conficker" output="&#xa;  Checking for Conficker.C or higher...&#xa;  Check 1 (port 26952/tcp): CLEAN (Timeout)&#xa;  Check 2 (port 54587/tcp): CLEAN (Timeout)&#xa;  Check 3 (port 52758/udp): CLEAN (Timeout)&#xa;  Check 4 (port 42205/udp): CLEAN (Timeout)&#xa;  0/4 checks are positive: Host is CLEAN or ports are blocked&#xa;"/><script id="smb-os-discovery" output="ERROR: Script execution failed (use -d to debug)"/><script id="smb-security-mode" output="&#xa;  account_used: guest&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">guest</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2020-11-18T04:53:07&#xa;  start_date: 2020-11-18T04:44:35"><elem key="date">2020-11-18T04:53:07</elem>
+<elem key="start_date">2020-11-18T04:44:35</elem>
+</script></hostscript><trace port="443" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="40.58"/>
+<hop ttl="2" ipaddr="10.10.10.154" rtt="61.68" host="bankrobber.htb"/>
+</trace>
+<times srtt="69572" rttvar="14934" to="129308"/>
+</host>
+<taskbegin task="NSE" time="1605671185"/>
+<taskend task="NSE" time="1605671185"/>
+<taskbegin task="NSE" time="1605671185"/>
+<taskend task="NSE" time="1605671185"/>
+<taskbegin task="NSE" time="1605671185"/>
+<taskend task="NSE" time="1605671185"/>
+<runstats><finished time="1605671185" timestr="Tue Nov 17 21:46:25 2020" elapsed="445.93" summary="Nmap done at Tue Nov 17 21:46:25 2020; 1 IP address (1 host up) scanned in 445.93 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

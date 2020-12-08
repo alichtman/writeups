@@ -1,0 +1,16 @@
+nmap-quick - Matched Pattern: unauthorized
+
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+
+tcp/80/nmap-http - Identified HTTP Server: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+
+tcp/3306/nmap-mysql - Matched Pattern: unauthorized
+
+tcp/443/nmap-http - Identified HTTP Server: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+
+tcp/443/nmap-http - Identified HTTP Server: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+
+nmap-full-tcp - Matched Pattern: unauthorized
+

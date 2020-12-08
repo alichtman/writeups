@@ -1,0 +1,39 @@
+- Nikto v2.1.6
+---------------------------------------------------------------------------
++ Target IP:          10.10.10.154
++ Target Hostname:    bankrobber.htb
++ Target Port:        443
+---------------------------------------------------------------------------
++ SSL Info:        Subject:  /CN=localhost
+                   Ciphers:  TLS_AES_256_GCM_SHA384
+                   Issuer:   /CN=localhost
++ Start Time:         2020-11-17 21:40:03 (GMT-6)
+---------------------------------------------------------------------------
++ Server: Apache/2.4.39 (Win64) OpenSSL/1.1.1b PHP/7.3.4
++ Retrieved x-powered-by header: PHP/7.3.4
++ The anti-clickjacking X-Frame-Options header is not present.
++ The X-XSS-Protection header is not defined. This header can hint to the user agent to protect against some forms of XSS
++ The site uses SSL and the Strict-Transport-Security HTTP header is not defined.
++ The site uses SSL and Expect-CT header is not present.
++ The X-Content-Type-Options header is not set. This could allow the user agent to render the content of the site in a different fashion to the MIME type
++ Apache mod_negotiation is enabled with MultiViews, which allows attackers to easily brute force file names. See http://www.wisec.it/sectou.php?id=4698ebdc59d15. The following alternatives for 'index' were found: HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var, HTTP_NOT_FOUND.html.var
++ Hostname 'bankrobber.htb' does not match certificate's names: localhost
++ Web Server returns a valid response with junk HTTP methods, this may cause false positives.
++ OSVDB-877: HTTP TRACE method is active, suggesting the host is vulnerable to XST
++ OSVDB-3092: /admin/: This might be interesting...
++ OSVDB-3268: /css/: Directory indexing found.
++ OSVDB-3092: /css/: This might be interesting...
++ OSVDB-3268: /img/: Directory indexing found.
++ OSVDB-3092: /img/: This might be interesting...
++ OSVDB-3092: /user/: This might be interesting...
++ OSVDB-3093: /admin/auth.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3093: /admin/index.php: This might be interesting... has been seen in web logs from an unknown scanner.
++ OSVDB-3268: /icons/: Directory indexing found.
++ OSVDB-3233: /icons/README: Apache default file found.
++ OSVDB-3092: /Admin/: This might be interesting...
++ ERROR: Error limit (20) reached for host, giving up. Last error: opening stream: can't connect: Connect failed: ; No route to host at /var/lib/nikto/plugins/LW2.pm line 5157.
+: No route to host
++ Scan terminated:  18 error(s) and 21 item(s) reported on remote host
++ End Time:           2020-11-17 22:16:06 (GMT-6) (2163 seconds)
+---------------------------------------------------------------------------
++ 1 host(s) tested

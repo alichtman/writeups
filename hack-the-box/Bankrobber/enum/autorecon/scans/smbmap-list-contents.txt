@@ -1,0 +1,2 @@
+[!] Authentication error on bankrobber.htb
+[!] Authentication error on bankrobber.htb
