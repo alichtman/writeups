@@ -1,0 +1,1 @@
+https://friendzone.htb/server-status (Status: 403)
