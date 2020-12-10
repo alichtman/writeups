@@ -1,0 +1,28 @@
+# Nmap 7.80 scan initiated Wed Dec  9 05:35:49 2020 as: nmap -A -v -p- -Pn -oN allports buff.htb
+Nmap scan report for buff.htb (10.10.10.198)
+Host is up (0.12s latency).
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE    VERSION
+7680/tcp open  pando-pub?
+8080/tcp open  http       Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+|_http-title: mrb3n's Bro Hut
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+No OS matches for host
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=258 (Good luck!)
+IP ID Sequence Generation: Randomized
+
+TRACEROUTE (using port 8080/tcp)
+HOP RTT       ADDRESS
+1   41.32 ms  10.10.14.1
+2   105.12 ms buff.htb (10.10.10.198)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  9 05:44:25 2020 -- 1 IP address (1 host up) scanned in 516.32 seconds

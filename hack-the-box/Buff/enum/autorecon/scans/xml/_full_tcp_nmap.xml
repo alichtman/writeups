@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Dec  9 05:36:09 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Buff/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Buff/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.198 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Buff/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Buff/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.198" start="1607513769" startstr="Wed Dec  9 05:36:09 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1607513769"/>
+<taskend task="NSE" time="1607513769"/>
+<taskbegin task="NSE" time="1607513769"/>
+<taskend task="NSE" time="1607513769"/>
+<taskbegin task="NSE" time="1607513769"/>
+<taskend task="NSE" time="1607513769"/>
+<taskbegin task="SYN Stealth Scan" time="1607513769"/>
+<taskprogress task="SYN Stealth Scan" time="1607513800" percent="9.32" remaining="302" etc="1607514102"/>
+<taskprogress task="SYN Stealth Scan" time="1607513830" percent="15.62" remaining="330" etc="1607514160"/>
+<taskprogress task="SYN Stealth Scan" time="1607513860" percent="20.20" remaining="360" etc="1607514219"/>
+<taskprogress task="SYN Stealth Scan" time="1607513890" percent="22.60" remaining="415" etc="1607514304"/>
+<taskprogress task="SYN Stealth Scan" time="1607513935" percent="27.15" remaining="446" etc="1607514380"/>
+<taskprogress task="SYN Stealth Scan" time="1607513974" percent="33.22" remaining="413" etc="1607514386"/>
+<taskprogress task="SYN Stealth Scan" time="1607514004" percent="41.73" remaining="329" etc="1607514332"/>
+<taskprogress task="SYN Stealth Scan" time="1607514034" percent="47.38" remaining="295" etc="1607514328"/>
+<taskprogress task="SYN Stealth Scan" time="1607514064" percent="52.86" remaining="264" etc="1607514327"/>
+<taskprogress task="SYN Stealth Scan" time="1607514169" percent="63.20" remaining="233" etc="1607514402"/>
+<taskprogress task="SYN Stealth Scan" time="1607514199" percent="69.15" remaining="192" etc="1607514391"/>
+<taskprogress task="SYN Stealth Scan" time="1607514232" percent="74.22" remaining="161" etc="1607514393"/>
+<taskprogress task="SYN Stealth Scan" time="1607514262" percent="80.17" remaining="122" etc="1607514384"/>
+<taskprogress task="SYN Stealth Scan" time="1607514292" percent="89.56" remaining="61" etc="1607514353"/>
+<taskend task="SYN Stealth Scan" time="1607514335" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1607514335"/>
+<taskend task="Service scan" time="1607514470" extrainfo="2 services on 1 host"/>
+<taskbegin task="Traceroute" time="1607514476"/>
+<taskend task="Traceroute" time="1607514477"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1607514477"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1607514477"/>
+<taskbegin task="NSE" time="1607514477"/>
+<taskend task="NSE" time="1607514493"/>
+<taskbegin task="NSE" time="1607514493"/>
+<taskend task="NSE" time="1607514496"/>
+<taskbegin task="NSE" time="1607514496"/>
+<taskend task="NSE" time="1607514496"/>
+<host starttime="1607513769" endtime="1607514496"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.198" addrtype="ipv4"/>
+<hostnames>
+<hostname name="buff.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="7680"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="pando-pub" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="http" product="Apache httpd" version="2.4.43" extrainfo="(Win64) OpenSSL/1.1.1g PHP/7.4.6" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.43</cpe></service><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-open-proxy" output="Potentially OPEN proxy.&#xa;Methods supported:CONNECTION"/><script id="http-server-header" output="Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6"><elem>Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6</elem>
+</script><script id="http-title" output="mrb3n&apos;s Bro Hut"><elem key="title">mrb3n&apos;s Bro Hut</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="7680"/>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=12/9%OT=7680%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5FD0B980%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=102%GCD=1%ISR=10B%TI=RD%II=I%TS=U)&#xa;OPS(O1=M54DNW8NNS%O2=M54DNW8NNS%O3=M54DNW8%O4=M54DNW8NNS%O5=M54DNW8NNS%O6=M54DNNS)&#xa;WIN(W1=FFFF%W2=FFFF%W3=FFFF%W4=FFFF%W5=FFFF%W6=FF70)&#xa;ECN(R=Y%DF=Y%TG=80%W=FFFF%O=M54DNW8NNS%CC=N%Q=)&#xa;T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=80%CD=Z)&#xa;"/>
+</os>
+<distance value="2"/>
+<tcpsequence index="258" difficulty="Good luck!" values="460B7675,ABE8914D,D3EFD995,657B28A,DA5A436C,78C13B5C"/>
+<ipidsequence class="Randomized" values="566D,569D,56A5,56A4,56E2,56F2"/>
+<tcptssequence class="none returned (unsupported)"/>
+<trace port="8080" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="41.76"/>
+<hop ttl="2" ipaddr="10.10.10.198" rtt="262.12" host="buff.htb"/>
+</trace>
+<times srtt="198082" rttvar="82942" to="529850"/>
+</host>
+<taskbegin task="NSE" time="1607514496"/>
+<taskend task="NSE" time="1607514496"/>
+<taskbegin task="NSE" time="1607514496"/>
+<taskend task="NSE" time="1607514496"/>
+<taskbegin task="NSE" time="1607514496"/>
+<taskend task="NSE" time="1607514496"/>
+<runstats><finished time="1607514496" timestr="Wed Dec  9 05:48:16 2020" elapsed="727.43" summary="Nmap done at Wed Dec  9 05:48:16 2020; 1 IP address (1 host up) scanned in 727.43 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

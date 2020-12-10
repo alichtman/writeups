@@ -1,0 +1,10 @@
+# Nmap 7.80 scan initiated Wed Dec  9 06:25:24 2020 as: nmap -v -p- -Pn -oN allports2 buff.htb
+Nmap scan report for buff.htb (10.10.10.198)
+Host is up (0.096s latency).
+Not shown: 65533 filtered ports
+PORT     STATE SERVICE
+7680/tcp open  pando-pub
+8080/tcp open  http-proxy
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Wed Dec  9 06:33:38 2020 -- 1 IP address (1 host up) scanned in 494.41 seconds

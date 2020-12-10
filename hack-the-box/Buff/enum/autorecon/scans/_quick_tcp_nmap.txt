@@ -1,0 +1,18 @@
+# Nmap 7.80 scan initiated Wed Dec  9 05:36:08 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Buff/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Buff/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.198
+Nmap scan report for buff.htb (10.10.10.198)
+Host is up, received user-set (0.11s latency).
+Scanned at 2020-12-09 05:36:09 CST for 40s
+Not shown: 999 filtered ports
+Reason: 999 no-responses
+PORT     STATE SERVICE REASON          VERSION
+8080/tcp open  http    syn-ack ttl 127 Apache httpd 2.4.43 ((Win64) OpenSSL/1.1.1g PHP/7.4.6)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-server-header: Apache/2.4.43 (Win64) OpenSSL/1.1.1g PHP/7.4.6
+|_http-title: mrb3n's Bro Hut
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec  9 05:36:49 2020 -- 1 IP address (1 host up) scanned in 41.01 seconds
