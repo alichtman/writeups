@@ -1,0 +1,7 @@
+http://blunder.htb/about (Status: 200)
+http://blunder.htb/0 (Status: 200)
+http://blunder.htb/admin (Status: 301)
+http://blunder.htb/install.php (Status: 200)
+http://blunder.htb/robots.txt (Status: 200)
+http://blunder.htb/todo.txt (Status: 200)
+http://blunder.htb/usb (Status: 200)

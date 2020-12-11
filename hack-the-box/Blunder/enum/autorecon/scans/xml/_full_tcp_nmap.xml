@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Thu Dec 10 19:49:10 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Blunder/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Blunder/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.191 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Blunder/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Blunder/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.191" start="1607651350" startstr="Thu Dec 10 19:49:10 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1607651350"/>
+<taskend task="NSE" time="1607651350"/>
+<taskbegin task="NSE" time="1607651350"/>
+<taskend task="NSE" time="1607651350"/>
+<taskbegin task="NSE" time="1607651350"/>
+<taskend task="NSE" time="1607651350"/>
+<taskbegin task="SYN Stealth Scan" time="1607651350"/>
+<taskprogress task="SYN Stealth Scan" time="1607651381" percent="11.36" remaining="242" etc="1607651623"/>
+<taskprogress task="SYN Stealth Scan" time="1607651411" percent="37.17" remaining="104" etc="1607651514"/>
+<taskprogress task="SYN Stealth Scan" time="1607651441" percent="69.43" remaining="41" etc="1607651481"/>
+<taskend task="SYN Stealth Scan" time="1607651530" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1607651530"/>
+<taskend task="Service scan" time="1607651537" extrainfo="1 service on 1 host"/>
+<taskbegin task="Traceroute" time="1607651544"/>
+<taskend task="Traceroute" time="1607651544"/>
+<taskbegin task="Parallel DNS resolution of 2 hosts." time="1607651544"/>
+<taskend task="Parallel DNS resolution of 2 hosts." time="1607651544"/>
+<taskbegin task="NSE" time="1607651544"/>
+<taskend task="NSE" time="1607651548"/>
+<taskbegin task="NSE" time="1607651548"/>
+<taskend task="NSE" time="1607651548"/>
+<taskbegin task="NSE" time="1607651548"/>
+<taskend task="NSE" time="1607651548"/>
+<host starttime="1607651350" endtime="1607651548"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.191" addrtype="ipv4"/>
+<hostnames>
+<hostname name="blunder.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65533">
+<extrareasons reason="no-responses" count="65533"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="closed" reason="reset" reason_ttl="63"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.41" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.41</cpe></service><script id="http-favicon" output="Unknown favicon MD5: A0F0E5D852F0E3783AF700B6EE9D00DA"/><script id="http-generator" output="Blunder"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.4.41 (Ubuntu)"><elem>Apache/2.4.41 (Ubuntu)</elem>
+</script><script id="http-title" output="Blunder | A blunder of interesting facts"><elem key="title">Blunder | A blunder of interesting facts</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<portused state="closed" proto="tcp" portid="21"/>
+<osmatch name="Linux 2.6.18 - 2.6.22" accuracy="92" line="49721">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.18" accuracy="85" line="49178">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="85"><cpe>cpe:/o:linux:linux_kernel:2.6.18</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.80%E=4%D=12/10%OT=80%CT=21%CU=%PV=Y%DS=2%DC=T%G=N%TM=5FD2D0DC%P=x86_64-pc-linux-gnu)&#xa;SEQ(CI=Z%TS=A)&#xa;SEQ(SP=FF%GCD=1%ISR=105%TI=Z%CI=Z%TS=A)&#xa;OPS(O1=M54DST11NW7%O2=NNT11%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=NNT11)&#xa;WIN(W1=FE88%W2=1FD%W3=FE88%W4=FE88%W5=FE88%W6=1FD)&#xa;ECN(R=Y%DF=Y%TG=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T4(R=N)&#xa;T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)&#xa;T6(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;T7(R=N)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="951912" lastboot="Sun Nov 29 19:27:16 2020"/>
+<distance value="2"/>
+<tcpsequence index="255" difficulty="Good luck!" values="67E101AB,2387A808,3D9DF19F,75632CBE"/>
+<ipidsequence class="All zeros" values="0,0,0,0"/>
+<tcptssequence class="1000HZ" values="38BCEE9E,38BCEF6A,38BCEF6A,38BCF01E"/>
+<trace port="21" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="47.33"/>
+<hop ttl="2" ipaddr="10.10.10.191" rtt="47.34" host="blunder.htb"/>
+</trace>
+<times srtt="62036" rttvar="24103" to="158448"/>
+</host>
+<taskbegin task="NSE" time="1607651548"/>
+<taskend task="NSE" time="1607651548"/>
+<taskbegin task="NSE" time="1607651548"/>
+<taskend task="NSE" time="1607651548"/>
+<taskbegin task="NSE" time="1607651548"/>
+<taskend task="NSE" time="1607651548"/>
+<runstats><finished time="1607651548" timestr="Thu Dec 10 19:52:28 2020" elapsed="198.74" summary="Nmap done at Thu Dec 10 19:52:28 2020; 1 IP address (1 host up) scanned in 198.74 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

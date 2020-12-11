@@ -1,0 +1,36 @@
+# Nmap 7.80 scan initiated Thu Dec 10 19:49:16 2020 as: nmap -A -v -p- -Pn -oN allports blunder.htb
+adjust_timeouts2: packet supposedly had rtt of -569398 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -583948 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -583948 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -569745 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -569745 microseconds.  Ignoring time.
+Nmap scan report for blunder.htb (10.10.10.191)
+Host is up (0.077s latency).
+Not shown: 65533 filtered ports
+PORT   STATE  SERVICE VERSION
+21/tcp closed ftp
+80/tcp open   http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: A0F0E5D852F0E3783AF700B6EE9D00DA
+|_http-generator: Blunder
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Blunder | A blunder of interesting facts
+Device type: general purpose
+Running (JUST GUESSING): Linux 2.6.X|3.X (92%)
+OS CPE: cpe:/o:linux:linux_kernel:2.6 cpe:/o:linux:linux_kernel:3.7
+Aggressive OS guesses: Linux 2.6.18 - 2.6.22 (92%), Linux 2.6.18 (85%), Linux 3.7 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 11.017 days (since Sun Nov 29 19:27:15 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 21/tcp)
+HOP RTT      ADDRESS
+1   82.73 ms 10.10.14.1
+2   82.77 ms blunder.htb (10.10.10.191)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 10 19:52:25 2020 -- 1 IP address (1 host up) scanned in 189.55 seconds

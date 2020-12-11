@@ -24,8 +24,8 @@
 | Irked       [x]  | Buff       [x]  |                       |               |
 | Friendzone  [!]  | Fuse       [ ]  |                       |               |
 | Swagshop    [!]  | BlackField [ ]  |                       |               |
-| Networked   [ ]  |                 |                       |               |
-| Jarvis      [x]  |                 |                       |               |
+| Networked   [ ]  | Active     [$]  |                       |               |
+| Jarvis      [x]  | Access     [$]  |                       |               |
 | Mirai       [o]  |                 |                       |               |
 | Popcorn     [x]  |                 |                       |               |
 | Haircut     [x]  |                 |                       |               |
@@ -33,7 +33,7 @@
 | Frolic      [x]  |                 |                       |               |
 | Postman     [x]  |                 |                       |               |
 | Admirer     [ ]  |                 |                       |               |
-| Blunder     [ ]  |                 |                       |               |
+| Blunder     [x]  |                 |                       |               |
 | Tabby       [ ]  |                 |                       |               |
 | Doctor      [x]  |                 |                       |               |
 | Quick       [ ]  |                 |                       |               |
