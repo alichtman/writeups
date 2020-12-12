@@ -1,0 +1,12 @@
+id,change_operator,change_time,create_operator,create_time,delete_operator,delete_time,status,wiegand_name,wiegand_count,odd_start,odd_count,even_start,even_count,cid_start,cid_count,comp_start,comp_count
+12,,,,,,,1,"AutoMatchWiegandFmt",0,0,0,0,0,0,0,0,0
+13,,,,,,,2,"SRBOn",0,0,0,0,0,0,0,0,0
+14,,,,,,,2,"Wiegand26",0,0,0,0,0,0,0,0,0
+15,,,,,,,2,"Wiegand26a",0,0,0,0,0,0,0,0,0
+16,,,,,,,2,"Wiegand34",0,0,0,0,0,0,0,0,0
+17,,,,,,,2,"Wiegand34a",0,0,0,0,0,0,0,0,0
+18,,,,,,,2,"Wiegand36",0,0,0,0,0,0,0,0,0
+19,,,,,,,2,"Wiegand37",0,0,0,0,0,0,0,0,0
+20,,,,,,,2,"Wiegand37a",0,0,0,0,0,0,0,0,0
+21,,,,,,,2,"Wiegand50",0,0,0,0,0,0,0,0,0
+22,,,,,,,2,"Wiegand66",0,0,0,0,0,0,0,0,0

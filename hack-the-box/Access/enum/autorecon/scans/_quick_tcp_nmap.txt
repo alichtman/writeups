@@ -1,0 +1,24 @@
+# Nmap 7.80 scan initiated Fri Dec 11 19:19:01 2020 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/xml/_quick_tcp_nmap.xml 10.10.10.98
+Nmap scan report for access.htb (10.10.10.98)
+Host is up, received user-set (0.048s latency).
+Scanned at 2020-12-11 19:19:01 CST for 143s
+Not shown: 997 filtered ports
+Reason: 997 no-responses
+PORT   STATE SERVICE REASON          VERSION
+21/tcp open  ftp     syn-ack ttl 127 Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV failed: 425 Cannot open data connection.
+| ftp-syst: 
+|_  SYST: Windows_NT
+23/tcp open  telnet  syn-ack ttl 127 Microsoft Windows XP telnetd (no more connections allowed)
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: MegaCorp
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 11 19:21:24 2020 -- 1 IP address (1 host up) scanned in 143.57 seconds

@@ -1,0 +1,18 @@
+# Nmap 7.80 scan initiated Fri Dec 11 19:21:24 2020 as: nmap -vv --reason -Pn -sV -p 21 "--script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.98
+Nmap scan report for access.htb (10.10.10.98)
+Host is up, received user-set (0.045s latency).
+Scanned at 2020-12-11 19:21:25 CST for 0s
+
+PORT   STATE SERVICE REASON          VERSION
+21/tcp open  ftp     syn-ack ttl 127 Microsoft ftpd
+|_banner: 220 Microsoft FTP Service
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV failed: 425 Cannot open data connection.
+| ftp-syst: 
+|_  SYST: Windows_NT
+|_sslv2-drown: 
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 11 19:21:25 2020 -- 1 IP address (1 host up) scanned in 1.19 seconds

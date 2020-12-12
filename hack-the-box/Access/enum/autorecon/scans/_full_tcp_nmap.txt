@@ -1,0 +1,49 @@
+# Nmap 7.80 scan initiated Fri Dec 11 19:19:01 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/xml/_full_tcp_nmap.xml 10.10.10.98
+Nmap scan report for access.htb (10.10.10.98)
+Host is up, received user-set (0.045s latency).
+Scanned at 2020-12-11 19:19:01 CST for 173s
+Not shown: 65532 filtered ports
+Reason: 65532 no-responses
+PORT   STATE SERVICE REASON          VERSION
+21/tcp open  ftp     syn-ack ttl 127 Microsoft ftpd
+23/tcp open  telnet  syn-ack ttl 127 Microsoft Windows XP telnetd (no more connections allowed)
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+| http-methods: 
+|_  Supported Methods: GET HEAD OPTIONS
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: MegaCorp
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: specialized|general purpose|phone
+Running (JUST GUESSING): Microsoft Windows 7|8|Phone|2008|8.1|Vista (91%)
+OS CPE: cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Microsoft Windows Embedded Standard 7 (91%), Microsoft Windows 8.1 Update 1 (91%), Microsoft Windows Phone 7.5 or 8.0 (91%), Microsoft Windows 7 or Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 (90%), Microsoft Windows Server 2008 R2 (90%), Microsoft Windows Server 2008 R2 or Windows 8.1 (90%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (90%), Microsoft Windows 7 (90%), Microsoft Windows 7 Professional or Windows 8 (90%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.80%E=4%D=12/11%OT=21%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5FD41B32%P=x86_64-pc-linux-gnu)
+SEQ(SP=105%GCD=1%ISR=10D%II=I%TS=7)
+SEQ(SP=105%GCD=1%ISR=10D%TS=7)
+OPS(O1=M54DNW8ST11%O2=M54DNW8ST11%O3=M54DNW8NNT11%O4=M54DNW8ST11%O5=M54DNW8ST11%O6=M54DST11)
+WIN(W1=2000%W2=2000%W3=2000%W4=2000%W5=2000%W6=2000)
+ECN(R=Y%DF=Y%TG=80%W=2000%O=M54DNW8NNS%CC=N%Q=)
+T1(R=Y%DF=Y%TG=80%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Uptime guess: 0.003 days (since Fri Dec 11 19:18:11 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=261 (Good luck!)
+IP ID Sequence Generation: Busy server or unknown class
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   41.01 ms 10.10.14.1
+2   40.98 ms access.htb (10.10.10.98)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 11 19:21:54 2020 -- 1 IP address (1 host up) scanned in 173.82 seconds

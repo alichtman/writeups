@@ -1,0 +1,82 @@
+# Nmap 7.80 scan initiated Fri Dec 11 19:21:24 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.98
+Nmap scan report for access.htb (10.10.10.98)
+Host is up, received user-set (0.041s latency).
+Scanned at 2020-12-11 19:21:25 CST for 141s
+
+PORT   STATE SERVICE REASON          VERSION
+80/tcp open  http    syn-ack ttl 127 Microsoft IIS httpd 7.5
+|_http-chrono: Request times for /; avg: 152.87ms; min: 152.25ms; max: 153.81ms
+|_http-comments-displayer: Couldn't find any comments.
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-date: Sat, 12 Dec 2020 01:29:18 GMT; +7m46s from local time.
+|_http-devframework: ASP.NET detected. Found related header.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+|_http-errors: Couldn't find any error pages.
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Content-Type: text/html
+|   Last-Modified: Thu, 23 Aug 2018 23:33:43 GMT
+|   Accept-Ranges: bytes
+|   ETag: "44a87bb393bd41:0"
+|   Server: Microsoft-IIS/7.5
+|   X-Powered-By: ASP.NET
+|   Date: Sat, 12 Dec 2020 01:29:22 GMT
+|   Connection: close
+|   Content-Length: 391
+|   
+|_  (Request type: GET)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash e93be337a60d7cbd8a60a1793bb91439
+|_Credits query returned unknown hash e93be337a60d7cbd8a60a1793bb91439
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Microsoft-IIS/7.5
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; jpg: 1
+|   Longest directory structure:
+|     Depth: 0
+|     Dir: /
+|   Total files found (by extension):
+|_    Other: 1; jpg: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: MegaCorp
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_127 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 11 19:23:46 2020 -- 1 IP address (1 host up) scanned in 142.00 seconds

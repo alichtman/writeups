@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Fri Dec 11 19:21:24 2020 as: nmap -vv -&#45;reason -Pn -sV -p 23 -&#45;script=banner,telnet-encryption,telnet-ntlm-info -oN /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/tcp_23_telnet-nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/xml/tcp_23_telnet_nmap.xml 10.10.10.98 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 23 -&#45;script=banner,telnet-encryption,telnet-ntlm-info -oN /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/tcp_23_telnet-nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/xml/tcp_23_telnet_nmap.xml 10.10.10.98" start="1607736084" startstr="Fri Dec 11 19:21:24 2020" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="23"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1607736085"/>
+<taskend task="NSE" time="1607736085"/>
+<taskbegin task="NSE" time="1607736085"/>
+<taskend task="NSE" time="1607736085"/>
+<taskbegin task="SYN Stealth Scan" time="1607736085"/>
+<taskend task="SYN Stealth Scan" time="1607736085" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1607736085"/>
+<taskend task="Service scan" time="1607736085" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1607736085"/>
+<taskend task="NSE" time="1607736085"/>
+<taskbegin task="NSE" time="1607736085"/>
+<taskend task="NSE" time="1607736085"/>
+<host starttime="1607736085" endtime="1607736085"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.98" addrtype="ipv4"/>
+<hostnames>
+<hostname name="access.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="23"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="telnet" product="Microsoft Windows XP telnetd" extrainfo="no more connections allowed" ostype="Windows XP" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows_xp</cpe></service><script id="banner" output="No more connections are allowed to telnet server. Please try ag&#xa;ain later.\x00"/><script id="telnet-encryption" output="&#xa;  Telnet server does not support encryption"/></port>
+</ports>
+<times srtt="40809" rttvar="40809" to="204045"/>
+</host>
+<taskbegin task="NSE" time="1607736085"/>
+<taskend task="NSE" time="1607736085"/>
+<taskbegin task="NSE" time="1607736085"/>
+<taskend task="NSE" time="1607736085"/>
+<runstats><finished time="1607736085" timestr="Fri Dec 11 19:21:25 2020" elapsed="0.84" summary="Nmap done at Fri Dec 11 19:21:25 2020; 1 IP address (1 host up) scanned in 0.84 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

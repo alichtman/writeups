@@ -25,7 +25,7 @@
 | Friendzone  [!]  | Fuse       [ ]  |                       |               |
 | Swagshop    [!]  | BlackField [ ]  |                       |               |
 | Networked   [ ]  | Active     [$]  |                       |               |
-| Jarvis      [x]  | Access     [$]  |                       |               |
+| Jarvis      [x]  | Access     [x]  |                       |               |
 | Mirai       [o]  |                 |                       |               |
 | Popcorn     [x]  |                 |                       |               |
 | Haircut     [x]  |                 |                       |               |

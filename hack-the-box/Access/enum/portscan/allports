@@ -1,0 +1,37 @@
+# Nmap 7.80 scan initiated Fri Dec 11 19:19:16 2020 as: nmap -A -v -p- -Pn -oN allports access.htb
+Nmap scan report for access.htb (10.10.10.98)
+Host is up (0.047s latency).
+Not shown: 65532 filtered ports
+PORT   STATE SERVICE VERSION
+21/tcp open  ftp     Microsoft ftpd
+| ftp-anon: Anonymous FTP login allowed (FTP code 230)
+|_Can't get directory listing: PASV failed: 425 Cannot open data connection.
+| ftp-syst: 
+|_  SYST: Windows_NT
+23/tcp open  telnet  Microsoft Windows XP telnetd (no more connections allowed)
+80/tcp open  http    Microsoft IIS httpd 7.5
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/7.5
+|_http-title: MegaCorp
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose|phone|specialized
+Running (JUST GUESSING): Microsoft Windows 8|Phone|2008|7|8.1|Vista|2012 (92%)
+OS CPE: cpe:/o:microsoft:windows_8 cpe:/o:microsoft:windows cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7 cpe:/o:microsoft:windows_8.1 cpe:/o:microsoft:windows_vista::- cpe:/o:microsoft:windows_vista::sp1 cpe:/o:microsoft:windows_server_2012
+Aggressive OS guesses: Microsoft Windows 8.1 Update 1 (92%), Microsoft Windows Phone 7.5 or 8.0 (92%), Microsoft Windows 7 or Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 (91%), Microsoft Windows Server 2008 R2 or Windows 8.1 (91%), Microsoft Windows Server 2008 R2 SP1 or Windows 8 (91%), Microsoft Windows 7 (91%), Microsoft Windows 7 Professional or Windows 8 (91%), Microsoft Windows 7 SP1 or Windows Server 2008 SP2 or 2008 R2 SP1 (91%), Microsoft Windows Vista SP0 or SP1, Windows Server 2008 SP1, or Windows 7 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 0.003 days (since Fri Dec 11 19:18:12 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OSs: Windows, Windows XP; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_xp
+
+TRACEROUTE (using port 23/tcp)
+HOP RTT      ADDRESS
+1   42.87 ms 10.10.14.1
+2   42.83 ms access.htb (10.10.10.98)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 11 19:22:00 2020 -- 1 IP address (1 host up) scanned in 163.99 seconds

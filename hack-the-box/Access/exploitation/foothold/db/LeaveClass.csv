@@ -1,0 +1,4 @@
+LeaveId,LeaveName,MinUnit,Unit,RemaindProc,RemaindCount,ReportSymbol,Deduct,Color,Classify,Code
+1,"Sick",1.0000000000000000e+00,1,1,1,"B",0.0000000000000000e+00,3398744,,"Leave_1         "
+2,"Vacation",1.0000000000000000e+00,1,1,1,"S",0.0000000000000000e+00,8421631,,"Leave_2         "
+3,"Other",1.0000000000000000e+00,1,1,1,"T",0.0000000000000000e+00,16744576,,"Leave_3         "

@@ -1,0 +1,16 @@
+# Nmap 7.80 scan initiated Fri Dec 11 19:21:24 2020 as: nmap -vv --reason -Pn -sV -p 23 --script=banner,telnet-encryption,telnet-ntlm-info -oN /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/tcp_23_telnet-nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Access/enum/autorecon/scans/xml/tcp_23_telnet_nmap.xml 10.10.10.98
+Nmap scan report for access.htb (10.10.10.98)
+Host is up, received user-set (0.041s latency).
+Scanned at 2020-12-11 19:21:25 CST for 0s
+
+PORT   STATE SERVICE REASON          VERSION
+23/tcp open  telnet  syn-ack ttl 127 Microsoft Windows XP telnetd (no more connections allowed)
+| banner: No more connections are allowed to telnet server. Please try ag
+|_ain later.\x00
+| telnet-encryption: 
+|_  Telnet server does not support encryption
+Service Info: OS: Windows XP; CPE: cpe:/o:microsoft:windows_xp
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 11 19:21:25 2020 -- 1 IP address (1 host up) scanned in 0.84 seconds
