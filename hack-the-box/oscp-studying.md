@@ -32,7 +32,7 @@
 | Blocky      [x]  |                 |                       |               |
 | Frolic      [x]  |                 |                       |               |
 | Postman     [x]  |                 |                       |               |
-| Admirer     [ ]  |                 |                       |               |
+| Admirer     [x]  |                 |                       |               |
 | Blunder     [x]  |                 |                       |               |
 | Tabby       [ ]  |                 |                       |               |
 | Doctor      [x]  |                 |                       |               |

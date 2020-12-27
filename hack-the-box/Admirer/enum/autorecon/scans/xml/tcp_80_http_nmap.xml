@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Dec 24 06:39:12 2020 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.187 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.187" start="1608809952" startstr="Thu Dec 24 06:39:12 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1608809952"/>
+<taskend task="NSE" time="1608809952"/>
+<taskbegin task="NSE" time="1608809952"/>
+<taskend task="NSE" time="1608809952"/>
+<taskbegin task="NSE" time="1608809952"/>
+<taskend task="NSE" time="1608809952"/>
+<taskbegin task="SYN Stealth Scan" time="1608809952"/>
+<taskend task="SYN Stealth Scan" time="1608809952" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1608809952"/>
+<taskend task="Service scan" time="1608809959" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1608809959"/>
+<taskend task="NSE" time="1608809978"/>
+<taskbegin task="NSE" time="1608809978"/>
+<taskend task="NSE" time="1608809978"/>
+<taskbegin task="NSE" time="1608809978"/>
+<taskend task="NSE" time="1608809978"/>
+<host starttime="1608809952" endtime="1608809978"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.187" addrtype="ipv4"/>
+<hostnames>
+<hostname name="admirer.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="Apache httpd" version="2.4.25" extrainfo="(Debian)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.25</cpe></service><script id="http-chrono" output="Request times for /; avg: 412.13ms; min: 225.08ms; max: 596.92ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=admirer.htb&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 840&#xa;    Comment: &#xa;        /* Actions */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/browser.min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /* browser.js v1.0 | @ajlkn | MIT licensed */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 752&#xa;    Comment: &#xa;        /* Icon */&#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Line number: 20&#xa;    Comment: &#xa;        &lt;!-&#45; Header -&#45;&gt;&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 2041&#xa;    Comment: &#xa;        /* Footer */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/util.js&#xa;    Line number: 37&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#x9; */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 789&#xa;    Comment: &#xa;        /* List */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 962&#xa;    Comment: &#xa;        /* Icons */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 1055&#xa;    Comment: &#xa;        /* Panel */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/breakpoints.min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /* breakpoints.js v1.0 | @ajlkn | MIT licensed */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/util.js&#xa;    Line number: 521&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#x9; */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/jquery.poptrox.min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /* jquery.poptrox.js v2.5.2-dev | (c) @ajlkn | github.com/ajlkn/jquery.poptrox | MIT licensed */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/util.js&#xa;    Line number: 3&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#x9; */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 1184&#xa;    Comment: &#xa;        /* Poptrox Popup */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/jquery.min.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*! jQuery v3.4.1 | (c) JS Foundation and other contributors | jquery.org/license */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 987&#xa;    Comment: &#xa;        /* Table */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 139&#xa;    Comment: &#xa;        /* Basic */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 1454&#xa;    Comment: &#xa;        /* Header */&#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Line number: 120&#xa;    Comment: &#xa;        &lt;!-&#45; Still under development... This does not send anything yet, but it looks nice! -&#45;&gt;&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 1364&#xa;    Comment: &#xa;        /* Wrapper */&#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Line number: 94&#xa;    Comment: &#xa;        &lt;!-&#45; Footer -&#45;&gt;&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 495&#xa;    Comment: &#xa;        /* Form */&#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Line number: 17&#xa;    Comment: &#xa;        &lt;!-&#45; Wrapper -&#45;&gt;&#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Line number: 144&#xa;    Comment: &#xa;        &lt;!-&#45; Scripts -&#45;&gt;&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 364&#xa;    Comment: &#xa;        /* Button */&#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Line number: 2&#xa;    Comment: &#xa;        &lt;!-&#45;&#xa;        &#x9;Multiverse by HTML5 UP&#xa;        &#x9;html5up.net | @ajlkn&#xa;        &#x9;Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)&#xa;        -&#45;&gt;&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/main.js&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 191&#xa;    Comment: &#xa;        /* Type */&#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Line number: 30&#xa;    Comment: &#xa;        &lt;!-&#45; Main -&#45;&gt;&#xa;    &#xa;    Path: http://admirer.htb:80/assets/css/main.css&#xa;    Line number: 1588&#xa;    Comment: &#xa;        /* Main */&#xa;    &#xa;    Path: http://admirer.htb:80/assets/js/util.js&#xa;    Line number: 299&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#x9; */&#xa;"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=admirer.htb&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://admirer.htb:80/&#xa;    Form id: name&#xa;    Form action: #&#xa;"/><script id="http-date" output="Thu, 24 Dec 2020 11:47:21 GMT; +8m01s from local time."><elem key="date">2020-12-24T11:47:21+00:00</elem>
+<elem key="delta">481.0</elem>
+</script><script id="http-devframework" output="Couldn&apos;t determine the underlying framework or CMS. Try increasing &apos;httpspider.maxpagecount&apos; value to spider more pages."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /robots.txt: Robots file&#xa;"/><script id="http-errors" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=admirer.htb&#xa;  Found the following error pages: &#xa;  &#xa;  Error Code: 404&#xa;  &#x9;http://admirer.htb:80/index.html&#xa;"/><script id="http-exif-spider" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-feed" output="Couldn&apos;t find any feeds."/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-fileupload-exploiter" output="&#xa;  &#xa;    Couldn&apos;t find a file-type field.&#xa;  &#xa;    Couldn&apos;t find a file-type field."><table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+<table>
+<elem>Couldn&apos;t find a file-type field.</elem>
+</table>
+</script><script id="http-headers" output="&#xa;  Date: Thu, 24 Dec 2020 11:47:21 GMT&#xa;  Server: Apache/2.4.25 (Debian)&#xa;  Connection: close&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST OPTIONS"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+<elem>OPTIONS</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash 123371a226c5565255e93ac3b0dc0f5a&#xa;Credits query returned unknown hash 123371a226c5565255e93ac3b0dc0f5a"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-robots.txt" output="1 disallowed entry &#xa;/admin-dir"/><script id="http-security-headers" output="&#xa;"></script><script id="http-server-header" output="Apache/2.4.25 (Debian)"><elem>Apache/2.4.25 (Debian)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1&#xa;    /assets/css/&#xa;      css: 1&#xa;    /assets/js/&#xa;      js: 4&#xa;    /images/fulls/&#xa;      jpg: 8&#xa;    /images/thumbs/&#xa;      jpg: 6&#xa;  Longest directory structure:&#xa;    Depth: 2&#xa;    Dir: /images/fulls/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 1; jpg: 14; js: 4&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Admirer"><elem key="title">Admirer</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-vuln-cve2017-1001000" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-wordpress-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args search-limit=&lt;number|all&gt; for deeper analysis)"/><script id="http-wordpress-users" output="[Error] Wordpress installation was not found. We couldn&apos;t find wp-login.php"/></port>
+</ports>
+<times srtt="42903" rttvar="42903" to="214515"/>
+</host>
+<taskbegin task="NSE" time="1608809978"/>
+<taskend task="NSE" time="1608809978"/>
+<taskbegin task="NSE" time="1608809978"/>
+<taskend task="NSE" time="1608809978"/>
+<taskbegin task="NSE" time="1608809978"/>
+<taskend task="NSE" time="1608809978"/>
+<runstats><finished time="1608809978" timestr="Thu Dec 24 06:39:38 2020" summary="Nmap done at Thu Dec 24 06:39:38 2020; 1 IP address (1 host up) scanned in 26.29 seconds" elapsed="26.29" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

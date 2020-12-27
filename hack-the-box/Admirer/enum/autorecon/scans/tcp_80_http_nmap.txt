@@ -1,0 +1,282 @@
+# Nmap 7.91 scan initiated Thu Dec 24 06:39:12 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/xml/tcp_80_http_nmap.xml 10.10.10.187
+Nmap scan report for admirer.htb (10.10.10.187)
+Host is up, received user-set (0.043s latency).
+Scanned at 2020-12-24 06:39:12 EST for 26s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.25 ((Debian))
+|_http-chrono: Request times for /; avg: 412.13ms; min: 225.08ms; max: 596.92ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=admirer.htb
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 840
+|     Comment: 
+|         /* Actions */
+|     
+|     Path: http://admirer.htb:80/assets/js/browser.min.js
+|     Line number: 1
+|     Comment: 
+|         /* browser.js v1.0 | @ajlkn | MIT licensed */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 752
+|     Comment: 
+|         /* Icon */
+|     
+|     Path: http://admirer.htb:80/
+|     Line number: 20
+|     Comment: 
+|         <!-- Header -->
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 2041
+|     Comment: 
+|         /* Footer */
+|     
+|     Path: http://admirer.htb:80/assets/js/util.js
+|     Line number: 37
+|     Comment: 
+|         
+|         
+|         
+|         
+|         	 */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 789
+|     Comment: 
+|         /* List */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 962
+|     Comment: 
+|         /* Icons */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 1055
+|     Comment: 
+|         /* Panel */
+|     
+|     Path: http://admirer.htb:80/assets/js/breakpoints.min.js
+|     Line number: 1
+|     Comment: 
+|         /* breakpoints.js v1.0 | @ajlkn | MIT licensed */
+|     
+|     Path: http://admirer.htb:80/assets/js/util.js
+|     Line number: 521
+|     Comment: 
+|         
+|         
+|         
+|         
+|         	 */
+|     
+|     Path: http://admirer.htb:80/assets/js/jquery.poptrox.min.js
+|     Line number: 1
+|     Comment: 
+|         /* jquery.poptrox.js v2.5.2-dev | (c) @ajlkn | github.com/ajlkn/jquery.poptrox | MIT licensed */
+|     
+|     Path: http://admirer.htb:80/assets/js/util.js
+|     Line number: 3
+|     Comment: 
+|         
+|         
+|         
+|         	 */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 1184
+|     Comment: 
+|         /* Poptrox Popup */
+|     
+|     Path: http://admirer.htb:80/assets/js/jquery.min.js
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v3.4.1 | (c) JS Foundation and other contributors | jquery.org/license */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 987
+|     Comment: 
+|         /* Table */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 139
+|     Comment: 
+|         /* Basic */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 1454
+|     Comment: 
+|         /* Header */
+|     
+|     Path: http://admirer.htb:80/
+|     Line number: 120
+|     Comment: 
+|         <!-- Still under development... This does not send anything yet, but it looks nice! -->
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 1364
+|     Comment: 
+|         /* Wrapper */
+|     
+|     Path: http://admirer.htb:80/
+|     Line number: 94
+|     Comment: 
+|         <!-- Footer -->
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 495
+|     Comment: 
+|         /* Form */
+|     
+|     Path: http://admirer.htb:80/
+|     Line number: 17
+|     Comment: 
+|         <!-- Wrapper -->
+|     
+|     Path: http://admirer.htb:80/
+|     Line number: 144
+|     Comment: 
+|         <!-- Scripts -->
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 364
+|     Comment: 
+|         /* Button */
+|     
+|     Path: http://admirer.htb:80/
+|     Line number: 2
+|     Comment: 
+|         <!--
+|         	Multiverse by HTML5 UP
+|         	html5up.net | @ajlkn
+|         	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+|         -->
+|     
+|     Path: http://admirer.htb:80/assets/js/main.js
+|     Line number: 1
+|     Comment: 
+|         
+|         
+|         
+|         
+|         */
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 191
+|     Comment: 
+|         /* Type */
+|     
+|     Path: http://admirer.htb:80/
+|     Line number: 30
+|     Comment: 
+|         <!-- Main -->
+|     
+|     Path: http://admirer.htb:80/assets/css/main.css
+|     Line number: 1588
+|     Comment: 
+|         /* Main */
+|     
+|     Path: http://admirer.htb:80/assets/js/util.js
+|     Line number: 299
+|     Comment: 
+|         
+|         
+|         
+|_        	 */
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=admirer.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://admirer.htb:80/
+|     Form id: name
+|_    Form action: #
+|_http-date: Thu, 24 Dec 2020 11:47:21 GMT; +8m01s from local time.
+|_http-devframework: Couldn't determine the underlying framework or CMS. Try increasing 'httpspider.maxpagecount' value to spider more pages.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|_  /robots.txt: Robots file
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=admirer.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 404
+|_  	http://admirer.htb:80/index.html
+|_http-exif-spider: ERROR: Script execution failed (use -d to debug)
+|_http-feed: Couldn't find any feeds.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-fileupload-exploiter: 
+|   
+|     Couldn't find a file-type field.
+|   
+|_    Couldn't find a file-type field.
+| http-headers: 
+|   Date: Thu, 24 Dec 2020 11:47:21 GMT
+|   Server: Apache/2.4.25 (Debian)
+|   Connection: close
+|   Content-Type: text/html; charset=UTF-8
+|   
+|_  (Request type: HEAD)
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 123371a226c5565255e93ac3b0dc0f5a
+|_Credits query returned unknown hash 123371a226c5565255e93ac3b0dc0f5a
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 1 disallowed entry 
+|_/admin-dir
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.25 (Debian)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1
+|     /assets/css/
+|       css: 1
+|     /assets/js/
+|       js: 4
+|     /images/fulls/
+|       jpg: 8
+|     /images/thumbs/
+|       jpg: 6
+|   Longest directory structure:
+|     Depth: 2
+|     Dir: /images/fulls/
+|   Total files found (by extension):
+|_    Other: 1; css: 1; jpg: 14; js: 4
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Admirer
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 24 06:39:38 2020 -- 1 IP address (1 host up) scanned in 26.29 seconds

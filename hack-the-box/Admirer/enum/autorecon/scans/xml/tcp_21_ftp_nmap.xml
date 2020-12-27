@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Dec 24 06:39:12 2020 as: nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.187 -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 21 &quot;-&#45;script=banner,(ftp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/tcp_21_ftp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Admirer/enum/autorecon/scans/xml/tcp_21_ftp_nmap.xml 10.10.10.187" start="1608809952" startstr="Thu Dec 24 06:39:12 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="21"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1608809952"/>
+<taskend task="NSE" time="1608809952"/>
+<taskbegin task="NSE" time="1608809952"/>
+<taskend task="NSE" time="1608809952"/>
+<taskbegin task="NSE" time="1608809952"/>
+<taskend task="NSE" time="1608809952"/>
+<taskbegin task="SYN Stealth Scan" time="1608809952"/>
+<taskend task="SYN Stealth Scan" time="1608809952" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1608809952"/>
+<taskend task="Service scan" time="1608809953" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1608809953"/>
+<taskend task="NSE" time="1608809954"/>
+<taskbegin task="NSE" time="1608809954"/>
+<taskend task="NSE" time="1608809954"/>
+<taskbegin task="NSE" time="1608809954"/>
+<taskend task="NSE" time="1608809954"/>
+<host starttime="1608809952" endtime="1608809954"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.187" addrtype="ipv4"/>
+<hostnames>
+<hostname name="admirer.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ftp" product="vsftpd" version="3.0.3" ostype="Unix" method="probed" conf="10"><cpe>cpe:/a:vsftpd:vsftpd:3.0.3</cpe></service><script id="banner" output="220 (vsFTPd 3.0.3)"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="47507" rttvar="47507" to="237535"/>
+</host>
+<taskbegin task="NSE" time="1608809954"/>
+<taskend task="NSE" time="1608809954"/>
+<taskbegin task="NSE" time="1608809954"/>
+<taskend task="NSE" time="1608809954"/>
+<taskbegin task="NSE" time="1608809954"/>
+<taskend task="NSE" time="1608809954"/>
+<runstats><finished time="1608809954" timestr="Thu Dec 24 06:39:14 2020" summary="Nmap done at Thu Dec 24 06:39:14 2020; 1 IP address (1 host up) scanned in 2.20 seconds" elapsed="2.20" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

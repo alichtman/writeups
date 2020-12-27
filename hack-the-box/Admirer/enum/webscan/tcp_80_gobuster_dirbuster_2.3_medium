@@ -1,0 +1,5 @@
+http://admirer.htb/images (Status: 301)
+http://admirer.htb/assets (Status: 301)
+http://admirer.htb/index.php (Status: 200)
+http://admirer.htb/robots.txt (Status: 200)
+http://admirer.htb/server-status (Status: 403)
