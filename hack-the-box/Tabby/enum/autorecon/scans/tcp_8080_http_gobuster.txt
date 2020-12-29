@@ -1,0 +1,6 @@
+/docs (Status: 302) [Size: 0]
+/examples (Status: 302) [Size: 0]
+/host-manager (Status: 302) [Size: 0]
+/index.html (Status: 200) [Size: 1895]
+/index.html (Status: 200) [Size: 1895]
+/manager (Status: 302) [Size: 0]

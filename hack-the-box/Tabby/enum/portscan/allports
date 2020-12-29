@@ -1,0 +1,72 @@
+# Nmap 7.91 scan initiated Sun Dec 27 00:33:27 2020 as: nmap -A -v -p- -Pn -oN allports tabby.htb
+adjust_timeouts2: packet supposedly had rtt of -460917 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -460917 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1019640 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1019640 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -143541 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -143541 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -504134 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -504134 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -775069 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -775069 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -906689 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -906689 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -182243 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -182243 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1156322 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1156322 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -206071 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -206071 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1260930 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1260930 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -180025 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -180025 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -605945 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -605945 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1110888 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1110888 microseconds.  Ignoring time.
+Nmap scan report for tabby.htb (10.10.10.194)
+Host is up (0.051s latency).
+Not shown: 65532 closed ports
+PORT     STATE SERVICE VERSION
+22/tcp   open  ssh     OpenSSH 8.2p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 45:3c:34:14:35:56:23:95:d6:83:4e:26:de:c6:5b:d9 (RSA)
+|   256 89:79:3a:9c:88:b0:5c:ce:4b:79:b1:02:23:4b:44:a6 (ECDSA)
+|_  256 1e:e7:b9:55:dd:25:8f:72:56:e8:8e:65:d5:19:b0:8d (ED25519)
+80/tcp   open  http    Apache httpd 2.4.41 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: 338ABBB5EA8D80B9869555ECA253D49D
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Mega Hosting
+8080/tcp open  http    Apache Tomcat
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-title: Apache Tomcat
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=12/27%OT=22%CT=1%CU=36804%PV=Y%DS=2%DC=T%G=Y%TM=5FE81D
+OS:12%P=x86_64-pc-linux-gnu)SEQ(SP=104%GCD=1%ISR=106%TI=Z%CI=Z%TS=A)OPS(O1=
+OS:M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7
+OS:%O6=M54DST11)WIN(W1=FE88%W2=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y
+OS:%DF=Y%T=40%W=FAF0%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD
+OS:=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%D
+OS:F=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O
+OS:=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40
+OS:%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 24.951 days (since Wed Dec  2 01:45:10 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=260 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 587/tcp)
+HOP RTT      ADDRESS
+1   73.47 ms 10.10.14.1
+2   64.45 ms tabby.htb (10.10.10.194)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec 27 00:35:14 2020 -- 1 IP address (1 host up) scanned in 106.96 seconds

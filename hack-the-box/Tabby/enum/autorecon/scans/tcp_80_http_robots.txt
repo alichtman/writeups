@@ -1,0 +1,15 @@
+HTTP/1.1 404 Not Found
+Date: Sun, 27 Dec 2020 05:54:26 GMT
+Server: Apache/2.4.41 (Ubuntu)
+Content-Length: 271
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>404 Not Found</title>
+</head><body>
+<h1>Not Found</h1>
+<p>The requested URL was not found on this server.</p>
+<hr>
+<address>Apache/2.4.41 (Ubuntu) Server at tabby.htb Port 80</address>
+</body></html>

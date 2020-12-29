@@ -34,7 +34,7 @@
 | Postman     [x]  |                 |                       |               |
 | Admirer     [x]  |                 |                       |               |
 | Blunder     [x]  |                 |                       |               |
-| Tabby       [ ]  |                 |                       |               |
+| Tabby       [x]  |                 |                       |               |
 | Doctor      [x]  |                 |                       |               |
 | Quick       [ ]  |                 |                       |               |
 

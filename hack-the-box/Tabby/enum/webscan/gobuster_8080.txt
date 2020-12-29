@@ -1,0 +1,7 @@
+http://tabby.htb:8080/docs (Status: 302)
+http://tabby.htb:8080/examples (Status: 302)
+http://tabby.htb:8080/examples (Status: 302)
+http://tabby.htb:8080/host-manager (Status: 302)
+http://tabby.htb:8080/index.html (Status: 200)
+http://tabby.htb:8080/index.html (Status: 200)
+http://tabby.htb:8080/manager (Status: 302)
