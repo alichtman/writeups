@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Tue Dec 29 05:42:57 2020 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_80_http_nmap.xml lightweight.htb
+Nmap scan report for lightweight.htb (10.10.10.119)
+Host is up, received user-set (0.039s latency).
+Scanned at 2020-12-29 05:42:58 EST for 0s
+
+PORT   STATE  SERVICE REASON       VERSION
+80/tcp closed http    reset ttl 63
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 29 05:42:58 2020 -- 1 IP address (1 host up) scanned in 0.52 seconds

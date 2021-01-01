@@ -1,0 +1,34 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/_full_tcp_nmap.xml" lightweight.htb
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" lightweight.htb
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" lightweight.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour lightweight.htb:22 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_22_ssh_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_22_ssh_nmap.xml" lightweight.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour lightweight.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 80 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_80_http_nmap.xml" lightweight.htb
+
+curl -sSik http://lightweight.htb:80/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_index.html"
+
+curl -sSik http://lightweight.htb:80/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://lightweight.htb:80/ /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://lightweight.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_whatweb.txt"
+
+nikto -ask=no -h http://lightweight.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://lightweight.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_gobuster.txt"; else gobuster dir -u http://lightweight.htb:80/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour lightweight.htb:389 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_389_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 389 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_389_ldap_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_389_ldap_nmap.xml" lightweight.htb
+
+enum4linux -a -M -l -d lightweight.htb 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/enum4linux.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour lightweight.htb:80 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_sslscan.txt"; fi
+

@@ -1,0 +1,72 @@
+# Nmap 7.91 scan initiated Tue Dec 29 05:42:57 2020 as: nmap -vv --reason -Pn -sV -p 22 --script=banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_22_ssh_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_22_ssh_nmap.xml lightweight.htb
+Nmap scan report for lightweight.htb (10.10.10.119)
+Host is up, received user-set (0.039s latency).
+Scanned at 2020-12-29 05:42:58 EST for 10s
+
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+|_banner: SSH-2.0-OpenSSH_7.4
+| ssh-auth-methods: 
+|   Supported authentication methods: 
+|     publickey
+|     gssapi-keyex
+|     gssapi-with-mic
+|_    password
+| ssh-hostkey: 
+|   2048 19:97:59:9a:15:fd:d2:ac:bd:84:73:c4:29:e9:2b:73 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDf7K92wk79uG+iF3K0XaLWtJBrMKM/PfpE01tmpOSxwdhbiXQZ1ggfXFOfjSrkNqO/W3apn2SH1IO3jRCUGmEfXUzmTlX7FKDETKKFJuSZFwdphEqxoX/wCZ+NQhBX9bMT817GjQTNPEmkQsuWUD7PcVBYhRSKohP0jbAc464VKbSeiQt6q1I71CxzUtqMnL7pOREvF41+0K0BNtQUJVKxq5Aq0g67Ba8b0UEecOwgS8O4rZeKrfuYHMXnl6n32XrjqliowOSaZl/iYOu3dgkooIEDFDiaEapOW7J71/Ag/96NWzUf1U91QxCIA2GNtAhXT+Bn+ncbFtWxGdh6enL
+|   256 88:58:a1:cf:38:cd:2e:15:1d:2c:7f:72:06:a3:57:67 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ2F5pumDKrMj6rP99uQehJ2kGbw7z54Ydq7uuZ8FgoTw7wJ44SSytCh1jkrQay1jRg0+4Izw0cqUeW93J5kDCc=
+|   256 31:6c:c1:eb:3b:28:0f:ad:d5:79:72:8f:f5:b5:49:db (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGwL0BBmHKyKlj3sRMsytml1etD3lMtofGbdxD8aAh1T
+| ssh2-enum-algos: 
+|   kex_algorithms: (12)
+|       curve25519-sha256
+|       curve25519-sha256@libssh.org
+|       ecdh-sha2-nistp256
+|       ecdh-sha2-nistp384
+|       ecdh-sha2-nistp521
+|       diffie-hellman-group-exchange-sha256
+|       diffie-hellman-group16-sha512
+|       diffie-hellman-group18-sha512
+|       diffie-hellman-group-exchange-sha1
+|       diffie-hellman-group14-sha256
+|       diffie-hellman-group14-sha1
+|       diffie-hellman-group1-sha1
+|   server_host_key_algorithms: (5)
+|       ssh-rsa
+|       rsa-sha2-512
+|       rsa-sha2-256
+|       ecdsa-sha2-nistp256
+|       ssh-ed25519
+|   encryption_algorithms: (12)
+|       chacha20-poly1305@openssh.com
+|       aes128-ctr
+|       aes192-ctr
+|       aes256-ctr
+|       aes128-gcm@openssh.com
+|       aes256-gcm@openssh.com
+|       aes128-cbc
+|       aes192-cbc
+|       aes256-cbc
+|       blowfish-cbc
+|       cast128-cbc
+|       3des-cbc
+|   mac_algorithms: (10)
+|       umac-64-etm@openssh.com
+|       umac-128-etm@openssh.com
+|       hmac-sha2-256-etm@openssh.com
+|       hmac-sha2-512-etm@openssh.com
+|       hmac-sha1-etm@openssh.com
+|       umac-64@openssh.com
+|       umac-128@openssh.com
+|       hmac-sha2-256
+|       hmac-sha2-512
+|       hmac-sha1
+|   compression_algorithms: (2)
+|       none
+|_      zlib@openssh.com
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 29 05:43:08 2020 -- 1 IP address (1 host up) scanned in 11.08 seconds

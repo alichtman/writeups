@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Dec 29 05:42:39 2020 as: nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/_full_tcp_nmap.xml lightweight.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -A -&#45;osscan-guess -&#45;version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/_full_tcp_nmap.xml lightweight.htb" start="1609238559" startstr="Tue Dec 29 05:42:39 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609238559"/>
+<taskend task="NSE" time="1609238559"/>
+<taskbegin task="NSE" time="1609238559"/>
+<taskend task="NSE" time="1609238559"/>
+<taskbegin task="NSE" time="1609238559"/>
+<taskend task="NSE" time="1609238559"/>
+<taskbegin task="SYN Stealth Scan" time="1609238559"/>
+<taskprogress task="SYN Stealth Scan" time="1609238590" percent="16.78" remaining="154" etc="1609238744"/>
+<taskprogress task="SYN Stealth Scan" time="1609238620" percent="41.76" remaining="86" etc="1609238705"/>
+<taskprogress task="SYN Stealth Scan" time="1609238650" percent="72.13" remaining="36" etc="1609238685"/>
+<taskend task="SYN Stealth Scan" time="1609238674" extrainfo="65535 total ports"/>
+<taskbegin task="Service scan" time="1609238674"/>
+<taskend task="Service scan" time="1609238686" extrainfo="3 services on 1 host"/>
+<taskbegin task="Traceroute" time="1609238689"/>
+<taskend task="Traceroute" time="1609238690"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1609238690"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1609238690"/>
+<taskbegin task="NSE" time="1609238690"/>
+<taskend task="NSE" time="1609238695"/>
+<taskbegin task="NSE" time="1609238695"/>
+<taskend task="NSE" time="1609238695"/>
+<taskbegin task="NSE" time="1609238695"/>
+<taskend task="NSE" time="1609238695"/>
+<host starttime="1609238559" endtime="1609238695"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.119" addrtype="ipv4"/>
+<hostnames>
+<hostname name="lightweight.htb" type="user"/>
+<hostname name="lightweight.htb" type="PTR"/>
+</hostnames>
+<ports><extraports state="filtered" count="65532">
+<extrareasons reason="no-responses" count="65478"/>
+<extrareasons reason="host-prohibiteds" count="54"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ssh" product="OpenSSH" version="7.4" extrainfo="protocol 2.0" method="probed" conf="10"><cpe>cpe:/a:openbsd:openssh:7.4</cpe></service><script id="ssh-hostkey" output="&#xa;  2048 19:97:59:9a:15:fd:d2:ac:bd:84:73:c4:29:e9:2b:73 (RSA)&#xa;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDf7K92wk79uG+iF3K0XaLWtJBrMKM/PfpE01tmpOSxwdhbiXQZ1ggfXFOfjSrkNqO/W3apn2SH1IO3jRCUGmEfXUzmTlX7FKDETKKFJuSZFwdphEqxoX/wCZ+NQhBX9bMT817GjQTNPEmkQsuWUD7PcVBYhRSKohP0jbAc464VKbSeiQt6q1I71CxzUtqMnL7pOREvF41+0K0BNtQUJVKxq5Aq0g67Ba8b0UEecOwgS8O4rZeKrfuYHMXnl6n32XrjqliowOSaZl/iYOu3dgkooIEDFDiaEapOW7J71/Ag/96NWzUf1U91QxCIA2GNtAhXT+Bn+ncbFtWxGdh6enL&#xa;  256 88:58:a1:cf:38:cd:2e:15:1d:2c:7f:72:06:a3:57:67 (ECDSA)&#xa;ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ2F5pumDKrMj6rP99uQehJ2kGbw7z54Ydq7uuZ8FgoTw7wJ44SSytCh1jkrQay1jRg0+4Izw0cqUeW93J5kDCc=&#xa;  256 31:6c:c1:eb:3b:28:0f:ad:d5:79:72:8f:f5:b5:49:db (ED25519)&#xa;ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGwL0BBmHKyKlj3sRMsytml1etD3lMtofGbdxD8aAh1T"><table>
+<elem key="type">ssh-rsa</elem>
+<elem key="fingerprint">1997599a15fdd2acbd8473c429e92b73</elem>
+<elem key="bits">2048</elem>
+<elem key="key">AAAAB3NzaC1yc2EAAAADAQABAAABAQDDf7K92wk79uG+iF3K0XaLWtJBrMKM/PfpE01tmpOSxwdhbiXQZ1ggfXFOfjSrkNqO/W3apn2SH1IO3jRCUGmEfXUzmTlX7FKDETKKFJuSZFwdphEqxoX/wCZ+NQhBX9bMT817GjQTNPEmkQsuWUD7PcVBYhRSKohP0jbAc464VKbSeiQt6q1I71CxzUtqMnL7pOREvF41+0K0BNtQUJVKxq5Aq0g67Ba8b0UEecOwgS8O4rZeKrfuYHMXnl6n32XrjqliowOSaZl/iYOu3dgkooIEDFDiaEapOW7J71/Ag/96NWzUf1U91QxCIA2GNtAhXT+Bn+ncbFtWxGdh6enL</elem>
+</table>
+<table>
+<elem key="type">ecdsa-sha2-nistp256</elem>
+<elem key="fingerprint">8858a1cf38cd2e151d2c7f7206a35767</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ2F5pumDKrMj6rP99uQehJ2kGbw7z54Ydq7uuZ8FgoTw7wJ44SSytCh1jkrQay1jRg0+4Izw0cqUeW93J5kDCc=</elem>
+</table>
+<table>
+<elem key="type">ssh-ed25519</elem>
+<elem key="fingerprint">316cc1eb3b280fadd579728ff5b549db</elem>
+<elem key="bits">256</elem>
+<elem key="key">AAAAC3NzaC1lZDI1NTE5AAAAIGwL0BBmHKyKlj3sRMsytml1etD3lMtofGbdxD8aAh1T</elem>
+</table>
+</script></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="389"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="ldap" product="OpenLDAP" version="2.2.X - 2.3.X" method="probed" conf="10"><cpe>cpe:/a:openldap:openldap</cpe></service><script id="ssl-cert" output="Subject: commonName=lightweight.htb&#xa;Subject Alternative Name: DNS:lightweight.htb, DNS:localhost, DNS:localhost.localdomain&#xa;Issuer: commonName=lightweight.htb&#xa;Public Key type: rsa&#xa;Public Key bits: 1024&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2018-06-09T13:32:51&#xa;Not valid after:  2019-06-09T13:32:51&#xa;MD5:   0e61 1374 e591 83bd fd4a ee1a f448 547c&#xa;SHA-1: 8e10 be17 d435 e99d 3f93 9f40 c5d9 433c 47dd 532f&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIB7jCCAVegAwIBAgIFAK3GsbIwDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAxMP&#xa;bGlnaHR3ZWlnaHQuaHRiMB4XDTE4MDYwOTEzMzI1MVoXDTE5MDYwOTEzMzI1MVow&#xa;GjEYMBYGA1UEAxMPbGlnaHR3ZWlnaHQuaHRiMIGfMA0GCSqGSIb3DQEBAQUAA4GN&#xa;ADCBiQKBgQCxvnGKmYo2hrfZIWhsg4xxexD5taBmlczGdn8RSN3/X4ByGY17Uk1J&#xa;8JfYiCVYaD78Hi1QjZVKqpTZQdrU5KC1JqREWvBH/dw+Oat1Q0hFQs1Kuuk7oCAy&#xa;hxYBsqbdqG1j++xAxDRNVJE4rzAS84MkMuM19RcxXdftJKmYaCBoQwIDAQABo0Aw&#xa;PjA8BgNVHREENTAzgg9saWdodHdlaWdodC5odGKCCWxvY2FsaG9zdIIVbG9jYWxo&#xa;b3N0LmxvY2FsZG9tYWluMA0GCSqGSIb3DQEBCwUAA4GBAHcHUNMIiasynONFZpFm&#xa;ehiY2mIbB8YpPfFu5aCyMr0Ws/Zwb2eBkuSW5NDY2J2qqPwlUJcy+pqzYpZHE40z&#xa;Q/rvhBc2XglTApQp4wxFEGRLAoxLmerI/OluxwpYb+J0oKJcf/7gWA+JNRSNP8bY&#xa;cCCEDJ6JnmORKAK04GxKbB+T&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">lightweight.htb</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">lightweight.htb</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">1024</elem>
+<elem key="modulus">B1BE718A998A3686B7D921686C838C717B10F9B5A06695CCC6767F1148DDFF5F8072198D7B524D49F097D8882558683EFC1E2D508D954AAA94D941DAD4E4A0B526A4445AF047FDDC3E39AB7543484542CD4ABAE93BA02032871601B2A6DDA86D63FBEC40C4344D549138AF3012F3832432E335F517315DD7ED24A99868206843</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:lightweight.htb, DNS:localhost, DNS:localhost.localdomain</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2018-06-09T13:32:51</elem>
+<elem key="notAfter">2019-06-09T13:32:51</elem>
+</table>
+<elem key="md5">0e611374e59183bdfd4aee1af448547c</elem>
+<elem key="sha1">8e10be17d435e99d3f939f40c5d9433c47dd532f</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIB7jCCAVegAwIBAgIFAK3GsbIwDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAxMP&#xa;bGlnaHR3ZWlnaHQuaHRiMB4XDTE4MDYwOTEzMzI1MVoXDTE5MDYwOTEzMzI1MVow&#xa;GjEYMBYGA1UEAxMPbGlnaHR3ZWlnaHQuaHRiMIGfMA0GCSqGSIb3DQEBAQUAA4GN&#xa;ADCBiQKBgQCxvnGKmYo2hrfZIWhsg4xxexD5taBmlczGdn8RSN3/X4ByGY17Uk1J&#xa;8JfYiCVYaD78Hi1QjZVKqpTZQdrU5KC1JqREWvBH/dw+Oat1Q0hFQs1Kuuk7oCAy&#xa;hxYBsqbdqG1j++xAxDRNVJE4rzAS84MkMuM19RcxXdftJKmYaCBoQwIDAQABo0Aw&#xa;PjA8BgNVHREENTAzgg9saWdodHdlaWdodC5odGKCCWxvY2FsaG9zdIIVbG9jYWxo&#xa;b3N0LmxvY2FsZG9tYWluMA0GCSqGSIb3DQEBCwUAA4GBAHcHUNMIiasynONFZpFm&#xa;ehiY2mIbB8YpPfFu5aCyMr0Ws/Zwb2eBkuSW5NDY2J2qqPwlUJcy+pqzYpZHE40z&#xa;Q/rvhBc2XglTApQp4wxFEGRLAoxLmerI/OluxwpYb+J0oKJcf/7gWA+JNRSNP8bY&#xa;cCCEDJ6JnmORKAK04GxKbB+T&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="22"/>
+<osmatch name="Linux 3.10 - 4.11" accuracy="92" line="63442">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2 - 4.9" accuracy="92" line="65317">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="4.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 5.1" accuracy="92" line="68124">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="5.X" accuracy="92"><cpe>cpe:/o:linux:linux_kernel:5.1</cpe></osclass>
+</osmatch>
+<osmatch name="Crestron XPanel control system" accuracy="90" line="19546">
+<osclass type="specialized" vendor="Crestron" osfamily="2-Series" accuracy="90"><cpe>cpe:/o:crestron:2_series</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.18" accuracy="89" line="64468">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.18</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.16" accuracy="89" line="64174">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="89"><cpe>cpe:/o:linux:linux_kernel:3.16</cpe></osclass>
+</osmatch>
+<osmatch name="ASUS RT-N56U WAP (Linux 3.4)" accuracy="87" line="8401">
+<osclass type="WAP" vendor="Asus" osfamily="embedded" accuracy="87"><cpe>cpe:/h:asus:rt-n56u</cpe></osclass>
+<osclass type="WAP" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.4</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.1" accuracy="87" line="62920">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.1</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 3.2" accuracy="87" line="64667">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="87"><cpe>cpe:/o:linux:linux_kernel:3.2</cpe></osclass>
+</osmatch>
+<osmatch name="HP P2000 G3 NAS device" accuracy="87" line="35040">
+<osclass type="storage-misc" vendor="HP" osfamily="embedded" accuracy="87"><cpe>cpe:/h:hp:p2000_g3</cpe></osclass>
+</osmatch>
+<osfingerprint fingerprint="SCAN(V=7.91%E=4%D=12/29%OT=22%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5FEB08A7%P=x86_64-pc-linux-gnu)&#xa;SEQ(SP=107%GCD=1%ISR=10C%TI=Z%TS=A)&#xa;SEQ(SP=107%GCD=1%ISR=10C%TI=Z%II=I%TS=A)&#xa;OPS(O1=M54DST11NW6%O2=M54DST11NW6%O3=M54DNNT11NW6%O4=M54DST11NW6%O5=M54DST11NW6%O6=M54DST11)&#xa;WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)&#xa;ECN(R=Y%DF=Y%TG=40%W=7210%O=M54DNNSNW6%CC=Y%Q=)&#xa;T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)&#xa;T2(R=N)&#xa;T3(R=N)&#xa;T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)&#xa;U1(R=N)&#xa;IE(R=Y%DFI=N%TG=40%CD=S)&#xa;"/>
+</os>
+<uptime seconds="149" lastboot="Tue Dec 29 05:42:26 2020"/>
+<distance value="2"/>
+<tcpsequence index="263" difficulty="Good luck!" values="F15DCA1E,FBF4A9C4,9B6EFA24,18E5A3EF,7D40175D,5A756D28"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="22DC3,22E25,22E89,22EEE,22F52,22FB6"/>
+<trace port="80" proto="tcp">
+<hop ttl="1" ipaddr="10.10.14.1" rtt="43.24"/>
+<hop ttl="2" ipaddr="10.10.10.119" rtt="43.24" host="lightweight.htb"/>
+</trace>
+<times srtt="41852" rttvar="1888" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1609238695"/>
+<taskend task="NSE" time="1609238695"/>
+<taskbegin task="NSE" time="1609238695"/>
+<taskend task="NSE" time="1609238695"/>
+<taskbegin task="NSE" time="1609238695"/>
+<taskend task="NSE" time="1609238695"/>
+<runstats><finished time="1609238695" timestr="Tue Dec 29 05:44:55 2020" summary="Nmap done at Tue Dec 29 05:44:55 2020; 1 IP address (1 host up) scanned in 136.33 seconds" elapsed="136.33" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

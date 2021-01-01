@@ -1,0 +1,72 @@
+# Nmap 7.91 scan initiated Tue Dec 29 05:42:39 2020 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/_full_tcp_nmap.xml lightweight.htb
+Nmap scan report for lightweight.htb (10.10.10.119)
+Host is up, received user-set (0.042s latency).
+Scanned at 2020-12-29 05:42:39 EST for 136s
+Not shown: 65532 filtered ports
+Reason: 65478 no-responses and 54 host-prohibiteds
+PORT    STATE SERVICE    REASON         VERSION
+22/tcp  open  ssh        syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 19:97:59:9a:15:fd:d2:ac:bd:84:73:c4:29:e9:2b:73 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDDf7K92wk79uG+iF3K0XaLWtJBrMKM/PfpE01tmpOSxwdhbiXQZ1ggfXFOfjSrkNqO/W3apn2SH1IO3jRCUGmEfXUzmTlX7FKDETKKFJuSZFwdphEqxoX/wCZ+NQhBX9bMT817GjQTNPEmkQsuWUD7PcVBYhRSKohP0jbAc464VKbSeiQt6q1I71CxzUtqMnL7pOREvF41+0K0BNtQUJVKxq5Aq0g67Ba8b0UEecOwgS8O4rZeKrfuYHMXnl6n32XrjqliowOSaZl/iYOu3dgkooIEDFDiaEapOW7J71/Ag/96NWzUf1U91QxCIA2GNtAhXT+Bn+ncbFtWxGdh6enL
+|   256 88:58:a1:cf:38:cd:2e:15:1d:2c:7f:72:06:a3:57:67 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJ2F5pumDKrMj6rP99uQehJ2kGbw7z54Ydq7uuZ8FgoTw7wJ44SSytCh1jkrQay1jRg0+4Izw0cqUeW93J5kDCc=
+|   256 31:6c:c1:eb:3b:28:0f:ad:d5:79:72:8f:f5:b5:49:db (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGwL0BBmHKyKlj3sRMsytml1etD3lMtofGbdxD8aAh1T
+80/tcp  open  tcpwrapped syn-ack ttl 63
+389/tcp open  ldap       syn-ack ttl 63 OpenLDAP 2.2.X - 2.3.X
+| ssl-cert: Subject: commonName=lightweight.htb
+| Subject Alternative Name: DNS:lightweight.htb, DNS:localhost, DNS:localhost.localdomain
+| Issuer: commonName=lightweight.htb
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-06-09T13:32:51
+| Not valid after:  2019-06-09T13:32:51
+| MD5:   0e61 1374 e591 83bd fd4a ee1a f448 547c
+| SHA-1: 8e10 be17 d435 e99d 3f93 9f40 c5d9 433c 47dd 532f
+| -----BEGIN CERTIFICATE-----
+| MIIB7jCCAVegAwIBAgIFAK3GsbIwDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAxMP
+| bGlnaHR3ZWlnaHQuaHRiMB4XDTE4MDYwOTEzMzI1MVoXDTE5MDYwOTEzMzI1MVow
+| GjEYMBYGA1UEAxMPbGlnaHR3ZWlnaHQuaHRiMIGfMA0GCSqGSIb3DQEBAQUAA4GN
+| ADCBiQKBgQCxvnGKmYo2hrfZIWhsg4xxexD5taBmlczGdn8RSN3/X4ByGY17Uk1J
+| 8JfYiCVYaD78Hi1QjZVKqpTZQdrU5KC1JqREWvBH/dw+Oat1Q0hFQs1Kuuk7oCAy
+| hxYBsqbdqG1j++xAxDRNVJE4rzAS84MkMuM19RcxXdftJKmYaCBoQwIDAQABo0Aw
+| PjA8BgNVHREENTAzgg9saWdodHdlaWdodC5odGKCCWxvY2FsaG9zdIIVbG9jYWxo
+| b3N0LmxvY2FsZG9tYWluMA0GCSqGSIb3DQEBCwUAA4GBAHcHUNMIiasynONFZpFm
+| ehiY2mIbB8YpPfFu5aCyMr0Ws/Zwb2eBkuSW5NDY2J2qqPwlUJcy+pqzYpZHE40z
+| Q/rvhBc2XglTApQp4wxFEGRLAoxLmerI/OluxwpYb+J0oKJcf/7gWA+JNRSNP8bY
+| cCCEDJ6JnmORKAK04GxKbB+T
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+OS fingerprint not ideal because: Missing a closed TCP port so results incomplete
+Aggressive OS guesses: Linux 3.10 - 4.11 (92%), Linux 3.2 - 4.9 (92%), Linux 5.1 (92%), Crestron XPanel control system (90%), Linux 3.18 (89%), Linux 3.16 (89%), ASUS RT-N56U WAP (Linux 3.4) (87%), Linux 3.1 (87%), Linux 3.2 (87%), HP P2000 G3 NAS device (87%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=12/29%OT=22%CT=%CU=%PV=Y%DS=2%DC=T%G=N%TM=5FEB08A7%P=x86_64-pc-linux-gnu)
+SEQ(SP=107%GCD=1%ISR=10C%TI=Z%TS=A)
+SEQ(SP=107%GCD=1%ISR=10C%TI=Z%II=I%TS=A)
+OPS(O1=M54DST11NW6%O2=M54DST11NW6%O3=M54DNNT11NW6%O4=M54DST11NW6%O5=M54DST11NW6%O6=M54DST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M54DNNSNW6%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 0.002 days (since Tue Dec 29 05:42:26 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 80/tcp)
+HOP RTT      ADDRESS
+1   43.24 ms 10.10.14.1
+2   43.24 ms lightweight.htb (10.10.10.119)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 29 05:44:55 2020 -- 1 IP address (1 host up) scanned in 136.33 seconds

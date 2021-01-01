@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Tue Dec 29 05:42:57 2020 as: nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_80_http_nmap.xml lightweight.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 80 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_80_http_nmap.xml lightweight.htb" start="1609238577" startstr="Tue Dec 29 05:42:57 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<taskbegin task="SYN Stealth Scan" time="1609238578"/>
+<taskend task="SYN Stealth Scan" time="1609238578" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1609238578"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<host starttime="1609238578" endtime="1609238578"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.119" addrtype="ipv4"/>
+<hostnames>
+<hostname name="lightweight.htb" type="user"/>
+<hostname name="lightweight.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="closed" reason="reset" reason_ttl="63"/><service name="http" method="table" conf="3"/></port>
+</ports>
+<times srtt="39444" rttvar="39444" to="197220"/>
+</host>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<taskbegin task="NSE" time="1609238578"/>
+<taskend task="NSE" time="1609238578"/>
+<runstats><finished time="1609238578" timestr="Tue Dec 29 05:42:58 2020" summary="Nmap done at Tue Dec 29 05:42:58 2020; 1 IP address (1 host up) scanned in 0.52 seconds" elapsed="0.52" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

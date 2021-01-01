@@ -1,0 +1,231 @@
+# Nmap 7.91 scan initiated Tue Dec 29 05:42:57 2020 as: nmap -vv --reason -Pn -sV -p 389 "--script=banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/tcp_389_ldap_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Lightweight/enum/autorecon/scans/xml/tcp_389_ldap_nmap.xml lightweight.htb
+Nmap scan report for lightweight.htb (10.10.10.119)
+Host is up, received user-set (0.039s latency).
+Scanned at 2020-12-29 05:42:58 EST for 37s
+
+PORT    STATE SERVICE REASON         VERSION
+389/tcp open  ldap    syn-ack ttl 63 OpenLDAP 2.2.X - 2.3.X
+| ldap-rootdse: 
+| LDAP Results
+|   <ROOT>
+|       namingContexts: dc=lightweight,dc=htb
+|       supportedControl: 2.16.840.1.113730.3.4.18
+|       supportedControl: 2.16.840.1.113730.3.4.2
+|       supportedControl: 1.3.6.1.4.1.4203.1.10.1
+|       supportedControl: 1.3.6.1.1.22
+|       supportedControl: 1.2.840.113556.1.4.319
+|       supportedControl: 1.2.826.0.1.3344810.2.3
+|       supportedControl: 1.3.6.1.1.13.2
+|       supportedControl: 1.3.6.1.1.13.1
+|       supportedControl: 1.3.6.1.1.12
+|       supportedExtension: 1.3.6.1.4.1.1466.20037
+|       supportedExtension: 1.3.6.1.4.1.4203.1.11.1
+|       supportedExtension: 1.3.6.1.4.1.4203.1.11.3
+|       supportedExtension: 1.3.6.1.1.8
+|       supportedLDAPVersion: 3
+|_      subschemaSubentry: cn=Subschema
+| ldap-search: 
+|   Context: dc=lightweight,dc=htb
+|     dn: dc=lightweight,dc=htb
+|         objectClass: top
+|         objectClass: dcObject
+|         objectClass: organization
+|         o: lightweight htb
+|         dc: lightweight
+|     dn: cn=Manager,dc=lightweight,dc=htb
+|         objectClass: organizationalRole
+|         cn: Manager
+|         description: Directory Manager
+|     dn: ou=People,dc=lightweight,dc=htb
+|         objectClass: organizationalUnit
+|         ou: People
+|     dn: ou=Group,dc=lightweight,dc=htb
+|         objectClass: organizationalUnit
+|         ou: Group
+|     dn: uid=ldapuser1,ou=People,dc=lightweight,dc=htb
+|         uid: ldapuser1
+|         cn: ldapuser1
+|         sn: ldapuser1
+|         mail: ldapuser1@lightweight.htb
+|         objectClass: person
+|         objectClass: organizationalPerson
+|         objectClass: inetOrgPerson
+|         objectClass: posixAccount
+|         objectClass: top
+|         objectClass: shadowAccount
+|         userPassword: {crypt}$6$3qx0SD9x$Q9y1lyQaFKpxqkGqKAjLOWd33Nwdhj.l4MzV7vTnfkE/g/Z/7N5ZbdEQWfup2lSdASImHtQFh6zMo41ZA./44/
+|         shadowLastChange: 17691
+|         shadowMin: 0
+|         shadowMax: 99999
+|         shadowWarning: 7
+|         loginShell: /bin/bash
+|         uidNumber: 1000
+|         gidNumber: 1000
+|         homeDirectory: /home/ldapuser1
+|     dn: uid=ldapuser2,ou=People,dc=lightweight,dc=htb
+|         uid: ldapuser2
+|         cn: ldapuser2
+|         sn: ldapuser2
+|         mail: ldapuser2@lightweight.htb
+|         objectClass: person
+|         objectClass: organizationalPerson
+|         objectClass: inetOrgPerson
+|         objectClass: posixAccount
+|         objectClass: top
+|         objectClass: shadowAccount
+|         userPassword: {crypt}$6$xJxPjT0M$1m8kM00CJYCAgzT4qz8TQwyGFQvk3boaymuAmMZCOfm3OA7OKunLZZlqytUp2dun509OBE2xwX/QEfjdRQzgn1
+|         shadowLastChange: 17691
+|         shadowMin: 0
+|         shadowMax: 99999
+|         shadowWarning: 7
+|         loginShell: /bin/bash
+|         uidNumber: 1001
+|         gidNumber: 1001
+|         homeDirectory: /home/ldapuser2
+|     dn: cn=ldapuser1,ou=Group,dc=lightweight,dc=htb
+|         objectClass: posixGroup
+|         objectClass: top
+|         cn: ldapuser1
+|         userPassword: {crypt}x
+|         gidNumber: 1000
+|     dn: cn=ldapuser2,ou=Group,dc=lightweight,dc=htb
+|         objectClass: posixGroup
+|         objectClass: top
+|         cn: ldapuser2
+|         userPassword: {crypt}x
+|_        gidNumber: 1001
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+| ssl-cert: Subject: commonName=lightweight.htb
+| Subject Alternative Name: DNS:lightweight.htb, DNS:localhost, DNS:localhost.localdomain
+| Issuer: commonName=lightweight.htb
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2018-06-09T13:32:51
+| Not valid after:  2019-06-09T13:32:51
+| MD5:   0e61 1374 e591 83bd fd4a ee1a f448 547c
+| SHA-1: 8e10 be17 d435 e99d 3f93 9f40 c5d9 433c 47dd 532f
+| -----BEGIN CERTIFICATE-----
+| MIIB7jCCAVegAwIBAgIFAK3GsbIwDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAxMP
+| bGlnaHR3ZWlnaHQuaHRiMB4XDTE4MDYwOTEzMzI1MVoXDTE5MDYwOTEzMzI1MVow
+| GjEYMBYGA1UEAxMPbGlnaHR3ZWlnaHQuaHRiMIGfMA0GCSqGSIb3DQEBAQUAA4GN
+| ADCBiQKBgQCxvnGKmYo2hrfZIWhsg4xxexD5taBmlczGdn8RSN3/X4ByGY17Uk1J
+| 8JfYiCVYaD78Hi1QjZVKqpTZQdrU5KC1JqREWvBH/dw+Oat1Q0hFQs1Kuuk7oCAy
+| hxYBsqbdqG1j++xAxDRNVJE4rzAS84MkMuM19RcxXdftJKmYaCBoQwIDAQABo0Aw
+| PjA8BgNVHREENTAzgg9saWdodHdlaWdodC5odGKCCWxvY2FsaG9zdIIVbG9jYWxo
+| b3N0LmxvY2FsZG9tYWluMA0GCSqGSIb3DQEBCwUAA4GBAHcHUNMIiasynONFZpFm
+| ehiY2mIbB8YpPfFu5aCyMr0Ws/Zwb2eBkuSW5NDY2J2qqPwlUJcy+pqzYpZHE40z
+| Q/rvhBc2XglTApQp4wxFEGRLAoxLmerI/OluxwpYb+J0oKJcf/7gWA+JNRSNP8bY
+| cCCEDJ6JnmORKAK04GxKbB+T
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+| ssl-enum-ciphers: 
+|   SSLv3: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       CBC-mode cipher in SSLv3 (CVE-2014-3566)
+|       Ciphersuite uses MD5 for message integrity
+|       Forward Secrecy not supported by any cipher
+|   TLSv1.0: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Forward Secrecy not supported by any cipher
+|   TLSv1.1: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Forward Secrecy not supported by any cipher
+|   TLSv1.2: 
+|     ciphers: 
+|       TLS_RSA_WITH_3DES_EDE_CBC_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_AES_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 1024) - A
+|       TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_IDEA_CBC_SHA (rsa 1024) - A
+|       TLS_RSA_WITH_RC4_128_MD5 (rsa 1024) - D
+|       TLS_RSA_WITH_RC4_128_SHA (rsa 1024) - D
+|       TLS_RSA_WITH_SEED_CBC_SHA (rsa 1024) - A
+|     compressors: 
+|       NULL
+|     cipher preference: client
+|     warnings: 
+|       64-bit block cipher 3DES vulnerable to SWEET32 attack
+|       64-bit block cipher IDEA vulnerable to SWEET32 attack
+|       Broken cipher RC4 is deprecated by RFC 7465
+|       Ciphersuite uses MD5 for message integrity
+|       Forward Secrecy not supported by any cipher
+|_  least strength: D
+| ssl-poodle: 
+|   VULNERABLE:
+|   SSL POODLE information leak
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2014-3566  BID:70574
+|           The SSL protocol 3.0, as used in OpenSSL through 1.0.1i and other
+|           products, uses nondeterministic CBC padding, which makes it easier
+|           for man-in-the-middle attackers to obtain cleartext data via a
+|           padding-oracle attack, aka the "POODLE" issue.
+|     Disclosure date: 2014-10-14
+|     Check results:
+|       TLS_RSA_WITH_AES_128_CBC_SHA
+|       TLS_FALLBACK_SCSV properly implemented
+|     References:
+|       https://www.imperialviolet.org/2014/10/14/poodle.html
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2014-3566
+|       https://www.openssl.org/~bodo/ssl-poodle.pdf
+|_      https://www.securityfocus.com/bid/70574
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Dec 29 05:43:35 2020 -- 1 IP address (1 host up) scanned in 37.52 seconds
