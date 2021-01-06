@@ -1,0 +1,227 @@
+_______________________________________________________________
+         __          _______   _____
+         \ \        / /  __ \ / ____|
+          \ \  /\  / /| |__) | (___   ___  __ _ _ __ ®
+           \ \/  \/ / |  ___/ \___ \ / __|/ _` | '_ \
+            \  /\  /  | |     ____) | (__| (_| | | | |
+             \/  \/   |_|    |_____/ \___|\__,_|_| |_|
+
+         WordPress Security Scanner by the WPScan Team
+                         Version 3.8.11
+       Sponsored by Automattic - https://automattic.com/
+       @_WPScan_, @ethicalhack3r, @erwan_lr, @firefart
+_______________________________________________________________
+
+[32m[+][0m URL: https://brainfuck.htb/ [10.10.10.17]
+[32m[+][0m Started: Fri Jan  1 06:10:25 2021
+
+Interesting Finding(s):
+
+[32m[+][0m Headers
+ | Interesting Entry: Server: nginx/1.10.0 (Ubuntu)
+ | Found By: Headers (Passive Detection)
+ | Confidence: 100%
+
+[32m[+][0m XML-RPC seems to be enabled: https://brainfuck.htb/xmlrpc.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+ | References:
+ |  - http://codex.wordpress.org/XML-RPC_Pingback_API
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_ghost_scanner
+ |  - https://www.rapid7.com/db/modules/auxiliary/dos/http/wordpress_xmlrpc_dos
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_xmlrpc_login
+ |  - https://www.rapid7.com/db/modules/auxiliary/scanner/http/wordpress_pingback_access
+
+[32m[+][0m WordPress readme found: https://brainfuck.htb/readme.html
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 100%
+
+[32m[+][0m The external WP-Cron seems to be enabled: https://brainfuck.htb/wp-cron.php
+ | Found By: Direct Access (Aggressive Detection)
+ | Confidence: 60%
+ | References:
+ |  - https://www.iplocation.net/defend-wordpress-from-ddos
+ |  - https://github.com/wpscanteam/wpscan/issues/1299
+
+[32m[+][0m WordPress version 4.7.3 identified (Insecure, released on 2017-03-06).
+ | Found By: Rss Generator (Passive Detection)
+ |  - https://brainfuck.htb/?feed=rss2, <generator>https://wordpress.org/?v=4.7.3</generator>
+ |  - https://brainfuck.htb/?feed=comments-rss2, <generator>https://wordpress.org/?v=4.7.3</generator>
+
+[32m[+][0m WordPress theme in use: proficient
+ | Location: https://brainfuck.htb/wp-content/themes/proficient/
+ | Last Updated: 2020-12-21T00:00:00.000Z
+ | Readme: https://brainfuck.htb/wp-content/themes/proficient/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 3.0.39
+ | Style URL: https://brainfuck.htb/wp-content/themes/proficient/style.css?ver=4.7.3
+ | Style Name: Proficient
+ | Description: Proficient is a Multipurpose WordPress theme with lots of powerful features, instantly giving a prof...
+ | Author: Specia
+ | Author URI: https://speciatheme.com/
+ |
+ | Found By: Css Style In Homepage (Passive Detection)
+ |
+ | Version: 1.0.6 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/proficient/style.css?ver=4.7.3, Match: 'Version: 1.0.6'
+
+[32m[+][0m Enumerating All Plugins (via Passive Methods)
+[32m[+][0m Checking Plugin Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m Plugin(s) Identified:
+
+[32m[+][0m wp-support-plus-responsive-ticket-system
+ | Location: https://brainfuck.htb/wp-content/plugins/wp-support-plus-responsive-ticket-system/
+ | Last Updated: 2019-09-03T07:57:00.000Z
+ | [33m[!][0m The version is out of date, the latest version is 9.1.2
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ |
+ | Version: 7.1.3 (100% confidence)
+ | Found By: Readme - Stable Tag (Aggressive Detection)
+ |  - https://brainfuck.htb/wp-content/plugins/wp-support-plus-responsive-ticket-system/readme.txt
+ | Confirmed By: Readme - ChangeLog Section (Aggressive Detection)
+ |  - https://brainfuck.htb/wp-content/plugins/wp-support-plus-responsive-ticket-system/readme.txt
+
+[32m[+][0m Enumerating All Themes (via Passive and Aggressive Methods)
+
+ Checking Known Locations -: |==========================================================================================================================|
+[32m[+][0m Checking Theme Versions (via Passive and Aggressive Methods)
+
+[34m[i][0m Theme(s) Identified:
+
+[32m[+][0m proficient
+ | Location: https://brainfuck.htb/wp-content/themes/proficient/
+ | Last Updated: 2020-12-21T00:00:00.000Z
+ | Readme: https://brainfuck.htb/wp-content/themes/proficient/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 3.0.39
+ | Style URL: https://brainfuck.htb/wp-content/themes/proficient/style.css
+ | Style Name: Proficient
+ | Description: Proficient is a Multipurpose WordPress theme with lots of powerful features, instantly giving a prof...
+ | Author: Specia
+ | Author URI: https://speciatheme.com/
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Known Locations (Aggressive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/proficient/, status: 403
+ |
+ | Version: 1.0.6 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/proficient/style.css, Match: 'Version: 1.0.6'
+
+[32m[+][0m specia
+ | Location: https://brainfuck.htb/wp-content/themes/specia/
+ | Last Updated: 2020-12-21T00:00:00.000Z
+ | Readme: https://brainfuck.htb/wp-content/themes/specia/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 3.1.52
+ | Style URL: https://brainfuck.htb/wp-content/themes/specia/style.css
+ | Style Name: Specia
+ | Style URI: https://speciatheme.com/specia-free-wordpress-theme/
+ | Description: Specia is a Multipurpose WordPress theme with lots of powerful features, instantly giving a professi...
+ | Author: Specia
+ | Author URI: https://speciatheme.com/
+ |
+ | Found By: Urls In Homepage (Passive Detection)
+ | Confirmed By: Known Locations (Aggressive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/specia/, status: 500
+ |
+ | Version: 2.1.1 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/specia/style.css, Match: 'Version: 2.1.1'
+
+[32m[+][0m twentyfifteen
+ | Location: https://brainfuck.htb/wp-content/themes/twentyfifteen/
+ | Last Updated: 2020-12-09T00:00:00.000Z
+ | Readme: https://brainfuck.htb/wp-content/themes/twentyfifteen/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 2.8
+ | Style URL: https://brainfuck.htb/wp-content/themes/twentyfifteen/style.css
+ | Style Name: Twenty Fifteen
+ | Style URI: https://wordpress.org/themes/twentyfifteen/
+ | Description: Our 2015 default theme is clean, blog-focused, and designed for clarity. Twenty Fifteen's simple, st...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Known Locations (Aggressive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/twentyfifteen/, status: 500
+ |
+ | Version: 1.7 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/twentyfifteen/style.css, Match: 'Version: 1.7'
+
+[32m[+][0m twentyseventeen
+ | Location: https://brainfuck.htb/wp-content/themes/twentyseventeen/
+ | Last Updated: 2020-12-09T00:00:00.000Z
+ | Readme: https://brainfuck.htb/wp-content/themes/twentyseventeen/README.txt
+ | [33m[!][0m The version is out of date, the latest version is 2.5
+ | Style URL: https://brainfuck.htb/wp-content/themes/twentyseventeen/style.css
+ | Style Name: Twenty Seventeen
+ | Style URI: https://wordpress.org/themes/twentyseventeen/
+ | Description: Twenty Seventeen brings your site to life with header video and immersive featured images. With a fo...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Known Locations (Aggressive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/twentyseventeen/, status: 500
+ |
+ | Version: 1.1 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/twentyseventeen/style.css, Match: 'Version: 1.1'
+
+[32m[+][0m twentysixteen
+ | Location: https://brainfuck.htb/wp-content/themes/twentysixteen/
+ | Last Updated: 2020-12-09T00:00:00.000Z
+ | Readme: https://brainfuck.htb/wp-content/themes/twentysixteen/readme.txt
+ | [33m[!][0m The version is out of date, the latest version is 2.3
+ | Style URL: https://brainfuck.htb/wp-content/themes/twentysixteen/style.css
+ | Style Name: Twenty Sixteen
+ | Style URI: https://wordpress.org/themes/twentysixteen/
+ | Description: Twenty Sixteen is a modernized take on an ever-popular WordPress layout — the horizontal masthead ...
+ | Author: the WordPress team
+ | Author URI: https://wordpress.org/
+ |
+ | Found By: Known Locations (Aggressive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/twentysixteen/, status: 500
+ |
+ | Version: 1.3 (80% confidence)
+ | Found By: Style (Passive Detection)
+ |  - https://brainfuck.htb/wp-content/themes/twentysixteen/style.css, Match: 'Version: 1.3'
+
+[32m[+][0m Enumerating Config Backups (via Passive and Aggressive Methods)
+
+ Checking Config Backups -: |===========================================================================================================================|
+
+[34m[i][0m No Config Backups Found.
+
+[32m[+][0m Enumerating DB Exports (via Passive and Aggressive Methods)
+
+ Checking DB Exports -: |===============================================================================================================================|
+
+[34m[i][0m No DB Exports Found.
+
+[32m[+][0m Enumerating Users (via Passive and Aggressive Methods)
+
+ Brute Forcing Author IDs -: |==========================================================================================================================|
+
+[34m[i][0m User(s) Identified:
+
+[32m[+][0m admin
+ | Found By: Author Posts - Display Name (Passive Detection)
+ | Confirmed By:
+ |  Rss Generator (Passive Detection)
+ |  Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ |  Login Error Messages (Aggressive Detection)
+
+[32m[+][0m administrator
+ | Found By: Author Id Brute Forcing - Author Pattern (Aggressive Detection)
+ | Confirmed By: Login Error Messages (Aggressive Detection)
+
+[33m[!][0m No WPScan API Token given, as a result vulnerability data has not been output.
+[33m[!][0m You can get a free API token with 50 daily requests by registering at https://wpscan.com/register
+
+[32m[+][0m Finished: Fri Jan  1 06:14:32 2021
+[32m[+][0m Requests Done: 22023
+[32m[+][0m Cached Requests: 23
+[32m[+][0m Data Sent: 5.688 MB
+[32m[+][0m Data Received: 3.97 MB
+[32m[+][0m Memory used: 302.566 MB
+[32m[+][0m Elapsed time: 00:04:06

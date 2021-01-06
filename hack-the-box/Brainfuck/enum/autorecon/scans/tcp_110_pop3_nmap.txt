@@ -1,0 +1,14 @@
+# Nmap 7.91 scan initiated Thu Dec 31 23:11:44 2020 as: nmap -vv --reason -Pn -sV -p 110 "--script=banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_110_pop3_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_110_pop3_nmap.xml brainfuck.htb
+Nmap scan report for brainfuck.htb (10.10.10.17)
+Host is up, received user-set (0.042s latency).
+Scanned at 2020-12-31 23:11:44 EST for 1s
+
+PORT    STATE SERVICE REASON         VERSION
+110/tcp open  pop3    syn-ack ttl 63 Dovecot pop3d
+|_banner: +OK Dovecot ready.
+|_pop3-capabilities: UIDL PIPELINING USER SASL(PLAIN) RESP-CODES TOP AUTH-RESP-CODE CAPA
+|_sslv2-drown: 
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 31 23:11:45 2020 -- 1 IP address (1 host up) scanned in 1.06 seconds

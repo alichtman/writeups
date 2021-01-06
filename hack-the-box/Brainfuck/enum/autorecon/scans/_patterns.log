@@ -1,0 +1,6 @@
+tcp/443/curl-index - Matched Pattern: Powered by WordPress, state-of-the-art semantic personal publishing platform.">WordPress.org</a></li>			</ul>
+
+tcp/443/nmap-http - Identified HTTP Server: nginx/1.10.0 (Ubuntu)
+
+tcp/443/nmap-http - Nmap script found a potential vulnerability. (State: VULNERABLE)
+

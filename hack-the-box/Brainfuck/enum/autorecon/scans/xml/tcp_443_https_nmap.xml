@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Dec 31 23:11:44 2020 as: nmap -vv -&#45;reason -Pn -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_443_https_nmap.xml brainfuck.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 443 &quot;-&#45;script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_443_https_nmap.xml brainfuck.htb" start="1609474304" startstr="Thu Dec 31 23:11:44 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="443"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="SYN Stealth Scan" time="1609474304"/>
+<taskend task="SYN Stealth Scan" time="1609474304" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1609474304"/>
+<taskend task="Service scan" time="1609474317" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1609474317"/>
+<taskprogress task="NSE" time="1609474348" percent="99.02" remaining="1" etc="1609474348"/>
+<taskprogress task="NSE" time="1609474378" percent="99.67" remaining="1" etc="1609474378"/>
+<taskprogress task="NSE" time="1609474408" percent="99.67" remaining="1" etc="1609474408"/>
+<taskprogress task="NSE" time="1609474438" percent="99.67" remaining="1" etc="1609474438"/>
+<taskprogress task="NSE" time="1609474468" percent="99.67" remaining="1" etc="1609474468"/>
+<taskprogress task="NSE" time="1609474498" percent="99.67" remaining="1" etc="1609474499"/>
+<taskend task="NSE" time="1609474515"/>
+<taskbegin task="NSE" time="1609474515"/>
+<taskend task="NSE" time="1609474531"/>
+<taskbegin task="NSE" time="1609474531"/>
+<taskend task="NSE" time="1609474531"/>
+<host starttime="1609474304" endtime="1609474531"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.17" addrtype="ipv4"/>
+<hostnames>
+<hostname name="brainfuck.htb" type="user"/>
+<hostname name="brainfuck.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="http" product="nginx" version="1.10.0" extrainfo="Ubuntu" ostype="Linux" tunnel="ssl" method="probed" conf="10"><cpe>cpe:/a:igor_sysoev:nginx:1.10.0</cpe><cpe>cpe:/o:linux:linux_kernel</cpe></service><script id="http-auth-finder" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=brainfuck.htb&#xa;  url                                     method&#xa;  https://brainfuck.htb:443/wp-login.php  FORM&#xa;"/><script id="http-chrono" output="Request times for /; avg: 333.64ms; min: 308.61ms; max: 369.74ms"/><script id="http-comments-displayer" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=brainfuck.htb&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-includes/css/jquery-ui-dialog.min.css?ver=4.7.3&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*!&#xa;         * jQuery UI CSS Framework 1.11.4&#xa;         * http://jqueryui.com&#xa;         *&#xa;         * Copyright jQuery Foundation and other contributors&#xa;         * Released under the MIT license.&#xa;         * http://jquery.org/license&#xa;         *&#xa;         * http://api.jqueryui.com/category/theming/&#xa;         */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 826&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 456&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1447&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 250&#xa;    Comment: &#xa;        &#xa;        &#xa;        ========================================-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 156&#xa;    Comment: &#xa;        &lt;!-&#45; Blog &amp; Sidebar Section -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1748&#xa;    Comment: &#xa;        /* Above WP toolbar. */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 51&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 425&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 66&#xa;    Comment: &#xa;        /* ]]&gt; */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 751&#xa;    Comment: &#xa;        /* Effect 1a */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1226&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1420&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 302&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 990&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 629&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 469&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1592&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;            text-transform: uppercase;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 924&#xa;    Comment: &#xa;        /*-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 94&#xa;    Comment: &#xa;        /* .navbar-brand { display: block; } */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 312&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 179&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 359&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 200&#xa;    Comment: &#xa;        &lt;!-&#45;/End of Blog Detail-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-includes/css/jquery-ui-dialog.min.css?ver=4.7.3&#xa;    Line number: 10&#xa;    Comment: &#xa;        /*!&#xa;         * jQuery UI Resizable 1.11.4&#xa;         * http://jqueryui.com&#xa;         *&#xa;         * Copyright jQuery Foundation and other contributors&#xa;         * Released under the MIT license.&#xa;         * http://jquery.org/license&#xa;         */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 925&#xa;    Comment: &#xa;        /***** Sadie *****/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 235&#xa;    Comment: &#xa;        &lt;!-&#45; End of Blog &amp; Sidebar Section -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 190&#xa;    Comment: &#xa;        &lt;!-&#45; .entry-content -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 346&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 136&#xa;    Comment: &#xa;        &#xa;        &#xa;        ========================================-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 111&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 228&#xa;    Comment: &#xa;        &lt;!-&#45; #secondary -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-includes/js/jquery/jquery.js?ver=1.12.4&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*! jQuery v1.12.4 | (c) jQuery Foundation | jquery.org/license */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1692&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1670&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 45&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1611&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;            margin-bottom: 2.1538461538em;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 274&#xa;    Comment: &#xa;        &#xa;        &#xa;        ========================================-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 240&#xa;    Comment: &#xa;        &#xa;        &#xa;        ========================================-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 353&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 125&#xa;    Comment: &#xa;        &lt;!-&#45; Menu Toggle -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 185&#xa;    Comment: &#xa;        &lt;!-&#45; .entry-header -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 161&#xa;    Comment: &#xa;        &lt;!-&#45;Blog Detail-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1245&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 18&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1204&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1&#xa;    Line number: 1&#xa;    Comment: &#xa;        /*! jQuery Migrate v1.4.1 | (c) jQuery Foundation and other contributors | jquery.org/license */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1325&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 863&#xa;    Comment: &#xa;        /* Common style */&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 114&#xa;    Comment: &#xa;        &lt;!-&#45; Mobile Display -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1232&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 832&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1210&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1063&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1274&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 18&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1078&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1069&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 181&#xa;    Comment: &#xa;        &lt;!-&#45; .entry-footer -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 996&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 1&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 79&#xa;    Comment: &#xa;        /* padding: 10px 0px 10px; */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1406&#xa;    Comment: &#xa;        /*  display: inline-block;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-login.php&#xa;    Line number: 7&#xa;    Comment: &#xa;        &lt;!-&#45;&lt;![endif]-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 64&#xa;    Comment: &#xa;        /* &lt;![CDATA[ */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 407&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 80&#xa;    Comment: &#xa;        /* } */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-login.php&#xa;    Line number: 2&#xa;    Comment: &#xa;        &lt;!-&#45;[if IE 8]&gt;&#xa;        &#x9;&#x9;&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; class=&quot;ie8&quot; lang=&quot;en-US&quot;&gt;&#xa;        &#x9;&lt;![endif]-&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 438&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 772&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 766&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 47&#xa;    Comment: &#xa;        /* Menu*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/proficient/style.css?ver=4.7.3&#xa;    Line number: 78&#xa;    Comment: &#xa;        /* .nav-center { */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 689&#xa;    Comment: &#xa;        /* Service Icon Effect*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 730&#xa;    Comment: &#xa;        /* Effect 1 */&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 635&#xa;    Comment: &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-content/themes/specia/style.css?ver=4.7.3&#xa;    Line number: 1320&#xa;    Comment: &#xa;        &#xa;        &#xa;        &#xa;        &#xa;        -&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;*/&#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Line number: 123&#xa;    Comment: &#xa;        &lt;!-&#45; /Mobile Display -&#45;&gt;&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-login.php&#xa;    Line number: 5&#xa;    Comment: &#xa;        &lt;!-&#45;[if !(IE 8) ]&gt;&lt;!-&#45;&gt;&#xa;"/><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=brainfuck.htb&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: https://brainfuck.htb:443/&#xa;    Form id: &#xa;    Form action: https://brainfuck.htb/&#xa;    &#xa;    Path: https://brainfuck.htb:443/wp-login.php&#xa;    Form id: loginform&#xa;    Form action: https://brainfuck.htb/wp-login.php&#xa;"/><script id="http-date" output="Fri, 01 Jan 2021 04:20:05 GMT; +8m08s from local time."><elem key="date">2021-01-01T04:20:05+00:00</elem>
+<elem key="delta">488.0</elem>
+</script><script id="http-devframework" output="Wordpress detected. Found common traces on /"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-drupal-enum" output="Nothing found amongst the top 100 resources,use -&#45;script-args number=&lt;number|all&gt; for deeper analysis)"/><script id="http-enum" output="&#xa;  /wp-login.php: Possible admin folder&#xa;  /readme.html: Wordpress version: 2 &#xa;  /: WordPress version: 4.7.3&#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: WordPress version 4.7&#xa;"/><script id="http-errors" output="Couldn&apos;t find any error pages."/><script id="http-feed" output="&#xa;Spidering limited to: maxpagecount=40; withinhost=brainfuck.htb&#xa;  Found the following feeds: &#xa;    RSS (version 2.0): https://brainfuck.htb/?feed=comments-rss2&#xa;    RSS (version 2.0): https://brainfuck.htb/?feed=rss2&#xa;"/><script id="http-fetch" output="Please enter the complete path of the directory to save data in."><elem key="ERROR">Please enter the complete path of the directory to save data in.</elem>
+</script><script id="http-generator" output="WordPress 4.7.3"/><script id="http-grep" output="&#xa;  (2) https://brainfuck.htb:443/: &#xa;    (2) email: &#xa;      + orestis@brainfuck.htb&#xa;      + ajax-loader@2x.gif"><table key="(2) https://brainfuck.htb:443/">
+<table key="(2) email">
+<elem>+ orestis@brainfuck.htb</elem>
+<elem>+ ajax-loader@2x.gif</elem>
+</table>
+</table>
+</script><script id="http-headers" output="&#xa;  Server: nginx/1.10.0 (Ubuntu)&#xa;  Date: Fri, 01 Jan 2021 04:20:08 GMT&#xa;  Content-Type: text/html; charset=UTF-8&#xa;  Connection: close&#xa;  Link: &lt;https://brainfuck.htb/?rest_route=/&gt;; rel=&quot;https://api.w.org/&quot;&#xa;  &#xa;  (Request type: HEAD)&#xa;"/><script id="http-jsonp-detection" output="Couldn&apos;t find any JSONP endpoints."/><script id="http-litespeed-sourcecode-download" output="Request with null byte did not work. This web server might not be vulnerable"/><script id="http-malware-host" output="Host appears to be clean"/><script id="http-methods" output="&#xa;  Supported Methods: GET HEAD POST"><table key="Supported Methods">
+<elem>GET</elem>
+<elem>HEAD</elem>
+<elem>POST</elem>
+</table>
+</script><script id="http-mobileversion-checker" output="No mobile version detected."/><script id="http-php-version" output="Logo query returned unknown hash e2bc1ded350fcda86b3c72286b10c62c&#xa;Credits query returned unknown hash e2bc1ded350fcda86b3c72286b10c62c"/><script id="http-referer-checker" output="Couldn&apos;t find any cross-domain scripts."/><script id="http-security-headers" output="&#xa;  Strict_Transport_Security: &#xa;    HSTS not configured in HTTPS Server"><table key="Strict_Transport_Security">
+<elem>HSTS not configured in HTTPS Server</elem>
+</table>
+</script><script id="http-server-header" output="nginx/1.10.0 (Ubuntu)"><elem>nginx/1.10.0 (Ubuntu)</elem>
+</script><script id="http-sitemap-generator" output="&#xa;  Directory structure:&#xa;    /&#xa;      Other: 1; php: 2&#xa;    /wp-content/themes/proficient/&#xa;      css: 1&#xa;    /wp-includes/&#xa;      xml: 1&#xa;    /wp-includes/css/&#xa;      css: 2&#xa;    /wp-includes/js/&#xa;      js: 1&#xa;    /wp-includes/js/jquery/&#xa;      js: 2&#xa;  Longest directory structure:&#xa;    Depth: 3&#xa;    Dir: /wp-content/themes/proficient/&#xa;  Total files found (by extension):&#xa;    Other: 1; css: 3; js: 3; php: 2; xml: 1&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/><script id="http-title" output="Brainfuck Ltd. &amp;#8211; Just another WordPress site"><elem key="title">Brainfuck Ltd. &amp;#8211; Just another WordPress site</elem>
+</script><script id="http-useragent-tester" output="&#xa;  Status for browser useragent: 200&#xa;  Allowed User Agents: &#xa;    Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)&#xa;    libwww&#xa;    lwp-trivial&#xa;    libcurl-agent/1.0&#xa;    PHP/&#xa;    Python-urllib/2.5&#xa;    GT::WWW&#xa;    Snoopy&#xa;    MFC_Tear_Sample&#xa;    HTTP::Lite&#xa;    PHPCrawl&#xa;    URI::Fetch&#xa;    Zend_Http_Client&#xa;    http client&#xa;    PECL::HTTP&#xa;    Wget/1.13.4 (linux-gnu)&#xa;    WWW-Mechanize/1.34"><elem key="Status for browser useragent">200</elem>
+<table key="Allowed User Agents">
+<elem>Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)</elem>
+<elem>libwww</elem>
+<elem>lwp-trivial</elem>
+<elem>libcurl-agent/1.0</elem>
+<elem>PHP/</elem>
+<elem>Python-urllib/2.5</elem>
+<elem>GT::WWW</elem>
+<elem>Snoopy</elem>
+<elem>MFC_Tear_Sample</elem>
+<elem>HTTP::Lite</elem>
+<elem>PHPCrawl</elem>
+<elem>URI::Fetch</elem>
+<elem>Zend_Http_Client</elem>
+<elem>http client</elem>
+<elem>PECL::HTTP</elem>
+<elem>Wget/1.13.4 (linux-gnu)</elem>
+<elem>WWW-Mechanize/1.34</elem>
+</table>
+</script><script id="http-vhosts" output="&#xa;128 names had status 200"/><script id="http-wordpress-enum" output="&#xa;Search limited to top 100 themes/plugins&#xa;  plugins&#xa;    akismet 3.3&#xa;  themes&#xa;    twentyfifteen 1.7&#xa;    twentysixteen 1.3&#xa;    twentyseventeen 1.1&#xa;"><table key="akismet">
+<elem key="path">/wp-content/plugins/akismet/</elem>
+<elem key="name">akismet</elem>
+<elem key="category">plugins</elem>
+<elem key="installation_version">3.3</elem>
+</table>
+<table key="twentyfifteen">
+<elem key="path">/wp-content/themes/twentyfifteen/</elem>
+<elem key="name">twentyfifteen</elem>
+<elem key="category">themes</elem>
+<elem key="installation_version">1.7</elem>
+</table>
+<table key="twentysixteen">
+<elem key="path">/wp-content/themes/twentysixteen/</elem>
+<elem key="name">twentysixteen</elem>
+<elem key="category">themes</elem>
+<elem key="installation_version">1.3</elem>
+</table>
+<table key="twentyseventeen">
+<elem key="path">/wp-content/themes/twentyseventeen/</elem>
+<elem key="name">twentyseventeen</elem>
+<elem key="category">themes</elem>
+<elem key="installation_version">1.1</elem>
+</table>
+<elem key="title">Search limited to top 100 themes/plugins</elem>
+</script><script id="ssl-cert" output="Subject: commonName=brainfuck.htb/organizationName=Brainfuck Ltd./stateOrProvinceName=Attica/countryName=GR/organizationalUnitName=IT/localityName=Athens/emailAddress=orestis@brainfuck.htb&#xa;Subject Alternative Name: DNS:www.brainfuck.htb, DNS:sup3rs3cr3t.brainfuck.htb&#xa;Issuer: commonName=brainfuck.htb/organizationName=Brainfuck Ltd./stateOrProvinceName=Attica/countryName=GR/organizationalUnitName=IT/localityName=Athens/emailAddress=orestis@brainfuck.htb&#xa;Public Key type: rsa&#xa;Public Key bits: 3072&#xa;Signature Algorithm: sha256WithRSAEncryption&#xa;Not valid before: 2017-04-13T11:19:29&#xa;Not valid after:  2027-04-11T11:19:29&#xa;MD5:   cbf1 6899 96aa f7a0 0565 0fc0 9491 7f20&#xa;SHA-1: f448 e798 a817 5580 879c 8fb8 ef0e 2d3d c656 cb66&#xa;-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFQzCCA6ugAwIBAgIJAI24F5h8eY+HMA0GCSqGSIb3DQEBCwUAMIGTMQswCQYD&#xa;VQQGEwJHUjEPMA0GA1UECAwGQXR0aWNhMQ8wDQYDVQQHDAZBdGhlbnMxFzAVBgNV&#xa;BAoMDkJyYWluZnVjayBMdGQuMQswCQYDVQQLDAJJVDEWMBQGA1UEAwwNYnJhaW5m&#xa;dWNrLmh0YjEkMCIGCSqGSIb3DQEJARYVb3Jlc3Rpc0BicmFpbmZ1Y2suaHRiMB4X&#xa;DTE3MDQxMzExMTkyOVoXDTI3MDQxMTExMTkyOVowgZMxCzAJBgNVBAYTAkdSMQ8w&#xa;DQYDVQQIDAZBdHRpY2ExDzANBgNVBAcMBkF0aGVuczEXMBUGA1UECgwOQnJhaW5m&#xa;dWNrIEx0ZC4xCzAJBgNVBAsMAklUMRYwFAYDVQQDDA1icmFpbmZ1Y2suaHRiMSQw&#xa;IgYJKoZIhvcNAQkBFhVvcmVzdGlzQGJyYWluZnVjay5odGIwggGiMA0GCSqGSIb3&#xa;DQEBAQUAA4IBjwAwggGKAoIBgQCjBI0m6FWgcLYONyxVeMgc+PuTFJMnMUjMb8BF&#xa;t0PIDSCt10grCCfzBNDIqfU9byiokyYVvvD+sRoWJQfMjd3I3NXMxHwpcLM6X9oR&#xa;Twt1iBBJRQkTnHOs1hyCmkiM+kn2W1xdL+mwBylAUlvUReLIDdS5anE7u95ApWsD&#xa;TTUt/mMUl1DwnCqrNkt3czQzCNfCIwIhbaLjsoXsiVo1fFEr6UpsyiaXad9eTTsl&#xa;EF9k3rByXrmP1WrkaFLqGhqS4v+rYtsyKGPngjAB664aAvB2sSI0/EuOTa7WOPcV&#xa;NP3Tga+zx55qXPeo6nqCttOlAKKwiZqba5AgDAjSFdB6Q60dghWSuRYU999Ku6zA&#xa;DdwP0BoT5+kcZJENY7wx1uzysSMrtCoi8E6bfx42UwNQe/UCDDXErXat90hTB+vV&#xa;h2vaSdyR0tz3w1iIHBZH5/3rY3f+LyfE9fSg2TbGFgZNDq6O/iykVWb9SG+tl1fA&#xa;RB208Y1/mOw0+84G9RIjLVMLb0kCAwEAAaOBlzCBlDAdBgNVHQ4EFgQUj12KscJg&#xa;/6gSHzm+kzSN/psvik8wHwYDVR0jBBgwFoAUj12KscJg/6gSHzm+kzSN/psvik8w&#xa;DAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCBeAwNwYDVR0RBDAwLoIRd3d3LmJyYWlu&#xa;ZnVjay5odGKCGXN1cDNyczNjcjN0LmJyYWluZnVjay5odGIwDQYJKoZIhvcNAQEL&#xa;BQADggGBAJ11TuRhhSQfq5NHXU5fV5VkCOPUx3yKsWjt93Qm8WDD2rJcZAq8jW59&#xa;NHDWhzDlKZMyNYv8gKJ8k6HuG3f20yeifKZulGw/YsY6dDtTzO+tooBqzjWb9irh&#xa;bpMIVXv1xBSuz+f5YGdzpvlMK/Ltt1nEQNjKXaTnjy7OGfp4isMZCzBZeKAKnjdn&#xa;+s6TgFrFA94B56naXNaNLHvv9WcFKviwDTP2PtDz0fc9hbnZz8oxE5Q6/l50NGUK&#xa;6bGCVIjDJfM/SsWPLHb4J6chkJxlZZLmpid+s5PsKSdY0ZZ1Oxb20O2mla77hDSJ&#xa;d43t/sZRBwWPEWxAHUR8Dj5pcrbCFyi57Qu4ENc5w7H0RhRyd0/OWs6ahn2ef4Qy&#xa;DSWfdpd5CVBGdSLVlVSjzLcBDmWuyy8q5CTgJ3VzIzOreg93F2mVAF+tlNZRX9rc&#xa;dFjsS0lwXWRZqd6642VuAtf4HoAFBh9PfBtUx+t1DxCXyY7OTwnvMsnNFg9fw11v&#xa;krhc81zFeg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;"><table key="subject">
+<elem key="commonName">brainfuck.htb</elem>
+<elem key="countryName">GR</elem>
+<elem key="emailAddress">orestis@brainfuck.htb</elem>
+<elem key="localityName">Athens</elem>
+<elem key="organizationName">Brainfuck Ltd.</elem>
+<elem key="organizationalUnitName">IT</elem>
+<elem key="stateOrProvinceName">Attica</elem>
+</table>
+<table key="issuer">
+<elem key="commonName">brainfuck.htb</elem>
+<elem key="countryName">GR</elem>
+<elem key="emailAddress">orestis@brainfuck.htb</elem>
+<elem key="localityName">Athens</elem>
+<elem key="organizationName">Brainfuck Ltd.</elem>
+<elem key="organizationalUnitName">IT</elem>
+<elem key="stateOrProvinceName">Attica</elem>
+</table>
+<table key="pubkey">
+<elem key="type">rsa</elem>
+<elem key="bits">3072</elem>
+<elem key="modulus">A3048D26E855A070B60E372C5578C81CF8FB931493273148CC6FC045B743C80D20ADD7482B0827F304D0C8A9F53D6F28A8932615BEF0FEB11A162507CC8DDDC8DCD5CCC47C2970B33A5FDA114F0B758810494509139C73ACD61C829A488CFA49F65B5C5D2FE9B0072940525BD445E2C80DD4B96A713BBBDE40A56B034D352DFE63149750F09C2AAB364B7773343308D7C22302216DA2E3B285EC895A357C512BE94A6CCA269769DF5E4D3B25105F64DEB0725EB98FD56AE46852EA1A1A92E2FFAB62DB322863E7823001EBAE1A02F076B12234FC4B8E4DAED638F71534FDD381AFB3C79E6A5CF7A8EA7A82B6D3A500A2B0899A9B6B90200C08D215D07A43AD1D821592B91614F7DF4ABBACC00DDC0FD01A13E7E91C64910D63BC31D6ECF2B1232BB42A22F04E9B7F1E365303507BF5020C35C4AD76ADF7485307EBD5876BDA49DC91D2DCF7C358881C1647E7FDEB6377FE2F27C4F5F4A0D936C616064D0EAE8EFE2CA45566FD486FAD9757C0441DB4F18D7F98EC34FBCE06F512232D530B6F49</elem>
+<elem key="exponent">65537</elem>
+</table>
+<table key="extensions">
+<table>
+<elem key="name">X509v3 Subject Key Identifier</elem>
+<elem key="value">8F:5D:8A:B1:C2:60:FF:A8:12:1F:39:BE:93:34:8D:FE:9B:2F:8A:4F</elem>
+</table>
+<table>
+<elem key="name">X509v3 Authority Key Identifier</elem>
+<elem key="value">keyid:8F:5D:8A:B1:C2:60:FF:A8:12:1F:39:BE:93:34:8D:FE:9B:2F:8A:4F&#xa;</elem>
+</table>
+<table>
+<elem key="name">X509v3 Basic Constraints</elem>
+<elem key="value">CA:TRUE</elem>
+</table>
+<table>
+<elem key="name">X509v3 Key Usage</elem>
+<elem key="value">Digital Signature, Non Repudiation, Key Encipherment</elem>
+</table>
+<table>
+<elem key="name">X509v3 Subject Alternative Name</elem>
+<elem key="value">DNS:www.brainfuck.htb, DNS:sup3rs3cr3t.brainfuck.htb</elem>
+</table>
+</table>
+<elem key="sig_algo">sha256WithRSAEncryption</elem>
+<table key="validity">
+<elem key="notBefore">2017-04-13T11:19:29</elem>
+<elem key="notAfter">2027-04-11T11:19:29</elem>
+</table>
+<elem key="md5">cbf1689996aaf7a005650fc094917f20</elem>
+<elem key="sha1">f448e798a8175580879c8fb8ef0e2d3dc656cb66</elem>
+<elem key="pem">-&#45;&#45;&#45;&#45;BEGIN CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;MIIFQzCCA6ugAwIBAgIJAI24F5h8eY+HMA0GCSqGSIb3DQEBCwUAMIGTMQswCQYD&#xa;VQQGEwJHUjEPMA0GA1UECAwGQXR0aWNhMQ8wDQYDVQQHDAZBdGhlbnMxFzAVBgNV&#xa;BAoMDkJyYWluZnVjayBMdGQuMQswCQYDVQQLDAJJVDEWMBQGA1UEAwwNYnJhaW5m&#xa;dWNrLmh0YjEkMCIGCSqGSIb3DQEJARYVb3Jlc3Rpc0BicmFpbmZ1Y2suaHRiMB4X&#xa;DTE3MDQxMzExMTkyOVoXDTI3MDQxMTExMTkyOVowgZMxCzAJBgNVBAYTAkdSMQ8w&#xa;DQYDVQQIDAZBdHRpY2ExDzANBgNVBAcMBkF0aGVuczEXMBUGA1UECgwOQnJhaW5m&#xa;dWNrIEx0ZC4xCzAJBgNVBAsMAklUMRYwFAYDVQQDDA1icmFpbmZ1Y2suaHRiMSQw&#xa;IgYJKoZIhvcNAQkBFhVvcmVzdGlzQGJyYWluZnVjay5odGIwggGiMA0GCSqGSIb3&#xa;DQEBAQUAA4IBjwAwggGKAoIBgQCjBI0m6FWgcLYONyxVeMgc+PuTFJMnMUjMb8BF&#xa;t0PIDSCt10grCCfzBNDIqfU9byiokyYVvvD+sRoWJQfMjd3I3NXMxHwpcLM6X9oR&#xa;Twt1iBBJRQkTnHOs1hyCmkiM+kn2W1xdL+mwBylAUlvUReLIDdS5anE7u95ApWsD&#xa;TTUt/mMUl1DwnCqrNkt3czQzCNfCIwIhbaLjsoXsiVo1fFEr6UpsyiaXad9eTTsl&#xa;EF9k3rByXrmP1WrkaFLqGhqS4v+rYtsyKGPngjAB664aAvB2sSI0/EuOTa7WOPcV&#xa;NP3Tga+zx55qXPeo6nqCttOlAKKwiZqba5AgDAjSFdB6Q60dghWSuRYU999Ku6zA&#xa;DdwP0BoT5+kcZJENY7wx1uzysSMrtCoi8E6bfx42UwNQe/UCDDXErXat90hTB+vV&#xa;h2vaSdyR0tz3w1iIHBZH5/3rY3f+LyfE9fSg2TbGFgZNDq6O/iykVWb9SG+tl1fA&#xa;RB208Y1/mOw0+84G9RIjLVMLb0kCAwEAAaOBlzCBlDAdBgNVHQ4EFgQUj12KscJg&#xa;/6gSHzm+kzSN/psvik8wHwYDVR0jBBgwFoAUj12KscJg/6gSHzm+kzSN/psvik8w&#xa;DAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCBeAwNwYDVR0RBDAwLoIRd3d3LmJyYWlu&#xa;ZnVjay5odGKCGXN1cDNyczNjcjN0LmJyYWluZnVjay5odGIwDQYJKoZIhvcNAQEL&#xa;BQADggGBAJ11TuRhhSQfq5NHXU5fV5VkCOPUx3yKsWjt93Qm8WDD2rJcZAq8jW59&#xa;NHDWhzDlKZMyNYv8gKJ8k6HuG3f20yeifKZulGw/YsY6dDtTzO+tooBqzjWb9irh&#xa;bpMIVXv1xBSuz+f5YGdzpvlMK/Ltt1nEQNjKXaTnjy7OGfp4isMZCzBZeKAKnjdn&#xa;+s6TgFrFA94B56naXNaNLHvv9WcFKviwDTP2PtDz0fc9hbnZz8oxE5Q6/l50NGUK&#xa;6bGCVIjDJfM/SsWPLHb4J6chkJxlZZLmpid+s5PsKSdY0ZZ1Oxb20O2mla77hDSJ&#xa;d43t/sZRBwWPEWxAHUR8Dj5pcrbCFyi57Qu4ENc5w7H0RhRyd0/OWs6ahn2ef4Qy&#xa;DSWfdpd5CVBGdSLVlVSjzLcBDmWuyy8q5CTgJ3VzIzOreg93F2mVAF+tlNZRX9rc&#xa;dFjsS0lwXWRZqd6642VuAtf4HoAFBh9PfBtUx+t1DxCXyY7OTwnvMsnNFg9fw11v&#xa;krhc81zFeg==&#xa;-&#45;&#45;&#45;&#45;END CERTIFICATE-&#45;&#45;&#45;&#45;&#xa;</elem>
+</script><script id="ssl-date" output="TLS randomness does not represent time"></script><script id="ssl-dh-params" output="&#xa;  VULNERABLE:&#xa;  Diffie-Hellman Key Exchange Insufficient Group Strength&#xa;    State: VULNERABLE&#xa;      Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;      of insufficient strength, especially those using one of a few commonly&#xa;      shared groups, may be susceptible to passive eavesdropping attacks.&#xa;    Check results:&#xa;      WEAK DH GROUP 1&#xa;            Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&#xa;            Modulus Type: Safe prime&#xa;            Modulus Source: nginx/1024-bit MODP group with safe prime modulus&#xa;            Modulus Length: 1024&#xa;            Generator Length: 8&#xa;            Public Key Length: 1024&#xa;    References:&#xa;      https://weakdh.org&#xa;"><table key="NMAP-8">
+<elem key="title">Diffie-Hellman Key Exchange Insufficient Group Strength</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="description">
+<elem>Transport Layer Security (TLS) services that use Diffie-Hellman groups&#xa;of insufficient strength, especially those using one of a few commonly&#xa;shared groups, may be susceptible to passive eavesdropping attacks.</elem>
+</table>
+<table key="check_results">
+<elem>WEAK DH GROUP 1&#xa;      Cipher Suite: TLS_DHE_RSA_WITH_AES_256_GCM_SHA384&#xa;      Modulus Type: Safe prime&#xa;      Modulus Source: nginx/1024-bit MODP group with safe prime modulus&#xa;      Modulus Length: 1024&#xa;      Generator Length: 8&#xa;      Public Key Length: 1024</elem>
+</table>
+<table key="refs">
+<elem>https://weakdh.org</elem>
+</table>
+</table>
+</script><script id="ssl-enum-ciphers" output="&#xa;  TLSv1.0: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 3072) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 3072) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 3072) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 3072) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  TLSv1.1: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 3072) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 3072) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 3072) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 3072) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  TLSv1.2: &#xa;    ciphers: &#xa;      TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_GCM_SHA384 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_256_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_256_GCM_SHA384 (rsa 3072) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA256 (rsa 3072) - A&#xa;      TLS_RSA_WITH_AES_256_CBC_SHA (rsa 3072) - A&#xa;      TLS_RSA_WITH_CAMELLIA_256_CBC_SHA (rsa 3072) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256 (secp256r1) - A&#xa;      TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA (secp256r1) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_GCM_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA256 (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_AES_128_CBC_SHA (dh 1024) - A&#xa;      TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA (dh 1024) - A&#xa;      TLS_RSA_WITH_AES_128_GCM_SHA256 (rsa 3072) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA256 (rsa 3072) - A&#xa;      TLS_RSA_WITH_AES_128_CBC_SHA (rsa 3072) - A&#xa;      TLS_RSA_WITH_CAMELLIA_128_CBC_SHA (rsa 3072) - A&#xa;    compressors: &#xa;      NULL&#xa;    cipher preference: server&#xa;    warnings: &#xa;      Key exchange (dh 1024) of lower strength than certificate key&#xa;  least strength: A"><table key="TLSv1.0">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<table key="TLSv1.1">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<table key="TLSv1.2">
+<table key="ciphers">
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_GCM_SHA384</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_256_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">secp256r1</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_DHE_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">dh 1024</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_GCM_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA256</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_AES_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+<table>
+<elem key="name">TLS_RSA_WITH_CAMELLIA_128_CBC_SHA</elem>
+<elem key="strength">A</elem>
+<elem key="kex_info">rsa 3072</elem>
+</table>
+</table>
+<table key="compressors">
+<elem>NULL</elem>
+</table>
+<elem key="cipher preference">server</elem>
+<table key="warnings">
+<elem>Key exchange (dh 1024) of lower strength than certificate key</elem>
+</table>
+</table>
+<elem key="least strength">A</elem>
+</script><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="39221" rttvar="39221" to="196105"/>
+</host>
+<taskbegin task="NSE" time="1609474531"/>
+<taskend task="NSE" time="1609474531"/>
+<taskbegin task="NSE" time="1609474531"/>
+<taskend task="NSE" time="1609474531"/>
+<taskbegin task="NSE" time="1609474531"/>
+<taskend task="NSE" time="1609474531"/>
+<runstats><finished time="1609474531" timestr="Thu Dec 31 23:15:31 2020" summary="Nmap done at Thu Dec 31 23:15:31 2020; 1 IP address (1 host up) scanned in 227.48 seconds" elapsed="227.48" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Dec 31 23:11:44 2020 as: nmap -vv -&#45;reason -Pn -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_25_smtp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_25_smtp_nmap.xml brainfuck.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 25 &quot;-&#45;script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_25_smtp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_25_smtp_nmap.xml brainfuck.htb" start="1609474304" startstr="Thu Dec 31 23:11:44 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="25"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="SYN Stealth Scan" time="1609474304"/>
+<taskend task="SYN Stealth Scan" time="1609474304" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1609474304"/>
+<taskend task="Service scan" time="1609474314" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1609474314"/>
+<taskend task="NSE" time="1609474329"/>
+<taskbegin task="NSE" time="1609474329"/>
+<taskprogress task="NSE" time="1609474360" percent="46.67" remaining="36" etc="1609474395"/>
+<taskprogress task="NSE" time="1609474390" percent="73.33" remaining="23" etc="1609474412"/>
+<taskprogress task="NSE" time="1609474420" percent="86.67" remaining="14" etc="1609474434"/>
+<taskend task="NSE" time="1609474428"/>
+<taskbegin task="NSE" time="1609474428"/>
+<taskend task="NSE" time="1609474456"/>
+<host starttime="1609474304" endtime="1609474456"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.17" addrtype="ipv4"/>
+<hostnames>
+<hostname name="brainfuck.htb" type="user"/>
+<hostname name="brainfuck.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="smtp" product="Postfix smtpd" hostname=" brainfuck" method="probed" conf="10"><cpe>cpe:/a:postfix:postfix</cpe></service><script id="smtp-commands" output="brainfuck, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, "/><script id="smtp-vuln-cve2010-4344" output="&#xa;  The SMTP server is not Exim: NOT VULNERABLE&#xa;"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="40657" rttvar="40657" to="203285"/>
+</host>
+<taskbegin task="NSE" time="1609474456"/>
+<taskend task="NSE" time="1609474456"/>
+<taskbegin task="NSE" time="1609474456"/>
+<taskend task="NSE" time="1609474456"/>
+<taskbegin task="NSE" time="1609474456"/>
+<taskend task="NSE" time="1609474456"/>
+<runstats><finished time="1609474456" timestr="Thu Dec 31 23:14:16 2020" summary="Nmap done at Thu Dec 31 23:14:16 2020; 1 IP address (1 host up) scanned in 152.67 seconds" elapsed="152.67" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

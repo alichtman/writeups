@@ -23,3 +23,5 @@ cp -iv ~/OSCP/tools/priv-esc/linux/linpeas.sh exploitation/privesc
 cp -Riv ~/OSCP/tools/priv-esc/linux/pspy/ exploitation/privesc
 cp -iv ~/OSCP/tools/priv-esc/windows/winPEAS.bat exploitation/privesc
 cp -iv ~/OSCP/tools/priv-esc/windows/winPEAS.exe exploitation/privesc
+cp -iv ~/OSCP/tools/priv-esc/windows/Seatbelt.exe exploitation/privesc
+cp -iv /usr/share/windows-resources/binaries/nc.exe exploitation/privesc

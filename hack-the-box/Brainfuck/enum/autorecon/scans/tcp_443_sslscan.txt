@@ -1,0 +1,189 @@
+Version: 2.0.6-static
+OpenSSL 1.1.1i-dev  xx XXX xxxx
+
+Connected to 10.10.10.17
+
+Testing SSL server brainfuck.htb on port 443 using SNI name brainfuck.htb
+
+  SSL/TLS Protocols:
+SSLv2     disabled
+SSLv3     disabled
+TLSv1.0   enabled
+TLSv1.1   enabled
+TLSv1.2   enabled
+TLSv1.3   disabled
+
+  TLS Fallback SCSV:
+Server supports TLS Fallback SCSV
+
+  TLS renegotiation:
+Secure session renegotiation supported
+
+  TLS Compression:
+Compression disabled
+
+  Heartbleed:
+TLSv1.2 not vulnerable to heartbleed
+TLSv1.1 not vulnerable to heartbleed
+TLSv1.0 not vulnerable to heartbleed
+
+  Supported Server Cipher(s):
+Preferred TLSv1.2  256 bits  ECDHE-RSA-AES256-GCM-SHA384   Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA384       Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-GCM-SHA384     DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA256         DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.2  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.2  256 bits  AES256-GCM-SHA384            
+Accepted  TLSv1.2  256 bits  AES256-SHA256                
+Accepted  TLSv1.2  256 bits  AES256-SHA                   
+Accepted  TLSv1.2  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-GCM-SHA256   Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA256       Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-GCM-SHA256     DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-SHA256         DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.2  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.2  128 bits  AES128-GCM-SHA256            
+Accepted  TLSv1.2  128 bits  AES128-SHA256                
+Accepted  TLSv1.2  128 bits  AES128-SHA                   
+Accepted  TLSv1.2  128 bits  CAMELLIA128-SHA              
+Preferred TLSv1.1  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.1  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.1  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.1  256 bits  AES256-SHA                   
+Accepted  TLSv1.1  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.1  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.1  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.1  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.1  128 bits  AES128-SHA                   
+Accepted  TLSv1.1  128 bits  CAMELLIA128-SHA              
+Preferred TLSv1.0  256 bits  ECDHE-RSA-AES256-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.0  256 bits  DHE-RSA-AES256-SHA            DHE 1024 bits
+Accepted  TLSv1.0  256 bits  DHE-RSA-CAMELLIA256-SHA       DHE 1024 bits
+Accepted  TLSv1.0  256 bits  AES256-SHA                   
+Accepted  TLSv1.0  256 bits  CAMELLIA256-SHA              
+Accepted  TLSv1.0  128 bits  ECDHE-RSA-AES128-SHA          Curve P-256 DHE 256
+Accepted  TLSv1.0  128 bits  DHE-RSA-AES128-SHA            DHE 1024 bits
+Accepted  TLSv1.0  128 bits  DHE-RSA-CAMELLIA128-SHA       DHE 1024 bits
+Accepted  TLSv1.0  128 bits  AES128-SHA                   
+Accepted  TLSv1.0  128 bits  CAMELLIA128-SHA              
+
+  Server Key Exchange Group(s):
+TLSv1.2  128 bits  secp256r1 (NIST P-256)
+
+  Server Signature Algorithm(s):
+TLSv1.2  rsa_pkcs1_sha1
+TLSv1.2  dsa_sha1
+TLSv1.2  ecdsa_sha1
+TLSv1.2  rsa_pkcs1_sha224
+TLSv1.2  dsa_sha224
+TLSv1.2  ecdsa_sha224
+TLSv1.2  rsa_pkcs1_sha256
+TLSv1.2  dsa_sha256
+TLSv1.2  ecdsa_secp256r1_sha256
+TLSv1.2  rsa_pkcs1_sha384
+TLSv1.2  dsa_sha384
+TLSv1.2  ecdsa_secp384r1_sha384
+TLSv1.2  rsa_pkcs1_sha512
+TLSv1.2  dsa_sha512
+TLSv1.2  ecdsa_secp521r1_sha512
+
+  SSL Certificate:
+    Certificate blob:
+-----BEGIN CERTIFICATE-----
+MIIFQzCCA6ugAwIBAgIJAI24F5h8eY+HMA0GCSqGSIb3DQEBCwUAMIGTMQswCQYD
+VQQGEwJHUjEPMA0GA1UECAwGQXR0aWNhMQ8wDQYDVQQHDAZBdGhlbnMxFzAVBgNV
+BAoMDkJyYWluZnVjayBMdGQuMQswCQYDVQQLDAJJVDEWMBQGA1UEAwwNYnJhaW5m
+dWNrLmh0YjEkMCIGCSqGSIb3DQEJARYVb3Jlc3Rpc0BicmFpbmZ1Y2suaHRiMB4X
+DTE3MDQxMzExMTkyOVoXDTI3MDQxMTExMTkyOVowgZMxCzAJBgNVBAYTAkdSMQ8w
+DQYDVQQIDAZBdHRpY2ExDzANBgNVBAcMBkF0aGVuczEXMBUGA1UECgwOQnJhaW5m
+dWNrIEx0ZC4xCzAJBgNVBAsMAklUMRYwFAYDVQQDDA1icmFpbmZ1Y2suaHRiMSQw
+IgYJKoZIhvcNAQkBFhVvcmVzdGlzQGJyYWluZnVjay5odGIwggGiMA0GCSqGSIb3
+DQEBAQUAA4IBjwAwggGKAoIBgQCjBI0m6FWgcLYONyxVeMgc+PuTFJMnMUjMb8BF
+t0PIDSCt10grCCfzBNDIqfU9byiokyYVvvD+sRoWJQfMjd3I3NXMxHwpcLM6X9oR
+Twt1iBBJRQkTnHOs1hyCmkiM+kn2W1xdL+mwBylAUlvUReLIDdS5anE7u95ApWsD
+TTUt/mMUl1DwnCqrNkt3czQzCNfCIwIhbaLjsoXsiVo1fFEr6UpsyiaXad9eTTsl
+EF9k3rByXrmP1WrkaFLqGhqS4v+rYtsyKGPngjAB664aAvB2sSI0/EuOTa7WOPcV
+NP3Tga+zx55qXPeo6nqCttOlAKKwiZqba5AgDAjSFdB6Q60dghWSuRYU999Ku6zA
+DdwP0BoT5+kcZJENY7wx1uzysSMrtCoi8E6bfx42UwNQe/UCDDXErXat90hTB+vV
+h2vaSdyR0tz3w1iIHBZH5/3rY3f+LyfE9fSg2TbGFgZNDq6O/iykVWb9SG+tl1fA
+RB208Y1/mOw0+84G9RIjLVMLb0kCAwEAAaOBlzCBlDAdBgNVHQ4EFgQUj12KscJg
+/6gSHzm+kzSN/psvik8wHwYDVR0jBBgwFoAUj12KscJg/6gSHzm+kzSN/psvik8w
+DAYDVR0TBAUwAwEB/zALBgNVHQ8EBAMCBeAwNwYDVR0RBDAwLoIRd3d3LmJyYWlu
+ZnVjay5odGKCGXN1cDNyczNjcjN0LmJyYWluZnVjay5odGIwDQYJKoZIhvcNAQEL
+BQADggGBAJ11TuRhhSQfq5NHXU5fV5VkCOPUx3yKsWjt93Qm8WDD2rJcZAq8jW59
+NHDWhzDlKZMyNYv8gKJ8k6HuG3f20yeifKZulGw/YsY6dDtTzO+tooBqzjWb9irh
+bpMIVXv1xBSuz+f5YGdzpvlMK/Ltt1nEQNjKXaTnjy7OGfp4isMZCzBZeKAKnjdn
++s6TgFrFA94B56naXNaNLHvv9WcFKviwDTP2PtDz0fc9hbnZz8oxE5Q6/l50NGUK
+6bGCVIjDJfM/SsWPLHb4J6chkJxlZZLmpid+s5PsKSdY0ZZ1Oxb20O2mla77hDSJ
+d43t/sZRBwWPEWxAHUR8Dj5pcrbCFyi57Qu4ENc5w7H0RhRyd0/OWs6ahn2ef4Qy
+DSWfdpd5CVBGdSLVlVSjzLcBDmWuyy8q5CTgJ3VzIzOreg93F2mVAF+tlNZRX9rc
+dFjsS0lwXWRZqd6642VuAtf4HoAFBh9PfBtUx+t1DxCXyY7OTwnvMsnNFg9fw11v
+krhc81zFeg==
+-----END CERTIFICATE-----
+    Version: 2
+    Serial Number: 8d:b8:17:98:7c:79:8f:87
+    Signature Algorithm: sha256WithRSAEncryption
+    Issuer: /C=GR/ST=Attica/L=Athens/O=Brainfuck Ltd./OU=IT/CN=brainfuck.htb/emailAddress=orestis@brainfuck.htb
+    Not valid before: Apr 13 11:19:29 2017 GMT
+    Not valid after: Apr 11 11:19:29 2027 GMT
+    Subject: /C=GR/ST=Attica/L=Athens/O=Brainfuck Ltd./OU=IT/CN=brainfuck.htb/emailAddress=orestis@brainfuck.htb
+    Public Key Algorithm: NULL
+    RSA Public Key: (3072 bit)
+      RSA Public-Key: (3072 bit)
+      Modulus:
+          00:a3:04:8d:26:e8:55:a0:70:b6:0e:37:2c:55:78:
+          c8:1c:f8:fb:93:14:93:27:31:48:cc:6f:c0:45:b7:
+          43:c8:0d:20:ad:d7:48:2b:08:27:f3:04:d0:c8:a9:
+          f5:3d:6f:28:a8:93:26:15:be:f0:fe:b1:1a:16:25:
+          07:cc:8d:dd:c8:dc:d5:cc:c4:7c:29:70:b3:3a:5f:
+          da:11:4f:0b:75:88:10:49:45:09:13:9c:73:ac:d6:
+          1c:82:9a:48:8c:fa:49:f6:5b:5c:5d:2f:e9:b0:07:
+          29:40:52:5b:d4:45:e2:c8:0d:d4:b9:6a:71:3b:bb:
+          de:40:a5:6b:03:4d:35:2d:fe:63:14:97:50:f0:9c:
+          2a:ab:36:4b:77:73:34:33:08:d7:c2:23:02:21:6d:
+          a2:e3:b2:85:ec:89:5a:35:7c:51:2b:e9:4a:6c:ca:
+          26:97:69:df:5e:4d:3b:25:10:5f:64:de:b0:72:5e:
+          b9:8f:d5:6a:e4:68:52:ea:1a:1a:92:e2:ff:ab:62:
+          db:32:28:63:e7:82:30:01:eb:ae:1a:02:f0:76:b1:
+          22:34:fc:4b:8e:4d:ae:d6:38:f7:15:34:fd:d3:81:
+          af:b3:c7:9e:6a:5c:f7:a8:ea:7a:82:b6:d3:a5:00:
+          a2:b0:89:9a:9b:6b:90:20:0c:08:d2:15:d0:7a:43:
+          ad:1d:82:15:92:b9:16:14:f7:df:4a:bb:ac:c0:0d:
+          dc:0f:d0:1a:13:e7:e9:1c:64:91:0d:63:bc:31:d6:
+          ec:f2:b1:23:2b:b4:2a:22:f0:4e:9b:7f:1e:36:53:
+          03:50:7b:f5:02:0c:35:c4:ad:76:ad:f7:48:53:07:
+          eb:d5:87:6b:da:49:dc:91:d2:dc:f7:c3:58:88:1c:
+          16:47:e7:fd:eb:63:77:fe:2f:27:c4:f5:f4:a0:d9:
+          36:c6:16:06:4d:0e:ae:8e:fe:2c:a4:55:66:fd:48:
+          6f:ad:97:57:c0:44:1d:b4:f1:8d:7f:98:ec:34:fb:
+          ce:06:f5:12:23:2d:53:0b:6f:49
+      Exponent: 65537 (0x10001)
+    X509v3 Extensions:
+      X509v3 Subject Key Identifier: 
+        8F:5D:8A:B1:C2:60:FF:A8:12:1F:39:BE:93:34:8D:FE:9B:2F:8A:4F
+      X509v3 Authority Key Identifier: 
+        keyid:8F:5D:8A:B1:C2:60:FF:A8:12:1F:39:BE:93:34:8D:FE:9B:2F:8A:4F
+
+      X509v3 Basic Constraints: 
+        CA:TRUE
+      X509v3 Key Usage: 
+        Digital Signature, Non Repudiation, Key Encipherment
+      X509v3 Subject Alternative Name: 
+        DNS:www.brainfuck.htb, DNS:sup3rs3cr3t.brainfuck.htb
+  Verify Certificate:
+    self signed certificate
+
+  SSL Certificate:
+Signature Algorithm: sha256WithRSAEncryption
+RSA Key Strength:    3072
+
+Subject:  brainfuck.htb
+Altnames: DNS:www.brainfuck.htb, DNS:sup3rs3cr3t.brainfuck.htb
+Issuer:   brainfuck.htb
+
+Not valid before: Apr 13 11:19:29 2017 GMT
+Not valid after:  Apr 11 11:19:29 2027 GMT

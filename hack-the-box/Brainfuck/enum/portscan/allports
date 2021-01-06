@@ -1,0 +1,54 @@
+# Nmap 7.91 scan initiated Thu Dec 31 23:10:40 2020 as: nmap -A -v -p- -Pn -oN allports brainfuck.htb
+Nmap scan report for brainfuck.htb (10.10.10.17)
+Host is up (0.040s latency).
+Not shown: 65530 filtered ports
+PORT    STATE SERVICE  VERSION
+22/tcp  open  ssh      OpenSSH 7.2p2 Ubuntu 4ubuntu2.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 94:d0:b3:34:e9:a5:37:c5:ac:b9:80:df:2a:54:a5:f0 (RSA)
+|   256 6b:d5:dc:15:3a:66:7a:f4:19:91:5d:73:85:b2:4c:b2 (ECDSA)
+|_  256 23:f5:a3:33:33:9d:76:d5:f2:ea:69:71:e3:4e:8e:02 (ED25519)
+25/tcp  open  smtp     Postfix smtpd
+|_smtp-commands: brainfuck, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+110/tcp open  pop3     Dovecot pop3d
+|_pop3-capabilities: SASL(PLAIN) AUTH-RESP-CODE USER PIPELINING RESP-CODES UIDL CAPA TOP
+143/tcp open  imap     Dovecot imapd
+|_imap-capabilities: Pre-login LOGIN-REFERRALS post-login more IDLE listed SASL-IR ID capabilities AUTH=PLAINA0001 LITERAL+ OK IMAP4rev1 have ENABLE
+443/tcp open  ssl/http nginx 1.10.0 (Ubuntu)
+|_http-generator: WordPress 4.7.3
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nginx/1.10.0 (Ubuntu)
+|_http-title: Brainfuck Ltd. &#8211; Just another WordPress site
+| ssl-cert: Subject: commonName=brainfuck.htb/organizationName=Brainfuck Ltd./stateOrProvinceName=Attica/countryName=GR
+| Subject Alternative Name: DNS:www.brainfuck.htb, DNS:sup3rs3cr3t.brainfuck.htb
+| Issuer: commonName=brainfuck.htb/organizationName=Brainfuck Ltd./stateOrProvinceName=Attica/countryName=GR
+| Public Key type: rsa
+| Public Key bits: 3072
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2017-04-13T11:19:29
+| Not valid after:  2027-04-11T11:19:29
+| MD5:   cbf1 6899 96aa f7a0 0565 0fc0 9491 7f20
+|_SHA-1: f448 e798 a817 5580 879c 8fb8 ef0e 2d3d c656 cb66
+|_ssl-date: TLS randomness does not represent time
+| tls-alpn: 
+|_  http/1.1
+| tls-nextprotoneg: 
+|_  http/1.1
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Aggressive OS guesses: Linux 3.10 - 4.11 (91%), Linux 3.12 (91%), Linux 3.13 (91%), Linux 3.13 or 4.2 (91%), Linux 3.16 (91%), Linux 3.16 - 4.6 (91%), Linux 3.18 (91%), Linux 3.2 - 4.9 (91%), Linux 3.8 - 3.11 (91%), Linux 4.2 (91%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 198.840 days (since Tue Jun 16 04:03:42 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: Host:  brainfuck; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+1   40.05 ms 10.10.14.1
+2   40.08 ms brainfuck.htb (10.10.10.17)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 31 23:13:21 2020 -- 1 IP address (1 host up) scanned in 161.26 seconds

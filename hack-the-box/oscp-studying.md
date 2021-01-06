@@ -5,7 +5,7 @@
 | Linux            | Windows         | HARD Linux            | HARD Windows  |
 | ---              | ---             | ---                   |               |
 | Lame        [x]  | Legacy     [x]  | Book             [ ]  | Jeeves   [x]  |
-| Brainfuck   [ ]  | Blue       [x]  | Mango            [o]  | Bart     [ ]  |
+| Brainfuck   [x]  | Blue       [x]  | Mango            [o]  | Bart     [ ]  |
 | Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
 | Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [x]  |
 | Nibbles     [o]  | Bastard    [x]  | Jail             [ ]  | Netmon   [x]  |

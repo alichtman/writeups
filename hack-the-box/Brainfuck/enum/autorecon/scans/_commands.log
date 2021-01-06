@@ -1,0 +1,40 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/_full_tcp_nmap.xml" brainfuck.htb
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" brainfuck.htb
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" brainfuck.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour brainfuck.htb:22 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_22_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 22 --script="banner,ssh2-enum-algos,ssh-hostkey,ssh-auth-methods" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_22_ssh_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_22_ssh_nmap.xml" brainfuck.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour brainfuck.htb:25 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_25_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 25 --script="banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_25_smtp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_25_smtp_nmap.xml" brainfuck.htb
+
+smtp-user-enum -M VRFY -U "/usr/share/seclists/Usernames/top-usernames-shortlist.txt" -t brainfuck.htb -p 25 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_25_smtp_user-enum.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour brainfuck.htb:110 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_110_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 110 --script="banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_110_pop3_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_110_pop3_nmap.xml" brainfuck.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour brainfuck.htb:143 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_143_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 143 --script="banner,(imap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_143_imap_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_143_imap_nmap.xml" brainfuck.htb
+
+if [ "True" == "True" ]; then sslscan --show-certificate --no-colour brainfuck.htb:443 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 443 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_443_https_nmap.xml" brainfuck.htb
+
+curl -sSik https://brainfuck.htb:443/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_https_index.html"
+
+curl -sSik https://brainfuck.htb:443/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_https_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png https://brainfuck.htb:443/ /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_https_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v https://brainfuck.htb:443 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_https_whatweb.txt"
+
+nikto -ask=no -h https://brainfuck.htb:443 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_https_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u https://brainfuck.htb:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_https_gobuster.txt"; else gobuster dir -u https://brainfuck.htb:443/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_443_https_gobuster.txt"; fi
+

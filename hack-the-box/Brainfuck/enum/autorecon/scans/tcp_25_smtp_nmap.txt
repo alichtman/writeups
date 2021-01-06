@@ -1,0 +1,16 @@
+# Nmap 7.91 scan initiated Thu Dec 31 23:11:44 2020 as: nmap -vv --reason -Pn -sV -p 25 "--script=banner,(smtp* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_25_smtp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_25_smtp_nmap.xml brainfuck.htb
+Nmap scan report for brainfuck.htb (10.10.10.17)
+Host is up, received user-set (0.041s latency).
+Scanned at 2020-12-31 23:11:44 EST for 152s
+
+PORT   STATE SERVICE REASON         VERSION
+25/tcp open  smtp    syn-ack ttl 63 Postfix smtpd
+|_smtp-commands: brainfuck, PIPELINING, SIZE 10240000, VRFY, ETRN, STARTTLS, ENHANCEDSTATUSCODES, 8BITMIME, DSN, 
+| smtp-vuln-cve2010-4344: 
+|_  The SMTP server is not Exim: NOT VULNERABLE
+|_sslv2-drown: 
+Service Info: Host:  brainfuck
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Dec 31 23:14:16 2020 -- 1 IP address (1 host up) scanned in 152.67 seconds

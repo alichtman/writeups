@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Thu Dec 31 23:11:44 2020 as: nmap -vv -&#45;reason -Pn -sV -p 110 &quot;-&#45;script=banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_110_pop3_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_110_pop3_nmap.xml brainfuck.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 110 &quot;-&#45;script=banner,(pop3* or ssl*) and not (brute or broadcast or dos or external or fuzzer)&quot; -oN /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/tcp_110_pop3_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Brainfuck/enum/autorecon/scans/xml/tcp_110_pop3_nmap.xml brainfuck.htb" start="1609474304" startstr="Thu Dec 31 23:11:44 2020" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="110"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="SYN Stealth Scan" time="1609474304"/>
+<taskend task="SYN Stealth Scan" time="1609474304" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1609474304"/>
+<taskend task="Service scan" time="1609474304" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474304"/>
+<taskbegin task="NSE" time="1609474304"/>
+<taskend task="NSE" time="1609474305"/>
+<taskbegin task="NSE" time="1609474305"/>
+<taskend task="NSE" time="1609474305"/>
+<host starttime="1609474304" endtime="1609474305"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.17" addrtype="ipv4"/>
+<hostnames>
+<hostname name="brainfuck.htb" type="user"/>
+<hostname name="brainfuck.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="63"/><service name="pop3" product="Dovecot pop3d" method="probed" conf="10"><cpe>cpe:/a:dovecot:dovecot</cpe></service><script id="banner" output="+OK Dovecot ready."/><script id="pop3-capabilities" output="UIDL PIPELINING USER SASL(PLAIN) RESP-CODES TOP AUTH-RESP-CODE CAPA"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="41775" rttvar="41775" to="208875"/>
+</host>
+<taskbegin task="NSE" time="1609474305"/>
+<taskend task="NSE" time="1609474305"/>
+<taskbegin task="NSE" time="1609474305"/>
+<taskend task="NSE" time="1609474305"/>
+<taskbegin task="NSE" time="1609474305"/>
+<taskend task="NSE" time="1609474305"/>
+<runstats><finished time="1609474305" timestr="Thu Dec 31 23:11:45 2020" summary="Nmap done at Thu Dec 31 23:11:45 2020; 1 IP address (1 host up) scanned in 1.06 seconds" elapsed="1.06" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>
