@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Wed Jan  6 23:59:47 2021 as: nmap -vv --reason -Pn -sV -p 49688 --script=banner,msrpc-enum,rpc-grind,rpcinfo -oN /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49688_rpc_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49688_rpc_nmap.xml resolute.htb
+Nmap scan report for resolute.htb (10.10.10.169)
+Host is up, received user-set (0.039s latency).
+Scanned at 2021-01-06 23:59:47 EST for 70s
+
+PORT      STATE SERVICE REASON          VERSION
+49688/tcp open  msrpc   syn-ack ttl 127 Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  7 00:00:57 2021 -- 1 IP address (1 host up) scanned in 69.69 seconds

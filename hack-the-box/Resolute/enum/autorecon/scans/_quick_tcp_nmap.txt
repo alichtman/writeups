@@ -1,0 +1,45 @@
+# Nmap 7.91 scan initiated Wed Jan  6 23:55:55 2021 as: nmap -vv --reason -Pn -sV -sC --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/_quick_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/_quick_tcp_nmap.xml resolute.htb
+Nmap scan report for resolute.htb (10.10.10.169)
+Host is up, received user-set (0.043s latency).
+Scanned at 2021-01-06 23:55:55 EST for 35s
+Not shown: 996 closed ports
+Reason: 996 resets
+PORT    STATE SERVICE      REASON          VERSION
+88/tcp  open  kerberos-sec syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2021-01-07 05:11:17Z)
+135/tcp open  msrpc        syn-ack ttl 127 Microsoft Windows RPC
+139/tcp open  netbios-ssn  syn-ack ttl 127 Windows Server 2016 Standard 14393 netbios-ssn
+464/tcp open  kpasswd5?    syn-ack ttl 127
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 2h55m15s, deviation: 4h37m08s, median: 15m14s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 22790/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 52471/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 55070/udp): CLEAN (Timeout)
+|   Check 4 (port 8596/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard 14393 (Windows Server 2016 Standard 6.3)
+|   Computer name: Resolute
+|   NetBIOS computer name: RESOLUTE\x00
+|   Domain name: megabank.local
+|   Forest name: megabank.local
+|   FQDN: Resolute.megabank.local
+|_  System time: 2021-01-06T21:11:33-08:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: required
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2021-01-07T05:11:38
+|_  start_date: 2021-01-07T05:11:13
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan  6 23:56:30 2021 -- 1 IP address (1 host up) scanned in 35.30 seconds

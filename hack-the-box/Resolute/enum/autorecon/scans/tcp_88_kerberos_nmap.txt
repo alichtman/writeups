@@ -1,0 +1,12 @@
+# Nmap 7.91 scan initiated Wed Jan  6 23:56:30 2021 as: nmap -vv --reason -Pn -sV -p 88 --script=banner,krb5-enum-users -oN /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_88_kerberos_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_88_kerberos_nmap.xml resolute.htb
+Nmap scan report for resolute.htb (10.10.10.169)
+Host is up, received user-set (0.063s latency).
+Scanned at 2021-01-06 23:56:30 EST for 17s
+
+PORT   STATE SERVICE      REASON          VERSION
+88/tcp open  kerberos-sec syn-ack ttl 127 Microsoft Windows Kerberos (server time: 2021-01-07 05:11:52Z)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan  6 23:56:47 2021 -- 1 IP address (1 host up) scanned in 16.83 seconds

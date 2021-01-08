@@ -1,0 +1,11 @@
+# Nmap 7.91 scan initiated Wed Jan  6 23:56:31 2021 as: nmap -vv --reason -Pn -sV -p 464 --script=banner,krb5-enum-users -oN /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_464_kerberos_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_464_kerberos_nmap.xml resolute.htb
+Nmap scan report for resolute.htb (10.10.10.169)
+Host is up, received user-set (0.039s latency).
+Scanned at 2021-01-06 23:56:31 EST for 21s
+
+PORT    STATE SERVICE   REASON          VERSION
+464/tcp open  kpasswd5? syn-ack ttl 127
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan  6 23:56:52 2021 -- 1 IP address (1 host up) scanned in 21.69 seconds

@@ -1,25 +1,8 @@
-# Resolute (`10.10.10.169`)
-
-## `/etc/hosts`
-
-I begin by adding an entry in `/etc/hosts` to resolve `resolute.htb` to `10.10.10.169`. I use this later in my report.
-
-## Enumeration
-
-I start a portscan of all ports (`-p-`), running OS, service version, and vulnerability scripts (`-A`), skipping host discovery (`-Pn`), with verbose logging (`-v`) and output to a file (`-oN`).
-
-```bash
-$ nmap -A -v -p- -Pn -oN allports resolute.htb
 # Nmap 7.91 scan initiated Wed Jan  6 23:56:07 2021 as: nmap -A -v -p- -Pn -oN allports resolute.htb
 Nmap scan report for resolute.htb (10.10.10.169)
 Host is up (0.042s latency).
 Not shown: 65515 closed ports
 PORT      STATE SERVICE      VERSION
-53/tcp   open  domain?      syn-ack
-| fingerprint-strings:
-|   DNSVersionBindReqTCP:
-|     version
-|_    bind
 88/tcp    open  kerberos-sec Microsoft Windows Kerberos (server time: 2021-01-07 05:12:45Z)
 135/tcp   open  msrpc        Microsoft Windows RPC
 139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
@@ -95,100 +78,3 @@ HOP RTT      ADDRESS
 Read data files from: /usr/bin/../share/nmap
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 # Nmap done at Wed Jan  6 23:58:40 2021 -- 1 IP address (1 host up) scanned in 153.08 seconds
-```
-
-The FQDN is `Resolute.megabank.local`, Domain name is `megabank.local`. I add these to `/etc/hosts`.
-
-## Shell as `melanie`
-
-I use `rpcclient` to enumerate domain users over SMB. I am allowed to login and run the query with empty authentication.
-
-```bash
-$ rpcclient -U "" -N resolute.htb
-rpcclient $> enumdomusers
-user:[Administrator] rid:[0x1f4]
-user:[Guest] rid:[0x1f5]
-user:[krbtgt] rid:[0x1f6]
-user:[DefaultAccount] rid:[0x1f7]
-user:[ryan] rid:[0x451]
-user:[marko] rid:[0x457]
-user:[sunita] rid:[0x19c9]
-user:[abigail] rid:[0x19ca]
-user:[marcus] rid:[0x19cb]
-user:[sally] rid:[0x19cc]
-user:[fred] rid:[0x19cd]
-user:[angela] rid:[0x19ce]
-user:[felicia] rid:[0x19cf]
-user:[gustavo] rid:[0x19d0]
-user:[ulf] rid:[0x19d1]
-user:[stevie] rid:[0x19d2]
-user:[claire] rid:[0x19d3]
-user:[paulo] rid:[0x19d4]
-user:[steve] rid:[0x19d5]
-user:[annette] rid:[0x19d6]
-user:[annika] rid:[0x19d7]
-user:[per] rid:[0x19d8]
-user:[claude] rid:[0x19d9]
-user:[melanie] rid:[0x2775]
-user:[zach] rid:[0x2776]
-user:[simon] rid:[0x2777]
-user:[naoki] rid:[0x2778]
-```
-
-I reformat the list of users into something more easily usable.
-
-![](img/2021-01-08-05-47-34.png)
-
-I check the password policy, to see if I can brute force the accounts, and it looks like there is no Account Lockout Threshold, so I can.
-
-![](img/2021-01-07-22-11-41.png)
-
-I find a comment saying the default account password was set to `Welcome123!`.
-
-![](img/2021-01-07-22-13-59.png)
-
-I try it for all users I found above. It works for `melanie`.
-
-![](img/2021-01-08-05-51-46.png)
-
-I check if I can login to Windows Remote Manager and see that I can.
-
-![](img/2021-01-08-05-53-16.png)
-
-I spawn a shell with `evil-winrm`.
-
-![](img/2021-01-08-05-53-51.png)
-
-## Privilege Escalation to `ryan`
-
-![](img/2021-01-08-06-05-09.png)
-
-![](img/2021-01-08-06-06-07.png)
-
-![](img/2021-01-08-06-07-38.png)
-
-## Privilege Escalation to `root`
-
-I see he is a part of the `DnsAdmins` group, which is vulnerable to this privilege escalation attack: https://medium.com/techzap/dns-admin-privesc-in-active-directory-ad-windows-ecc7ed5a21a2
-
-![](img/2021-01-08-06-08-01.png)
-
-I generate a payload.
-
-![](img/2021-01-08-06-09-19.png)
-
-I host an `SMB` server.
-
-![](img/2021-01-08-06-10-14.png)
-
-I start a `nc` listener.
-
-![](img/2021-01-08-06-10-33.png)
-
-I run the exploit.
-
-![](img/2021-01-08-06-11-02.png)
-
-And get a shell as `nt authority\system`.
-
-![](img/2021-01-08-06-11-38.png)

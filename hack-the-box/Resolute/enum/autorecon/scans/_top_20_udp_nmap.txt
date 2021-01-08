@@ -1,0 +1,51 @@
+# Nmap 7.91 scan initiated Wed Jan  6 23:55:55 2021 as: nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/_top_20_udp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/_top_20_udp_nmap.xml resolute.htb
+adjust_timeouts2: packet supposedly had rtt of -209372 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -209372 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -485249 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -485249 microseconds.  Ignoring time.
+Nmap scan report for resolute.htb (10.10.10.169)
+Host is up, received user-set (0.042s latency).
+Scanned at 2021-01-06 23:55:55 EST for 326s
+
+PORT      STATE         SERVICE      REASON               VERSION
+53/udp    closed        domain       port-unreach ttl 127
+67/udp    closed        dhcps        port-unreach ttl 127
+68/udp    closed        dhcpc        port-unreach ttl 127
+69/udp    closed        tftp         port-unreach ttl 127
+123/udp   closed        ntp          port-unreach ttl 127
+135/udp   closed        msrpc        port-unreach ttl 127
+137/udp   open|filtered netbios-ns   no-response
+138/udp   open|filtered netbios-dgm  no-response
+139/udp   closed        netbios-ssn  port-unreach ttl 127
+161/udp   closed        snmp         port-unreach ttl 127
+162/udp   closed        snmptrap     port-unreach ttl 127
+445/udp   closed        microsoft-ds port-unreach ttl 127
+500/udp   open|filtered isakmp       no-response
+514/udp   closed        syslog       port-unreach ttl 127
+520/udp   closed        route        port-unreach ttl 127
+631/udp   closed        ipp          port-unreach ttl 127
+1434/udp  closed        ms-sql-m     port-unreach ttl 127
+1900/udp  closed        upnp         port-unreach ttl 127
+4500/udp  open|filtered nat-t-ike    no-response
+49152/udp closed        unknown      port-unreach ttl 127
+Warning: OSScan results may be unreliable because we could not find at least 1 open and 1 closed port
+Device type: general purpose
+Running: Microsoft Windows 2008|7
+OS CPE: cpe:/o:microsoft:windows_server_2008:r2 cpe:/o:microsoft:windows_7
+OS details: Microsoft Windows Server 2008 R2, Microsoft Windows 7
+TCP/IP fingerprint:
+OS:SCAN(V=7.91%E=4%D=1/7%OT=%CT=%CU=53%PV=Y%DS=2%DC=T%G=N%TM=5FF695A1%P=x86
+OS:_64-pc-linux-gnu)T5(R=Y%DF=Y%TG=80%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%D
+OS:F=Y%TG=80%W=0%S=A%A=O%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%TG=80%W=0%S=Z%A=S+%F=AR
+OS:%O=%RD=0%Q=)U1(R=N)IE(R=Y%DFI=N%TG=80%CD=Z)
+
+Network Distance: 2 hops
+
+TRACEROUTE (using port 1434/udp)
+HOP RTT      ADDRESS
+1   39.80 ms 10.10.14.1
+2   40.72 ms resolute.htb (10.10.10.169)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jan  7 00:01:21 2021 -- 1 IP address (1 host up) scanned in 326.40 seconds

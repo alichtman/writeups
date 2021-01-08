@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.91 scan initiated Wed Jan  6 23:56:31 2021 as: nmap -vv -&#45;reason -Pn -sV -p 464 -&#45;script=banner,krb5-enum-users -oN /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_464_kerberos_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_464_kerberos_nmap.xml resolute.htb -->
+<nmaprun scanner="nmap" args="nmap -vv -&#45;reason -Pn -sV -p 464 -&#45;script=banner,krb5-enum-users -oN /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_464_kerberos_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_464_kerberos_nmap.xml resolute.htb" start="1609995391" startstr="Wed Jan  6 23:56:31 2021" version="7.91" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="464"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1609995391"/>
+<taskend task="NSE" time="1609995391"/>
+<taskbegin task="NSE" time="1609995391"/>
+<taskend task="NSE" time="1609995391"/>
+<taskbegin task="SYN Stealth Scan" time="1609995391"/>
+<taskend task="SYN Stealth Scan" time="1609995391" extrainfo="1 total ports"/>
+<taskbegin task="Service scan" time="1609995391"/>
+<taskend task="Service scan" time="1609995402" extrainfo="1 service on 1 host"/>
+<taskbegin task="NSE" time="1609995402"/>
+<taskend task="NSE" time="1609995412"/>
+<taskbegin task="NSE" time="1609995412"/>
+<taskend task="NSE" time="1609995412"/>
+<host starttime="1609995391" endtime="1609995412"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="10.10.10.169" addrtype="ipv4"/>
+<hostnames>
+<hostname name="resolute.htb" type="user"/>
+<hostname name="resolute.htb" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="464"><state state="open" reason="syn-ack" reason_ttl="127"/><service name="kpasswd5" method="table" conf="3"/></port>
+</ports>
+<times srtt="39378" rttvar="39378" to="196890"/>
+</host>
+<taskbegin task="NSE" time="1609995412"/>
+<taskend task="NSE" time="1609995412"/>
+<taskbegin task="NSE" time="1609995412"/>
+<taskend task="NSE" time="1609995412"/>
+<runstats><finished time="1609995412" timestr="Wed Jan  6 23:56:52 2021" summary="Nmap done at Wed Jan  6 23:56:52 2021; 1 IP address (1 host up) scanned in 21.69 seconds" elapsed="21.69" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

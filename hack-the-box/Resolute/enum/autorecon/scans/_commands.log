@@ -1,0 +1,90 @@
+nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/_full_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/_full_tcp_nmap.xml" resolute.htb
+
+nmap -vv --reason -Pn -sU -A --top-ports=20 --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/_top_20_udp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/_top_20_udp_nmap.xml" resolute.htb
+
+nmap -vv --reason -Pn -sV -sC --version-all -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/_quick_tcp_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/_quick_tcp_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:88 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_88_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 88 --script="banner,krb5-enum-users" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_88_kerberos_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_88_kerberos_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:135 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_135_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 135 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_135_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_135_rpc_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:139 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_139_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 139 --script="banner,(nbstat or smb* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" --script-args="unsafe=1" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_139_smb_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_139_smb_nmap.xml" resolute.htb
+
+enum4linux -a -M -l -d resolute.htb 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/enum4linux.txt"
+
+smbclient -L\\ -N -I resolute.htb 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/smbclient.txt"
+
+smbmap -H resolute.htb -P 139 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/smbmap-share-permissions.txt"; smbmap -u null -p "" -H resolute.htb -P 139 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/smbmap-share-permissions.txt"
+
+smbmap -H resolute.htb -P 139 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/smbmap-list-contents.txt"; smbmap -u null -p "" -H resolute.htb -P 139 -R 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/smbmap-list-contents.txt"
+
+smbmap -H resolute.htb -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/smbmap-execute-command.txt"; smbmap -u null -p "" -H resolute.htb -P 139 -x "ipconfig /all" 2>&1 | tee -a "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/smbmap-execute-command.txt"
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:464 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_464_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 464 --script="banner,krb5-enum-users" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_464_kerberos_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_464_kerberos_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:389 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_389_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 389 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_389_ldap_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_389_ldap_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:636 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_636_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:3268 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_3268_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 3268 --script="banner,(ldap* or ssl*) and not (brute or broadcast or dos or external or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_3268_ldap_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_3268_ldap_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:3269 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_3269_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:5985 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 5985 --script="banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_5985_http_nmap.xml" resolute.htb
+
+curl -sSik http://resolute.htb:5985/ -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_index.html"
+
+curl -sSik http://resolute.htb:5985/robots.txt -m 10 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_robots.txt"
+
+if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://resolute.htb:5985/ /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_screenshot.png; fi
+
+whatweb --color=never --no-errors -a 3 -v http://resolute.htb:5985 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_whatweb.txt"
+
+nikto -ask=no -h http://resolute.htb:5985 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_nikto.txt"
+
+if [[ `gobuster -h 2>&1 | grep -F "mode (dir)"` ]]; then gobuster -u http://resolute.htb:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -e -k -l -s "200,204,301,302,307,401,403" -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_gobuster.txt"; else gobuster dir -u http://resolute.htb:5985/ -w /usr/share/seclists/Discovery/Web-Content/common.txt -z -k -l -x "txt,html,php,asp,aspx,jsp" -o "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_gobuster.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49664 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49664_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49664 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49664_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49664_rpc_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49665 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49665_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49665 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49665_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49665_rpc_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49666 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49666_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49666 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49666_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49666_rpc_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49667 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49667_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49667 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49667_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49667_rpc_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49671 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49671_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49671 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49671_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49671_rpc_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49676 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49676_sslscan.txt"; fi
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49677 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49677_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49677 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49677_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49677_rpc_nmap.xml" resolute.htb
+
+if [ "False" == "True" ]; then sslscan --show-certificate --no-colour resolute.htb:49688 2>&1 | tee "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49688_sslscan.txt"; fi
+
+nmap -vv --reason -Pn -sV -p 49688 --script="banner,msrpc-enum,rpc-grind,rpcinfo" -oN "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_49688_rpc_nmap.txt" -oX "/home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/xml/tcp_49688_rpc_nmap.xml" resolute.htb
+

@@ -1,0 +1,1 @@
+[*] Task tcp/5985/wkhtmltoimage returned non-zero exit code: 1. Command: if hash wkhtmltoimage 2> /dev/null; then wkhtmltoimage --format png http://resolute.htb:5985/ /home/kali/Desktop/Development/writeups/hack-the-box/Resolute/enum/autorecon/scans/tcp_5985_http_screenshot.png; fi
