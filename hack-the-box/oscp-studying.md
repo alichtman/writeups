@@ -15,7 +15,7 @@
 | Sense       [x]  | Silo       [x]  | Lightweight      [x]  | Nest     [ ]  |
 | Solidstate  [o]  | Bounty     [x]  | La Casa De Papel [ ]  | Sauna    [ ]  |
 | Kotarak     [!]  | Jerry      [x]  | Jail             [ ]  | Querier  [ ]  |
-| Node        [#]  | Conceal    [ ]  | Safe             [ ]  |               |
+| Node        [#]  | Conceal    [ ]  | Safe             [ ]  | Cascade  [ ]  |
 | Valentine   [o]  | Chatterbox [x]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
 | Sunday      [x]  | BankRobber [x]  |                       |               |
@@ -26,7 +26,7 @@
 | Swagshop    [!]  | BlackField [ ]  |                       |               |
 | Networked   [ ]  | Active     [$]  |                       |               |
 | Jarvis      [x]  | Access     [x]  |                       |               |
-| Mirai       [o]  |                 |                       |               |
+| Mirai       [o]  | Remote     [ ]  |                       |               |
 | Popcorn     [x]  |                 |                       |               |
 | Haircut     [x]  |                 |                       |               |
 | Blocky      [x]  |                 |                       |               |
@@ -37,6 +37,8 @@
 | Tabby       [x]  |                 |                       |               |
 | Doctor      [x]  |                 |                       |               |
 | Quick       [ ]  |                 |                       |               |
+| Traverxec   [x]  |                 |                       |               |
+| OpenAdmin   [x]  |                 |                       |               |
 
 
 ## Key
