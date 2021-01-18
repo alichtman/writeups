@@ -1,0 +1,58 @@
+# Nmap 7.91 scan initiated Sun Jan 17 04:11:18 2021 as: nmap -vv --reason -Pn -A --osscan-guess --version-all -p- -oN /home/kali/Desktop/Development/writeups/hack-the-box/Networked/enum/autorecon/scans/_full_tcp_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Networked/enum/autorecon/scans/xml/_full_tcp_nmap.xml networked.htb
+adjust_timeouts2: packet supposedly had rtt of -714355 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -714355 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -412451 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -412451 microseconds.  Ignoring time.
+Nmap scan report for networked.htb (10.10.10.146)
+Host is up, received user-set (0.041s latency).
+Scanned at 2021-01-17 04:11:18 EST for 163s
+Not shown: 65532 filtered ports
+Reason: 65452 no-responses and 80 host-prohibiteds
+PORT    STATE  SERVICE REASON         VERSION
+22/tcp  open   ssh     syn-ack ttl 63 OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 22:75:d7:a7:4f:81:a7:af:52:66:e5:27:44:b1:01:5b (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFgr+LYQ5zL9JWnZmjxP7FT1134sJla89HBT+qnqNvJQRHwO7IqPSa5tEWGZYtzQ2BehsEqb/PisrRHlTeatK0X8qrS3tuz+l1nOj3X/wdcgnFXBrhwpRB2spULt2YqRM49aEbm7bRf2pctxuvgeym/pwCghb6nSbdsaCIsoE+X7QwbG0j6ZfoNIJzQkTQY7O+n1tPP8mlwPOShZJP7+NWVf/kiHsgZqVx6xroCp/NYbQTvLWt6VF/V+iZ3tiT7E1JJxJqQ05wiqsnjnFaZPYP+ptTqorUKP4AenZnf9Wan7VrrzVNZGnFlczj/BsxXOYaRe4Q8VK4PwiDbcwliOBd
+|   256 2d:63:28:fc:a2:99:c7:d4:35:b9:45:9a:4b:38:f9:c8 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAsf1XXvL55L6U7NrCo3XSBTr+zCnnQ+GorAMgUugr3ihPkA+4Tw2LmpBr1syz7Z6PkNyQw6NzC3KwSUy1BOGw8=
+|   256 73:cd:a0:5b:84:10:7d:a7:1c:7c:61:1d:f5:54:cf:c4 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILMrhnJBfdb0fWQsWVfynAxcQ8+SNlL38vl8VJaaqPTL
+80/tcp  open   http    syn-ack ttl 63 Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+443/tcp closed https   reset ttl 63
+OS fingerprint not ideal because: Didn't receive UDP response. Please try again with -sSU
+Aggressive OS guesses: Linux 3.10 - 4.11 (94%), Linux 5.1 (94%), HP P2000 G3 NAS device (90%), Linux 3.2 - 4.9 (90%), Linux 3.13 (89%), Linux 3.13 or 4.2 (89%), Linux 3.16 - 4.6 (89%), Linux 4.1 (89%), Linux 4.10 (89%), Linux 4.2 (89%)
+No exact OS matches for host (test conditions non-ideal).
+TCP/IP fingerprint:
+SCAN(V=7.91%E=4%D=1/17%OT=22%CT=443%CU=%PV=Y%DS=2%DC=T%G=N%TM=6003FFD9%P=x86_64-pc-linux-gnu)
+SEQ(SP=103%GCD=1%ISR=10C%TI=Z%TS=A)
+OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW7%O5=M54DST11NW7%O6=M54DST11)
+WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120%W6=7120)
+ECN(R=Y%DF=Y%TG=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)
+T1(R=Y%DF=Y%TG=40%S=O%A=S+%F=AS%RD=0%Q=)
+T2(R=N)
+T3(R=N)
+T4(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T5(R=Y%DF=Y%TG=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+T6(R=N)
+T6(R=Y%DF=Y%TG=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)
+T7(R=N)
+U1(R=N)
+IE(R=Y%DFI=N%TG=40%CD=S)
+
+Uptime guess: 49.710 days (since Sat Nov 28 11:12:13 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=259 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT      ADDRESS
+1   41.79 ms 10.10.14.1
+2   41.81 ms networked.htb (10.10.10.146)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 17 04:14:01 2021 -- 1 IP address (1 host up) scanned in 163.62 seconds

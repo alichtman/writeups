@@ -24,7 +24,7 @@
 | Irked       [x]  | Buff       [x]  |                       |               |
 | Friendzone  [!]  | Fuse       [ ]  |                       |               |
 | Swagshop    [!]  | BlackField [ ]  |                       |               |
-| Networked   [ ]  | Active     [$]  |                       |               |
+| Networked   [x]  | Active     [$]  |                       |               |
 | Jarvis      [x]  | Access     [x]  |                       |               |
 | Mirai       [o]  | Remote     [ ]  |                       |               |
 | Popcorn     [x]  |                 |                       |               |

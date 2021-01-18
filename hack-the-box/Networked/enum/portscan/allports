@@ -1,0 +1,38 @@
+# Nmap 7.91 scan initiated Sun Jan 17 04:11:05 2021 as: nmap -A -v -p- -Pn -oN allports networked.htb
+adjust_timeouts2: packet supposedly had rtt of -713626 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -713626 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -212453 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -212453 microseconds.  Ignoring time.
+Nmap scan report for networked.htb (10.10.10.146)
+Host is up (0.042s latency).
+Not shown: 65532 filtered ports
+PORT    STATE  SERVICE VERSION
+22/tcp  open   ssh     OpenSSH 7.4 (protocol 2.0)
+| ssh-hostkey: 
+|   2048 22:75:d7:a7:4f:81:a7:af:52:66:e5:27:44:b1:01:5b (RSA)
+|   256 2d:63:28:fc:a2:99:c7:d4:35:b9:45:9a:4b:38:f9:c8 (ECDSA)
+|_  256 73:cd:a0:5b:84:10:7d:a7:1c:7c:61:1d:f5:54:cf:c4 (ED25519)
+80/tcp  open   http    Apache httpd 2.4.6 ((CentOS) PHP/5.4.16)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.6 (CentOS) PHP/5.4.16
+|_http-title: Site doesn't have a title (text/html; charset=UTF-8).
+443/tcp closed https
+Device type: general purpose
+Running (JUST GUESSING): Linux 3.X|4.X|2.6.X|5.X (88%)
+OS CPE: cpe:/o:linux:linux_kernel:3 cpe:/o:linux:linux_kernel:4 cpe:/o:linux:linux_kernel:2.6.32 cpe:/o:linux:linux_kernel:5.1
+Aggressive OS guesses: Linux 3.10 - 4.11 (88%), Linux 2.6.32 (88%), Linux 4.4 (87%), Linux 3.10 - 3.12 (86%), Linux 5.1 (86%), Linux 4.9 (85%), Linux 3.18 (85%), Linux 3.2 - 4.9 (85%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 49.710 days (since Sat Nov 28 11:12:13 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=256 (Good luck!)
+IP ID Sequence Generation: All zeros
+
+TRACEROUTE (using port 443/tcp)
+HOP RTT      ADDRESS
+1   43.48 ms 10.10.14.1
+2   43.51 ms networked.htb (10.10.10.146)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Jan 17 04:13:54 2021 -- 1 IP address (1 host up) scanned in 168.66 seconds
