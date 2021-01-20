@@ -78,18 +78,69 @@ Looks like a credential pair: `clave:11des0081x`.
 
 ![](img/2021-01-12-18-52-19.png)
 
+After logging in, I'm presented with a pair of repositories: `Profile` and `Deployer`.
+
+![](img/2021-01-14-21-55-43.png)
+
+Deployer seems to execute `$ sudo git pull` in a directory containing the `Profile` repo whenever a merge request is merged.
+
 ![](img/2021-01-12-19-31-30.png)
 
 ![](img/2021-01-12-19-32-15.png)
 
-I fork the repo to `clave`'s account.
+![](img/2021-01-14-23-40-40.png)
 
-![](img/2021-01-12-19-34-35.png)
+I go to the settings page and see a page titled `Profile`.
+
+![](img/2021-01-15-00-18-42.png)
+
+![](img/2021-01-15-00-04-08.png)
+
+Now that I know where it is deployed, I can replace the `index.php` file with a reverse shell and get a shell.
+
+![](img/2021-01-15-00-11-17.png)
+
+I use [this PHP reverse shell](http://pentestmonkey.net/tools/web-shells/php-reverse-shell) from pentestmonkey.
+
+I update the IP and port.
+
+![](img/2021-01-15-00-15-50.png)
+
+![](img/2021-01-15-00-16-30.png)
+
+![](img/2021-01-15-00-16-54.png)
+
+Open a `nc` listener.
+
+![](img/2021-01-15-00-17-17.png)
+
+I merge the merge request.
+
+![](img/2021-01-15-00-17-39.png)
+
+I then navigate to the settings page and get a shell.
+
+![](img/2021-01-15-00-18-38.png)
+
+![](img/2021-01-15-00-18-55.png)
+
 
 ## Reverse Shell
 
 ## Upgrading Shell
 
+![](img/2021-01-15-00-19-34.png)
+
+
+
 ## Privilege Escalation
+
+![](img/2021-01-15-00-20-30.png)
+
+![](img/2021-01-15-00-20-42.png)
+
+![](img/2021-01-15-00-23-21.png)
+
+
 
 ## Root
