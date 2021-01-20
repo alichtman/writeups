@@ -1,0 +1,344 @@
+# Nmap 7.91 scan initiated Wed Jan 20 01:22:43 2021 as: nmap -vv --reason -Pn -sV -p 80 "--script=banner,(http* or ssl*) and not (brute or broadcast or dos or external or http-slowloris* or fuzzer)" -oN /home/kali/Desktop/Development/writeups/hack-the-box/Curling/enum/autorecon/scans/tcp_80_http_nmap.txt -oX /home/kali/Desktop/Development/writeups/hack-the-box/Curling/enum/autorecon/scans/xml/tcp_80_http_nmap.xml curling.htb
+Nmap scan report for curling.htb (10.10.10.150)
+Host is up, received user-set (0.039s latency).
+Scanned at 2021-01-20 01:22:43 EST for 40s
+
+PORT   STATE SERVICE REASON         VERSION
+80/tcp open  http    syn-ack ttl 63 Apache httpd 2.4.29 ((Ubuntu))
+| http-auth-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=curling.htb
+|   url                                                                          method
+|   http://curling.htb:80/                                                       FORM
+|   http://curling.htb:80/index.php/2-uncategorised                              FORM
+|   http://curling.htb:80/index.php                                              FORM
+|   http://curling.htb:80/index.php/2-uncategorised/1-first-post-of-curling2018  FORM
+|   http://curling.htb:80/index.php/component/users/?view=reset&amp;Itemid=101   FORM
+|_  http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101  FORM
+| http-backup-finder: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=curling.htb
+|   http://curling.htb:80/index.php/index.php/2-uncategorised~
+|   http://curling.htb:80/index.php/index copy.php/2-uncategorised
+|   http://curling.htb:80/index.php/Copy of index.php/2-uncategorised
+|   http://curling.htb:80/index.php/Copy (2) of index.php/2-uncategorised
+|   http://curling.htb:80/index.php/index.php/2-uncategorised.1
+|   http://curling.htb:80/index.php/index.php/2-uncategorised.~1~
+|   http://curling.htb:80/index.php/2-uncategorised/index.bak
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/1-first-post-of-curling2018~
+|   http://curling.htb:80/index.php/2-uncategorised/index copy.php/2-uncategorised/1-first-post-of-curling2018
+|   http://curling.htb:80/index.php/2-uncategorised/Copy of index.php/2-uncategorised/1-first-post-of-curling2018
+|   http://curling.htb:80/index.php/2-uncategorised/Copy (2) of index.php/2-uncategorised/1-first-post-of-curling2018
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/1-first-post-of-curling2018.1
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/1-first-post-of-curling2018.~1~
+|   http://curling.htb:80/index.php/2-uncategorised/index.bak
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/1-first-post-of-curling2018~
+|   http://curling.htb:80/index.php/2-uncategorised/index copy.php/2-uncategorised/1-first-post-of-curling2018
+|   http://curling.htb:80/index.php/2-uncategorised/Copy of index.php/2-uncategorised/1-first-post-of-curling2018
+|   http://curling.htb:80/index.php/2-uncategorised/Copy (2) of index.php/2-uncategorised/1-first-post-of-curling2018
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/1-first-post-of-curling2018.1
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/1-first-post-of-curling2018.~1~
+|   http://curling.htb:80/index.php/2-uncategorised/index.bak
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/3-what-s-the-object-of-curling~
+|   http://curling.htb:80/index.php/2-uncategorised/index copy.php/2-uncategorised/3-what-s-the-object-of-curling
+|   http://curling.htb:80/index.php/2-uncategorised/Copy of index.php/2-uncategorised/3-what-s-the-object-of-curling
+|   http://curling.htb:80/index.php/2-uncategorised/Copy (2) of index.php/2-uncategorised/3-what-s-the-object-of-curling
+|   http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/3-what-s-the-object-of-curling.1
+|_  http://curling.htb:80/index.php/2-uncategorised/index.php/2-uncategorised/3-what-s-the-object-of-curling.~1~
+|_http-chrono: Request times for /; avg: 264.67ms; min: 218.76ms; max: 350.82ms
+| http-comments-displayer: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=curling.htb
+|     
+|     Path: http://curling.htb:80/index.php/2-uncategorised/3-what-s-the-object-of-curling?tmpl=component&amp;print=1
+|     Line number: 19
+|     Comment: 
+|         <!--[if lt IE 9]><script src="/media/jui/js/html5.js?4c6b364068a1c45e7cd3bb9b6a49b052"></script><![endif]-->
+|     
+|     Path: http://curling.htb:80/index.php/2-uncategorised
+|     Line number: 137
+|     Comment: 
+|         <!-- end items-leading -->
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 29
+|     Comment: 
+|         <!--[if lt IE 9]><script src="/media/system/js/html5fallback.js?4c6b364068a1c45e7cd3bb9b6a49b052"></script><![endif]-->
+|     
+|     Path: http://curling.htb:80/index.php/2-uncategorised
+|     Line number: 209
+|     Comment: 
+|         <!-- end span -->
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 21
+|     Comment: 
+|         <!--[if lt IE 9]><script src="/media/system/js/polyfill.event.js?4c6b364068a1c45e7cd3bb9b6a49b052"></script><![endif]-->
+|     
+|     Path: http://curling.htb:80/media/jui/js/jquery.min.js?4c6b364068a1c45e7cd3bb9b6a49b052
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery v1.12.4 | (c) jQuery Foundation | jquery.org/license */
+|     
+|     Path: http://curling.htb:80/media/system/js/caption.js?4c6b364068a1c45e7cd3bb9b6a49b052
+|     Line number: 1
+|     Comment: 
+|         /*
+|                 GNU General Public License version 2 or later; see LICENSE.txt
+|         */
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 151
+|     Comment: 
+|         <!-- End Right Sidebar -->
+|     
+|     Path: http://curling.htb:80/media/jui/js/html5.js?4c6b364068a1c45e7cd3bb9b6a49b052
+|     Line number: 1
+|     Comment: 
+|         /**
+|         * @preserve HTML5 Shiv 3.7.3 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+|         */
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 156
+|     Comment: 
+|         <!-- Footer -->
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 99
+|     Comment: 
+|         <!-- Begin Right Sidebar -->
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 54
+|     Comment: 
+|         <!-- Begin Content -->
+|     
+|     Path: http://curling.htb:80/media/jui/js/bootstrap.min.js?4c6b364068a1c45e7cd3bb9b6a49b052
+|     Line number: 1
+|     Comment: 
+|         /*!
+|          * Bootstrap.js by @fat & @mdo
+|          * Copyright 2012 Twitter, Inc.
+|          * http://www.apache.org/licenses/LICENSE-2.0.txt
+|          *
+|          * Custom version for Joomla!
+|          */
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 38
+|     Comment: 
+|         <!-- Body -->
+|     
+|     Path: http://curling.htb:80/index.php?format=feed&amp;type=rss
+|     Line number: 2
+|     Comment: 
+|         <!-- generator="Joomla! - Open Source Content Management" -->
+|     
+|     Path: http://curling.htb:80/templates/protostar/js/template.js?4c6b364068a1c45e7cd3bb9b6a49b052
+|     Line number: 1
+|     Comment: 
+|         /**
+|          * @package     Joomla.Site
+|          * @subpackage  Templates.protostar
+|          * @copyright   Copyright (C) 2005 - 2018 Open Source Matters, Inc. All rights reserved.
+|          * @license     GNU General Public License version 2 or later; see LICENSE.txt
+|          * @since       3.2
+|          */
+|     
+|     Path: http://curling.htb:80/media/jui/js/jquery-migrate.min.js?4c6b364068a1c45e7cd3bb9b6a49b052
+|     Line number: 1
+|     Comment: 
+|         /*! jQuery Migrate v1.4.1 | (c) jQuery Foundation and other contributors | jquery.org/license */
+|     
+|     Path: http://curling.htb:80/index.php/2-uncategorised
+|     Line number: 208
+|     Comment: 
+|         <!-- end item -->
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 96
+|     Comment: 
+|         <!-- End Content -->
+|     
+|     Path: http://curling.htb:80/index.php/2-uncategorised
+|     Line number: 280
+|     Comment: 
+|         <!-- end row -->
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 41
+|     Comment: 
+|         <!-- Header -->
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Line number: 171
+|     Comment: 
+|_        <!-- secret.txt -->
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=curling.htb
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://curling.htb:80/
+|     Form id: login-form
+|     Form action: /index.php
+|     
+|     Path: http://curling.htb:80/index.php/2-uncategorised
+|     Form id: login-form
+|     Form action: /index.php
+|     
+|     Path: http://curling.htb:80/index.php
+|     Form id: login-form
+|     Form action: /index.php
+|     
+|     Path: http://curling.htb:80/index.php/2-uncategorised/1-first-post-of-curling2018
+|     Form id: login-form
+|     Form action: /index.php
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=reset&amp;Itemid=101
+|     Form id: user-registration
+|     Form action: /index.php/component/users/?task=reset.request&Itemid=101
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=reset&amp;Itemid=101
+|     Form id: login-form
+|     Form action: /index.php/component/users/?Itemid=101
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Form id: user-registration
+|     Form action: /index.php/component/users/?task=remind.remind&Itemid=101
+|     
+|     Path: http://curling.htb:80/index.php/component/users/?view=remind&amp;Itemid=101
+|     Form id: login-form
+|_    Form action: /index.php/component/users/?Itemid=101
+|_http-date: Wed, 20 Jan 2021 06:26:50 GMT; +3m56s from local time.
+|_http-devframework: Joomla detected. Found common traces on /
+| http-dombased-xss: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=curling.htb
+|   Found the following indications of potential DOM based XSS: 
+|     
+|     Source: window.open(this.href,'win2','status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=480,directories=no,location=no')
+|_    Pages: http://curling.htb:80/, http://curling.htb:80/, http://curling.htb:80/, http://curling.htb:80/index.php/2-uncategorised, http://curling.htb:80/index.php/2-uncategorised, http://curling.htb:80/index.php/2-uncategorised, http://curling.htb:80/index.php, http://curling.htb:80/index.php, http://curling.htb:80/index.php, http://curling.htb:80/index.php/2-uncategorised/1-first-post-of-curling2018
+|_http-drupal-enum: Nothing found amongst the top 100 resources,use --script-args number=<number|all> for deeper analysis)
+| http-enum: 
+|   /administrator/: Possible admin folder
+|   /administrator/index.php: Possible admin folder
+|   /administrator/manifests/files/joomla.xml: Joomla version 3.8.8
+|   /language/en-GB/en-GB.xml: Joomla version 3.8.8
+|   /htaccess.txt: Joomla!
+|   /README.txt: Interesting, a readme.
+|   /bin/: Potentially interesting folder
+|   /cache/: Potentially interesting folder
+|   /images/: Potentially interesting folder
+|   /includes/: Potentially interesting folder
+|   /libraries/: Potentially interesting folder
+|   /modules/: Potentially interesting folder
+|   /templates/: Potentially interesting folder
+|_  /tmp/: Potentially interesting folder
+| http-errors: 
+| Spidering limited to: maxpagecount=40; withinhost=curling.htb
+|   Found the following error pages: 
+|   
+|   Error Code: 400
+|_  	http://curling.htb:80
+|_http-favicon: Unknown favicon MD5: 1194D7D32448E1F90741A97B42AF91FA
+| http-feed: 
+| Spidering limited to: maxpagecount=40; withinhost=curling.htb
+|   Found the following feeds: 
+|     Atom: http://curling.htb/index.php/2-uncategorised?format=feed&amp;type=atom
+|     Atom: http://curling.htb:80/index.php/2-uncategorised?format=feed&amp;type=atom
+|     Atom: http://curling.htb/index.php?format=feed&amp;type=atom
+|     RSS (version 2.0): http://curling.htb:80/index.php?format=feed&amp;type=rss
+|     RSS (version 2.0): http://curling.htb/index.php/2-uncategorised?format=feed&amp;type=rss
+|     RSS (version 2.0): http://curling.htb:80/index.php/2-uncategorised?format=feed&amp;type=rss
+|     RSS (version 2.0): http://curling.htb/index.php?format=feed&amp;type=rss
+|_    Atom: http://curling.htb:80/index.php?format=feed&amp;type=atom
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-generator: Joomla! - Open Source Content Management
+| http-headers: 
+|   Date: Wed, 20 Jan 2021 06:26:49 GMT
+|   Server: Apache/2.4.29 (Ubuntu)
+|   Set-Cookie: c0548020854924e0aecd05ed9f5b672b=i708voo788p8i6mnms8irr5ujf; path=/; HttpOnly
+|   Expires: Wed, 17 Aug 2005 00:00:00 GMT
+|   Last-Modified: Wed, 20 Jan 2021 06:26:49 GMT
+|   Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: no-cache
+|   Connection: close
+|   Content-Type: text/html; charset=utf-8
+|   
+|_  (Request type: HEAD)
+| http-internal-ip-disclosure: 
+|_  Internal IP Leaked: 250
+|_http-jsonp-detection: Couldn't find any JSONP endpoints.
+|_http-litespeed-sourcecode-download: Request with null byte did not work. This web server might not be vulnerable
+|_http-malware-host: Host appears to be clean
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-mobileversion-checker: No mobile version detected.
+| http-php-version: Logo query returned unknown hash 7a3146ed1be018349dac704fca44fbba
+|_Credits query returned unknown hash 6a1181c3c8187bed1a40285845e2d4c9
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-security-headers: 
+|   Cache_Control: 
+|     Header: Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+|   Pragma: 
+|     Header: Pragma: no-cache
+|   Expires: 
+|_    Header: Expires: Wed, 17 Aug 2005 00:00:00 GMT
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+| http-sitemap-generator: 
+|   Directory structure:
+|     /
+|       Other: 1; php: 1
+|     /index.php/
+|       Other: 1
+|     /index.php/2-uncategorised/
+|       Other: 2
+|     /index.php/component/users/
+|       Other: 1
+|     /media/jui/js/
+|       js: 5
+|     /media/system/js/
+|       js: 3
+|     /templates/protostar/
+|       ico: 1
+|     /templates/protostar/css/
+|       css: 1
+|     /templates/protostar/js/
+|       js: 1
+|   Longest directory structure:
+|     Depth: 3
+|     Dir: /media/jui/js/
+|   Total files found (by extension):
+|_    Other: 5; css: 1; ico: 1; js: 9; php: 1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+|_http-title: Home
+| http-traceroute: 
+|   last-modified
+|     Hop #1: Wed, 20 Jan 2021 06:26:46 GMT
+|     Hop #2: Wed, 20 Jan 2021 06:26:47 GMT
+|_    Hop #3: Wed, 20 Jan 2021 06:26:47 GMT
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+| http-vhosts: 
+|_128 names had status 200
+|_http-wordpress-enum: Nothing found amongst the top 100 resources,use --script-args search-limit=<number|all> for deeper analysis)
+|_http-wordpress-users: [Error] Wordpress installation was not found. We couldn't find wp-login.php
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 20 01:23:23 2021 -- 1 IP address (1 host up) scanned in 40.22 seconds

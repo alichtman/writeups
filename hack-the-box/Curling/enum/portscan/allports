@@ -1,0 +1,41 @@
+# Nmap 7.91 scan initiated Wed Jan 20 01:22:14 2021 as: nmap -A -v -p- -Pn -oN allports curling.htb
+adjust_timeouts2: packet supposedly had rtt of -213126 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -213126 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1313817 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -1313817 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -565708 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -565708 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -565070 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -565070 microseconds.  Ignoring time.
+Nmap scan report for curling.htb (10.10.10.150)
+Host is up (0.040s latency).
+Not shown: 65533 closed ports
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 7.6p1 Ubuntu 4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 8a:d1:69:b4:90:20:3e:a7:b6:54:01:eb:68:30:3a:ca (RSA)
+|   256 9f:0b:c2:b2:0b:ad:8f:a1:4e:0b:f6:33:79:ef:fb:43 (ECDSA)
+|_  256 c1:2a:35:44:30:0c:5b:56:6a:3f:a5:cc:64:66:d9:a9 (ED25519)
+80/tcp open  http    Apache httpd 2.4.29 ((Ubuntu))
+|_http-favicon: Unknown favicon MD5: 1194D7D32448E1F90741A97B42AF91FA
+|_http-generator: Joomla! - Open Source Content Management
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Home
+Aggressive OS guesses: Linux 3.18 (94%), Linux 3.2 - 4.9 (94%), Linux 3.16 (93%), Crestron XPanel control system (93%), ASUS RT-N56U WAP (Linux 3.4) (92%), Linux 3.10 - 4.11 (90%), Linux 3.12 (90%), Linux 3.13 (90%), DD-WRT v3.0 (Linux 4.4.2) (90%), Linux 4.10 (90%)
+No exact OS matches for host (test conditions non-ideal).
+Uptime guess: 38.986 days (since Sat Dec 12 01:43:41 2020)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=257 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 53/tcp)
+HOP RTT      ADDRESS
+1   40.71 ms 10.10.14.1
+2   40.77 ms curling.htb (10.10.10.150)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 20 01:22:52 2021 -- 1 IP address (1 host up) scanned in 38.23 seconds

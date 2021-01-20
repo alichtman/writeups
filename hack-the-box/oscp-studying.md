@@ -19,7 +19,7 @@
 | Valentine   [o]  | Chatterbox [x]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
 | Sunday      [x]  | BankRobber [x]  |                       |               |
-| Tartarsauce [ ]  | Bastion    [x]  |                       |               |
+| Tartarsauce [!]  | Bastion    [x]  |                       |               |
 | Magic       [x]  | Secnotes   [x]  |                       |               |
 | Irked       [x]  | Buff       [x]  |                       |               |
 | Friendzone  [!]  | Fuse       [ ]  |                       |               |
@@ -39,6 +39,7 @@
 | Quick       [ ]  |                 |                       |               |
 | Traverxec   [x]  |                 |                       |               |
 | OpenAdmin   [x]  |                 |                       |               |
+| Curling     [x]  |                 |                       |               |
 
 
 ## Key

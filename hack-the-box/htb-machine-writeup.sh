@@ -20,6 +20,7 @@ cp -iv ~/Desktop/Development/writeups/hack-the-box/template-writeup.md writeup.m
 
 cp -iv ~/OSCP/tools/priv-esc/linux/LinEnum.sh exploitation/privesc
 cp -iv ~/OSCP/tools/priv-esc/linux/linpeas.sh exploitation/privesc
+cp -iv ~/OSCP/tools/priv-esc/linux/uptux.py exploitation/privesc
 cp -Riv ~/OSCP/tools/priv-esc/linux/pspy/ exploitation/privesc
 cp -iv ~/OSCP/tools/priv-esc/windows/winPEAS.bat exploitation/privesc
 cp -iv ~/OSCP/tools/priv-esc/windows/winPEAS.exe exploitation/privesc

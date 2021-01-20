@@ -1,0 +1,91 @@
+WhatWeb report for http://curling.htb:80
+Status    : 200 OK
+Title     : Home
+IP        : 10.10.10.150
+Country   : RESERVED, ZZ
+
+Summary   : HTTPServer[Ubuntu Linux][Apache/2.4.29 (Ubuntu)], HttpOnly[c0548020854924e0aecd05ed9f5b672b], Apache[2.4.29], PasswordField[password], HTML5, MetaGenerator[Joomla! - Open Source Content Management], Cookies[c0548020854924e0aecd05ed9f5b672b], JQuery, Script[application/json], Bootstrap
+
+Detected Plugins:
+[ Apache ]
+	The Apache HTTP Server Project is an effort to develop and 
+	maintain an open-source HTTP server for modern operating 
+	systems including UNIX and Windows NT. The goal of this 
+	project is to provide a secure, efficient and extensible 
+	server that provides HTTP services in sync with the current 
+	HTTP standards. 
+
+	Version      : 2.4.29 (from HTTP Server Header)
+	Google Dorks: (3)
+	Website     : http://httpd.apache.org/
+
+[ Bootstrap ]
+	Bootstrap is an open source toolkit for developing with 
+	HTML, CSS, and JS. 
+
+	Website     : https://getbootstrap.com/
+
+[ Cookies ]
+	Display the names of cookies in the HTTP headers. The 
+	values are not returned to save on space. 
+
+	String       : c0548020854924e0aecd05ed9f5b672b
+
+[ HTML5 ]
+	HTML version 5, detected by the doctype declaration 
+
+
+[ HTTPServer ]
+	HTTP server header string. This plugin also attempts to 
+	identify the operating system from the server header. 
+
+	OS           : Ubuntu Linux
+	String       : Apache/2.4.29 (Ubuntu) (from server string)
+
+[ HttpOnly ]
+	If the HttpOnly flag is included in the HTTP set-cookie 
+	response header and the browser supports it then the cookie 
+	cannot be accessed through client side script - More Info: 
+	http://en.wikipedia.org/wiki/HTTP_cookie 
+
+	String       : c0548020854924e0aecd05ed9f5b672b
+
+[ JQuery ]
+	A fast, concise, JavaScript that simplifies how to traverse 
+	HTML documents, handle events, perform animations, and add 
+	AJAX. 
+
+	Website     : http://jquery.com/
+
+[ MetaGenerator ]
+	This plugin identifies meta generator tags and extracts its 
+	value. 
+
+	String       : Joomla! - Open Source Content Management
+
+[ PasswordField ]
+	find password fields 
+
+	String       : password (from field name)
+
+[ Script ]
+	This plugin detects instances of script HTML elements and 
+	returns the script language/type. 
+
+	String       : application/json
+
+HTTP Headers:
+	HTTP/1.1 200 OK
+	Date: Wed, 20 Jan 2021 06:26:41 GMT
+	Server: Apache/2.4.29 (Ubuntu)
+	Set-Cookie: c0548020854924e0aecd05ed9f5b672b=cctnnphfvhpehvrg0f7ooll2c3; path=/; HttpOnly
+	Expires: Wed, 17 Aug 2005 00:00:00 GMT
+	Last-Modified: Wed, 20 Jan 2021 06:26:41 GMT
+	Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
+	Pragma: no-cache
+	Vary: Accept-Encoding
+	Content-Encoding: gzip
+	Content-Length: 3884
+	Connection: close
+	Content-Type: text/html; charset=utf-8
+	
