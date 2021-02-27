@@ -7,15 +7,15 @@
 | Lame        [x]  | Legacy     [x]  | Book             [ ]  | Jeeves   [x]  |
 | Brainfuck   [x]  | Blue       [x]  | Mango            [o]  | Bart     [ ]  |
 | Shocker     [x]  | Devel      [x]  | October          [ ]  | Tally    [ ]  |
-| Bashed      [x]  | Optimum    [x]  | Bitlab           [ ]  | Arctic   [x]  |
+| Bashed      [x]  | Optimum    [x]  | Bitlab           [!]  | Arctic   [x]  |
 | Nibbles     [o]  | Bastard    [x]  | Jail             [ ]  | Netmon   [x]  |
 | Beep        [x]  | Granny     [x]  | Falafel          [ ]  | Sizzle   [ ]  |
 | Nineveh     [x]  | Grandpa    [x]  | Devoops          [x]  | Sniper   [ ]  |
 | Cronos      [x]  | Servmon    [!]  | Hawk             [ ]  | Control  [ ]  |
 | Sense       [x]  | Silo       [x]  | Lightweight      [x]  | Nest     [ ]  |
 | Solidstate  [o]  | Bounty     [x]  | La Casa De Papel [ ]  | Sauna    [ ]  |
-| Kotarak     [!]  | Jerry      [x]  | Jail             [ ]  | Querier  [ ]  |
-| Node        [#]  | Conceal    [ ]  | Safe             [ ]  | Cascade  [ ]  |
+| Kotarak     [!]  | Jerry      [x]  | Safe             [ ]  | Querier  [ ]  |
+| Node        [#]  | Conceal    [ ]  |                       | Cascade  [ ]  |
 | Valentine   [o]  | Chatterbox [x]  |                       |               |
 | Poison      [x]  | Forest     [ ]  |                       |               |
 | Sunday      [x]  | BankRobber [x]  |                       |               |
@@ -26,7 +26,7 @@
 | Swagshop    [!]  | BlackField [ ]  |                       |               |
 | Networked   [x]  | Active     [$]  |                       |               |
 | Jarvis      [x]  | Access     [x]  |                       |               |
-| Mirai       [o]  | Remote     [ ]  |                       |               |
+| Mirai       [o]  | Remote     [x]  |                       |               |
 | Popcorn     [x]  |                 |                       |               |
 | Haircut     [x]  |                 |                       |               |
 | Blocky      [x]  |                 |                       |               |
