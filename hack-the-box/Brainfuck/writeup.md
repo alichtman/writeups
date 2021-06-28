@@ -112,7 +112,11 @@ I browse to the site administration tab.
 
 `orestis:kHGuERB29DNiNE` seem to be the SMTP credentials. 
 
-I use [`imapbox`](https://github.com/polo2ro/imapbox/pulls) to dump the emails from the SMTP server. I clone and then modify the script to remove SSL support with: `$ sed -i "s/IMAP4_SSL/IMAP4/g" mailboxresource.py`. I create the config:
+I use [`imapbox`](https://github.com/polo2ro/imapbox/pulls) to dump the emails from the SMTP server. I clone and then modify the script to remove SSL support with: `$ sed -i "s/IMAP4_SSL/IMAP4/g" mailboxresource.py`.
+
+> NOTE: I wrote [this PR](https://github.com/polo2ro/imapbox/pull/35/files) to add SSL support to imapbox.
+ 
+I create the config:
 
 ![](img/2021-01-05-23-26-39.png)
 
